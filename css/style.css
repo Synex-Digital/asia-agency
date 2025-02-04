@@ -110,6 +110,27 @@ body {
   cursor: pointer; /* Indicate it's clickable (if needed) */
   transition: background-color 0.2s ease; /* Smooth hover effect */
 }
+/* projects button */
+.projects-button {
+  display: inline-flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically align text and arrow */
+  background-color: transparent; /* Transparent background */
+  color: #ffffff; /* White text color */
+  padding: 14px 20px; /* Adjust padding as needed */
+  border: 1.5px solid rgba(255, 255, 255, 1);
+  border-radius: 100px; /* Rounded corners */
+  cursor: pointer; /* Make it look clickable */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.button-arrow {
+  margin-left: 10px; /* Space between text and arrow */
+  background-image: url("/images/icons/arrow-right-solid.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+}
 /* Hero Section start */
 
 #hero .container nav {
@@ -237,14 +258,135 @@ header p {
 /* about section start */
 
 .about-us-content {
- 
   display: flex;
   justify-content: space-between;
 }
 
-.about-us-text{
+.about-us-text {
   max-width: 724px;
 }
 
-
 /* about section end */
+/* product section start */
+.projects-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.projects-container h3 {
+  width: 654px;
+  text-align: start;
+}
+.card {
+  width: 876px; /* Adjust width as needed */
+  background: rgba(14, 17, 22, 1);
+  border-radius: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 24px 24px 24px 40px;
+}
+.card .card-image picture img {
+  width: 320px;
+  height: 340px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.card-content {
+  width: 430px;
+}
+
+.card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.card-tag {
+  background-color: #007bff; /* Blue background */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.card-date {
+  font-size: 0.8rem;
+  color: #666; /* Gray color */
+}
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 20px; /* Adjust gap between cards */
+}
+
+.card {
+  flex: 0 0 calc(50% - 10px); /* Each card takes 50% width minus half the gap */
+  background: rgba(14, 17, 22, 1);
+  border-radius: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 24px 24px 24px 40px;
+  box-sizing: border-box;
+}
+
+.card .card-image picture img {
+  width: 320px;
+  height: 340px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-content {
+  width: 430px;
+}
+
+.card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.progress-bar {
+  flex-grow: 1;
+  height: 5px;
+  background-color: #e0e0e0;
+  margin: 0 20px;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  background-color: #007bff;
+  width: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* product section end */
