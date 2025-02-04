@@ -5,23 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/comon.css" />
     <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- Google Fonts lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Document</title>
   </head>
   <body>
     <!-- Hero Section start-->
     <section id="hero">
-      <nav class="py-40">
-        <div class="container">
-          <div></div>
-          <div></div>
+      <div class="container py-40">
+        <nav class="">
+          <div class="logo">
+            <img src="/images/logo.svg" alt="logo" />
+            <span class="font-20 font-weight-600 lato white">Asia.Agency</span>
+          </div>
+          <div>
+            <ul class="nav-menu font-16 font-weight-500 lato">
+              <li class="nav-item"><a href="#">About Us</a></li>
+              <li class="nav-item"><a href="#">Contact</a></li>
+
+              <!-- Dropdown Menu -->
+              <li class="nav-item dropdown">
+                <a href="#">Services ▼</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Web Development</a></li>
+                  <li><a href="#">SEO Optimization</a></li>
+                  <li><a href="#">Digital Marketing</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item"><a href="#">Blog</a></li>
+            </ul>
+          </div>
           <div>
             <button class="glow-button font-18">
               Contact us!
               <div class="polygon"></div>
             </button>
           </div>
-        </div>
-      </nav>
+        </nav>
+
+        <header>
+          <p class="lato">
+            <span class="font-18 font-weight-500 gray-25">
+              Growth solutions for</span
+            >
+            <span class="tag font-16 font-weight-400">startup</span>
+            <span class="tag font-16 font-weight-400">agencies</span>
+            <span class="tag font-16 font-weight-400">existing company</span>
+          </p>
+
+          <h1
+            class="main-heading Soft-Sky-Glow font-76 font-weight-700 plus-jakarta"
+          >
+            Your
+            <span class="primary italic plus-jakarta">business growth </span>
+            partner beyond just marketing
+          </h1>
+
+          <p class="description lato font-weight-500 font-18 gray-400">
+            More than just a marketing agency — we build strategies that drive
+            growth from top to bottom. From brand positioning to sales funnels,
+            we act as your in-house team to scale your business fast.
+          </p>
+          <div class="cta-section">
+            <a href="#" class="cta-button gray-900 py-14 lato"
+              >How we're different →</a
+            >
+          </div>
+        </header>
+      </div>
     </section>
     <!-- Hero Section end-->
 

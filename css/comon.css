@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 /* Reset CSS */
 *,
 *::before,
@@ -9,10 +10,10 @@
 
 /* Font Families */
 .lato {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", serif;
 }
 .plus-jakarta {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Plus Jakarta Sans", serif;
 }
 
 .container {
@@ -61,6 +62,10 @@
   padding-top: 11px;
   padding-bottom: 11px;
 }
+.py-14 {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
 .py-40 {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -80,6 +85,10 @@
 .py-120 {
   padding-top: 120px;
   padding-bottom: 120px;
+}
+.my-40 {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .pt-20 {
@@ -113,16 +122,30 @@
 
 /* Colors */
 .white {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 1);
 }
+
 .primary {
-  color: #82f2ab;
+  background: var(--Color-Other-1, rgba(130, 242, 168, 1));
+
+  -webkit-background-clip: text; /* For Chrome, Safari */
+  -moz-background-clip: text; /* For Firefox */
+  -ms-background-clip: text; /* For Internet Explorer/Edge */
+  -o-background-clip: text; /* For Opera */
+  background-clip: text; /* Standard property */
+  -webkit-text-fill-color: transparent;
 }
 .gray-400 {
   color: #98a2b3;
 }
 .gray-800 {
   color: #1d2939;
+}
+.gray-900 {
+  color: rgba(16, 24, 40, 1);
+}
+.gray-300 {
+  color: rgba(208, 213, 221, 1);
 }
 
 /* Font Weights */
@@ -233,4 +256,60 @@
 .plus-jakarta-weight-900 {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 900;
+}
+
+.Soft-Sky-Glow {
+  background: radial-gradient(
+    39.91% 96.59% at 52.48% 50%,
+    #ffffff 0%,
+    rgba(228, 237, 255, 0.53) 100%
+  );
+  -webkit-background-clip: text; /* For Chrome, Safari */
+  -moz-background-clip: text; /* For Firefox */
+  -ms-background-clip: text; /* For Internet Explorer/Edge */
+  -o-background-clip: text; /* For Opera */
+  background-clip: text; /* Standard property */
+  -webkit-text-fill-color: transparent; /* Required for WebKit browsers */
+}
+
+.gray-25 {
+  background: var(--Color-Grey-25, rgba(252, 252, 253, 1));
+  -webkit-background-clip: text; /* For Chrome, Safari */
+  -moz-background-clip: text; /* For Firefox */
+  -ms-background-clip: text; /* For Internet Explorer/Edge */
+  -o-background-clip: text; /* For Opera */
+  background-clip: text; /* Standard property */
+  -webkit-text-fill-color: transparent;
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  background-color: #222;
+  list-style: none;
+  top: 100%;
+  left: 0;
+  display: none;
+  min-width: 150px;
+  padding: 5px 0;
+  border-radius: 5px;
+}
+
+.dropdown-menu li a {
+  padding: 10px 15px;
+  display: block;
+  color: white;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #333;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
 }

@@ -70,3 +70,112 @@ body {
   filter: blur(5.7px); /* Blurs the gradient itself */
   z-index: 0; /* Place behind content */
 }
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  background: var(--Color-Other-White, rgba(255, 255, 255, 1));
+
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* CTA Hover Effect */
+.cta-button:hover {
+  opacity: 0.8;
+}
+
+/* Hero Section start */
+
+#hero .container nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 8px;
+  border-radius: 85px;
+  background: radial-gradient(
+    76.07% 57.21% at 50% 123.08%,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(4, 5, 9, 0.2) 100%
+  );
+}
+.logo {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  gap: 0px 8px;
+}
+nav {
+  border: 1px solid rgba(145, 145, 145, 0.41);
+}
+
+/* Menu styles */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Links */
+.nav-item a {
+  text-decoration: none;
+  color: rgba(208, 213, 221, 1);
+  font-size: 16px;
+  padding: 8px 12px;
+  display: block;
+}
+
+/* Hover effect */
+.nav-item a:hover {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+header {
+  width: 800px;
+  margin: 0 auto;
+  padding: 140px 0px 83px 0px;
+}
+
+header p {
+  text-align: center;
+}
+
+.main-heading {
+  text-align: center;
+  margin-top: 12px;
+}
+/* Tags */
+.tag {
+  display: inline-block;
+  padding: 6px 12px;
+  color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(145, 145, 145, 0.3);
+  background: rgba(14, 17, 22, 1);
+
+  border-radius: 15px;
+  margin: 0 5px;
+}
+
+/* Main Heading */
+.main-heading {
+  line-height: 1.2;
+}
+
+/* Description */
+.description {
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+.cta-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hero Section end */
