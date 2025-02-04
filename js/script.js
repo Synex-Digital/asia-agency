@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const updateProgress = () => {
     const progress = ((currentIndex + 1) / totalCards) * 100;
     progressBar.style.width = `${progress}%`;
+    progressBar.style.backgroundColor = `rgba(255, 255, 255, 1)`;
   };
 
   // Function to slide

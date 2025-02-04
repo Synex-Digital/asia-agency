@@ -1,5 +1,5 @@
 body {
-  background: black;
+  background: #0b0a0d;
 }
 
 .btn {
@@ -364,29 +364,85 @@ header p {
 .progress-bar {
   flex-grow: 1;
   height: 5px;
-  background-color: #e0e0e0;
+  background-color: rgba(145, 145, 145, 0.3); /* Default background color */
   margin: 0 20px;
   position: relative;
 }
 
 .progress {
   height: 100%;
-  background-color: #007bff;
+  background-color: rgba(255, 255, 255, 1); /* Default progress color */
   width: 0;
   transition: width 0.3s ease-in-out;
 }
 
-button {
-  padding: 10px 20px;
-  background-color: #007bff;
+
+.slider-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.slider-buttons {
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.prev-button {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(145, 145, 145, 0.08);
+  border: 1px solid rgba(145, 145, 145, 0.3);
+
+  border-radius: 100px;
   color: white;
   border: none;
   cursor: pointer;
+  position: relative; /* Ensures the arrow is positioned correctly inside */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-button:disabled {
-  background-color: #cccccc;
-  cursor: not-allowed;
+.prev-arrow {
+  background-image: url("/images/icons/arrow-left-solid.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 12px;
+}
+.next-button {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(145, 145, 145, 0.08);
+  border: 1px solid rgba(145, 145, 145, 0.3);
+  border-radius: 100px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: relative; /* Ensures the arrow is positioned correctly inside */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.next-arrow {
+  background-image: url("/images/icons/arrow-right-solid.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 12px;
 }
 
 /* product section end */
