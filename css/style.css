@@ -246,20 +246,5 @@ header p {
   max-width: 724px;
 }
 
-.about-us-button {
-  display: inline-block; /* Make the button behave like inline content */
-  padding: 15px 30px; /* Adjust padding as needed */
-  background-color: #0f0; /* Green button background */
-  color: #111; /* Dark text color for contrast */
-  text-decoration: none; /* Remove underline from the link */
-  border-radius: 5px; /* Add rounded corners */
-  font-size: 1.1rem; /* Adjust font size as needed */
-  font-weight: 600; /* Make the text slightly bolder */
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.about-us-button:hover {
-  background-color: #0c0; /* Darker green on hover */
-}
 
 /* about section end */
