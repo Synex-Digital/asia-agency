@@ -1,0 +1,236 @@
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Font Families */
+.lato {
+  font-family: "Lato", sans-serif;
+}
+.plus-jakarta {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Font Sizes */
+.font-12 {
+  font-size: 12px;
+}
+.font-16 {
+  font-size: 16px;
+}
+.font-18 {
+  font-size: 18px;
+}
+.font-20 {
+  font-size: 20px;
+}
+.font-24 {
+  font-size: 24px;
+}
+.font-32 {
+  font-size: 32px;
+}
+.font-40 {
+  font-size: 40px;
+}
+.font-48 {
+  font-size: 48px;
+}
+.font-56 {
+  font-size: 56px;
+}
+.font-76 {
+  font-size: 76px;
+}
+.font-96 {
+  font-size: 96px;
+}
+
+/* Padding */
+.py-11 {
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+.py-40 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.py-60 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.py-80 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.py-84 {
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
+.py-120 {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+.pt-24 {
+  padding-top: 24px;
+}
+.pt-32 {
+  padding-top: 32px;
+}
+.pt-40 {
+  padding-top: 40px;
+}
+.pt-45 {
+  padding-top: 45px;
+}
+.pt-80 {
+  padding-top: 80px;
+}
+.pt-120 {
+  padding-top: 120px;
+}
+.pt-160 {
+  padding-top: 160px;
+}
+
+.pb-280 {
+  padding-bottom: 280px;
+}
+
+/* Colors */
+.white {
+  color: #ffffff;
+}
+.primary {
+  color: #82f2ab;
+}
+.gray-400 {
+  color: #98a2b3;
+}
+.gray-800 {
+  color: #1d2939;
+}
+
+/* Font Weights */
+.font-weight-100 {
+  font-weight: 100;
+} /* Thin */
+.font-weight-200 {
+  font-weight: 200;
+} /* Extra Light */
+.font-weight-300 {
+  font-weight: 300;
+} /* Light */
+.font-weight-400 {
+  font-weight: 400;
+} /* Regular */
+.font-weight-500 {
+  font-weight: 500;
+} /* Medium */
+.font-weight-600 {
+  font-weight: 600;
+} /* Semi-Bold */
+.font-weight-700 {
+  font-weight: 700;
+} /* Bold */
+.font-weight-800 {
+  font-weight: 800;
+} /* Extra Bold */
+.font-weight-900 {
+  font-weight: 900;
+} /* Black */
+
+/* Italics */
+.italic {
+  font-style: italic;
+}
+
+/* Specific Font Weights for Lato */
+.lato-weight-100 {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+}
+.lato-weight-200 {
+  font-family: "Lato", sans-serif;
+  font-weight: 200;
+}
+.lato-weight-300 {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+.lato-weight-400 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+.lato-weight-500 {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+}
+.lato-weight-600 {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+}
+.lato-weight-700 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+.lato-weight-800 {
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
+}
+.lato-weight-900 {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+}
+
+/* Specific Font Weights for Plus Jakarta Sans */
+.plus-jakarta-weight-100 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 100;
+}
+.plus-jakarta-weight-200 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 200;
+}
+.plus-jakarta-weight-300 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 300;
+}
+.plus-jakarta-weight-400 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+}
+.plus-jakarta-weight-500 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+}
+.plus-jakarta-weight-600 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+}
+.plus-jakarta-weight-700 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+}
+.plus-jakarta-weight-800 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+}
+.plus-jakarta-weight-900 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 900;
+}

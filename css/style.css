@@ -1,0 +1,72 @@
+body {
+  background: black;
+}
+
+/* coustome button */
+.glow-button {
+  font-weight: bold;
+  color: #ddd; /* Light text */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 100px; /* Smooth rounded button */
+  background: black; /* Dark button */
+  position: relative;
+  cursor: pointer;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.1);
+
+  /* Transparent border to prevent shifting */
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+.glow-button::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 50px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.7),
+    rgba(100, 100, 100, 0.3)
+  );
+  z-index: -1;
+}
+
+.glow-button::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  width: 40px;
+  height: 15px;
+  background: radial-gradient(circle, rgba(0, 255, 0, 0.4), transparent);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: -2;
+}
+
+.glow-button .polygon {
+  position: absolute; /* Needed for pseudo-element positioning */
+  width: 20px; /* Example size */
+  height: 20px; /* Example size */
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+/* Pseudo-element for the gradient + blur effect */
+.glow-button .polygon::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* Covers entire parent */
+  background: radial-gradient(
+    13.36% 61.11% at 50% 50%,
+    /* Centered gradient */ #82f2a8 0%,
+    rgba(2, 2, 1, 0) 100%
+  );
+  filter: blur(5.7px); /* Blurs the gradient itself */
+  z-index: 0; /* Place behind content */
+}
