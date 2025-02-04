@@ -2,6 +2,9 @@ body {
   background: black;
 }
 
+.btn {
+  border-radius: 100px;
+}
 /* coustome button */
 .glow-button {
   font-weight: bold;
@@ -77,7 +80,7 @@ body {
   background: var(--Color-Other-White, rgba(255, 255, 255, 1));
 
   padding: 12px 20px;
-  border-radius: 25px;
+  border-radius: 100px;
   text-decoration: none;
   font-weight: bold;
   border: none;
@@ -157,7 +160,6 @@ header p {
   color: rgba(255, 255, 255, 1);
   border: 1px solid rgba(145, 145, 145, 0.3);
   background: rgba(14, 17, 22, 1);
-
   border-radius: 15px;
   margin: 0 5px;
 }
@@ -172,10 +174,46 @@ header p {
   margin-top: 32px;
   margin-bottom: 40px;
 }
-.cta-section{
+.cta-section {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 /* Hero Section end */
+
+/* clents section start */
+.logo-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow logos to wrap */
+  justify-content: center; /* Center the logos horizontally */
+  gap: 32px; /* Spacing between logos */
+  max-width: 1200px; /* Optional: Set a maximum width for the container */
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  align-items: start; /* Vertically center logo and text (if you have text) */
+  justify-content: space-between;
+  min-width: 100px; /*Set a minimum width8*/
+  max-width: 150px; /* Set a maximum width */
+}
+
+.logo img {
+  max-height: 40px; /* Set a maximum height for the logo image */
+  /* Remove max-width if you want the images to take their natural width */
+  min-width: 100px; /*Set a minimum width8*/
+  max-width: 150px; /* Set a maximum width */
+  margin-right: 10px; /* Space between logo and text (if you have text) */
+  display: flex;
+  align-items: start; /* Vertically center the logo and text */
+}
+
+.logo span {
+  font-size: 1.2rem; /* Adjust font size as needed */
+  font-weight: 600; /* Make the text slightly bolder */
+}
+/* clents section end */
