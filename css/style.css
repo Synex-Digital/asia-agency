@@ -580,6 +580,8 @@ details[open] > summary::after {
   direction: row;
   justify-content: space-between;
   align-items: start;
+  gap: 20px;
+  padding: 12px;
 }
 
 .content {
@@ -605,15 +607,19 @@ details a {
   border-radius: 8px;
   background-color: rgba(14, 17, 22);
   padding: 34px 24px 0px 24px;
+  /* Hide scrollbar for Chrome, Safari, and Edge */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 11 */
 }
-
+.table-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
 table {
   width: 100%;
-  border-collapse: collapse;
- 
-  background-color: rgba(14, 17, 22);
-  border: 1px solid var(--color-other-outline-30, rgba(145, 145, 145, 0.3));
-  border-radius: 8px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid rgba(145, 145, 145, 0.3);
+  border-radius: 12px;
   overflow: hidden;
 }
 
@@ -623,10 +629,12 @@ td {
   text-align: left;
   border-bottom: 1px solid #282f38;
 }
-
-th {
+thead tr{
+  background-color: #1c1f24;
+}
+thead tr th {
+  padding: 24px 0px 24px 24px;
   text-transform: uppercase;
-  border-bottom: 1.5px solid rgba(145, 145, 145, 0.3);
 }
 
 tr:hover {
@@ -666,6 +674,16 @@ tbody tr td picture {
 
   .accordion {
     width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .campaign-data-content {
+    width: 100%;
+    margin: 0 auto;
+  }
+  table {
+    width: 100%;
+    font-size: 14px;
   }
 }
 
