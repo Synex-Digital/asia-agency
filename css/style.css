@@ -1,0 +1,446 @@
+body {
+  background: #0b0a0d;
+}
+
+.btn {
+  border-radius: 100px;
+}
+/* coustome button */
+.glow-button {
+  font-weight: bold;
+  color: #ddd; /* Light text */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 100px; /* Smooth rounded button */
+  background: black; /* Dark button */
+  position: relative;
+  cursor: pointer;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.1);
+
+  /* Transparent border to prevent shifting */
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+.glow-button::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 50px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.7),
+    rgba(100, 100, 100, 0.3)
+  );
+  z-index: -1;
+}
+
+.glow-button::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  width: 40px;
+  height: 15px;
+  background: radial-gradient(circle, rgba(0, 255, 0, 0.4), transparent);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: -2;
+}
+
+.glow-button .polygon {
+  position: absolute; /* Needed for pseudo-element positioning */
+  width: 20px; /* Example size */
+  height: 20px; /* Example size */
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+/* Pseudo-element for the gradient + blur effect */
+.glow-button .polygon::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* Covers entire parent */
+  background: radial-gradient(
+    13.36% 61.11% at 50% 50%,
+    /* Centered gradient */ #82f2a8 0%,
+    rgba(2, 2, 1, 0) 100%
+  );
+  filter: blur(5.7px); /* Blurs the gradient itself */
+  z-index: 0; /* Place behind content */
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  background: var(--Color-Other-White, rgba(255, 255, 255, 1));
+
+  padding: 12px 20px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* CTA Hover Effect */
+.cta-button:hover {
+  opacity: 0.8;
+}
+/* Badge Button */
+.badge-button {
+  display: inline-block; /* Allows the badge to be placed inline with text */
+  max-width: 118px;
+  height: 36px;
+  padding: 6px 16px 6px 6px; /* Adjust padding for size */
+  background: var(--Color-BG-Box-BG, rgba(14, 17, 22, 1));
+  border: 1px solid var(--color-other-outline-30, rgba(145, 145, 145, 0.3));
+  color: rgba(255, 255, 255, 1); /* Dark text color */
+  border-radius: 40px; /* Rounded corners (adjust for shape) */
+  font-size: 14px; /* Adjust font size */
+  font-weight: 600; /* Make text slightly bolder */
+  font-family: sans-serif; /* Choose a font */
+  text-align: center; /* Center the text */
+  white-space: nowrap; /* Prevent text from wrapping */
+  cursor: pointer; /* Indicate it's clickable (if needed) */
+  transition: background-color 0.2s ease; /* Smooth hover effect */
+}
+/* projects button */
+.projects-button {
+  display: inline-flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically align text and arrow */
+  background-color: transparent; /* Transparent background */
+  color: #ffffff; /* White text color */
+  padding: 14px 20px; /* Adjust padding as needed */
+  border: 1.5px solid rgba(255, 255, 255, 1);
+  border-radius: 100px; /* Rounded corners */
+  cursor: pointer; /* Make it look clickable */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.button-arrow {
+  margin-left: 10px; /* Space between text and arrow */
+  background-image: url("/images/icons/arrow-right-solid.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+}
+/* Hero Section start */
+
+#hero .container nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 8px;
+  border-radius: 85px;
+  background: radial-gradient(
+    76.07% 57.21% at 50% 123.08%,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(4, 5, 9, 0.2) 100%
+  );
+}
+.mainlogo {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  gap: 0px 8px;
+}
+nav {
+  border: 1px solid rgba(145, 145, 145, 0.41);
+}
+
+/* Menu styles */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Links */
+.nav-item a {
+  text-decoration: none;
+  color: rgba(208, 213, 221, 1);
+  font-size: 16px;
+  padding: 8px 12px;
+  display: block;
+}
+
+/* Hover effect */
+.nav-item a:hover {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+header {
+  width: 800px;
+  margin: 0 auto;
+  padding: 140px 0px 83px 0px;
+}
+
+header p {
+  text-align: center;
+}
+
+.main-heading {
+  text-align: center;
+  margin-top: 12px;
+}
+/* Tags */
+.tag {
+  display: inline-block;
+  padding: 6px 12px;
+  color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(145, 145, 145, 0.3);
+  background: rgba(14, 17, 22, 1);
+  border-radius: 15px;
+  margin: 0 5px;
+}
+
+/* Main Heading */
+.main-heading {
+  line-height: 1.2;
+}
+
+/* Description */
+.description {
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+.cta-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hero Section end */
+
+/* clents section start */
+.logo-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow logos to wrap */
+  justify-content: center; /* Center the logos horizontally */
+  gap: 32px; /* Spacing between logos */
+  max-width: 1200px; /* Optional: Set a maximum width for the container */
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  align-items: start; /* Vertically center logo and text (if you have text) */
+  justify-content: space-between;
+  min-width: 100px; /*Set a minimum width8*/
+  max-width: 150px; /* Set a maximum width */
+}
+
+.logo img {
+  max-height: 40px; /* Set a maximum height for the logo image */
+  /* Remove max-width if you want the images to take their natural width */
+  min-width: 100px; /*Set a minimum width8*/
+  max-width: 150px; /* Set a maximum width */
+  margin-right: 10px; /* Space between logo and text (if you have text) */
+  display: flex;
+  align-items: start; /* Vertically center the logo and text */
+}
+
+.logo span {
+  font-size: 1.2rem; /* Adjust font size as needed */
+  font-weight: 600; /* Make the text slightly bolder */
+}
+/* clents section end */
+/* about section start */
+
+.about-us-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-us-text {
+  max-width: 724px;
+}
+
+/* about section end */
+/* product section start */
+.projects-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.projects-container h3 {
+  width: 654px;
+  text-align: start;
+}
+.card {
+  width: 876px; /* Adjust width as needed */
+  background: rgba(14, 17, 22, 1);
+  border-radius: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 24px 24px 24px 40px;
+}
+.card .card-image picture img {
+  width: 320px;
+  height: 340px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.card-content {
+  width: 430px;
+}
+
+.card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.card-tag {
+  background-color: #007bff; /* Blue background */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.card-date {
+  font-size: 0.8rem;
+  color: #666; /* Gray color */
+}
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 20px; /* Adjust gap between cards */
+}
+
+.card {
+  flex: 0 0 calc(50% - 10px); /* Each card takes 50% width minus half the gap */
+  background: rgba(14, 17, 22, 1);
+  border-radius: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 24px 24px 24px 40px;
+  box-sizing: border-box;
+}
+
+.card .card-image picture img {
+  width: 320px;
+  height: 340px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-content {
+  width: 430px;
+}
+
+.card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.progress-bar {
+  flex-grow: 1;
+  height: 5px;
+  background-color: rgba(145, 145, 145, 0.3); /* Default background color */
+  margin: 0 20px;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  background-color: rgba(255, 255, 255, 1); /* Default progress color */
+  width: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.slider-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slider-buttons {
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.prev-button {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(145, 145, 145, 0.08);
+  border: 1px solid rgba(145, 145, 145, 0.3);
+
+  border-radius: 100px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: relative; /* Ensures the arrow is positioned correctly inside */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prev-arrow {
+  background-image: url("/images/icons/arrow-left-solid.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 12px;
+}
+.next-button {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(145, 145, 145, 0.08);
+  border: 1px solid rgba(145, 145, 145, 0.3);
+  border-radius: 100px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: relative; /* Ensures the arrow is positioned correctly inside */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.next-arrow {
+  background-image: url("/images/icons/arrow-right-solid.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 12px;
+}
+
+/* product section end */
