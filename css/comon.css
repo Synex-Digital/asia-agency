@@ -210,6 +210,10 @@
   -webkit-text-fill-color: transparent; /* Required for WebKit browsers */
 }
 
+.green-topleft-bottomright {
+  background: linear-gradient(135deg, #57d687, #172420, #388155);
+}
+
 .gray-25 {
   background: var(--Color-Grey-25, rgba(252, 252, 253, 1));
   -webkit-background-clip: text; /* For Chrome, Safari */

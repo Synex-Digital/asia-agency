@@ -581,7 +581,6 @@ details[open] > summary::after {
   justify-content: space-between;
   align-items: start;
   gap: 20px;
-  padding: 12px;
 }
 
 .content {
@@ -629,7 +628,7 @@ td {
   text-align: left;
   border-bottom: 1px solid #282f38;
 }
-thead tr{
+thead tr {
   background-color: #1c1f24;
 }
 thead tr th {
@@ -709,3 +708,67 @@ tbody tr td picture {
 }
 
 /* campaign data section end */
+
+/* cta section start */
+.cta-section {
+  padding: 12px 12px 160px 12px;
+}
+
+.cta-contant {
+  width: 100%;
+  max-width: 1200px; /* Prevents it from being too wide */
+  margin: 0 auto; /* Centers the section */
+  padding: 120px 303px;
+  border-radius: 25px;
+}
+
+.cta-contant h3 {
+  text-align: center;
+  font-size: clamp(28px, 4vw, 48px);
+}
+
+.cta-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .cta-contant {
+    padding: 100px 150px; /* Reduce side padding */
+  }
+  .cta-contant h3 {
+    font-size: 40px;
+  }
+  .cta-section {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-contant {
+    padding: 80px 80px; /* Further reduce padding */
+  }
+  .cta-contant h3 {
+    font-size: 36px;
+  }
+  .cta-section {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-contant {
+    padding: 60px 24px; /* Make it fit smaller screens */
+  }
+  .cta-contant h3 {
+    font-size: 28px;
+  }
+  .cta-section {
+    padding: 12px;
+  }
+}
+
+/* cta section end */
