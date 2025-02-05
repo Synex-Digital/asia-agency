@@ -709,66 +709,151 @@ tbody tr td picture {
 
 /* campaign data section end */
 
-/* cta section start */
-.cta-section {
-  padding: 12px 12px 160px 12px;
+/* service section start */
+.service-section-wrap {
+  padding: 160px 14px;
 }
 
-.cta-contant {
+.service-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.service-section h3 {
   width: 100%;
-  max-width: 1200px; /* Prevents it from being too wide */
-  margin: 0 auto; /* Centers the section */
-  padding: 120px 303px;
-  border-radius: 25px;
-}
-
-.cta-contant h3 {
-  text-align: center;
+  max-width: 564px;
+  text-align: start;
   font-size: clamp(28px, 4vw, 48px);
 }
 
-.cta-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 40px;
+.service-section p {
+  width: 100%;
+  max-width: 459px;
+  line-height: 1.5;
+  font-size: clamp(16px, 2vw, 18px);
 }
 
-/* Responsive Styles */
+.service-section-card {
+  padding-top: 80px;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 41px 0;
+  border-top: 1px solid rgba(29, 41, 57, 1);
+  border-bottom: 1px solid rgba(29, 41, 57, 1);
+}
+
+.service-card h3 {
+  width: 100%;
+  max-width: 1170px;
+  font-size: clamp(24px, 4vw, 48px);
+}
+
+.service-card a img {
+  width: 50px;
+  height: 50px;
+  transform: rotate(319deg);
+}
+
+/* ✅ Responsive Design */
 @media (max-width: 1024px) {
-  .cta-contant {
-    padding: 100px 150px; /* Reduce side padding */
+  .service-section {
+    flex-direction: column;
+    text-align: center;
   }
-  .cta-contant h3 {
-    font-size: 40px;
+
+  .service-section h3,
+  .service-section p {
+    max-width: 90%;
+    text-align: center;
   }
-  .cta-section {
-    padding: 12px;
+
+  .service-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 41px 0;
+    border-top: 1px solid rgba(29, 41, 57, 1);
+    border-bottom: 1px solid rgba(29, 41, 57, 1);
+    flex-wrap: nowrap; /* Prevent column stacking */
+    gap: 20px; /* Adds space between elements */
+  }
+
+  .service-card h3 {
+    width: 100%;
+    font-size: 28px;
+    max-width: 900px; /* Adjust width for proper spacing */
+  }
+
+  .service-card a img {
+    width: 30px;
+    height: 30px;
+    transform: rotate(319deg);
   }
 }
 
 @media (max-width: 768px) {
-  .cta-contant {
-    padding: 80px 80px; /* Further reduce padding */
+  .service-card {
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
-  .cta-contant h3 {
-    font-size: 36px;
+
+  .service-card h3 {
+    font-size: 28px;
   }
-  .cta-section {
-    padding: 12px;
+
+  .service-section p {
+    font-size: 16px;
+  }
+
+  .service-card {
+    padding: 20px 0;
+  }
+
+  .service-card h3 {
+    font-size: 28 px;
+  }
+
+  .service-card a img {
+    width: 25px;
+    height: 25px;
   }
 }
 
 @media (max-width: 480px) {
-  .cta-contant {
-    padding: 60px 24px; /* Make it fit smaller screens */
+  .service-section-wrap {
+    padding: 80px 12px;
   }
-  .cta-contant h3 {
+
+  .service-section h3 {
     font-size: 28px;
   }
-  .cta-section {
-    padding: 12px;
+
+  .service-section p {
+    font-size: 14px;
+  }
+
+  .service-card {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .service-card h3 {
+    font-size: 20px;
+  }
+
+  .service-card a img {
+    width: 25px;
+    height: 25px;
   }
 }
 
-/* cta section end */
+/* service section end */
