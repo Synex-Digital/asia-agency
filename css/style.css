@@ -444,3 +444,50 @@ header p {
 }
 
 /* product section end */
+/* trust us section start */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center content horizontally */
+  align-items: center;
+  padding: 20px;
+  gap: 20px; /* Adds spacing between features */
+}
+
+.feature {
+  width: 100%; /* Full width on very small screens */
+  max-width: 300px; /* Limit width so it doesn't stretch too much */
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  text-align: left;
+  justify-content: start; /* Center items in the row */
+}
+
+/* Centering text content */
+.feature h3 {
+  line-height: 24px;
+  text-align: start;
+}
+
+.feature img {
+  width: 54px;
+  height: 54px;
+  margin-right: 6px;
+}
+
+/* Medium screens: 2 columns */
+@media (min-width: 576px) {
+  .feature {
+    width: 48%; /* Two columns */
+  }
+}
+
+/* Large screens: 4 columns */
+@media (min-width: 1024px) {
+  .feature {
+    width: 23%; /* Four columns */
+  }
+}
+
+/* trust us section end */
