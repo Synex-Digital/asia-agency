@@ -376,11 +376,9 @@ header p {
   transition: width 0.3s ease-in-out;
 }
 
-
 .slider-controls {
   display: flex;
   align-items: center;
-  margin-top: 20px;
   gap: 10px;
 }
 
