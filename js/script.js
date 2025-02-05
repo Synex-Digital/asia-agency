@@ -46,3 +46,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize
   updateProgress();
 });
+// JavaScript for Accordion
+document.querySelectorAll("details").forEach((item) => {
+  item.addEventListener("toggle", function () {
+    if (this.open) {
+      document.querySelectorAll("details").forEach((otherItem) => {
+        if (otherItem !== this) {
+          otherItem.removeAttribute("open");
+        }
+      });
+    }
+  });
+});

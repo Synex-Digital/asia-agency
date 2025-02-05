@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 /* Reset CSS */
 *,
 *::before,
@@ -15,6 +14,9 @@
 .plus-jakarta {
   font-family: "Plus Jakarta Sans", serif;
 }
+.lora {
+  font-family: "Lora", serif;
+}
 
 .container {
   max-width: 1170px;
@@ -24,6 +26,9 @@
 /* Font Sizes */
 .font-12 {
   font-size: 12px;
+}
+.font-14 {
+  font-size: 14px;
 }
 .font-16 {
   font-size: 16px;
@@ -189,82 +194,6 @@
 /* Italics */
 .italic {
   font-style: italic;
-}
-
-/* Specific Font Weights for Lato */
-.lato-weight-100 {
-  font-family: "Lato", sans-serif;
-  font-weight: 100;
-}
-.lato-weight-200 {
-  font-family: "Lato", sans-serif;
-  font-weight: 200;
-}
-.lato-weight-300 {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-}
-.lato-weight-400 {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-}
-.lato-weight-500 {
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
-}
-.lato-weight-600 {
-  font-family: "Lato", sans-serif;
-  font-weight: 600;
-}
-.lato-weight-700 {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-}
-.lato-weight-800 {
-  font-family: "Lato", sans-serif;
-  font-weight: 800;
-}
-.lato-weight-900 {
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-}
-
-/* Specific Font Weights for Plus Jakarta Sans */
-.plus-jakarta-weight-100 {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 100;
-}
-.plus-jakarta-weight-200 {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 200;
-}
-.plus-jakarta-weight-300 {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 300;
-}
-.plus-jakarta-weight-400 {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 400;
-}
-.plus-jakarta-weight-500 {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 500;
-}
-.plus-jakarta-weight-600 {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 600;
-}
-.plus-jakarta-weight-700 {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 700;
-}
-.plus-jakarta-weight-800 {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 800;
-}
-.plus-jakarta-weight-900 {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 900;
 }
 
 .Soft-Sky-Glow {

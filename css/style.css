@@ -131,6 +131,18 @@ body {
   width: 14px;
   height: 14px;
 }
+/* white background button */
+.white-bg-btn {
+  padding: 8px 16px 8px 16px;
+  background: var(--Color-Other-White, rgba(255, 255, 255, 1));
+  border-radius: 100px;
+  text-decoration: none;
+}
+.white-bg-btn-arrow {
+  margin-left: 9px;
+  width: 14px;
+  height: 12px;
+}
 /* Hero Section start */
 
 #hero .container nav {
@@ -491,3 +503,191 @@ header p {
 }
 
 /* trust us section end */
+
+/* campaign data section start */
+.campaign-data-title {
+  width: 460px;
+  margin: 0 auto;
+}
+.accordion {
+  width: 100%;
+  max-width: 474px;
+}
+
+details {
+  position: relative;
+  margin-bottom: 15px;
+  border-radius: 25px; /* Ensure rounded corners */
+  overflow: hidden;
+  background: var(--Color-BG-Box-BG, rgba(14, 17, 22, 1));
+  padding: 2px; /* Small padding to prevent content from touching the edge */
+}
+
+/* Pseudo-element for the gradient border */
+details[open]::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* Covers the entire details */
+  border-radius: 25px; /* Rounded corners */
+  padding: 1px; /* Thickness of the border */
+  background: radial-gradient(
+    164.04% 114.84% at 50% 0%,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  z-index: 0;
+}
+
+summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 24px;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1; /* Ensure it's above the gradient */
+}
+
+/* Remove default arrow */
+summary::marker {
+  display: none;
+}
+
+/* Add arrow */
+summary::after {
+  content: "▼"; /* Down arrow */
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  right: 15px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when details are open */
+details[open] > summary::after {
+  content: "▲"; /* Up arrow */
+  transform: rotate(180deg);
+}
+
+.campaign-data-content {
+  display: flex;
+  direction: row;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.content {
+  width: 370px;
+  padding-left: 24px;
+  position: relative;
+  z-index: 1; /* Ensure content is above the border */
+}
+
+/* Optional: Style the "More info" link */
+details a {
+  margin-left: 24px;
+  margin-top: 34px;
+  margin-bottom: 24px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.table-container {
+  width: 57%;
+  max-height: 571px; /* Set a maximum height (adjust as needed) */
+  overflow-y: auto; /* Enable vertical scrolling */
+  border-radius: 8px;
+  background-color: rgba(14, 17, 22);
+  padding: 34px 24px 0px 24px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+ 
+  background-color: rgba(14, 17, 22);
+  border: 1px solid var(--color-other-outline-30, rgba(145, 145, 145, 0.3));
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 16px 16px;
+  text-align: left;
+  border-bottom: 1px solid #282f38;
+}
+
+th {
+  text-transform: uppercase;
+  border-bottom: 1.5px solid rgba(145, 145, 145, 0.3);
+}
+
+tr:hover {
+  background-color: #202831;
+}
+tbody tr td picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px; /* Fixed width */
+  height: 56px; /* Fixed height */
+  padding: 12px 12px 12px 12px; /* Applied only top padding */
+  gap: 10px; /* Not needed for a single image, but kept */
+  border-radius: 100px; /* Top-left rounded */
+  background: rgba(23, 28, 36, 1);
+}
+
+.brand-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .campaign-data-content {
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .accordion {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .campaign-data-content {
+    width: 100%;
+    margin: 0 auto;
+  }
+  table {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 10px 12px;
+  }
+
+  summary {
+    font-size: 18px;
+    padding: 16px;
+  }
+}
+
+/* campaign data section end */
