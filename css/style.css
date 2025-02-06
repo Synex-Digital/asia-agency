@@ -303,6 +303,10 @@ header p {
   box-sizing: border-box;
 }
 
+.card-container {
+  width: 460px;
+}
+
 .card .card-image picture img {
   width: 320px;
   height: 340px;
@@ -312,7 +316,7 @@ header p {
 }
 
 .card-content {
-  width: 430px;
+  width: 449px;
 }
 
 .card-footer {
@@ -869,7 +873,7 @@ tbody tr td picture {
 .profile-image img {
   position: absolute;
   top: 0px;
-  left: 40px;
+  left: 45px;
   width: 100%;
   height: 100%;
   border-radius: 50%;

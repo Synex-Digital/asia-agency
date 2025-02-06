@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".slider-container").forEach((container) => {
     const slider = container.querySelector(".slider");
-    const cards = container.querySelectorAll(".project-card");
+    const cards = container.querySelectorAll(".card");
     const prevButton = container.querySelector(".prev-button");
     const nextButton = container.querySelector(".next-button");
     const progressBar = container.querySelector(".progress");
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cards[currentIndex].classList.add("active");
 
       // Calculate the width of each card
-      const cardWidth = cards[0].offsetWidth; // This will give the actual width including padding, etc.
+      const cardWidth = cards[currentIndex].offsetWidth; // This will give the actual width including padding, etc.
       const gap = 20; // Define the gap value as per your CSS
 
       // Calculate translateX based on the card widths and current index
