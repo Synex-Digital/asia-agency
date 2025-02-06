@@ -289,6 +289,7 @@ header p {
   width: 654px;
   text-align: start;
 }
+
 .project-card {
   flex: 0 0 calc(50% - 10px); /* Each card takes 50% width minus half the gap */
   width: 876px; /* Adjust width as needed */
@@ -835,7 +836,7 @@ tbody tr td picture {
 /* service section end */
 /* testimonial section start */
 .testimonial-card {
-  flex: 0 0 calc(50% - 10px); /* Each card takes 50% width minus half the gap */
+  flex: 0 0 calc(50%); /* Each card takes 50% width minus half the gap */
   width: 876px; /* Adjust width as needed */
   background: rgba(14, 17, 22, 1);
   border-radius: 24px;
@@ -911,12 +912,12 @@ tbody tr td picture {
   border-radius: 100px;
   width: fit-content;
 }
-.rating-img{
+.rating-img {
   width: 20px;
   height: 23px;
   margin-right: 7px;
 }
-.stars{
+.stars {
   margin-right: 7px;
 }
 

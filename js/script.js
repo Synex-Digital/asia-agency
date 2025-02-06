@@ -2,44 +2,55 @@
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".slider-container").forEach((container) => {
     const slider = container.querySelector(".slider");
-    const cards = container.querySelectorAll(".card");
+    const cards = container.querySelectorAll(".project-card");
     const prevButton = container.querySelector(".prev-button");
     const nextButton = container.querySelector(".next-button");
     const progressBar = container.querySelector(".progress");
-    const totalCards = cards.length;
+
     let currentIndex = 0;
+    const totalCards = cards.length;
 
-    // Set slider width dynamically based on card count
-    slider.style.width = `${totalCards * 50}%`;
+    function updateSlider() {
+      // Reset all cards
+      cards.forEach((card) => card.classList.remove("active"));
 
-    // Function to update progress bar
-    const updateProgress = () => {
-      const progress = ((currentIndex + 1) / totalCards) * 100;
-      progressBar.style.width = `${progress}%`;
-      progressBar.style.backgroundColor = `rgba(255, 255, 255, 1)`;
-    };
+      // Add 'active' class to the current card
+      cards[currentIndex].classList.add("active");
 
-    // Function to slide
-    const slideTo = (index) => {
-      if (index < 0) {
-        currentIndex = totalCards - 1;
-      } else if (index >= totalCards) {
-        currentIndex = 0;
+      // Calculate the width of each card
+      const cardWidth = cards[0].offsetWidth; // This will give the actual width including padding, etc.
+      const gap = 20; // Define the gap value as per your CSS
+
+      // Calculate translateX based on the card widths and current index
+      let translateValue = -(currentIndex * (cardWidth + gap)); // Account for the width and gap
+
+      // Update the transform property
+      slider.style.transform = `translateX(${translateValue}px)`;
+
+      // Update the progress bar
+      let progressWidth = ((currentIndex + 1) / totalCards) * 100;
+      progressBar.style.width = progressWidth + "%";
+    }
+
+    nextButton.addEventListener("click", () => {
+      if (currentIndex < totalCards - 1) {
+        currentIndex++;
       } else {
-        currentIndex = index;
+        currentIndex = 0; // Loop back to the start
       }
+      updateSlider();
+    });
 
-      const transformValue = `translateX(-${currentIndex * 50}%)`;
-      slider.style.transform = transformValue;
-      updateProgress();
-    };
+    prevButton.addEventListener("click", () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+      } else {
+        currentIndex = totalCards - 1; // Loop back to the end
+      }
+      updateSlider();
+    });
 
-    // Event Listeners
-    prevButton.addEventListener("click", () => slideTo(currentIndex - 1));
-    nextButton.addEventListener("click", () => slideTo(currentIndex + 1));
-
-    // Initialize
-    updateProgress();
+    updateSlider();
   });
 });
 
