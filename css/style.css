@@ -289,64 +289,12 @@ header p {
   width: 654px;
   text-align: start;
 }
-.card {
+.project-card {
+  flex: 0 0 calc(50% - 10px); /* Each card takes 50% width minus half the gap */
   width: 876px; /* Adjust width as needed */
   background: rgba(14, 17, 22, 1);
   border-radius: 24px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 24px 24px 24px 40px;
-}
-.card .card-image picture img {
-  width: 320px;
-  height: 340px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-}
-.card-content {
-  width: 430px;
-}
-
-.card-footer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-}
-
-.card-tag {
-  background-color: #007bff; /* Blue background */
-  color: white;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 0.8rem;
-}
-
-.card-date {
-  font-size: 0.8rem;
-  color: #666; /* Gray color */
-}
-.slider-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  gap: 20px; /* Adjust gap between cards */
-}
-
-.card {
-  flex: 0 0 calc(50% - 10px); /* Each card takes 50% width minus half the gap */
-  background: rgba(14, 17, 22, 1);
-  border-radius: 24px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -371,6 +319,31 @@ header p {
   flex-wrap: wrap;
   gap: 10px;
   align-items: center;
+}
+
+.card-tag {
+  background-color: #007bff; /* Blue background */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.card-date {
+  font-size: 0.8rem;
+  color: #666; /* Gray color */
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 20px; /* Adjust gap between cards */
 }
 
 .progress-bar {
@@ -402,33 +375,7 @@ header p {
   gap: 10px;
 }
 
-.prev-button {
-  width: 44px;
-  height: 44px;
-  background-color: rgba(145, 145, 145, 0.08);
-  border: 1px solid rgba(145, 145, 145, 0.3);
-
-  border-radius: 100px;
-  color: white;
-  border: none;
-  cursor: pointer;
-  position: relative; /* Ensures the arrow is positioned correctly inside */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.prev-arrow {
-  background-image: url("/images/icons/arrow-left-solid.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 14px;
-  height: 12px;
-}
+.prev-button,
 .next-button {
   width: 44px;
   height: 44px;
@@ -438,13 +385,14 @@ header p {
   color: white;
   border: none;
   cursor: pointer;
-  position: relative; /* Ensures the arrow is positioned correctly inside */
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.prev-arrow,
 .next-arrow {
-  background-image: url("/images/icons/arrow-right-solid.svg");
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -453,6 +401,14 @@ header p {
   transform: translate(-50%, -50%);
   width: 14px;
   height: 12px;
+}
+
+.prev-arrow {
+  background-image: url("/images/icons/arrow-left-solid.svg");
+}
+
+.next-arrow {
+  background-image: url("/images/icons/arrow-right-solid.svg");
 }
 
 /* product section end */
@@ -711,9 +667,29 @@ tbody tr td picture {
 
 /* service section start */
 .service-section-wrap {
+  position: relative;
   padding: 160px 14px;
+  background: linear-gradient(296.19deg, #0e1116 0%, #0e1116 100%);
+  overflow: hidden;
 }
 
+/* Overlay effect */
+/* .service-section-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0; 
+  background: rgba(130, 242, 168, 0.3); 
+  backdrop-filter: blur(357.1200256347656px);
+
+  -webkit-backdrop-filter: blur(35px); 
+  z-index: 1;
+} */
+
+/* Ensure content stays above the overlay */
+.service-section-wrap > * {
+  position: relative;
+  z-index: 2;
+}
 .service-section {
   display: flex;
   flex-direction: row;
@@ -857,3 +833,96 @@ tbody tr td picture {
 }
 
 /* service section end */
+/* testimonial section start */
+.testimonial-card {
+  flex: 0 0 calc(50% - 10px); /* Each card takes 50% width minus half the gap */
+  width: 876px; /* Adjust width as needed */
+  background: rgba(14, 17, 22, 1);
+  border-radius: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px;
+  box-sizing: border-box;
+}
+.testimonial-tittle {
+  width: 646px;
+  margin: 0 auto;
+}
+
+.profile {
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+  align-items: start;
+  gap: 15px;
+}
+
+.profile-image {
+  position: relative;
+  width: 56px;
+  height: 56px;
+}
+
+.profile-image img {
+  position: absolute;
+  top: 0px;
+  left: 40px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.icon {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(23, 28, 36, 1);
+  border: 2px solid rgba(14, 17, 22, 1);
+  border-radius: 50%;
+  padding: 4px;
+}
+.icon svg {
+  z-index: 1;
+  width: 22px;
+  height: 28px;
+}
+
+.profile-info p {
+  padding-top: 4px;
+}
+
+.testimonial-text {
+  width: 390px;
+  line-height: 26px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  background: #1c1d20;
+  padding: 10px 12px;
+  border-radius: 100px;
+  width: fit-content;
+}
+.rating-img{
+  width: 20px;
+  height: 23px;
+  margin-right: 7px;
+}
+.stars{
+  margin-right: 7px;
+}
+
+.stars img {
+  width: 10px;
+  height: 10px;
+}
+
+/* testimonial section end */
