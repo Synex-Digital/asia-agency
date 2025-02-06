@@ -194,9 +194,13 @@ header {
   margin: 0 auto;
   padding: 140px 0px 83px 0px;
 }
-
-header p {
-  text-align: center;
+.header-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-descriptin-tittle {
+  margin-right: 12px;
 }
 
 .main-heading {
@@ -204,14 +208,29 @@ header p {
   margin-top: 12px;
 }
 /* Tags */
+.tag-container {
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  gap: 4px;
+}
+
 .tag {
-  display: inline-block;
-  padding: 6px 12px;
-  color: rgba(255, 255, 255, 1);
-  border: 1px solid rgba(145, 145, 145, 0.3);
+  display: inline-flex; /* Allows flex properties while keeping it inline */
+  justify-content: center; /* Centers text horizontally */
+  align-items: center; /* Centers text vertically */
+  padding: 4px 12px;
   background: rgba(14, 17, 22, 1);
+  border: 1px solid rgba(145, 145, 145, 0.3);
+
   border-radius: 15px;
-  margin: 0 5px;
+}
+
+.tag span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Main Heading */
@@ -931,3 +950,99 @@ tbody tr td picture {
 }
 
 /* testimonial section end */
+/* blog section start */
+.blog-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.blog-heading h3 {
+  text-align: start;
+  width: 450px;
+}
+
+.blog-cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 24px;
+  row-gap: 20px;
+}
+.blog-card {
+  width: 374px;
+  background: rgba(11, 10, 13, 1);
+  border: 1.5px solid transparent; /* Transparent border to apply the gradient */
+  border-image-source: radial-gradient(
+    164.04% 114.84% at 50% 0%,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-image-slice: 1; /* Ensures the gradient is applied to the entire border */
+  border-radius: 20px; /* Rounded corners for both the border and content */
+}
+
+.blog-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+.blog-card-content {
+  padding-left: 16px;
+}
+@media (max-width: 1024px) {
+  .blog-heading h3 {
+    width: 100%;
+  }
+  .blog-cards {
+    column-gap: 16px; /* Reduced gap for smaller screens */
+    justify-content: center;
+    padding: 0px 12px;
+  }
+}
+
+/* Responsive for mobile screens */
+@media (max-width: 768px) {
+  .blog-heading h3 {
+    width: 100%;
+  }
+
+  .blog-card {
+    width: 70%; /* Full width for smaller screens */
+  }
+
+  .blog-cards {
+    column-gap: 16px; /* Reduced gap for smaller screens */
+    padding: 0px 12px;
+  }
+}
+/* Responsive for extra small screens (mobile phones) */
+@media (max-width: 480px) {
+  .blog-heading {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+  }
+  .blog-heading h3 {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 12px;
+  }
+
+  .blog-card {
+    width: 100%; /* Full width for mobile */
+  }
+
+  .blog-cards {
+    row-gap: 16px; /* Reduced row gap for mobile */
+    padding: 12px 12px;
+  }
+
+  .blog-card-content {
+    padding-left: 12px; /* Reduce padding */
+  }
+}
+/* blog section end */

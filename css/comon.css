@@ -130,6 +130,9 @@
   padding-top: 160px;
 }
 
+.pb-16 {
+  padding-bottom: 16px;
+}
 .pb-280 {
   padding-bottom: 280px;
 }
@@ -282,6 +285,17 @@
   justify-content: center;
   align-items: center;
   padding-top: 40px;
+  
+}
+.cta-btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.cta-btn a img {
+  width: 14px;
+  height: 12px;
 }
 
 /* Responsive Styles */
