@@ -350,42 +350,140 @@ header {
 
 /* about section end */
 /* number section start */
+
+.numbers-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.numbers-container h3 {
+  width: 564px;
+  text-align: start;
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  max-width: 1200px;
-  margin: 0 auto;
   position: relative;
 }
 
 .box {
   position: relative;
-  aspect-ratio: 2/1;
-  width: 100%;
+  width: 400px;
+  height: 200px;
   background: rgba(0, 0, 0, 0.3);
   overflow: hidden;
   transition: border 0.3s, box-shadow 0.3s;
 }
 
+/* Common border style for all boxes */
+.box {
+  border: 1px solid;
+  border-image-source: linear-gradient(
+    90deg,
+    #0b0a0d 0%,
+    rgba(91, 91, 91, 0.5) 50%,
+    #0b0a0d 100%
+  );
+  border-image-slice: 1;
+}
+/* First row */
+.box:nth-child(1) {
+  border-top: none;
+  border-left: none;
+}
+.box:nth-child(2) {
+  border-top: none;
+}
+.box:nth-child(3) {
+  border-top: none;
+  border-right: none;
+}
+
+/* Middle rows */
+.box:nth-child(4),
+.box:nth-child(7),
+.box:nth-child(10) {
+  border-left: none;
+}
+.box:nth-child(6),
+.box:nth-child(9),
+.box:nth-child(12) {
+  border-right: none;
+}
+
+/* Last row */
+.box:nth-child(13) {
+  border-left: none;
+  border-bottom: none;
+}
+.box:nth-child(14) {
+  border-bottom: none;
+}
+.box:nth-child(15) {
+  border-right: none;
+  border-bottom: none;
+}
+/* Keep the hover effect separate from borders */
 .box::before {
   content: "";
   position: absolute;
   inset: 0;
   border: 1px solid transparent;
-  background: linear-gradient(90deg, 
+  background: linear-gradient(
+    90deg,
     rgba(145, 145, 145, 0.1) 0%,
     #82f2a7 50%,
     rgba(145, 145, 145, 0.1) 100%
   ) border-box;
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) padding-box, 
-    linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   opacity: 0;
   transition: opacity 0.3s;
   pointer-events: none;
+}
+.box .plus-icon {
+  position: relative;
+}
+.box .plus-icon img {
+  width: 39px;
+  height: 22px;
+  position: absolute;
+  top: 30px;
+}
+.box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  background: linear-gradient(
+      90deg,
+      rgba(145, 145, 145, 0.1) 0%,
+      #82f2a7 50%,
+      rgba(145, 145, 145, 0.1) 100%
+    )
+    border-box;
+
+  /* Webkit browsers */
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+
+  /* Standard syntax */
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+/* For Firefox support */
+@-moz-document url-prefix() {
+  .box::before {
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: subtract; /* Firefox uses 'subtract' instead of 'exclude' */
+  }
 }
 
 .box:hover::before {
@@ -408,7 +506,6 @@ header {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: rgba(130, 242, 167, 0.4);
   pointer-events: none;
   transition: opacity 0.3s ease;
   z-index: 1000;
