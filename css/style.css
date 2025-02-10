@@ -248,6 +248,57 @@ header {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header {
+    width: 100%;
+    padding: 50px 20px;
+  }
+  .tag {
+    margin-bottom: 6px;
+  }
+  .main-heading {
+    font-size: 28px;
+  }
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 1024px) {
+  nav {
+    padding: 15px;
+  }
+
+  .nav-menu {
+    gap: 15px;
+  }
+
+  header {
+    width: 90%;
+  }
+
+  .main-heading {
+    font-size: 36px;
+  }
+}
 
 /* Hero Section end */
 
@@ -298,6 +349,79 @@ header {
 }
 
 /* about section end */
+/* number section start */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.box {
+  position: relative;
+  aspect-ratio: 2/1;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  background: linear-gradient(90deg, 
+    rgba(145, 145, 145, 0.1) 0%,
+    #82f2a7 50%,
+    rgba(145, 145, 145, 0.1) 100%
+  ) border-box;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.box:hover::before {
+  opacity: 1;
+}
+
+.particle {
+  position: absolute;
+  background: #82f2a7;
+  pointer-events: none;
+  animation: particleAnim 1s forwards;
+}
+
+.box.glow {
+  box-shadow: 0 0 15px rgba(130, 242, 167, 0.7);
+}
+
+.glow-area {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(130, 242, 167, 0.4);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+@keyframes particleAnim {
+  to {
+    transform: translate(var(--tx, 0), var(--ty, 0));
+    opacity: 0;
+  }
+}
+/* number section end */
+
 /* product section start */
 .projects-container {
   display: flex;
