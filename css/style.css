@@ -359,22 +359,32 @@ header p {
   position: relative;
   width: 400px;
   height: 200px;
-  background: rgba(0, 0, 0, 0.05); /*not working  */
-  overflow: hidden;
-  transition: border 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(91, 91, 91, 0.5);
 }
 
-/* Common border style for all boxes */
-.box {
-  border: 1px solid;
-  border-image-source: linear-gradient(
-    90deg,
-    #0b0a0d 0%,
-    rgba(91, 91, 91, 0.5) 50%,
-    #0b0a0d 100%
-  );
-  border-image-slice: 1;
+.box.glow {
+  border-image: radial-gradient(
+      75px at var(--glow-x) var(--glow-y),
+      #82f2a7,
+      rgba(91, 91, 91, 0.5)
+    )
+    1;
 }
+
+.particle {
+  position: absolute;
+  background: #82f2a7;
+  pointer-events: none;
+  animation: particleAnim 1s forwards;
+}
+
+@keyframes particleAnim {
+  to {
+    transform: translate(var(--tx, 0), var(--ty, 0));
+    opacity: 0;
+  }
+}
+
 /* First row */
 .box:nth-child(1) {
   border-top: none;
@@ -413,26 +423,7 @@ header p {
   border-bottom: none;
 }
 /* Keep the hover effect separate from borders */
-.box::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border: 1px solid transparent;
-  background: linear-gradient(
-      90deg,
-      rgba(145, 145, 145, 0.1) 0%,
-      #82f2a7 50%,
-      rgba(145, 145, 145, 0.1) 100%
-    )
-    border-box;
-  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: destination-out;
-  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.3s;
-  pointer-events: none;
-}
+
 .box .plus-icon {
   position: relative;
 }
@@ -442,71 +433,7 @@ header p {
   position: absolute;
   top: 30px;
 }
-.box::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border: 1px solid transparent;
-  background: linear-gradient(
-      90deg,
-      rgba(145, 145, 145, 0.1) 0%,
-      #82f2a7 50%,
-      rgba(145, 145, 145, 0.1) 100%
-    )
-    border-box;
 
-  /* Webkit browsers */
-  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: destination-out;
-
-  /* Standard syntax */
-  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-
-  opacity: 0;
-  transition: opacity 0.3s;
-  pointer-events: none;
-}
-
-/* For Firefox support */
-@-moz-document url-prefix() {
-  .box::before {
-    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-    mask-composite: subtract; /* Firefox uses 'subtract' instead of 'exclude' */
-  }
-}
-
-.box:hover::before {
-  opacity: 1;
-}
-
-.particle {
-  position: absolute;
-  background: #82f2a7;
-  pointer-events: none;
-  animation: particleAnim 1s forwards;
-}
-
-.box.glow {
-  box-shadow: 0 0 15px rgba(130, 242, 167, 0.7);
-}
-
-.glow-area {
-  position: fixed;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 1000;
-}
-
-@keyframes particleAnim {
-  to {
-    transform: translate(var(--tx, 0), var(--ty, 0));
-    opacity: 0;
-  }
-}
 /* number section end */
 
 /* product section start */
