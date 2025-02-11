@@ -35,7 +35,6 @@ document.addEventListener("mousemove", (e) => {
     // Calculate the glow position relative to the box
     const glowX = mouseX - rect.left;
     const glowY = mouseY - rect.top;
-
     // Check if mouse is within glow radius of the box
     const isNearBox =
       glowX >= -radius &&
