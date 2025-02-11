@@ -1205,7 +1205,7 @@ tbody tr td picture {
 }
 
 .blog-card::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: 20px;
@@ -1215,17 +1215,12 @@ tbody tr td picture {
     rgba(255, 255, 255, 0.8) 0%,
     rgba(255, 255, 255, 0) 100%
   );
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
 }
-
 
 .blog-card img {
   width: 100%;
@@ -1295,6 +1290,8 @@ tbody tr td picture {
 .contact-form {
   display: flex;
   width: 100%;
+  background: #16191d;
+  border-radius: 12px;
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
@@ -1342,33 +1339,52 @@ form {
 .form-group input {
   padding: 16px 0px;
   width: 221px;
-  background: var(--Color-BG-Box-BG, rgba(14, 17, 22, 1));
+  background: #16191d;
   border: transparent;
   color: var(--Color-Other-White, rgba(255, 255, 255, 1));
   font-family: "Lato", serif;
   font-size: 18px;
   font-weight: 600;
+  border-bottom: 1.5px solid rgba(145, 145, 145, 0.3);
 }
-.form-input input:focus {
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 1);
+}
+
+.form-group input:focus {
   outline: none;
-}
-.form-input input::placeholder {
+  border: none;
   font-family: "Lato", serif;
   font-size: 18px;
   font-weight: 600;
+  border-bottom: 1.5px solid rgba(145, 145, 145, 0.3);
 }
 
 .contact-details textarea {
   padding: 16px 0px;
   width: 100%;
-  background: var(--Color-BG-Box-BG, rgba(14, 17, 22, 1));
+  background: #16191d;
   border: transparent;
   color: var(--Color-Other-White, rgba(255, 255, 255, 1));
+  border-bottom: 1.5px solid rgba(145, 145, 145, 0.3);
   font-family: "Lato", serif;
   font-size: 18px;
   font-weight: 600;
   margin-top: 71px;
 }
+.contact-details textarea::placeholder {
+  color: rgba(255, 255, 255, 1);
+}
+.contact-details textarea:focus {
+  outline: none;
+  border: none;
+  font-family: "Lato", serif;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1.5px solid rgba(145, 145, 145, 0.3);
+}
+
+
 .submit-btn button {
   padding: 14px 0px;
   width: 100%;
