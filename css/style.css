@@ -350,9 +350,10 @@ header p {
   text-align: start;
 }
 .grid {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  position: relative;
+  overflow: hidden;
 }
 
 .box {
@@ -369,6 +370,19 @@ header p {
       rgba(91, 91, 91, 0.5)
     )
     1;
+}
+.glow-area {
+  position: fixed;
+  top: 50px;
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 1000;
+  background: radial-gradient(
+    circle,
+    rgba(130, 242, 167, 0.1) 0%,
+    transparent 70%
+  );
+  transition: opacity 0.3s ease;
 }
 
 .particle {

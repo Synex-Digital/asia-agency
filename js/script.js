@@ -11,6 +11,19 @@ document.addEventListener("mousemove", (e) => {
   const mouseX = e.clientX;
   const mouseY = e.clientY;
 
+  // Get grid boundaries
+  const grid = document.querySelector(".grid");
+  const gridRect = grid.getBoundingClientRect();
+
+  // Check if mouse is within grid boundaries
+  const isInGrid =
+    mouseX >= gridRect.left &&
+    mouseX <= gridRect.right &&
+    mouseY >= gridRect.top &&
+    mouseY <= gridRect.bottom;
+
+  // Only show glow area when mouse is in grid
+  glowArea.style.opacity = isInGrid ? "1" : "0";
   glowArea.style.left = `${mouseX - radius}px`;
   glowArea.style.top = `${mouseY - radius}px`;
   glowArea.style.width = `${radius * 2}px`;
@@ -18,19 +31,21 @@ document.addEventListener("mousemove", (e) => {
 
   boxes.forEach((box) => {
     const rect = box.getBoundingClientRect();
-    
+
     // Calculate the glow position relative to the box
     const glowX = mouseX - rect.left;
     const glowY = mouseY - rect.top;
-    
+
     // Check if mouse is within glow radius of the box
-    const isNearBox = 
-      glowX >= -radius && glowX <= rect.width + radius &&
-      glowY >= -radius && glowY <= rect.height + radius;
+    const isNearBox =
+      glowX >= -radius &&
+      glowX <= rect.width + radius &&
+      glowY >= -radius &&
+      glowY <= rect.height + radius;
 
     if (isNearBox) {
-      box.style.setProperty('--glow-x', `${glowX}px`);
-      box.style.setProperty('--glow-y', `${glowY}px`);
+      box.style.setProperty("--glow-x", `${glowX}px`);
+      box.style.setProperty("--glow-y", `${glowY}px`);
       box.classList.add("glow");
     } else {
       box.classList.remove("glow");
@@ -38,9 +53,37 @@ document.addEventListener("mousemove", (e) => {
   });
 });
 
+function createParticles(box, mouseX, mouseY) {
+  let particleCount = 0;
 
+  for (let i = 0; i < 3; i++) {
+    if (particleCount >= maxParticles) return;
 
+    const particle = document.createElement("div");
+    particle.classList.add("particle");
 
+    const size = Math.random() * 3 + 2;
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+
+    const angle = Math.random() * Math.PI * 2;
+    const moveDistance = Math.random() * 50 + 50;
+
+    particle.style.setProperty("--tx", `${Math.cos(angle) * moveDistance}px`);
+    particle.style.setProperty("--ty", `${Math.sin(angle) * moveDistance}px`);
+
+    const rect = box.getBoundingClientRect();
+    particle.style.left = `${mouseX - rect.left}px`;
+    particle.style.top = `${mouseY - rect.top}px`;
+
+    box.appendChild(particle);
+    particleCount++;
+
+    setTimeout(() => {
+      particle.remove();
+    }, 1000);
+  }
+}
 
 // JavaScript for Slider
 document.addEventListener("DOMContentLoaded", () => {
