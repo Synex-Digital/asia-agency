@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
 
@@ -19,9 +19,9 @@
   </head>
   <body>
     <!-- Hero Section start-->
-    <section id="hero">
-      <div class="container py-40">
-        <nav class="">
+    <section id="hero" class="py-40">
+      <div class="container">
+        <nav>
           <div class="mainlogo">
             <img src="/images/logo.svg" alt="logo" />
             <span class="font-20 font-weight-600 lato white">Asia.Agency</span>
@@ -53,20 +53,26 @@
         </nav>
 
         <header>
-          <p class="lato">
-            <span class="font-18 font-weight-500 gray-25">
-              Growth solutions for</span
+          <div class="lato header-description">
+            <div
+              class="header-descriptin-tittle font-18 font-weight-500 gray-25"
             >
-            <span class="tag font-16 font-weight-400">startup</span>
-            <span class="tag font-16 font-weight-400">agencies</span>
-            <span class="tag font-16 font-weight-400">existing company</span>
-          </p>
+              Growth solutions for
+            </div>
+            <div class="tag-container">
+              <h6 class="tag font-16 font-weight-400 white">startup</h6>
+              <h6 class="tag font-16 font-weight-400 white">agencies</h6>
+              <h6 class="tag font-16 font-weight-400 white">
+                existing company
+              </h6>
+            </div>
+          </div>
 
           <h1
             class="main-heading Soft-Sky-Glow font-76 font-weight-700 plus-jakarta"
           >
             Your
-            <span class="primary italic plus-jakarta">business growth </span>
+            <span class="primary italic lora">business growth </span>
             partner beyond just marketing
           </h1>
 
@@ -75,10 +81,15 @@
             growth from top to bottom. From brand positioning to sales funnels,
             we act as your in-house team to scale your business fast.
           </p>
-          <div class="cta-section">
-            <a href="#" class="cta-button gray-900 py-14 lato"
-              >How we're different →</a
-            >
+          <div class="cta-btn">
+            <button>
+              <a href="#" class="cta-button gray-900"
+                >How we're different
+                <img
+                  src="/images/icons/arrow-right-solid-Grey-900.svg"
+                  alt="cta-icons"
+              /></a>
+            </button>
           </div>
         </header>
       </div>
@@ -177,6 +188,103 @@
       </div>
     </section>
     <!-- about us section end-->
+    <!-- numbers section start-->
+    <section class="py-80">
+      <div class="container">
+        <div class="numbers-container">
+          <h3
+            class="main-heading Soft-Sky-Glow font-48 font-weight-700 plus-jakarta"
+          >
+            We drive your business
+            <span class="primary italic lora">beyond limits </span>
+          </h3>
+          <button class="projects-button font-18 font-weight-600 lato">
+            Ready to scale? Let's talk
+            <span class="button-arrow"></span>
+          </button>
+        </div>
+        <div class="grid pt-80">
+          <!-- 15 boxes for 3x5 grid -->
+          <div class="box">
+            <h6 class="plus-jakarta font-weight-500 font-96 white pt-24 pl-46">
+              100
+              <span class="plus-icon"
+                ><img src="/images/icons/plus-solid.svg" alt="plus-solid"
+              /></span>
+            </h6>
+            <span class="lato font-weight-500 font-18 gray-400 pl-46"
+              >Successful Project</span
+            >
+          </div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box">
+            <h6 class="plus-jakarta font-weight-500 font-96 white pt-24 pl-46">
+              50
+              <span class="plus-icon"
+                ><img src="/images/icons/plus-solid.svg" alt="plus-solid"
+              /></span>
+            </h6>
+            <span class="lato font-weight-500 font-18 gray-400 pl-46"
+              >Industries Served</span
+            >
+          </div>
+          <div class="box"></div>
+          <div class="box">
+            <h6 class="plus-jakarta font-weight-500 font-96 white pt-24 pl-46">
+              300
+              <span class="plus-icon"
+                ><img src="/images/icons/percent-solid.svg" alt="plus-solid"
+              /></span>
+            </h6>
+            <span class="lato font-weight-500 font-18 gray-400 pl-46"
+              >Average ROI Groth</span
+            >
+          </div>
+          <div class="box"></div>
+          <div class="box">
+            <h6 class="plus-jakarta font-weight-500 font-96 white pt-24 pl-46">
+              90
+              <span class="plus-icon"
+                ><img src="/images/icons/percent-solid.svg" alt="plus-solid"
+              /></span>
+            </h6>
+            <span class="lato font-weight-500 font-18 gray-400 pl-46"
+              >Client Satisfaction Rate</span
+            >
+          </div>
+          <div class="box"></div>
+          <div class="box">
+            <h6 class="plus-jakarta font-weight-500 font-96 white pt-24 pl-46">
+              15
+              <span class="plus-icon"
+                ><img src="/images/icons/plus-solid.svg" alt="plus-solid"
+              /></span>
+            </h6>
+            <span class="lato font-weight-500 font-18 gray-400 pl-46"
+              >Years of Exprience</span
+            >
+          </div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box">
+            <h6 class="plus-jakarta font-weight-500 font-96 white pt-24 pl-46">
+              10
+              <span class="plus-icon"
+                ><img src="/images/icons/plus-solid.svg" alt="plus-solid"
+              /></span>
+            </h6>
+            <span class="lato font-weight-500 font-18 gray-400 pl-46"
+              >Leds Generate</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- numbers section end-->
+
     <!-- projects section start-->
     <section id="projects" class="py-80">
       <div class="container">
@@ -185,19 +293,19 @@
             class="main-heading Soft-Sky-Glow font-48 font-weight-700 plus-jakarta"
           >
             our custom approach ensures
-            <span class="primary italic plus-jakarta">project success </span>
+            <span class="primary italic lora">project success </span>
           </h3>
           <button class="projects-button font-18 font-weight-600 lato">
             More projects
             <span class="button-arrow"></span>
           </button>
         </div>
-        <div class="py-80">
+        <div class="pt-80">
           <div class="slider-container">
             <div class="slider">
               <!-- Card 1 -->
-              <div class="card">
-                <div class="py-45">
+              <div class="card project-card">
+                <div class="py-45 card-container">
                   <div
                     class="card-title font-32 font-weight-600 plus-jakarta white"
                   >
@@ -211,11 +319,15 @@
                     measurable growth.
                   </div>
                   <div class="card-footer pt-32 lato">
-                    <span class="tag font-16 font-weight-400"
+                    <span class="tag font-16 font-weight-400 white"
                       >Marketing campaign</span
                     >
-                    <span class="tag font-16 font-weight-400">Strategy</span>
-                    <span class="tag font-16 font-weight-400">Campaign</span>
+                    <span class="tag font-16 font-weight-400 white"
+                      >Strategy</span
+                    >
+                    <span class="tag font-16 font-weight-400 white"
+                      >Campaign</span
+                    >
                   </div>
                 </div>
                 <div class="card-image">
@@ -228,7 +340,7 @@
                 </div>
               </div>
               <!-- Card 2 -->
-              <div class="card">
+              <div class="card project-card">
                 <div class="py-45">
                   <div
                     class="card-title font-32 font-weight-600 plus-jakarta white"
@@ -243,11 +355,15 @@
                     measurable growth.
                   </div>
                   <div class="card-footer pt-32 lato">
-                    <span class="tag font-16 font-weight-400"
+                    <span class="tag font-16 font-weight-400 white white"
                       >Marketing campaign</span
                     >
-                    <span class="tag font-16 font-weight-400">Strategy</span>
-                    <span class="tag font-16 font-weight-400">Campaign</span>
+                    <span class="tag font-16 font-weight-400 white white"
+                      >Strategy</span
+                    >
+                    <span class="tag font-16 font-weight-400 white white"
+                      >Campaign</span
+                    >
                   </div>
                 </div>
                 <div class="card-image">
@@ -260,7 +376,7 @@
                 </div>
               </div>
               <!-- Card 3 -->
-              <div class="card">
+              <div class="card project-card">
                 <div class="py-45">
                   <div
                     class="card-title font-32 font-weight-600 plus-jakarta white"
@@ -275,11 +391,87 @@
                     measurable growth.
                   </div>
                   <div class="card-footer pt-32 lato">
-                    <span class="tag font-16 font-weight-400"
+                    <span class="tag font-16 font-weight-400 white"
                       >Marketing campaign</span
                     >
-                    <span class="tag font-16 font-weight-400">Strategy</span>
-                    <span class="tag font-16 font-weight-400">Campaign</span>
+                    <span class="tag font-16 font-weight-400 white"
+                      >Strategy</span
+                    >
+                    <span class="tag font-16 font-weight-400 white"
+                      >Campaign</span
+                    >
+                  </div>
+                </div>
+                <div class="card-image">
+                  <picture>
+                    <img
+                      src="https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt=""
+                    />
+                  </picture>
+                </div>
+              </div>
+              <!-- Card 4 -->
+              <div class="card project-card">
+                <div class="py-45">
+                  <div
+                    class="card-title font-32 font-weight-600 plus-jakarta white"
+                  >
+                    Digital Marketing Campaign
+                  </div>
+                  <div
+                    class="card-content font-18 gray-400 lato gray-400 pt-12"
+                  >
+                    Our integrated digital strategy led to a 50% increase in
+                    leads and a 35% rise in conversion rates, delivering
+                    measurable growth.
+                  </div>
+                  <div class="card-footer pt-32 lato">
+                    <span class="tag font-16 font-weight-400 white"
+                      >Marketing campaign</span
+                    >
+                    <span class="tag font-16 font-weight-400 white"
+                      >Strategy</span
+                    >
+                    <span class="tag font-16 font-weight-400 white"
+                      >Campaign</span
+                    >
+                  </div>
+                </div>
+                <div class="card-image">
+                  <picture>
+                    <img
+                      src="https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt=""
+                    />
+                  </picture>
+                </div>
+              </div>
+              <!-- Card 5 -->
+              <div class="card project-card">
+                <div class="py-45">
+                  <div
+                    class="card-title font-32 font-weight-600 plus-jakarta white"
+                  >
+                    Digital Marketing Campaign
+                  </div>
+                  <div
+                    class="card-content font-18 gray-400 lato gray-400 pt-12"
+                  >
+                    Our integrated digital strategy led to a 50% increase in
+                    leads and a 35% rise in conversion rates, delivering
+                    measurable growth.
+                  </div>
+                  <div class="card-footer pt-32 lato">
+                    <span class="tag font-16 font-weight-400 white"
+                      >Marketing campaign</span
+                    >
+                    <span class="tag font-16 font-weight-400 white"
+                      >Strategy</span
+                    >
+                    <span class="tag font-16 font-weight-400 white"
+                      >Campaign</span
+                    >
                   </div>
                 </div>
                 <div class="card-image">
@@ -309,9 +501,1026 @@
         </div>
       </div>
     </section>
-
     <!-- projects section end-->
 
+    <!-- trust us section start-->
+    <section id="trust-us" class="py-40">
+      <div class="container">
+        <div class="features">
+          <div class="feature">
+            <img src="/images/icons/calendar-days-solid.svg" alt="Icon 1" />
+            <h3 class="lato font-weight-600 font-18 white">
+              Top-notch consultancy<br />& timely delivery
+            </h3>
+          </div>
+          <div class="feature">
+            <img src="/images/icons/calendar-days-solid.svg" alt="Icon 2" />
+            <h3 class="lato font-weight-600 font-18 white">
+              Long-Term Partnerships<br />Built on Trust
+            </h3>
+          </div>
+          <div class="feature">
+            <img src="/images/icons/calendar-days-solid.svg" alt="Icon 3" />
+            <h3 class="lato font-weight-600 font-18 white">
+              Quick onboarding<br />faster than new hires
+            </h3>
+          </div>
+          <div class="feature">
+            <img src="/images/icons/calendar-days-solid.svg" alt="Icon 4" />
+            <h3 class="lato font-weight-600 font-18 white">
+              3-Day Free Trial and<br />flexible rate
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- trust us section end-->
+
+    <!-- campaign data section start-->
+    <section id="campaign-data" class="py-80">
+      <div class="container">
+        <div class="campaign-data-title">
+          <h3
+            class="main-heading Soft-Sky-Glow font-48 font-weight-700 plus-jakarta"
+          >
+            explore our winning
+            <span class="primary italic lora">campaign </span>
+          </h3>
+        </div>
+        <div class="campaign-data-content py-80">
+          <div class="accordion">
+            <details>
+              <summary class="white font-weight-700 lato font-20">
+                Successful Lead Campaigns
+              </summary>
+              <div class="content lato font-weight-400 font-16 gray-400">
+                Generating high-quality leads that drive measurable business
+                results.
+              </div>
+
+              <a
+                class="white-bg-btn lato font-weight-600 font-16 gray-900"
+                href="#"
+              >
+                More info <span></span>
+
+                <img
+                  class="white-bg-btn-arrow"
+                  src="/images/icons/arrow-right-solid-Grey-900.svg"
+                  alt=""
+                />
+              </a>
+            </details>
+            <details>
+              <summary class="white font-weight-700 lato font-20">
+                Organic Promotion Success Rate
+              </summary>
+              <div class="content lato font-weight-400 font-16 gray-400">
+                Content for Organic Promotion Success Rate.
+              </div>
+
+              <a
+                class="white-bg-btn lato font-weight-600 font-16 gray-900"
+                href="#"
+              >
+                More info <span></span>
+
+                <img
+                  class="white-bg-btn-arrow"
+                  src="/images/icons/arrow-right-solid-Grey-900.svg"
+                  alt=""
+                />
+              </a>
+            </details>
+            <details>
+              <summary class="white font-weight-700 lato font-20">
+                Boost in Conversion Rates
+              </summary>
+              <div class="content lato font-weight-400 font-16 gray-400">
+                Content for Boost in Conversion Rates.
+              </div>
+
+              <a
+                class="white-bg-btn lato font-weight-600 font-16 gray-900"
+                href="#"
+              >
+                More info <span></span>
+
+                <img
+                  class="white-bg-btn-arrow"
+                  src="/images/icons/arrow-right-solid-Grey-900.svg"
+                  alt=""
+                />
+              </a>
+            </details>
+            <details>
+              <summary class="white font-weight-700 lato font-20">
+                Business Data
+              </summary>
+              <div class="content lato font-weight-400 font-16 gray-400">
+                Content for Business Data.
+              </div>
+
+              <a
+                class="white-bg-btn lato font-weight-600 font-16 gray-900"
+                href="#"
+              >
+                More info <span></span>
+
+                <img
+                  class="white-bg-btn-arrow"
+                  src="/images/icons/arrow-right-solid-Grey-900.svg"
+                  alt=""
+                />
+              </a>
+            </details>
+            <details>
+              <summary class="white font-weight-700 lato font-20">
+                Top 5 in...
+              </summary>
+              <div class="content lato font-weight-400 font-16 gray-400">
+                Content for Top 5 in...
+              </div>
+
+              <a
+                class="white-bg-btn lato font-weight-600 font-16 gray-900"
+                href="#"
+              >
+                More info <span></span>
+
+                <img
+                  class="white-bg-btn-arrow"
+                  src="/images/icons/arrow-right-solid-Grey-900.svg"
+                  alt=""
+                />
+              </a>
+            </details>
+          </div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr class="lato font-weight-500 font-14 white">
+                  <th>Brand</th>
+                  <th>Platform</th>
+                  <th>Conversion Cost</th>
+                  <th>Monthly Budget</th>
+                </tr>
+              </thead>
+              <tbody class="white lato font-weight-500 font-16">
+                <tr>
+                  <td>
+                    <picture>
+                      <img
+                        src="/images/icons/location-crosshairs-solid.svg"
+                        alt="Brand 1"
+                        class="brand-icon"
+                      />
+                    </picture>
+                  </td>
+                  <td>Facebook</td>
+                  <td>$53</td>
+                  <td>$9,000</td>
+                </tr>
+                <tr>
+                  <td>
+                    <picture>
+                      <img
+                        src="/images/icons/location-crosshairs-solid.svg"
+                        alt="Brand 2"
+                        class="brand-icon"
+                      />
+                    </picture>
+                  </td>
+                  <td>Facebook</td>
+                  <td>$53</td>
+                  <td>$9,500</td>
+                </tr>
+                <tr>
+                  <td>
+                    <picture>
+                      <img
+                        src="/images/icons/location-crosshairs-solid.svg"
+                        alt="Brand 2"
+                        class="brand-icon"
+                      />
+                    </picture>
+                  </td>
+                  <td>Facebook</td>
+                  <td>$53</td>
+                  <td>$9,500</td>
+                </tr>
+                <tr>
+                  <td>
+                    <picture>
+                      <img
+                        src="/images/icons/location-crosshairs-solid.svg"
+                        alt="Brand 2"
+                        class="brand-icon"
+                      />
+                    </picture>
+                  </td>
+                  <td>Facebook</td>
+                  <td>$53</td>
+                  <td>$9,500</td>
+                </tr>
+                <tr>
+                  <td>
+                    <picture>
+                      <img
+                        src="/images/icons/location-crosshairs-solid.svg"
+                        alt="Brand 2"
+                        class="brand-icon"
+                      />
+                    </picture>
+                  </td>
+                  <td>Facebook</td>
+                  <td>$53</td>
+                  <td>$9,500</td>
+                </tr>
+                <tr>
+                  <td>
+                    <picture>
+                      <img
+                        src="/images/icons/location-crosshairs-solid.svg"
+                        alt="Brand 2"
+                        class="brand-icon"
+                      />
+                    </picture>
+                  </td>
+                  <td>Facebook</td>
+                  <td>$53</td>
+                  <td>$9,500</td>
+                </tr>
+                <tr>
+                  <td>
+                    <picture>
+                      <img
+                        src="/images/icons/location-crosshairs-solid.svg"
+                        alt="Brand 2"
+                        class="brand-icon"
+                      />
+                    </picture>
+                  </td>
+                  <td>Facebook</td>
+                  <td>$53</td>
+                  <td>$9,500</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- campaign data section end-->
+
+    <!-- cta  section start -->
+    <section class="cta-section">
+      <div class="container green-topleft-bottomright cta-contant">
+        <h3 class="font-48 plus-jakarta font-weight-700 white">
+          Get a reliable partner that provides solutions to business challenges
+        </h3>
+        <div class="cta-btn">
+          <a href="#" class="cta-button gray-900"
+            >Hire consultant
+            <img
+              src="/images/icons/arrow-right-solid-Grey-900.svg"
+              alt="cta-icons"
+          /></a>
+        </div>
+      </div>
+    </section>
+    <!-- cta  section end -->
+
+    <!--service section start -->
+    <section class="service-section-wrap">
+      <div class="container">
+        <div class="service-section">
+          <h3
+            class="main-heading Soft-Sky-Glow font-48 font-weight-700 plus-jakarta"
+          >
+            Asia Agency drives
+            <span class="primary italic lora">growth </span> with innovation
+          </h3>
+          <p class="lato gray-400 font-16 gray-400">
+            Our approach goes beyond marketing, we offer 360° solutions that
+            address every aspect of your business. From consulting and
+            operational guidance to full-fledged digital strategies, we create
+            growth plans tailored to your unique goals.
+          </p>
+        </div>
+        <div class="service-section-card pt-80">
+          <div class="service-card">
+            <h3 class="plus-jakarta font-48 font-weight-600 white">
+              Business Strategy & Consulting
+            </h3>
+            <a href="#"
+              ><img src="/images/icons/arrow-right-solid.svg" alt=""
+            /></a>
+          </div>
+          <div class="service-card">
+            <h3 class="plus-jakarta font-48 font-weight-600 white">
+              Digital Marketing
+            </h3>
+            <a href="#"
+              ><img src="/images/icons/arrow-right-solid.svg" alt=""
+            /></a>
+          </div>
+          <div class="service-card">
+            <h3 class="plus-jakarta font-48 font-weight-600 white">
+              Performance Analytics
+            </h3>
+            <a href="#"
+              ><img src="/images/icons/arrow-right-solid.svg" alt=""
+            /></a>
+          </div>
+          <div class="service-card">
+            <h3 class="plus-jakarta font-48 font-weight-600 white">
+              Creative Content & Campaigns
+            </h3>
+            <a href="#"
+              ><img src="/images/icons/arrow-right-solid.svg" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- service section end -->
+
+    <!-- testimonial section start -->
+    <section class="py-80">
+      <div class="container">
+        <div class="testimonial-tittle pt-80">
+          <h3
+            class="main-heading Soft-Sky-Glow font-48 font-weight-700 plus-jakarta"
+          >
+            <span class="primary italic lora">Our partners </span>
+            find nemeous reasions to love us
+          </h3>
+        </div>
+        <div class="pt-80">
+          <div class="slider-container">
+            <div class="slider">
+              <!-- Card 1 -->
+              <div class="card testimonial-card">
+                <div class="profile">
+                  <div class="profile-image">
+                    <div class="icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" fill="blue" />
+                        <path
+                          d="M10 16v-4h4v4h4v-6h2L12 4 4 10h2v6z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <img
+                      src="https://images.pexels.com/photos/634021/pexels-photo-634021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="Erfan Hossain"
+                    />
+                  </div>
+                  <div class="profile-info">
+                    <h3 class="lato font-weight-600 font-18 white pt-16">
+                      Erfan Hossain
+                    </h3>
+                    <p class="lato gray-400 font-16 gray-400">
+                      Co founder at Bingo
+                    </p>
+                  </div>
+
+                  <div class="rating">
+                    <img
+                      class="rating-img"
+                      src="images/icons/rating-icons.svg"
+                      alt="C Logo"
+                    />
+                    <span class="stars">
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                    </span>
+                    <span
+                      class="rating-value lato font-weight-400 font-16 white"
+                      >5.0</span
+                    >
+                  </div>
+                </div>
+                <p class="testimonial-text lato font-weight-500 font-20 white">
+                  Asia Agency’s data-driven strategies have completely
+                  transformed our business approach. They don’t just deliver
+                  campaigns; they create comprehensive growth plans that help us
+                  connect with customers in meaningful ways.
+                </p>
+              </div>
+              <!-- Card 2 -->
+              <div class="card testimonial-card">
+                <div class="profile">
+                  <div class="profile-image">
+                    <div class="icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" fill="blue" />
+                        <path
+                          d="M10 16v-4h4v4h4v-6h2L12 4 4 10h2v6z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <img
+                      src="https://images.pexels.com/photos/634021/pexels-photo-634021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="Erfan Hossain"
+                    />
+                  </div>
+                  <div class="profile-info">
+                    <h3 class="lato font-weight-600 font-18 white pt-16">
+                      Erfan Hossain
+                    </h3>
+                    <p class="lato gray-400 font-16 gray-400">
+                      Co founder at Bingo
+                    </p>
+                  </div>
+
+                  <div class="rating">
+                    <img
+                      class="rating-img"
+                      src="images/icons/rating-icons.svg"
+                      alt="C Logo"
+                    />
+                    <span class="stars">
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                    </span>
+                    <span
+                      class="rating-value lato font-weight-400 font-16 white"
+                      >5.0</span
+                    >
+                  </div>
+                </div>
+                <p class="testimonial-text lato font-weight-500 font-20 white">
+                  Asia Agency’s data-driven strategies have completely
+                  transformed our business approach. They don’t just deliver
+                  campaigns; they create comprehensive growth plans that help us
+                  connect with customers in meaningful ways.
+                </p>
+              </div>
+              <!-- Card 3 -->
+              <div class="card testimonial-card">
+                <div class="profile">
+                  <div class="profile-image">
+                    <div class="icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" fill="blue" />
+                        <path
+                          d="M10 16v-4h4v4h4v-6h2L12 4 4 10h2v6z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <img
+                      src="https://images.pexels.com/photos/634021/pexels-photo-634021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="Erfan Hossain"
+                    />
+                  </div>
+                  <div class="profile-info">
+                    <h3 class="lato font-weight-600 font-18 white pt-16">
+                      Erfan Hossain
+                    </h3>
+                    <p class="lato gray-400 font-16 gray-400">
+                      Co founder at Bingo
+                    </p>
+                  </div>
+
+                  <div class="rating">
+                    <img
+                      class="rating-img"
+                      src="images/icons/rating-icons.svg"
+                      alt="C Logo"
+                    />
+                    <span class="stars">
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                    </span>
+                    <span
+                      class="rating-value lato font-weight-400 font-16 white"
+                      >5.0</span
+                    >
+                  </div>
+                </div>
+                <p class="testimonial-text lato font-weight-500 font-20 white">
+                  Asia Agency’s data-driven strategies have completely
+                  transformed our business approach. They don’t just deliver
+                  campaigns; they create comprehensive growth plans that help us
+                  connect with customers in meaningful ways.
+                </p>
+              </div>
+              <!-- Card 4 -->
+              <div class="card testimonial-card">
+                <div class="profile">
+                  <div class="profile-image">
+                    <div class="icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" fill="blue" />
+                        <path
+                          d="M10 16v-4h4v4h4v-6h2L12 4 4 10h2v6z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <img
+                      src="https://images.pexels.com/photos/634021/pexels-photo-634021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="Erfan Hossain"
+                    />
+                  </div>
+                  <div class="profile-info">
+                    <h3 class="lato font-weight-600 font-18 white pt-16">
+                      Erfan Hossain
+                    </h3>
+                    <p class="lato gray-400 font-16 gray-400">
+                      Co founder at Bingo
+                    </p>
+                  </div>
+
+                  <div class="rating">
+                    <img
+                      class="rating-img"
+                      src="images/icons/rating-icons.svg"
+                      alt="C Logo"
+                    />
+                    <span class="stars">
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                    </span>
+                    <span
+                      class="rating-value lato font-weight-400 font-16 white"
+                      >5.0</span
+                    >
+                  </div>
+                </div>
+                <p class="testimonial-text lato font-weight-500 font-20 white">
+                  Asia Agency’s data-driven strategies have completely
+                  transformed our business approach. They don’t just deliver
+                  campaigns; they create comprehensive growth plans that help us
+                  connect with customers in meaningful ways.
+                </p>
+              </div>
+            </div>
+            <div class="slider-controls pt-32">
+              <div class="slider-buttons">
+                <button class="prev-button">
+                  <span class="prev-arrow"></span>
+                </button>
+                <button class="next-button">
+                  <span class="next-arrow"></span>
+                </button>
+              </div>
+              <div class="progress-bar">
+                <div class="progress"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- testimonial section end -->
+
+    <!-- cta  section start -->
+    <section class="cta-section">
+      <div class="container green-topleft-bottomright cta-contant">
+        <h3 class="font-48 plus-jakarta font-weight-700 white">
+          Got a project in mind? <br />Tell us about it.
+        </h3>
+        <div class="cta-btn">
+          <button>
+            <a href="#" class="cta-button gray-900"
+              >Contract us
+              <img
+                src="/images/icons/arrow-right-solid-Grey-900.svg"
+                alt="cta-icons"
+            /></a>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- cta  section end -->
+
+    <!-- Blog section start -->
+    <section>
+      <div class="container">
+        <div>
+          <div class="blog-heading">
+            <h3
+              class="main-heading Soft-Sky-Glow font-48 font-weight-700 plus-jakarta"
+            >
+              We write about
+              <span class="primary italic lora">business and growth </span>
+            </h3>
+            <button class="projects-button font-18 font-weight-600 lato">
+              View all blogs
+              <span class="button-arrow"></span>
+            </button>
+          </div>
+        </div>
+        <div class="blog-cards py-80">
+          <div class="blog-card">
+            <img
+              src="https://images.pexels.com/photos/634021/pexels-photo-634021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <div class="blog-card-content">
+              <div class="pt-16">
+                <h6 class="tag font-16 font-weight-400 white">Strategy</h6>
+                <h6 class="tag font-16 font-weight-400 white">10 min read</h6>
+              </div>
+              <h5 class="plus-jakarta font-weight-600 font-24 white pt-16">
+                How to Stand Out in a Crowded Market
+              </h5>
+              <p class="lato font-weight-400 font-16 gray-400 pt-12 pb-16">
+                Learn the secrets of building a brand that not only attracts
+                attention but also fosters...
+              </p>
+            </div>
+          </div>
+          <div class="blog-card">
+            <img
+              src="https://images.pexels.com/photos/634021/pexels-photo-634021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <div class="blog-card-content">
+              <div class="pt-16">
+                <h6 class="tag font-16 font-weight-400 white">
+                  Marketing Campaign
+                </h6>
+                <h6 class="tag font-16 font-weight-400 white">10 min read</h6>
+              </div>
+              <h5 class="plus-jakarta font-weight-600 font-24 white pt-16">
+                How Business Consultancy Drives ROI
+              </h5>
+              <p class="lato font-weight-400 font-16 gray-400 pt-12 pb-16">
+                Understand why a holistic business growth strategy is essential
+                in today's competitive...
+              </p>
+            </div>
+          </div>
+          <div class="blog-card">
+            <img
+              src="https://images.pexels.com/photos/634021/pexels-photo-634021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <div class="blog-card-content">
+              <div class="pt-16">
+                <h6 class="tag font-16 font-weight-400 white">Campaign</h6>
+                <h6 class="tag font-16 font-weight-400 white">10 min read</h6>
+              </div>
+              <h5 class="plus-jakarta font-weight-600 font-24 white pt-16">
+                How Business Consultancy Drives ROI
+              </h5>
+              <p class="lato font-weight-400 font-16 gray-400 pt-12 pb-16">
+                Discover the tactics that top-performing brands are using to
+                turn visitors into loyal customers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Blog section end -->
+
+    <!-- contact from start -->
+    <section>
+      <div class="container">
+        <div class="contact-form">
+          <div class="contact-form-content">
+            <h2 class="plus-jakarta font-weight-700 font-56 white">
+              Tell us about your project
+            </h2>
+            <div class="contact-form-points pt-32">
+              <img
+                src="/images/icons/circle-check-solid.svg"
+                alt="circle-check"
+              />
+              <span class="lato font-weight-500 font-18 white"
+                >We will respond to you within 12 hours</span
+              >
+            </div>
+            <div class="contact-form-points pt-16">
+              <img
+                src="/images/icons/circle-check-solid.svg"
+                alt="circle-check"
+              />
+              <span class="lato font-weight-500 font-18 white"
+                >We'll sign an DNA if request</span
+              >
+            </div>
+            <div class="contact-form-points pt-16">
+              <img
+                src="/images/icons/circle-check-solid.svg"
+                alt="circle-check"
+              />
+              <span class="lato font-weight-500 font-18 white"
+                >Access to dedicated consultant specialist</span
+              >
+            </div>
+            <h4 class="lato font-weight-700 font-20 white">
+              Always busy and want to book an exact time to call?
+            </h4>
+            <button>
+              <span class="lato font-weight-600 font-16 white">
+                Book a free call
+              </span>
+            </button>
+          </div>
+          <div class="contact-form-input">
+            <div class="contact-form-container">
+              <div>
+                <h2 class="lato font-weight-600 font-18 white">Service</h2>
+                <div class="pt-16">
+                  <h6 class="tag font-16 font-weight-400 white">Consulting</h6>
+                  <h6 class="tag font-16 font-weight-400 white">Consulting</h6>
+                  <h6 class="tag font-16 font-weight-400 white">Consulting</h6>
+                  <h6 class="tag font-16 font-weight-400 white">Consulting</h6>
+                </div>
+              </div>
+              <div class="pt-24">
+                <h2 class="lato font-weight-600 font-18 white">Budget</h2>
+                <div class="pt-16">
+                  <h6 class="tag font-16 font-weight-400 white">
+                    Less then $10k
+                  </h6>
+                  <h6 class="tag font-16 font-weight-400 white">$10k-$50k</h6>
+                  <h6 class="tag font-16 font-weight-400 white">
+                    More then $50k
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <form action="#" method="post" class="pt-60 contact-details">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  required
+                  placeholder="Full Name*"
+                />
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Email*"
+                />
+              </div>
+
+              <textarea
+                id="projectDetails"
+                name="projectDetails"
+                required
+              ></textarea>
+
+              <div class="submit-btn">
+                <button
+                  type="submit"
+                  class="lato font-weight-600 font-18 gray-900"
+                >
+                  <span> Submit inquiry</span>
+                  <img
+                    src="/images/icons/arrow-right-solid-Grey-900.svg"
+                    alt="arrow-right"
+                  />
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact from end -->
+
+    <!-- faq section start -->
+    <section class="py-80">
+      <div class="container">
+        <div class="faq-section">
+          <div>
+            <div class="faq-section-content">
+              <h3
+                class="main-heading Soft-Sky-Glow font-48 font-weight-700 plus-jakarta"
+              >
+                Got a questins? we've
+                <span class="primary italic lora">got answers! </span>
+              </h3>
+              <p class="lato gray-400 font-16 gray-400">
+                Transforming challenges into opportunities for growth
+              </p>
+
+              <div class="pt-32 faq-nav-buttons">
+                <button
+                  class="faq-button-nav-1 lato font-weight-600 font-16 white"
+                >
+                  About us
+                </button>
+                <button
+                  class="faq-button-nav-2 lato font-weight-600 font-16 gray-900"
+                >
+                  Services
+                </button>
+                <button
+                  class="faq-button-nav-1 lato font-weight-600 font-16 white"
+                >
+                  Consaltancy
+                </button>
+              </div>
+            </div>
+            <div class="nav-faq-container">
+              <div class="nav-faq-content">
+                <details class="nav-faq-item">
+                  <summary class="lato font-weight-600 font-20 white">
+                    <img
+                      src="/images/icons/arrow-right-solid.svg"
+                      alt="arrow"
+                    />
+                    What services do you offer?
+                  </summary>
+                  <div class="content lato font-weight-400 font-16 gray-400">
+                    We offer digital marketing, web development, and business
+                    consulting services.
+                  </div>
+                </details>
+              </div>
+              <div class="nav-faq-content">
+                <details class="nav-faq-item">
+                  <summary class="lato font-weight-600 font-20 white">
+                    <img
+                      src="/images/icons/arrow-right-solid.svg"
+                      alt="arrow"
+                    />
+                    What services do you offer?
+                  </summary>
+                  <div class="content lato font-weight-400 font-16 gray-400">
+                    We offer digital marketing, web development, and business
+                    consulting services.
+                  </div>
+                </details>
+              </div>
+              <div class="nav-faq-content">
+                <details class="nav-faq-item">
+                  <summary class="lato font-weight-600 font-20 white">
+                    <img
+                      src="/images/icons/arrow-right-solid.svg"
+                      alt="arrow"
+                    />
+                    What services do you offer?
+                  </summary>
+                  <div class="content lato font-weight-400 font-16 gray-400">
+                    We offer digital marketing, web development, and business
+                    consulting services.
+                  </div>
+                </details>
+              </div>
+              <div class="nav-faq-content">
+                <details class="nav-faq-item">
+                  <summary class="lato font-weight-600 font-20 white">
+                    <img
+                      src="/images/icons/arrow-right-solid.svg"
+                      alt="arrow"
+                    />
+                    What services do you offer?
+                  </summary>
+                  <div class="content lato font-weight-400 font-16 gray-400">
+                    We offer digital marketing, web development, and business
+                    consulting services.
+                  </div>
+                </details>
+              </div>
+              <div class="nav-faq-content">
+                <details class="nav-faq-item">
+                  <summary class="lato font-weight-600 font-20 white">
+                    <img
+                      src="/images/icons/arrow-right-solid.svg"
+                      alt="arrow"
+                    />
+                    What services do you offer?
+                  </summary>
+                  <div class="content lato font-weight-400 font-16 gray-400">
+                    We offer digital marketing, web development, and business
+                    consulting services.
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- faq section end -->
+
+    <!-- footer section start -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <h3 class="plus-jakarta font-weight-700 font-48 white">
+            3-day FREE trail to get to know us
+          </h3>
+          <p class="lato font-weight-400 font-16 white pt-16">
+            we offer you a three dasy trail to reduce risk and check our
+            compatibility. you can decide whether you are ready to move forward
+            with us
+          </p>
+          <div class="footer-content-button pt-32">
+            <button class="lato font-16 font-weight-600 gray-900">
+              Start a free trail
+            </button>
+          </div>
+        </div>
+        <div class="footer-content-nav">
+          <div class="footer-content-nav-1">
+            <div class="footer-logo">
+              <img src="/images/logo.svg" alt="footer logo" />
+              <span class="lato font-weight-700 font-26 white"
+                >Asia.Agency</span
+              >
+            </div>
+            <h4 class="lato font-weight-700 font-20 white pt-32">Subscribe</h4>
+            <p class="lato font-weight-400 font-16 gray-500">
+              join our newsteller to get the latest article and updates
+            </p>
+
+            <div class="footer-content-nav-1-input">
+              <div class="footer-content-nav-1-input-email">
+                <img src="images/icons/envelope-regular.svg" alt="envelope" />
+                <input type="email" placeholder="Enter your email" />
+              </div>
+              <button
+                type="button"
+                class="lato font-weight-600 font-18 gray-900"
+              >
+                Subcribe
+              </button>
+            </div>
+          </div>
+          <div class="footer-content-nav-2">
+            <div class="footer-content-nav-list">
+              <h2 class="lato font-weight-600 font-18 gray-300">Services</h2>
+              <ul class="pt-12">
+                <li>Digital marketig</li>
+                <li>Digital marketig</li>
+                <li>Digital marketig</li>
+                <li>Digital marketig</li>
+                <li>Digital marketig</li>
+              </ul>
+            </div>
+            <div class="footer-content-nav-list">
+              <h2 class="lato font-weight-600 font-18 gray-300">Quick Link</h2>
+              <ul class="pt-12">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/index.html">About</a></li>
+                <li><a href="/index.html">Contact us</a></li>
+                <li><a href="/index.html">Blog</a></li>
+                <li><a href="/index.html">Career</a></li>
+              </ul>
+            </div>
+            <div class="footer-content-nav-list">
+              <h2 class="lato font-weight-600 font-18 gray-300">Review</h2>
+              <ul class="pt-12">
+                <li>Digital marketig</li>
+                <li>Digital marketig</li>
+                <li>Digital marketig</li>
+                <li>Digital marketig</li>
+                <li>Digital marketig</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="speretaor"></div>
+
+        <div class="footer-content-nav-bottom">
+          <span class="lato font-weight-400 font-16 gray-500"
+            >&copy; 2025-2028 Asia.Agency</span
+          >
+          <div class="footer-content-nav-social">
+            <img src="/images/icons/x-twitter-brands-solid.svg" alt="twitter" />
+            <img src="/images/icons/linkedin-brands-solid.svg" alt="linkedin" />
+            <img src="/images/icons/facebook-brands-solid.svg" alt="facebook" />
+            <img
+              src="/images/icons/instagram-brands-solid.svg"
+              alt="instagram"
+            />
+            <img src="/images/icons/tiktok-brands-solid.svg" alt="tiktok" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- footer section end -->
     <script src="/js/script.js"></script>
   </body>
 </html>
