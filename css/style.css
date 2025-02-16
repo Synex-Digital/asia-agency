@@ -1306,6 +1306,12 @@ tbody tr td picture {
   align-items: start;
   padding: 80px 60px 80px 80px;
 }
+#contact-form {
+  background-image: url("/images/Contactform.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .contact-form-content {
   width: 478px;
 }
@@ -1328,10 +1334,13 @@ tbody tr td picture {
   width: 244px;
 }
 .contact-form-content button {
-  padding: 8px 16px;
+  display: flex;
   margin-top: 20px;
+  padding: 8px 16px;
   border-radius: 100px;
-  background: #9bd9b1;
+  border: none;
+  color: #808080;
+  cursor: pointer;
 }
 
 form {
