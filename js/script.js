@@ -4,15 +4,19 @@ glowArea.classList.add("glow-area");
 document.body.appendChild(glowArea);
 
 const radius = 75; // Glow radius
-const maxParticles = 20;
-let activeParticles = 0;
+const maxParticles = 20; // Maximum number of particles (though current createParticles creates max 3 per call)
+let activeParticles = 0; // Not currently used, but could be used to limit total particles
 
 document.addEventListener("mousemove", (e) => {
   const mouseX = e.clientX;
   const mouseY = e.clientY;
 
-  // Get grid boundaries
+  // Get grid boundaries (assuming your grid container has class "grid")
   const grid = document.querySelector(".grid");
+  if (!grid) { // Check if grid exists - important!
+    console.error("Grid container with class 'grid' not found in HTML.");
+    return; // Exit if no grid found to avoid errors
+  }
   const gridRect = grid.getBoundingClientRect();
 
   // Check if mouse is within grid boundaries
@@ -46,13 +50,16 @@ document.addEventListener("mousemove", (e) => {
       box.style.setProperty("--glow-x", `${glowX}px`);
       box.style.setProperty("--glow-y", `${glowY}px`);
       box.classList.add("glow");
+
+      // **Call createParticles function when mouse is near a box**
+      createParticles(box, glowX, glowY); // Pass box, and relative mouse position
     } else {
       box.classList.remove("glow");
     }
   });
 });
 
-function createParticles(box, mouseX, mouseY) {
+function createParticles(box, mouseX, mouseY) { // Modified to accept mouseX, mouseY relative to box
   let particleCount = 0;
 
   for (let i = 0; i < 3; i++) {
@@ -71,9 +78,8 @@ function createParticles(box, mouseX, mouseY) {
     particle.style.setProperty("--tx", `${Math.cos(angle) * moveDistance}px`);
     particle.style.setProperty("--ty", `${Math.sin(angle) * moveDistance}px`);
 
-    const rect = box.getBoundingClientRect();
-    particle.style.left = `${mouseX - rect.left}px`;
-    particle.style.top = `${mouseY - rect.top}px`;
+    particle.style.left = `${mouseX}px`; // Use relative mouseX
+    particle.style.top = `${mouseY}px`;   // Use relative mouseY
 
     box.appendChild(particle);
     particleCount++;
