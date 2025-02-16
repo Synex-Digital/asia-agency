@@ -795,7 +795,7 @@ details a {
   display: inline-block;
   cursor: pointer;
 }
-details img{
+details img {
   width: 24px;
   height: 24px;
 }
@@ -837,7 +837,7 @@ thead tr th {
   text-transform: uppercase;
 }
 
-tbody tr td{
+tbody tr td {
   text-align: center;
 }
 
@@ -1137,6 +1137,15 @@ tbody tr td picture {
   border-radius: 50%;
   padding: 4px;
 }
+.icon img {
+  position: absolute;
+  width: 22px;
+  height: 28px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Corrected to -50% for translateY */
+}
+
 .icon svg {
   z-index: 1;
   width: 22px;
