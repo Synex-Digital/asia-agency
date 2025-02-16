@@ -298,6 +298,10 @@ a {
   margin: 0 auto; /* Centers the section */
   padding: 120px 303px;
   border-radius: 25px;
+  background-image: url("/images/cta.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .cta-contant h3 {
@@ -365,6 +369,12 @@ a {
 /* cta section end */
 
 /* Footer  section start */
+footer {
+  background-image: url("/images/FooterArea.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 .footer-content-nav {
   display: flex;
   justify-content: space-between;
@@ -530,7 +540,7 @@ footer .speretaor {
   .footer-content h3 {
     font-size: 36px;
   }
-  .footer-content p{
+  .footer-content p {
     font-size: 14px;
     padding: 20px;
   }
@@ -551,7 +561,7 @@ footer .speretaor {
   .footer-content h3 {
     font-size: 28px;
   }
-  .footer-content p{
+  .footer-content p {
     font-size: 14px;
     padding: 20px;
   }

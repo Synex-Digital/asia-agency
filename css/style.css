@@ -5,61 +5,53 @@ body {
 .btn {
   border-radius: 100px;
 }
-/* coustome button */
+/* Glow button */
 .glow-button {
+  border-radius: 100px;
+  position: relative;
+  background: radial-gradient(
+    164.04% 114.84% at 50% 0%,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border: 1px solid;
+  overflow: hidden;
+}
+.glow-button-border {
+  position: absolute;
   font-weight: 600;
-  color: #ddd; /* Light text */
+  width: 100%;
+  height: 100%;
+  color: #ddd;
   padding: 12px 20px;
   border: none;
-  border-radius: 100px; /* Smooth rounded button */
-  background: black; /* Dark button */
+  border-radius: 100px;
+  background: black;
   position: relative;
   cursor: pointer;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.1);
-  /* Transparent border to prevent shifting */
-  border: 3px solid transparent;
+  border: 1px solid transparent;
   background-clip: padding-box;
 }
 
-.glow-button::before {
-  content: "";
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  right: -1px;
-  bottom: -1px;
-  border-radius: 50px;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.7),
-    rgba(100, 100, 100, 0.3)
-  );
-  z-index: -1;
-}
-
 .glow-button .polygon {
-  position: absolute; /* Needed for pseudo-element positioning */
-  width: 20px; /* Example size */
-  height: 20px; /* Example size */
+  position: absolute;
+  width: 20px;
+  height: 20px;
   left: 50%;
-  bottom: 0;
   transform: translateX(-50%);
+  bottom: -13px;
+  z-index: 10;
 }
 
-/* Pseudo-element for the gradient + blur effect */
 .glow-button .polygon::before {
   content: "";
   position: absolute;
-  inset: 0; /* Covers entire parent */
-  background: radial-gradient(
-    13.36% 61.11% at 50% 50%,
-    /* Centered gradient */ #82f2a8 0%,
-    rgba(2, 2, 1, 0) 100%
-  );
-  filter: blur(5.7px); /* Blurs the gradient itself */
-  z-index: 0; /* Place behind content */
+  inset: 0;
+  background-image: radial-gradient(#82f2a8 0%, #020201 100%);
+  filter: blur(5.7px);
+  z-index: 0;
 }
-
 /* CTA Button */
 .cta-button {
   display: inline-block;
@@ -80,33 +72,42 @@ body {
 }
 /* Badge Button */
 .badge-button {
-  display: inline-block; /* Allows the badge to be placed inline with text */
-  max-width: 118px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 36px;
-  padding: 6px 16px 6px 6px; /* Adjust padding for size */
-  background: var(--Color-BG-Box-BG, rgba(14, 17, 22, 1));
-  border: 1px solid var(--color-other-outline-30, rgba(145, 145, 145, 0.3));
-  color: rgba(255, 255, 255, 1); /* Dark text color */
-  border-radius: 40px; /* Rounded corners (adjust for shape) */
-  font-size: 14px; /* Adjust font size */
-  font-weight: 600; /* Make text slightly bolder */
-  font-family: sans-serif; /* Choose a font */
-  text-align: center; /* Center the text */
-  white-space: nowrap; /* Prevent text from wrapping */
-  cursor: pointer; /* Indicate it's clickable (if needed) */
-  transition: background-color 0.2s ease; /* Smooth hover effect */
+  padding: 6px 16px 6px 6px;
+  background: rgba(14, 17, 22, 1);
+  border: 1px solid rgba(145, 145, 145, 0.3);
+  color: rgba(255, 255, 255, 1);
+  border-radius: 40px;
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
+.badge-button .button-icon {
+  background-image: url("/images/icons/about-us.png");
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 5px;
+  margin-right: 4px;
+}
+
 /* projects button */
 .projects-button {
-  display: inline-flex; /* Use flexbox for alignment */
-  align-items: center; /* Vertically align text and arrow */
-  background-color: transparent; /* Transparent background */
-  color: #ffffff; /* White text color */
-  padding: 14px 20px; /* Adjust padding as needed */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #ffffff;
+  padding: 14px 20px;
   border: 1.5px solid rgba(255, 255, 255, 1);
-  border-radius: 100px; /* Rounded corners */
-  cursor: pointer; /* Make it look clickable */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .button-arrow {
@@ -114,8 +115,8 @@ body {
   background-image: url("/images/icons/arrow-right-solid.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 14px;
-  height: 14px;
+  width: 24px;
+  height: 24px;
 }
 /* white background button */
 .white-bg-btn {
@@ -130,6 +131,12 @@ body {
   height: 12px;
 }
 /* Hero Section start */
+#hero {
+  background-image: url("/images/BGTexture.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 #hero .container nav {
   display: flex;
@@ -350,31 +357,55 @@ header p {
   text-align: start;
 }
 .grid {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  position: relative;
+  overflow: hidden;
 }
 
 .box {
   position: relative;
   width: 400px;
   height: 200px;
-  background: rgba(0, 0, 0, 0.05); /*not working  */
-  overflow: hidden;
-  transition: border 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(91, 91, 91, 0.5);
 }
 
-/* Common border style for all boxes */
-.box {
-  border: 1px solid;
-  border-image-source: linear-gradient(
-    90deg,
-    #0b0a0d 0%,
-    rgba(91, 91, 91, 0.5) 50%,
-    #0b0a0d 100%
-  );
-  border-image-slice: 1;
+.box.glow {
+  border-image: radial-gradient(
+      75px at var(--glow-x) var(--glow-y),
+      #82f2a7,
+      rgba(91, 91, 91, 0.5)
+    )
+    1;
 }
+.glow-area {
+  position: fixed;
+  top: 50px;
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 1000;
+  background: radial-gradient(
+    circle,
+    rgba(130, 242, 167, 0.1) 0%,
+    transparent 70%
+  );
+  transition: opacity 0.3s ease;
+}
+
+.particle {
+  position: absolute;
+  background: #82f2a7;
+  pointer-events: none;
+  animation: particleAnim 1s forwards;
+}
+
+@keyframes particleAnim {
+  to {
+    transform: translate(var(--tx, 0), var(--ty, 0));
+    opacity: 0;
+  }
+}
+
 /* First row */
 .box:nth-child(1) {
   border-top: none;
@@ -413,26 +444,7 @@ header p {
   border-bottom: none;
 }
 /* Keep the hover effect separate from borders */
-.box::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border: 1px solid transparent;
-  background: linear-gradient(
-      90deg,
-      rgba(145, 145, 145, 0.1) 0%,
-      #82f2a7 50%,
-      rgba(145, 145, 145, 0.1) 100%
-    )
-    border-box;
-  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: destination-out;
-  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.3s;
-  pointer-events: none;
-}
+
 .box .plus-icon {
   position: relative;
 }
@@ -442,71 +454,7 @@ header p {
   position: absolute;
   top: 30px;
 }
-.box::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border: 1px solid transparent;
-  background: linear-gradient(
-      90deg,
-      rgba(145, 145, 145, 0.1) 0%,
-      #82f2a7 50%,
-      rgba(145, 145, 145, 0.1) 100%
-    )
-    border-box;
 
-  /* Webkit browsers */
-  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: destination-out;
-
-  /* Standard syntax */
-  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-
-  opacity: 0;
-  transition: opacity 0.3s;
-  pointer-events: none;
-}
-
-/* For Firefox support */
-@-moz-document url-prefix() {
-  .box::before {
-    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-    mask-composite: subtract; /* Firefox uses 'subtract' instead of 'exclude' */
-  }
-}
-
-.box:hover::before {
-  opacity: 1;
-}
-
-.particle {
-  position: absolute;
-  background: #82f2a7;
-  pointer-events: none;
-  animation: particleAnim 1s forwards;
-}
-
-.box.glow {
-  box-shadow: 0 0 15px rgba(130, 242, 167, 0.7);
-}
-
-.glow-area {
-  position: fixed;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 1000;
-}
-
-@keyframes particleAnim {
-  to {
-    transform: translate(var(--tx, 0), var(--ty, 0));
-    opacity: 0;
-  }
-}
 /* number section end */
 
 /* product section start */
@@ -706,6 +654,7 @@ header p {
   display: flex;
   flex-direction: row;
   align-items: start;
+  justify-content: flex-start;
   text-align: left;
   justify-content: start; /* Center items in the row */
 }
@@ -795,18 +744,32 @@ header p {
 
 /* Add arrow */
 .campaign-data-content .accordion summary::after {
-  content: "▼"; /* Down arrow */
+  content: ""; /* Down arrow */
   font-size: 14px;
   color: white;
   position: absolute;
   right: 15px;
   transition: transform 0.3s ease;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("/images/icons/ExpandIcon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 /* Rotate arrow when details are open */
 .campaign-data-content .accordion details[open] > summary::after {
-  content: "▲"; /* Up arrow */
+  content: "";
   transform: rotate(180deg);
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("/images/icons/ExpandIcon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .campaign-data-content {
@@ -831,6 +794,10 @@ details a {
   margin-bottom: 24px;
   display: inline-block;
   cursor: pointer;
+}
+details img {
+  width: 24px;
+  height: 24px;
 }
 
 .table-container {
@@ -868,6 +835,10 @@ thead tr {
 thead tr th {
   padding: 24px 0px 24px 24px;
   text-transform: uppercase;
+}
+
+tbody tr td {
+  text-align: center;
 }
 
 tr:hover {
@@ -1166,6 +1137,15 @@ tbody tr td picture {
   border-radius: 50%;
   padding: 4px;
 }
+.icon img {
+  position: absolute;
+  width: 22px;
+  height: 28px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Corrected to -50% for translateY */
+}
+
 .icon svg {
   z-index: 1;
   width: 22px;
@@ -1326,6 +1306,12 @@ tbody tr td picture {
   align-items: start;
   padding: 80px 60px 80px 80px;
 }
+#contact-form {
+  background-image: url("/images/Contactform.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .contact-form-content {
   width: 478px;
 }
@@ -1348,10 +1334,13 @@ tbody tr td picture {
   width: 244px;
 }
 .contact-form-content button {
-  padding: 8px 16px;
+  display: flex;
   margin-top: 20px;
+  padding: 8px 16px;
   border-radius: 100px;
-  background: #9bd9b1;
+  border: none;
+  color: #808080;
+  cursor: pointer;
 }
 
 form {
@@ -1521,6 +1510,14 @@ form {
 
 /* contact form end */
 /* faq section start */
+#faq-section {
+  background-image: url("/images/bg-faq.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
 .faq-section {
   width: 100%;
 }
