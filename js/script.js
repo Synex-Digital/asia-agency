@@ -105,9 +105,11 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateSlider() {
       // Reset all cards
       cards.forEach((card) => card.classList.remove("active"));
+      cards.forEach((card) => card.classList.remove("active-testimonial"));
 
       // Add 'active' class to the current card
       cards[currentIndex].classList.add("active");
+      cards[currentIndex].classList.add("active-testimonial");
 
       // Calculate the width of each card
       const cardWidth = cards[currentIndex].offsetWidth; // This will give the actual width including padding, etc.
