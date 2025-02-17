@@ -317,6 +317,7 @@ a {
 }
 .cta-btn button {
   border-radius: 25px;
+  border: none;
 }
 .cta-btn a {
   display: flex;
