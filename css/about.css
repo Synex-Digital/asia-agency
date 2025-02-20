@@ -1,0 +1,223 @@
+body {
+  background: #0b0a0d;
+}
+
+/* Bannar section start */
+#bannar picture img {
+  width: 100%;
+  height: 580px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+/* Bannar section end */
+/* vision section start */
+#bannar picture img {
+  width: 100%;
+  height: 580px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+/* vision section end */
+/* mission-vision section start */
+
+#mission-vision {
+  padding: 160px 80px;
+}
+
+.mission-vision-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  column-gap: 30px;
+}
+.mission-vision-container .vertical-separator {
+  width: 1px; /* The actual width of the separator line */
+  height: 244px; /* Your specified height */
+  border: none; /* Reset default border */
+  border-left: 1px solid var(--color-other-outline-30, rgba(145, 145, 145, 0.3));
+}
+.mission-vision-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  width: 525px;
+}
+.mission-vision-content button {
+  max-width: 109px;
+  min-width: 0px;
+}
+
+/* mission-vision section end */
+/* team section start */
+
+.team-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.team-content h2 {
+  width: 379px;
+  text-align: start;
+}
+.team-content p {
+  width: 458px;
+}
+.team-top-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 30px;
+}
+.team-card {
+  position: relative;
+  background: var(--Color-BG-Box-BG, rgba(14, 17, 22, 1));
+  border-radius: 12px;
+  overflow: hidden;
+}
+.team-top-card .team-card {
+  width: 573px;
+  height: 480px;
+  object-fit: cover;
+  object-position: center;
+}
+.team-card picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.team-card-overlay {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0px 32px 32px 32px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  height: 202px;
+}
+.team-card-overlay span {
+  margin-top: 8px;
+}
+.team-card-overlay .team-card-overlay-content {
+  width: 443px;
+}
+.team-card-overlay picture {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.team-card-overlay picture img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.team-bottom-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 30px;
+  margin-top: 24px;
+}
+.team-card-2 {
+  position: relative;
+  background: var(--Color-BG-Box-BG, rgba(14, 17, 22, 1));
+  border-radius: 12px;
+  overflow: hidden;
+}
+.team-bottom-card .team-card-2 {
+  width: 374px;
+  height: 360px;
+  object-fit: cover;
+  object-position: center;
+}
+.team-card-2 picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.team-card-overlay {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0px 32px 32px 32px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  height: 202px;
+}
+.team-card-overlay span {
+  margin-top: 8px;
+}
+.team-card-overlay .team-card-overlay-content {
+  width: 443px;
+}
+.team-card-overlay picture {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.team-card-overlay picture img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* team section end */
+/* success-story section start */
+.suscces-container h2{
+    width: 539px;
+    text-align: start;
+
+}
+.success-overlay{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+.success-overlay img {
+  width: 510px;
+  height: 526px;
+  border-radius: 15px;
+  object-fit: cover;
+  object-position: center;
+}
+.success-overlay-content {
+  width: 558px;
+}
+.success-overlay-content p {
+  line-height: 24px;
+  width: 458px;
+}
+.success-overlay-content-bottom span {
+  color: var(--Color-Other-1, rgba(130, 242, 168, 1));
+  font-size: 64px;
+  line-height: 76px;
+  margin-bottom: 6px;
+}
+.success-overlay-content-bottom p {
+  line-height: 26px;
+}
+.horizontal-separator {
+  border: 1px solid var(--color-other-outline-30, rgba(145, 145, 145, 0.3));
+  /* Add other styles as needed, like width, margin, etc. */
+  width: 100%; /* To make it span the full width */
+  margin: 32px 0;
+}
+/* success-story section end */
