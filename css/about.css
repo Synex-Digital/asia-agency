@@ -181,15 +181,14 @@ body {
 
 /* team section end */
 /* success-story section start */
-.suscces-container h2{
-    width: 539px;
-    text-align: start;
-
+.suscces-container h2 {
+  width: 539px;
+  text-align: start;
 }
-.success-overlay{
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
+.success-overlay {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
 }
 .success-overlay img {
   width: 510px;
@@ -221,11 +220,44 @@ body {
   margin: 32px 0;
 }
 /* success-story section end */
-.cta-section{
-    padding: 80px 0px 160px 0px;
+.why-choose-us-container h2 {
+  width: 381px;
+  text-align: start;
+}
+.cta-section {
+  padding: 80px 0px 160px 0px;
 }
 
 /* why-choose-us section start */
+.columns {
+  display: flex;
+  justify-content: space-between; /* Distribute columns evenly */
+  gap: 20px; /* Space between columns */
+}
 
+.column {
+  width: calc(33.33% - 20px); /* Adjust width for spacing */
+  text-align: left; /* Align text within columns to the left */
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: var(--color-other-outline-30, rgba(145, 145, 145, 0.3));
+  padding: 8px 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column h3 {
+  margin-top: 16px;;
+}
+
+.column p {
+ margin-top: 24px;
+ line-height: 24px;
+}
 
 /* why-choose-us section end */
