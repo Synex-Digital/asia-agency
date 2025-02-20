@@ -158,6 +158,9 @@ a {
 .pb-80 {
   padding-bottom: 80px;
 }
+.pb-160 {
+  padding-bottom: 160px;
+}
 .pb-280 {
   padding-bottom: 280px;
 }
@@ -408,11 +411,7 @@ header p {
   margin-top: 32px;
   margin-bottom: 40px;
 }
-.cta-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 @media (max-width: 600px) {
   nav {
     flex-direction: column;
@@ -586,9 +585,6 @@ header p {
 }
 
 /* cta section start */
-.cta-section {
-  padding: 12px 12px 160px 12px;
-}
 
 .cta-contant {
   width: 100%;
