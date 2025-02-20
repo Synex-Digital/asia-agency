@@ -219,6 +219,12 @@ body {
   margin: 32px 0;
 }
 /* success-story section end */
+/* why-choose-us section start */
+#why-choose-us {
+  background-image: url(/images/services-section.png);
+  background-size: cover;
+  background-position: center;
+}
 .why-choose-us-container h2 {
   width: 381px;
   text-align: start;
@@ -227,7 +233,6 @@ body {
   padding: 80px 0px 160px 0px;
 }
 
-/* why-choose-us section start */
 .columns {
   display: flex;
   justify-content: space-between;
@@ -261,40 +266,141 @@ body {
 
 /* why-choose-us section end */
 /* capabilities section start */
-.dropdown {
+.capabilities-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.capabilities-container picture img {
+  width: 544px;
+  height: 559px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.capability-dropdown {
   width: 520px;
 }
-.dropdown-header {
+.capability-dropdown-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.dropdown-header button {
+.capability-dropdown-header button {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background: var(--color-other-outline-30, rgba(145, 145, 145, 0.3));
   border: none;
+  font-size: 20px;
+}
+.dropdown-content {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .list-item {
-    display: flex;
-    align-items: center;
-  }
-  .list-item .list {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%; /* Set border-radius to 50% to make it circular */
-    background-color: black; /* Black background */
-    border: 1px solid transparent; /* Use transparent border to ensure the gradient is visible */
-    border-image-source: radial-gradient(
-      164.04% 114.84% at 50% 0%,
-      rgba(255, 255, 255, 0.8) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    border-image-slice: 1; /* Ensures the gradient covers the entire border */
-    margin-right: 18px;
-  }
-  
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.list-item .list {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%; /* Set border-radius to 50% to make it circular */
+  background-color: black; /* Black background */
+  position: relative; /* Position relative for the before pseudo-element */
+}
+.list-item .list::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%; /* Circular shape for before element */
+  padding: 1px;
+  background: radial-gradient(
+    164.04% 114.84% at 50% 0%,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 1; /* Make sure the before element is visible */
+  pointer-events: none;
+}
 
 /* capabilities section end */
+/* cta section start */
+.trail-section-container {
+  padding: 32px;
+  background: rgba(22, 25, 29, 1);
+  border-radius: 15px;
+  background-image: url(/images/Contactform.png);
+  background-size: cover;
+  background-position: center;
+}
+.trial-section-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.trial-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 478px;
+}
+.trial-content a {
+  width: 192px;
+  margin-top: 32px;
+}
+.trial-info-box {
+  width: 497px;
+  background: var(--color-other-outline-15, rgba(145, 145, 145, 0.15));
+  padding: 24px 16px 24px 24px;
+  border-radius: 15px;
+}
+.trial-info-box .trial-tags {
+  padding-top: 140px;
+}
+.trial-info-box .trial-tags .tag {
+  background: var(--color-other-outline-15, rgba(145, 145, 145, 0.15));
+}
+.trial-steps {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.trial-steps .step {
+  width: 264px;
+  height: 134px;
+  border-radius: 10px;
+  background: var(--color-other-outline-15, rgba(145, 145, 145, 0.15));
+  padding: 24px 79px 24px 24px;
+}
+.trial-steps .step .step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--Color-Other-1, rgba(130, 242, 168, 1));
+  margin-bottom: 16px;
+}
+
+/* cta section end */
