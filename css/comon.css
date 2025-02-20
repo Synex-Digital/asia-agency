@@ -591,10 +591,10 @@ header p {
 /* clents section start */
 .logo-container {
   display: flex;
-  flex-wrap: wrap; /* Allow logos to wrap */
-  justify-content: center; /* Center the logos horizontally */
-  gap: 32px; /* Spacing between logos */
-  max-width: 1200px; /* Optional: Set a maximum width for the container */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  max-width: 1200px;
   padding: 20px;
 }
 
@@ -602,25 +602,25 @@ header p {
   display: flex;
   flex-direction: column;
   text-align: start;
-  align-items: start; /* Vertically center logo and text (if you have text) */
+  align-items: start;
   justify-content: space-between;
-  min-width: 100px; /*Set a minimum width8*/
-  max-width: 150px; /* Set a maximum width */
+  min-width: 100px;
+  max-width: 150px;
 }
 
 .logo img {
-  max-height: 40px; /* Set a maximum height for the logo image */
-  /* Remove max-width if you want the images to take their natural width */
-  min-width: 100px; /*Set a minimum width8*/
-  max-width: 150px; /* Set a maximum width */
-  margin-right: 10px; /* Space between logo and text (if you have text) */
+  max-height: 40px;
+
+  min-width: 100px;
+  max-width: 150px;
+  margin-right: 10px;
   display: flex;
-  align-items: start; /* Vertically center the logo and text */
+  align-items: start;
 }
 
 .logo span {
-  font-size: 1.2rem; /* Adjust font size as needed */
-  font-weight: 600; /* Make the text slightly bolder */
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 /* clents section end */
 
@@ -628,8 +628,8 @@ header p {
 
 .cta-contant {
   width: 100%;
-  max-width: 1200px; /* Prevents it from being too wide */
-  margin: 0 auto; /* Centers the section */
+  max-width: 1200px; 
+  margin: 0 auto; 
   padding: 120px 303px;
   border-radius: 25px;
   background-image: url("/images/cta.png");

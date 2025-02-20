@@ -13,7 +13,8 @@ document.addEventListener("mousemove", (e) => {
 
   // Get grid boundaries (assuming your grid container has class "grid")
   const grid = document.querySelector(".grid");
-  if (!grid) { // Check if grid exists - important!
+  if (!grid) {
+    // Check if grid exists - important!
     console.error("Grid container with class 'grid' not found in HTML.");
     return; // Exit if no grid found to avoid errors
   }
@@ -59,7 +60,8 @@ document.addEventListener("mousemove", (e) => {
   });
 });
 
-function createParticles(box, mouseX, mouseY) { // Modified to accept mouseX, mouseY relative to box
+function createParticles(box, mouseX, mouseY) {
+  // Modified to accept mouseX, mouseY relative to box
   let particleCount = 0;
 
   for (let i = 0; i < 3; i++) {
@@ -79,7 +81,7 @@ function createParticles(box, mouseX, mouseY) { // Modified to accept mouseX, mo
     particle.style.setProperty("--ty", `${Math.sin(angle) * moveDistance}px`);
 
     particle.style.left = `${mouseX}px`; // Use relative mouseX
-    particle.style.top = `${mouseY}px`;   // Use relative mouseY
+    particle.style.top = `${mouseY}px`; // Use relative mouseY
 
     box.appendChild(particle);
     particleCount++;
@@ -160,3 +162,6 @@ document.querySelectorAll("details").forEach((item) => {
     }
   });
 });
+// about us section
+
+/* JavaScript (script.js) */
