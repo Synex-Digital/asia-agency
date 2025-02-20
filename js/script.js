@@ -181,3 +181,40 @@ document.querySelectorAll(".dropdownButton").forEach(button => {
 });
 
 
+// Testimonial slider functionality
+const slider = document.querySelector('.slider');
+const prevButton = document.querySelector('.prev-button');
+const nextButton = document.querySelector('.next-button');
+const progressBar = document.querySelector('.progress');
+const cards = document.querySelectorAll('.testimonial-card');
+
+let currentIndex = 0;
+const cardWidth = cards[0].offsetWidth;
+const totalCards = cards.length;
+
+// Update progress bar
+function updateProgress() {
+  const progress = ((currentIndex + 1) / totalCards) * 100;
+  progressBar.style.width = `${progress}%`;
+}
+
+// Next slide
+nextButton.addEventListener('click', () => {
+  if (currentIndex < totalCards - 1) {
+    currentIndex++;
+    slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    updateProgress();
+  }
+});
+
+// Previous slide
+prevButton.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    updateProgress();
+  }
+});
+
+// Initialize progress bar
+updateProgress();

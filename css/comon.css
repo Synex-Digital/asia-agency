@@ -568,7 +568,6 @@ header p {
   height: 12px;
 }
 
-
 /* Dropdown menu */
 .dropdown {
   position: relative;
@@ -641,8 +640,8 @@ header p {
 
 .cta-contant {
   width: 100%;
-  max-width: 1200px; 
-  margin: 0 auto; 
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 120px 303px;
   border-radius: 25px;
   background-image: url("/images/cta.png");
