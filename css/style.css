@@ -194,7 +194,7 @@ body {
 }
 
 .project-card {
-  flex: 0 0 calc(50% - 10px); /* Each card takes 50% width minus half the gap */
+  flex: 0 0 876px; /* Each card takes 50% width minus half the gap */
   width: 876px; /* Adjust width as needed */
   background: rgba(14, 17, 22, 1);
   border-radius: 24px;
@@ -1117,9 +1117,9 @@ form {
   border: none;
 }
 .submit-btn button img {
-  margin-left: 12px;
-  width: 14px;
-  height: 12px;
+  margin-left: 4px;
+  width: 24px;
+  height: 24px;
 }
 
 /* Responsive Design */
