@@ -61,9 +61,11 @@ body {
 .team-content h2 {
   width: 379px;
   text-align: start;
+  line-height: 58px;
 }
 .team-content p {
   width: 458px;
+  line-height: 24px;
 }
 .team-top-card {
   display: flex;
@@ -114,11 +116,14 @@ body {
   height: 56px;
   border-radius: 50%;
   overflow: hidden;
+  background: var(--Color-Other-White, rgba(255, 255, 255, 1));
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .team-card-overlay picture img {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
+  width: 28px;
+  height: 28px;
   overflow: hidden;
 }
 .team-bottom-card {
@@ -165,18 +170,6 @@ body {
 }
 .team-card-overlay .team-card-overlay-content {
   width: 443px;
-}
-.team-card-overlay picture {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-.team-card-overlay picture img {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  overflow: hidden;
 }
 
 /* team section end */
@@ -244,15 +237,16 @@ body {
   text-align: left;
 }
 
-.icon {
+.column .icon {
   width: 40px;
   height: 40px;
-  border-radius: 100%;
-  background: var(--color-other-outline-30, rgba(145, 145, 145, 0.3));
-  padding: 8px 6px;
+  border-radius: 50%;
+  background: rgba(145, 145, 145, 0.3);
+  padding: 8px 4px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
 }
 
 .column h3 {
@@ -405,7 +399,7 @@ body {
 
 /* cta section end */
 /* testimonial section start */
-.about-us-slider{
+.about-us-slider {
   padding: 80px 0px 160px 0px;
 }
 .testimonial-card {
