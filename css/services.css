@@ -2,6 +2,79 @@ body {
   background: #0b0a0d;
 }
 /*hero section  start */
+.stats-contaier {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 80px;
+}
+.stats {
+  width: 220px;
+}
+.stats-item {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
 
+.stats-item .stars-plus-icon {
+  width: 39px;
+  height: 38px;
+}
+.gradient-text {
+  font-size: 40px;
+  font-weight: bold;
+  display: inline-block;
+  background: radial-gradient(
+    39.91% 96.59% at 52.48% 50%,
+    #ffffff 0%,
+    rgba(228, 237, 255, 0.53) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
 /* hero section end */
+/* approatch section start */
+.approach-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.approach-container h2 {
+  text-align: start;
+  width: 390px;
+}
+.approach-container p {
+  width: 458px;
+  line-height: 24px;
+}
+
+.approach-container-item {
+  display: flex;
+  justify-content: space-between;
+}
+.approach-item img {
+  width: 80px;
+  height: 80px;
+}
+.approach-item ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.approach-item ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.approach-item ul li img {
+  width: 24px;
+  height: 24px;
+  mask-image: url("/images/icons/Right_Icon.svg");
+  -webkit-mask-image: url("/images/icons/Right_Icon.svg");
+  background-color: rgba(152, 162, 179, 1);
+}
+
+/* approacht section end */
