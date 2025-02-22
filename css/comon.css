@@ -119,6 +119,9 @@ a {
   margin-bottom: 40px;
 }
 
+.pt-8 {
+  padding-top: 8px;
+}
 .pt-12 {
   padding-top: 12px;
 }

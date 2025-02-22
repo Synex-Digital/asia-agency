@@ -78,3 +78,133 @@ body {
 }
 
 /* approacht section end */
+/* respomd immmditly section start */
+.respond-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 80px;
+}
+.respond-container h2 {
+  width: 474px;
+  text-align: start;
+}
+.respond-container p {
+  width: 438px;
+  line-height: 24px;
+}
+.respond-card-container {
+  background-color: rgba(14, 17, 22, 1);
+  padding: 60px;
+  border-radius: 15px;
+  margin-bottom: 24px;
+}
+.respond-card-content {
+  width: 1050px;
+  margin: 0 auto;
+}
+.respond-card-content h2 {
+  text-align: center;
+  width: 486px;
+  margin: 0 auto;
+  margin-bottom: 48px;
+}
+.respond-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.respond-card {
+  width: 250.5px;
+  background: rgba(145, 145, 145, 0.15);
+  border-radius: 13px;
+  padding: 24px 16px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.text h3{
+  text-align: center;
+}
+.text p{
+  text-align: center;
+}
+
+.checkbox-container {
+  position: absolute;
+  top: 16px;
+  right: 15.5px;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox + .label {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(50, 213, 131, 1);
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox + .label::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgba(145, 145, 145, 0.15);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkbox:checked + .label::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(50, 213, 131, 1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.respond-card picture {
+  padding: 12px;
+  border: 1px solid;
+  border-image-source: radial-gradient(
+    164.04% 114.84% at 50% 0%,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-image-slice: 1;
+  border-radius: 8px;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(145, 145, 145, 0.15);
+}
+.respond-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.respond-content picture img {
+  width: 48px;
+  height: 48px;
+}
+
+/* respomd immmditly section end */
