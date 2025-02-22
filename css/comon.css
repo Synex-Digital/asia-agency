@@ -556,15 +556,18 @@ header p {
 }
 /* white background button */
 .white-bg-btn {
-  padding: 8px 16px 8px 16px;
+  padding: 14px 20px;
   background: var(--Color-Other-White, rgba(255, 255, 255, 1));
   border-radius: 100px;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .white-bg-btn-arrow {
   margin-left: 9px;
-  width: 14px;
-  height: 12px;
+  width: 24px;
+  height: 24px;
 }
 
 /* Dropdown menu */
@@ -719,6 +722,8 @@ footer {
   align-items: center;
   padding: 14px 20px;
   border-radius: 100px;
+  border: none;
+  cursor: pointer;
 }
 .footer-content-nav {
   padding: 120px 20px 0px 20px;
@@ -767,6 +772,7 @@ footer {
   padding: 14px 20px;
   background: var(--Color-Other-White, rgba(255, 255, 255, 1));
   border-radius: 100px;
+  border: none;
 }
 
 .footer-content-nav-2 {
