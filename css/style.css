@@ -791,6 +791,11 @@ tbody tr td picture {
 
 /* service section end */
 /* testimonial section start */
+#testimonial {
+  width: 1784px;
+  margin: 0 auto;
+  overflow: hidden;
+}
 .testimonial-card {
   flex: 0 0 702px;
   width: 702px;
