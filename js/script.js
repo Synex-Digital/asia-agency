@@ -4,7 +4,7 @@ glowArea.classList.add("glow-area");
 document.body.appendChild(glowArea);
 
 const radius = 75; // Glow radius
-const maxParticles = 20; // Maximum number of particles (though current createParticles creates max 3 per call)
+const maxParticles = 5; // Maximum number of particles (though current createParticles creates max 3 per call)
 let activeParticles = 0; // Not currently used, but could be used to limit total particles
 
 document.addEventListener("mousemove", (e) => {
@@ -164,12 +164,15 @@ document.querySelectorAll("details").forEach((item) => {
 });
 // about us section
 
-document.querySelectorAll(".dropdownButton").forEach(button => {
+document.querySelectorAll(".dropdownButton").forEach((button) => {
   button.addEventListener("click", function () {
     // Find the closest dropdown content (next sibling div)
     const dropdownContent = this.parentElement.parentElement.nextElementSibling;
 
-    if (dropdownContent.style.display === "none" || dropdownContent.style.display === "") {
+    if (
+      dropdownContent.style.display === "none" ||
+      dropdownContent.style.display === ""
+    ) {
       dropdownContent.style.display = "block";
       dropdownContent.style.animation = "fadeIn 0.5s forwards";
       this.innerHTML = "-";
@@ -180,17 +183,17 @@ document.querySelectorAll(".dropdownButton").forEach(button => {
   });
 });
 
-
 // Testimonial slider functionality
-const slider = document.querySelector('.slider');
-const prevButton = document.querySelector('.prev-button');
-const nextButton = document.querySelector('.next-button');
-const progressBar = document.querySelector('.progress');
-const cards = document.querySelectorAll('.testimonial-card');
+const slider = document.querySelector(".slider");
+const prevButton = document.querySelector(".prev-button");
+const nextButton = document.querySelector(".next-button");
+const progressBar = document.querySelector(".progress");
+const cards = document.querySelectorAll(".testimonial-card");
 
 let currentIndex = 0;
 const cardWidth = cards[0].offsetWidth;
 const totalCards = cards.length;
+console.log(cardWidth);
 
 // Update progress bar
 function updateProgress() {
@@ -199,7 +202,7 @@ function updateProgress() {
 }
 
 // Next slide
-nextButton.addEventListener('click', () => {
+nextButton.addEventListener("click", () => {
   if (currentIndex < totalCards - 1) {
     currentIndex++;
     slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
@@ -208,7 +211,7 @@ nextButton.addEventListener('click', () => {
 });
 
 // Previous slide
-prevButton.addEventListener('click', () => {
+prevButton.addEventListener("click", () => {
   if (currentIndex > 0) {
     currentIndex--;
     slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;

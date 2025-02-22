@@ -61,9 +61,11 @@ body {
 .team-content h2 {
   width: 379px;
   text-align: start;
+  line-height: 58px;
 }
 .team-content p {
   width: 458px;
+  line-height: 24px;
 }
 .team-top-card {
   display: flex;
@@ -114,11 +116,14 @@ body {
   height: 56px;
   border-radius: 50%;
   overflow: hidden;
+  background: var(--Color-Other-White, rgba(255, 255, 255, 1));
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .team-card-overlay picture img {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
+  width: 28px;
+  height: 28px;
   overflow: hidden;
 }
 .team-bottom-card {
@@ -165,18 +170,6 @@ body {
 }
 .team-card-overlay .team-card-overlay-content {
   width: 443px;
-}
-.team-card-overlay picture {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-.team-card-overlay picture img {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  overflow: hidden;
 }
 
 /* team section end */
@@ -244,12 +237,11 @@ body {
   text-align: left;
 }
 
-.icon {
+.column_icon {
   width: 40px;
   height: 40px;
-  border-radius: 100%;
-  background: var(--color-other-outline-30, rgba(145, 145, 145, 0.3));
-  padding: 8px 6px;
+  border-radius: 50%;
+  background: rgba(145, 145, 145, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -363,7 +355,7 @@ body {
   width: 478px;
 }
 .trial-content a {
-  width: 192px;
+  width: 200px;
   margin-top: 32px;
 }
 .trial-info-box {
@@ -401,19 +393,20 @@ body {
   border-radius: 50%;
   background: var(--Color-Other-1, rgba(130, 242, 168, 1));
   margin-bottom: 16px;
+  color: rgba(16, 24, 40, 1);
 }
 
 /* cta section end */
 /* testimonial section start */
-.about-us-slider{
+.about-us-slider {
   padding: 80px 0px 160px 0px;
 }
 .testimonial-card {
-  flex: 0 0 calc(50%); /* Each card takes 50% width minus half the gap */
-  width: 876px; /* Adjust width as needed */
+  flex: 0 0 702px;
+  width: 702px;
   background: rgba(14, 17, 22, 1);
   border-radius: 24px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -421,6 +414,7 @@ body {
   box-sizing: border-box;
   background-image: url("/images/testimonial-card.png");
 }
+
 .testimonial-tittle {
   width: 646px;
   margin: 0 auto;
@@ -511,7 +505,6 @@ body {
 .slider-container {
   position: relative;
   width: 100%;
-  overflow: hidden;
 }
 
 .slider {

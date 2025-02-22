@@ -540,7 +540,7 @@ header p {
   align-items: center;
   justify-content: center;
   height: 36px;
-  padding: 6px 16px 6px 0px;
+  padding: 6px 16px 6px 6px;
   background: rgba(14, 17, 22, 1);
   border: 1px solid rgba(145, 145, 145, 0.3);
   color: rgba(255, 255, 255, 1);
@@ -551,21 +551,23 @@ header p {
   transition: background-color 0.2s ease;
 }
 .badge-button .button-icon {
-  width: 37px;
-  height: 37px;
-  margin-top: 6px;
+  width: 24px;
+  height: 24px;
 }
 /* white background button */
 .white-bg-btn {
-  padding: 8px 16px 8px 16px;
+  padding: 14px 20px;
   background: var(--Color-Other-White, rgba(255, 255, 255, 1));
   border-radius: 100px;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .white-bg-btn-arrow {
   margin-left: 9px;
-  width: 14px;
-  height: 12px;
+  width: 24px;
+  height: 24px;
 }
 
 /* Dropdown menu */
@@ -653,6 +655,7 @@ header p {
 .cta-contant h3 {
   text-align: center;
   font-size: clamp(28px, 4vw, 48px);
+  width: 564px;
 }
 
 .cta-btn {
@@ -666,52 +669,18 @@ header p {
   border: none;
 }
 .cta-btn a {
+  font-family: "lato";
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4px;
 }
 .cta-btn a img {
-  width: 14px;
-  height: 12px;
+  width: 24px;
+  height: 24px;
 }
 
 /* Responsive Styles */
-@media (max-width: 1024px) {
-  .cta-contant {
-    padding: 100px 150px; /* Reduce side padding */
-  }
-  .cta-contant h3 {
-    font-size: 40px;
-  }
-  .cta-section {
-    padding: 12px;
-  }
-}
-
-@media (max-width: 768px) {
-  .cta-contant {
-    padding: 80px 80px; /* Further reduce padding */
-  }
-  .cta-contant h3 {
-    font-size: 36px;
-  }
-  .cta-section {
-    padding: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .cta-contant {
-    padding: 60px 24px; /* Make it fit smaller screens */
-  }
-  .cta-contant h3 {
-    font-size: 28px;
-  }
-  .cta-section {
-    padding: 12px;
-  }
-}
 
 /* cta section end */
 
@@ -753,6 +722,8 @@ footer {
   align-items: center;
   padding: 14px 20px;
   border-radius: 100px;
+  border: none;
+  cursor: pointer;
 }
 .footer-content-nav {
   padding: 120px 20px 0px 20px;
@@ -801,6 +772,7 @@ footer {
   padding: 14px 20px;
   background: var(--Color-Other-White, rgba(255, 255, 255, 1));
   border-radius: 100px;
+  border: none;
 }
 
 .footer-content-nav-2 {

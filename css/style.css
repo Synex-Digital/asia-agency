@@ -6,9 +6,6 @@ body {
   border-radius: 100px;
 }
 
-
-
-
 /* projects button */
 .projects-button {
   display: inline-flex;
@@ -31,7 +28,6 @@ body {
   width: 24px;
   height: 24px;
 }
-
 
 /* about section start */
 
@@ -198,7 +194,7 @@ body {
 }
 
 .project-card {
-  flex: 0 0 calc(50% - 10px); /* Each card takes 50% width minus half the gap */
+  flex: 0 0 876px; /* Each card takes 50% width minus half the gap */
   width: 876px; /* Adjust width as needed */
   background: rgba(14, 17, 22, 1);
   border-radius: 24px;
@@ -265,7 +261,6 @@ body {
 .slider-container {
   position: relative;
   width: 100%;
-  overflow: hidden;
 }
 
 .slider {
@@ -790,11 +785,11 @@ tbody tr td picture {
 /* service section end */
 /* testimonial section start */
 .testimonial-card {
-  flex: 0 0 calc(50%); /* Each card takes 50% width minus half the gap */
-  width: 876px; /* Adjust width as needed */
+  flex: 0 0 702px;
+  width: 702px;
   background: rgba(14, 17, 22, 1);
   border-radius: 24px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1122,9 +1117,9 @@ form {
   border: none;
 }
 .submit-btn button img {
-  margin-left: 12px;
-  width: 14px;
-  height: 12px;
+  margin-left: 4px;
+  width: 24px;
+  height: 24px;
 }
 
 /* Responsive Design */
