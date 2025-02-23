@@ -126,10 +126,10 @@ body {
   align-items: center;
   position: relative;
 }
-.text h3{
+.text h3 {
   text-align: center;
 }
-.text p{
+.text p {
   text-align: center;
 }
 
@@ -206,5 +206,71 @@ body {
   width: 48px;
   height: 48px;
 }
-
+.respond-form-container {
+  background: rgba(14, 17, 22, 1);
+  padding: 60px;
+  border-radius: 15px;
+}
+.respond-form-container h3 {
+  text-align: center;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  column-gap: 40px;
+  row-gap: 60px;
+  margin-top: 48px;
+}
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-row .form-item {
+  width: 505px;
+}
+.form-row .form-item input {
+  width: 100%;
+  padding: 16px 0px;
+  background-color: rgba(14, 17, 22, 1);
+  outline: none;
+  border: none;
+  border-bottom: 1.5px solid
+    var(--color-other-outline-30, rgba(145, 145, 145, 0.3));
+  color: rgba(255, 255, 255, 1);
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Lato", serif;
+}
+.form-row .form-item input::placeholder {
+  color: rgba(255, 255, 255, 1);
+}
+.form-group textarea {
+  width: 100%;
+  padding: 16px 0px;
+  background-color: rgba(14, 17, 22, 1);
+  outline: none;
+  border: none;
+  border-bottom: 1.5px solid
+    var(--color-other-outline-30, rgba(145, 145, 145, 0.3));
+  color: rgba(255, 255, 255, 1);
+}
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 1);
+}
+.respond-form-container .submit-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+.respond-form-container .submit-btn button {
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+}
+.respond-form-container .submit-btn button img {
+  margin-left: 4px;
+}
 /* respomd immmditly section end */
