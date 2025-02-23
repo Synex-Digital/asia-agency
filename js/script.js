@@ -221,3 +221,7 @@ prevButton.addEventListener("click", () => {
 
 // Initialize progress bar
 updateProgress();
+
+
+
+
