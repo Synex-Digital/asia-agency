@@ -821,3 +821,220 @@ tbody tr td picture {
 }
 
 /* testimonial section end */
+/* contact form start */
+.contact-form {
+  display: flex;
+  width: 100%;
+  background: #16191d;
+  border-radius: 12px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  padding: 80px 60px 80px 80px;
+}
+#contact-form {
+  background-image: url("/images/Contactform.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-form-content {
+  width: 478px;
+}
+
+.contact-form-input {
+  width: 466px;
+}
+.contact-form-points {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.contact-form-points img {
+  width: 20px;
+  height: 20px;
+}
+.contact-form-content h4 {
+  padding-top: 84px;
+  width: 244px;
+}
+.contact-form-content button {
+  display: flex;
+  margin-top: 20px;
+  padding: 8px 16px;
+  border-radius: 100px;
+  border: none;
+  color: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  border: none;
+}
+
+form {
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.form-group input {
+  padding: 16px 0px;
+  width: 221px;
+  background: #16191d;
+  border: transparent;
+  color: var(--Color-Other-White, rgba(255, 255, 255, 1));
+  font-family: "Lato", serif;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1.5px solid rgba(145, 145, 145, 0.3);
+}
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 1);
+}
+
+.form-group input:focus {
+  outline: none;
+  border: none;
+  font-family: "Lato", serif;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1.5px solid rgba(145, 145, 145, 0.3);
+}
+
+.contact-details textarea {
+  padding: 16px 0px;
+  width: 100%;
+  background: #16191d;
+  border: transparent;
+  color: var(--Color-Other-White, rgba(255, 255, 255, 1));
+  border-bottom: 1.5px solid rgba(145, 145, 145, 0.3);
+  font-family: "Lato", serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 71px;
+}
+.contact-details textarea::placeholder {
+  color: rgba(255, 255, 255, 1);
+}
+.contact-details textarea:focus {
+  outline: none;
+  border: none;
+  font-family: "Lato", serif;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1.5px solid rgba(145, 145, 145, 0.3);
+}
+
+.submit-btn button {
+  padding: 14px 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  margin-top: 30px;
+  border: none;
+}
+.submit-btn button img {
+  margin-left: 4px;
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contact-form {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 40px;
+  }
+
+  .contact-form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .contact-form-points {
+    justify-content: center;
+  }
+
+  .contact-form-input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .contact-form-container {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form-points {
+    justify-content: center;
+  }
+
+  .contact-form-content h4 {
+    width: 100%;
+  }
+
+  .contact-form-input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form-content h2 {
+    font-size: 32px;
+  }
+  .contact-form-content h4 {
+    font-size: 18px;
+  }
+  .contact-form-content,
+  .form-group input {
+    width: 100%;
+  }
+  .form-input input {
+    width: 100%;
+  }
+  .contact-details textarea {
+    font-size: 16px;
+  }
+}
+
+/* contact form end */
