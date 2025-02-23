@@ -1,32 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
     const campaignItems = document.querySelectorAll('.campaign-data-item');
     const progressFill = document.querySelector('.progress-fill');
-    // Select all campaign table containers. Assuming their classes share a common prefix.
     const campaignTables = document.querySelectorAll('[class^="campaign-table-container-"]');
 
-    // Initially show only the first campaign table and hide the others.
+    // Initially show only the first campaign table and hide the others
     campaignTables.forEach((table, index) => {
       table.style.display = index === 0 ? 'block' : 'none';
     });
 
-    // Set the first campaign item as active by default.
+    const totalWidth = 798;
+    const stepWidth = totalWidth / 3; // Dividing by 3 for 33%, 66%, 100%
+
+    // Set initial progress to 33% and first item active
+    progressFill.style.width = `${stepWidth}px`;
     if (campaignItems.length > 0) {
         campaignItems[0].classList.add('active');
     }
-
-    const totalWidth = 798; // Total width of the progress bar container
-    const stepWidth = totalWidth / campaignItems.length; // Each step width based on number of items
 
     campaignItems.forEach((item, index) => {
         item.addEventListener('click', () => {
             // Remove active class from all items
             campaignItems.forEach(i => i.classList.remove('active'));
 
-            // Add active class to the clicked item
+            // Add active class only to current clicked item
             item.classList.add('active');
 
-            // Calculate and update progress bar width
-            const progress = (index + 1) * stepWidth;
+            // Calculate progress - 33% for first, 66% for second, 100% for third
+            const progress = stepWidth * (index + 1);
             progressFill.style.transition = 'width 0.3s ease';
             progressFill.style.width = `${progress}px`;
 
@@ -34,7 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
             campaignTables.forEach(table => {
               table.style.display = 'none';
             });
-            // Display the corresponding campaign table (assuming order matches)
+            
+            // Display the corresponding campaign table
             if (campaignTables[index]) {
               campaignTables[index].style.display = 'block';
             }
