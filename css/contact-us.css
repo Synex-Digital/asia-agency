@@ -3,6 +3,8 @@ body {
 }
 #hero header {
   width: 1170px;
+  padding: 0px;
+  margin-top: 120px;
 }
 
 /* contact form start */

@@ -323,6 +323,7 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  margin-top: 40px;
 }
 
 #hero .container nav {
