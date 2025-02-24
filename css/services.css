@@ -632,16 +632,16 @@ tbody tr td picture {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 14px;
-  height: 12px;
+  width: 24px;
+  height: 24px;
 }
 
 .prev-arrow {
-  background-image: url("/images/icons/arrow-left-solid.svg");
+  background-image: url("/images/about-us/icon/left-icon.svg");
 }
 
 .next-arrow {
-  background-image: url("/images/icons/arrow-right-solid.svg");
+  background-image: url("/images/about-us/icon/right-icon.svg");
 }
 
 /* product section end */
