@@ -159,3 +159,61 @@ form h6 {
   height: 24px;
 }
 /* contact form end */
+/*  review section start- */
+.review-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.review-card {
+  width: 374px;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(14, 17, 22, 1);
+  border-radius: 15px;
+}
+.review-card img {
+  width: 198px;
+  height: 80px;
+  object-fit: contain;
+  object-position: center;
+  margin-bottom: 80px;
+}
+.review-card-active {
+  background-image: url("/images/contact-us/bg-texture.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  z-index: 10;
+  border-radius: 15px;
+  position: relative;
+}
+
+.review-card-active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px;
+  padding: 1px;
+  background: radial-gradient(
+    164.04% 114.84% at 50% 0%,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+
+
+
+/* review section end */
