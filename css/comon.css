@@ -179,7 +179,9 @@ a {
 .pb-280 {
   padding-bottom: 280px;
 }
-
+.mt-40 {
+  margin-top: 40px;
+}
 /* Colors */
 .white {
   color: rgba(255, 255, 255, 1);
@@ -342,6 +344,9 @@ a {
   display: flex;
   align-items: center;
   gap: 0px 8px;
+}
+.mainlogo a{
+  padding-top: 0px;
 }
 nav {
   border: 1px solid rgba(145, 145, 145, 0.41);
