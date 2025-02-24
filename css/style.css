@@ -1024,6 +1024,7 @@ tbody tr td picture {
   background-image: url("/images/Contactform.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .contact-form-content {

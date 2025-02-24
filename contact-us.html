@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us</title>
+    <!-- Google Fonts lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/comon.css" />
+    <link rel="stylesheet" href="./css/contact-us.css" />
+  </head>
+  <body>
+    <!-- Hero Section start-->
+    <section id="hero" class="py-40">
+      <div class="container">
+        <nav>
+          <div class="mainlogo">
+            <img src="/images/logo.svg" alt="logo" />
+            <span class="font-20 font-weight-600 lato white">Asia.Agency</span>
+          </div>
+          <div>
+            <ul class="nav-menu font-16 font-weight-500 lato">
+              <li class="nav-item"><a href="/about-us.html">About Us</a></li>
+              <li class="nav-item"><a href="#">Contact</a></li>
+
+              <!-- Dropdown Menu -->
+              <li class="nav-item dropdown">
+                <a href="/services.html">Services ▼</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Web Development</a></li>
+                  <li><a href="#">SEO Optimization</a></li>
+                  <li><a href="#">Digital Marketing</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item"><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div>
+            <button class="lato glow-button font-18" type="button">
+              <div class="glow-button-border">Contact us!</div>
+              <div class="polygon"></div>
+            </button>
+          </div>
+        </nav>
+
+        <header>
+          <!-- contact from start -->
+          <div class="pb-80">
+            <div class="contact-form" id="contact-form">
+              <div class="contact-form-content">
+                <h2 class="plus-jakarta font-weight-700 font-56 white">
+                  Tell us about your project
+                </h2>
+                <div class="contact-form-points pt-32">
+                  <img
+                    src="images/contact-us/icons/Project-Detail-Icon.png"
+                    alt="circle-check"
+                  />
+                  <span class="lato font-weight-500 font-18 white"
+                    >We will respond to you within 12 hours</span
+                  >
+                </div>
+                <div class="contact-form-points pt-16">
+                  <img
+                    src="images/contact-us/icons/Project-Detail-Icon.png"
+                    alt="circle-check"
+                  />
+                  <span class="lato font-weight-500 font-18 white"
+                    >We'll sign an DNA if request</span
+                  >
+                </div>
+                <div class="contact-form-points pt-16">
+                  <img
+                    src="images/contact-us/icons/Project-Detail-Icon.png"
+                    alt="circle-check"
+                  />
+                  <span class="lato font-weight-500 font-18 white"
+                    >Access to dedicated consultant specialist</span
+                  >
+                </div>
+                <a href="#" class="lato font-weight-700 font-20 white"
+                  >hello@asiaagency@gmail.com</a
+                >
+                <h4 class="lato font-weight-700 font-20 white">
+                  Always busy and want to book an exact time to call?
+                </h4>
+
+                <button>
+                  <span class="lato font-weight-600 font-16">
+                    Book a free call
+                  </span>
+                </button>
+              </div>
+              <div class="contact-form-input">
+                <div class="contact-form-container">
+                  <div>
+                    <h2 class="lato font-weight-600 font-18 white">Service</h2>
+                    <div class="pt-16">
+                      <h6 class="tag font-16 font-weight-400 white">
+                        Consulting
+                      </h6>
+                      <h6 class="tag font-16 font-weight-400 white">
+                        Consulting
+                      </h6>
+                      <h6 class="tag font-16 font-weight-400 white">
+                        Consulting
+                      </h6>
+                      <h6 class="tag font-16 font-weight-400 white">
+                        Consulting
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="pt-24">
+                    <h2 class="lato font-weight-600 font-18 white">Budget</h2>
+                    <div class="pt-16">
+                      <h6 class="tag font-16 font-weight-400 white">
+                        Less then $10k
+                      </h6>
+                      <h6 class="tag font-16 font-weight-400 white">
+                        $10k-$50k
+                      </h6>
+                      <h6 class="tag font-16 font-weight-400 white">
+                        More then $50k
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+                <form action="#" method="post" class="pt-60 contact-details">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      id="fullName"
+                      name="fullName"
+                      required
+                      placeholder="Full Name*"
+                    />
+
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      placeholder="Email*"
+                    />
+                  </div>
+
+                  <textarea
+                    id="projectDetails"
+                    name="projectDetails"
+                    placeholder="Project Details*"
+                    required
+                  ></textarea>
+
+                  <h6 class="lato font-weight-600 font-18 white">Attach a file(optional)</h6>
+                  <div class="file-upload">
+                    <label class="file-upload">
+                      Choose a file or drag and drop here
+                      <input type="file" />
+                    </label>
+                  </div>
+                  <div class="submit-btn">
+                    <button
+                      type="submit"
+                      class="lato font-weight-600 font-18 gray-900"
+                    >
+                      <span> Submit inquiry</span>
+                      <img
+                        src="/images/icons/Right_Icon.svg"
+                        alt="arrow-right"
+                      />
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- contact from end -->
+        </header>
+      </div>
+    </section>
+    <!-- Hero Section end-->
+  </body>
+</html>
