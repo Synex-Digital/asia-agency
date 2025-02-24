@@ -72,9 +72,9 @@ body {
 .approach-item ul li img {
   width: 24px;
   height: 24px;
-  mask-image: url("/images/icons/Right_Icon.svg");
-  -webkit-mask-image: url("/images/icons/Right_Icon.svg");
-  background-color: rgba(152, 162, 179, 1);
+  /* mask-image: url("/images/services/icons/right.png");
+  -webkit-mask-image: url("/images/services/icons/right.png");
+  background-color: rgba(152, 162, 179, 1); */
 }
 
 /* approacht section end */
@@ -254,14 +254,22 @@ body {
   border-bottom: 1.5px solid
     var(--color-other-outline-30, rgba(145, 145, 145, 0.3));
   color: rgba(255, 255, 255, 1);
+  font-family: "Lato", serif;
+  font-weight: 600;
+  font-size: 18px;
 }
 .form-group textarea::placeholder {
   color: rgba(255, 255, 255, 1);
+  font-family: "Lato", serif;
+  font-weight: 600;
+  font-size: 18px;
 }
 .respond-form-container .submit-btn {
   display: flex;
   justify-content: center;
   margin-top: 48px;
+  width: 200px;
+  margin: auto;
 }
 .respond-form-container .submit-btn button {
   padding: 14px 20px;
@@ -536,6 +544,7 @@ tbody tr td picture {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  border: 15px;
 }
 
 .card-content {
@@ -876,7 +885,7 @@ form {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.faq-form-group  {
+.faq-form-group {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -945,7 +954,6 @@ form {
   width: 24px;
   height: 24px;
 }
-
 
 /* contact form end */
 /* faq section start */
@@ -1033,7 +1041,6 @@ form {
   background-repeat: no-repeat;
   background-position: center;
   width: 1122px;
-
 }
 /* Desktop styles remain the same */
 
@@ -1088,7 +1095,6 @@ form {
   .nav-faq-item .content {
     margin-left: 32px;
     font-size: 14px;
-    
   }
 }
 
