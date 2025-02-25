@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Page</title>
+
+    <!-- Google Fonts lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/comon.css" />
+    <link rel="stylesheet" href="/css/blog-page.css" />
+  </head>
+  <body>
+    <!-- Hero Section start-->
+    <section id="hero" class="py-40">
+      <div class="container">
+        <nav>
+          <div class="mainlogo">
+            <a href="/index.html"><img src="/images/logo.svg" alt="logo" /></a>
+            <span class="font-20 font-weight-600 lato white">Asia.Agency</span>
+          </div>
+          <div>
+            <ul class="nav-menu font-16 font-weight-500 lato">
+              <li class="nav-item"><a href="/about-us.html">About Us</a></li>
+              <li class="nav-item"><a href="/contact-us.html">Contact</a></li>
+
+              <!-- Dropdown Menu -->
+              <li class="nav-item dropdown">
+                <a href="/services.html">Services ▼</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Web Development</a></li>
+                  <li><a href="#">SEO Optimization</a></li>
+                  <li><a href="#">Digital Marketing</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item"><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div>
+            <button class="lato glow-button font-18" type="button">
+              <div class="glow-button-border">Contact us!</div>
+              <div class="polygon"></div>
+            </button>
+          </div>
+        </nav>
+
+        <div class="header-section pt-120">
+          <div class="bage-section lato">
+            <h6 class="font-16 font-weight-400 white custom-tag gray-900">
+              All topics
+            </h6>
+            <h6 class="tag font-16 font-weight-400 white">Business</h6>
+            <h6 class="tag font-16 font-weight-400 white">Branding</h6>
+            <h6 class="tag font-16 font-weight-400 white">Business</h6>
+            <h6 class="tag font-16 font-weight-400 white">Business</h6>
+          </div>
+          <div class="input-header">
+            <img src="/images/blog-page/icons/search.png" alt="search" />
+            <input type="text" name="" id="" placeholder="Search articles" />
+          </div>
+        </div>
+        <div class="header-section-content">
+          <h1
+            class="main-heading Soft-Sky-Glow font-76 font-weight-700 plus-jakarta"
+          >
+            Asia Agency
+            <span class="primary italic lora">blogs </span>
+          </h1>
+          <p class="lato font-weight-500 font-18 gray-400">
+            We create unexpected connections between creative people with a
+            passion, and creative businesses on a mission, so they can make the
+            best work of their lives.
+          </p>
+        </div>
+
+        <div class="pt-80" id="blog-section-slider">
+          <div class="slider-container">
+            <div class="slider">
+              <!-- Card 1 -->
+              <div class="card blog-card">
+                <img src="/images/blog-page/blog-slider-image-01.png" alt="" />
+                <div class="bage-section">
+                  <h6 class="tag font-16 font-weight-400 white lato">
+                    Strategy
+                  </h6>
+                  <h6 class="tag font-16 font-weight-400 white lato">
+                    10 min read
+                  </h6>
+                </div>
+                <h4 class="plus-jakarta font-weight-700 font-32 white">
+                  How Business Consultancy Drives Consultancy Drives ROI
+                </h4>
+              </div>
+              <!-- Card 2 -->
+              <div class="card blog-card">
+                <img src="/images/blog-page/blog-slider-image-01.png" alt="" />
+                <div class="bage-section">
+                  <h6 class="tag font-16 font-weight-400 white lato">
+                    Strategy
+                  </h6>
+                  <h6 class="tag font-16 font-weight-400 white lato">
+                    10 min read
+                  </h6>
+                </div>
+                <h4 class="plus-jakarta font-weight-700 font-32 white">
+                  How Business Consultancy Drives Consultancy Drives ROI
+                </h4>
+              </div>
+              <!-- Card 3 -->
+              <div class="card blog-card">
+                <img src="/images/blog-page/blog-slider-image-01.png" alt="" />
+                <div class="bage-section">
+                  <h6 class="tag font-16 font-weight-400 white lato">
+                    Strategy
+                  </h6>
+                  <h6 class="tag font-16 font-weight-400 white lato">
+                    10 min read
+                  </h6>
+                </div>
+                <h4 class="plus-jakarta font-weight-700 font-32 white">
+                  How Business Consultancy Drives Consultancy Drives ROI
+                </h4>
+              </div>
+            </div>
+            <div class="slider-controls pt-32">
+              <div class="slider-buttons">
+                <button class="prev-button">
+                  <span class="prev-arrow"></span>
+                </button>
+                <button class="next-button">
+                  <span class="next-arrow"></span>
+                </button>
+              </div>
+              <div class="progress-bar">
+                <div class="progress"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section end-->
+
+    <script src="/js/blog-page.js"></script>
+  </body>
+</html>

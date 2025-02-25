@@ -1024,6 +1024,7 @@ tbody tr td picture {
   background-image: url("/images/Contactform.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .contact-form-content {
@@ -1250,6 +1251,11 @@ form {
 }
 .faq-section-content {
   width: 100%;
+}
+.faq-section-content h3 {
+  text-align: center;
+  width: 533px;
+  margin: 0 auto;
 }
 .faq-section-content p {
   text-align: center;
