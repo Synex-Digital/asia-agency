@@ -122,3 +122,58 @@ body {
 }
 
 /* featured case study end */
+/* capabilities section start */
+#capabilities{
+  margin-top: 160px;
+  margin-bottom: 80px;
+}
+.capabilities-container {
+  display: flex;
+  justify-content: space-between;
+}
+.capabilities-container picture {
+  width: 473px;
+  height: 520px;
+}
+.capabilities-container img {
+  width: 473px;
+  height: 520px;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.capabilities-right {
+  width: 474px;
+}
+.capabilities-right h3 {
+  text-align: start;
+}
+
+.approach-container-item {
+  display: flex;
+  justify-content: space-between;
+}
+.approach-item img {
+  width: 80px;
+  height: 80px;
+}
+.approach-item ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.approach-item ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.approach-item ul li img {
+  width: 24px;
+  height: 24px;
+  /* mask-image: url("/images/services/icons/right.png");
+  -webkit-mask-image: url("/images/services/icons/right.png");
+  background-color: rgba(152, 162, 179, 1); */
+}
+
+/* capabilities section end */
