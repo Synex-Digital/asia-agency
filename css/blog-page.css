@@ -162,3 +162,110 @@ body {
   width: 627px;
   left: 40px;
 }
+
+/* blog section  start*/
+.blog-heading {
+  text-align: start;
+  background: radial-gradient(
+    39.91% 96.59% at 52.48% 50%,
+    #ffffff 0%,
+    rgba(228, 237, 255, 0.53) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Hide original text color */
+}
+
+.blog-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 24px;
+  row-gap: 40px;
+}
+
+.blog-cards {
+  width: 374px;
+  background: rgba(11, 10, 13, 1);
+  position: relative;
+  border-radius: 20px;
+  padding: 1.5px;
+  overflow: hidden;
+}
+
+.blog-cards::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1.5px;
+  background: radial-gradient(
+    164.04% 114.84% at 50% 0%,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.blog-cards img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+.blog-cards-content {
+  padding-left: 16px;
+}
+
+.blog-paginaton-contaienr{
+  margin-top: 56px;
+}
+.blog-pagination {
+  width: 496px;
+  margin: auto;
+  border: 1px solid var(--color-other-outline-30, rgba(145, 145, 145, 0.3));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pagination-prev-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  gap: 8px;
+}
+.pagination-prev-button img {
+  width: 20px;
+  height: 20px;
+}
+.pagination-next-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  gap: 8px;
+}
+.pagination-next-button img {
+  width: 20px;
+  height: 20px;
+}
+.pagination-content {
+  width: 40px;
+  border-right: 1px solid
+    var(--color-other-outline-30, rgba(145, 145, 145, 0.3));
+  border-left: 1px solid var(--color-other-outline-30, rgba(145, 145, 145, 0.3));
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination-active {
+  background-color: rgba(130, 242, 168, 1);
+  color: rgba(16, 24, 40, 1);
+}
+/* blog section  end*/
