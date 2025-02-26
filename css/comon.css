@@ -13,7 +13,9 @@ a {
   list-style: none;
   text-decoration: none;
 }
-
+.underline{
+  text-decoration: underline;
+}
 /* Font Families */
 .lato {
   font-family: "Lato", serif;
