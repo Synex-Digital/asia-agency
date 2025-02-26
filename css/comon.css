@@ -118,10 +118,10 @@ a {
   margin-top: 40px;
   margin-bottom: 40px;
 }
-.mt-8{
+.mt-8 {
   margin-top: 8px;
 }
-.mt-80{
+.mt-80 {
   margin-top: 80px;
 }
 .pt-8 {
@@ -185,6 +185,15 @@ a {
 /* Colors */
 .white {
   color: rgba(255, 255, 255, 1);
+}
+.bg-white {
+  background: rgba(255, 255, 255, 1);
+}
+.bg-box {
+  background: rgba(14, 17, 22, 1);
+}
+.bg-primary {
+  background: rgba(130, 242, 168, 1);
 }
 
 .primary {
@@ -345,7 +354,7 @@ a {
   align-items: center;
   gap: 0px 8px;
 }
-.mainlogo a{
+.mainlogo a {
   padding-top: 0px;
 }
 nav {
