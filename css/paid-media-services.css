@@ -206,8 +206,23 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.cards .card h3{
+.cards .card h3 {
   margin-top: 48px;
 }
 
 /* content section end */
+/* solutions section start */
+#solution h3 {
+  width: 550px;
+  margin: auto;
+}
+.solution-cards{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.solution-cards .solution-card{
+  width: 374px;
+  
+}
+/* solutions section end */
