@@ -86,3 +86,39 @@ body {
   align-items: center;
 }
 /* paid media channels end */
+/* featured case study start */
+.case-study-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.case-study-left {
+  width: 547px;
+}
+.case-study-left .case-study-button button {
+  border-radius: 100px;
+  margin-top: 32px;
+}
+.case-study-left .case-study-button button a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.horizontal-separator {
+  width: 100%; /* Full width */
+  height: 1.5px; /* Thickness of the separator */
+  background-color: rgba(145, 145, 145, 0.3); /* Using the given color */
+  margin: 32px 0; /* Adds spacing above and below */
+}
+.case-study-container .stats-contaier {
+  margin-top: 24px;
+}
+.case-study-container picture img {
+  width: 473px;
+  height: 520px;
+  border-radius: 12px;
+}
+
+/* featured case study end */
