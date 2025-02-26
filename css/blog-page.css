@@ -220,8 +220,11 @@ body {
 .blog-cards-content {
   padding-left: 16px;
 }
+.blog-cards-content h5 {
+  margin-top: 16px;
+}
 
-.blog-paginaton-contaienr{
+.blog-paginaton-contaienr {
   margin-top: 56px;
 }
 .blog-pagination {
@@ -231,6 +234,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-radius: 10px;
 }
 .pagination-prev-button {
   display: flex;
@@ -238,6 +242,7 @@ body {
   justify-content: space-between;
   padding: 10px 16px;
   gap: 8px;
+  cursor: pointer;
 }
 .pagination-prev-button img {
   width: 20px;
@@ -249,6 +254,7 @@ body {
   justify-content: center;
   padding: 10px 16px;
   gap: 8px;
+  cursor: pointer;
 }
 .pagination-next-button img {
   width: 20px;
@@ -263,9 +269,61 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .pagination-active {
   background-color: rgba(130, 242, 168, 1);
   color: rgba(16, 24, 40, 1);
 }
 /* blog section  end*/
+/* blog cta section start */
+.blog-cta-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 114px 303px;
+  flex-direction: column;
+  margin-top: 80px;
+  margin-bottom: 160px;
+  background-image: url("/images/cta.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 28px;
+}
+.blog-cta-container h3 {
+  text-align: center;
+}
+.blog-cta-container form {
+  width: 490px;
+  padding: 6px 6px 6px 24px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+.blog-cta-container form input {
+  width: 60%;
+  border: none;
+  outline: none;
+  padding: 16px 0;
+  font-size: 16px;
+  color: rgba(102, 112, 133, 1);
+}
+.blog-cta-container form input::placeholder {
+  color: rgba(102, 112, 133, 1);
+}
+.blog-cta-container form button {
+  background: rgba(29, 41, 57, 1);
+  border-radius: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 14px 20px;
+  color: rgba(255, 255, 255, 1);
+}
+
+/* blog cta section end */
