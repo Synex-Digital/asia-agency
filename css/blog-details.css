@@ -1,0 +1,25 @@
+body {
+  background: #0b0a0d;
+}
+
+.hero-content h1 {
+  width: 708px;
+  text-align: start;
+  margin-top: 120px;
+  padding-bottom: 65px;
+}
+.hero-content p {
+  width: 657px;
+  text-align: start;
+  line-height: 24px;
+  margin: 32px 0px;
+}
+
+.circle-seperator {
+  width: 8px; /* Adjust size as needed */
+  height: 8px;
+  background-color: rgba(145, 145, 145, 0.3); /* Change color as needed */
+  border-radius: 50%; /* Makes it a circle */
+  display: inline-block; /* Ensures it doesn't take full width */
+  margin: 0px 8px;
+}
