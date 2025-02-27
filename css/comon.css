@@ -792,8 +792,8 @@ header p {
 }
 
 .card-container .card-image img {
-  width: 20px;
-  height: 20px;
+  width: 32px;
+  height: 32px;
 }
 .card-container .card-image {
   display: inline-flex;
