@@ -131,3 +131,23 @@ body {
   border-radius: 28px;
 }
 /* problem solution section end */
+/* EXECUTION section start */
+.execution-image-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.execution-image-container picture img {
+  width: 565px;
+  height: 480px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 28px;
+}
+.execution-text-container {
+  width: 529px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+/* EXECUTION section end */
