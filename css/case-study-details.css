@@ -117,3 +117,17 @@ body {
   border-radius: 28px;
 }
 /* formulaa section end */
+/* problem solution section start */
+.solution-images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.solution-images picture img {
+  width: 565px;
+  height: 480px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 28px;
+}
+/* problem solution section end */
