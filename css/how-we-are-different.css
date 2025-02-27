@@ -1,6 +1,11 @@
 body {
   background: #0b0a0d;
 }
+#hero  header  p{
+  width: 664px;
+}
+
+
 /* solutions section start */
 #solution h3 {
   width: 550px;

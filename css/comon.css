@@ -126,7 +126,7 @@ a {
 .mt-80 {
   margin-top: 80px;
 }
-.mb-80{
+.mb-80 {
   margin-bottom: 80px;
 }
 .pt-8 {
@@ -1037,6 +1037,437 @@ header p {
 }
 
 /* testimonial section end */
+
+/* campaign data section start */
+.campaign-data-content {
+  background-color: rgba(14, 17, 22, 1);
+  border-radius: 15px;
+  padding: 60px;
+  margin-top: 80px;
+}
+
+.campaign-data-container {
+  width: 798px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px; /* Spacing between items and progress bar */
+}
+
+.campaign-data-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.campaign-data-item.active span {
+  color: rgba(255, 255, 255, 1);
+}
+
+.campaign-data-item img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Progress Bar */
+.campaign-progress-bar {
+  width: 798px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.progress-fill {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 4px;
+  transition: width 0.3s ease-in-out;
+}
+.campaign-data-1 {
+  display: flex;
+  justify-content: space-between;
+}
+.campaign-table-container-2,
+.campaign-table-container-3 {
+  display: none;
+}
+.campaign-table-content {
+  padding: 24px;
+  background: rgba(145, 145, 145, 0.3);
+  width: 601px;
+  border-radius: 15px;
+}
+
+.table-container {
+  max-height: 571px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  border-radius: 15px;
+  background-color: rgba(14, 17, 22);
+  /* padding: 34px 24px 0px 24px; */
+  /* Hide scrollbar for Chrome, Safari, and Edge */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 11 */
+}
+.table-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid rgba(145, 145, 145, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 16px 16px;
+  text-align: left;
+  border-bottom: 1px solid #282f38;
+}
+thead tr {
+  background-color: #1c1f24;
+}
+thead tr th {
+  padding: 24px 0px 24px 24px;
+  text-transform: uppercase;
+}
+
+tbody tr td {
+  text-align: center;
+}
+
+tr:hover {
+  background-color: #202831;
+}
+tbody tr td picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px; /* Fixed width */
+  height: 56px; /* Fixed height */
+  padding: 12px 12px 12px 12px; /* Applied only top padding */
+  gap: 10px; /* Not needed for a single image, but kept */
+  border-radius: 100px; /* Top-left rounded */
+  background: rgba(23, 28, 36, 1);
+}
+
+.brand-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.campaign-table-right-content {
+  width: 386px;
+}
+.campaign-table-right-bullets ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.campaign-table-right-bullets ul li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.campaign-table-right-bullets ul li span {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(145, 145, 145, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+.campaign-table-right-bullets ul li img {
+  width: 24px;
+  height: 24px;
+}
+/* campaign data section end */
+
+/* contact form start */
+.contact-form {
+  display: flex;
+  width: 100%;
+  background: #16191d;
+  border-radius: 12px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  padding: 80px 60px 80px 80px;
+}
+#contact-form {
+  background-image: url("/images/Contactform.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-form-content {
+  width: 478px;
+}
+
+.contact-form-input {
+  width: 466px;
+}
+.contact-form-points {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.contact-form-points img {
+  width: 20px;
+  height: 20px;
+}
+.contact-form-content h4 {
+  padding-top: 84px;
+  width: 244px;
+}
+.contact-form-content button {
+  display: flex;
+  margin-top: 20px;
+  padding: 8px 16px;
+  border-radius: 100px;
+  border: none;
+  color: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  border: none;
+}
+
+form {
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.faq-form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.faq-form-group input {
+  padding: 16px 0px;
+  width: 221px;
+  background: #16191d;
+  border: transparent;
+  color: var(--Color-Other-White, rgba(255, 255, 255, 1));
+  font-family: "Lato", serif;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1.5px solid rgba(145, 145, 145, 0.3);
+}
+.faq-form-group input::placeholder {
+  color: rgba(255, 255, 255, 1);
+}
+
+.faq-form-group input:focus {
+  outline: none;
+  border: none;
+  font-family: "Lato", serif;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1.5px solid rgba(145, 145, 145, 0.3);
+}
+
+.contact-details textarea {
+  padding: 16px 0px;
+  width: 100%;
+  background: #16191d;
+  border: transparent;
+  color: var(--Color-Other-White, rgba(255, 255, 255, 1));
+  border-bottom: 1.5px solid rgba(145, 145, 145, 0.3);
+  font-family: "Lato", serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 71px;
+}
+.contact-details textarea::placeholder {
+  color: rgba(255, 255, 255, 1);
+}
+.contact-details textarea:focus {
+  outline: none;
+  border: none;
+  font-family: "Lato", serif;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1.5px solid rgba(145, 145, 145, 0.3);
+}
+
+.submit-btn button {
+  padding: 14px 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  margin-top: 30px;
+  border: none;
+}
+.submit-btn button img {
+  margin-left: 4px;
+  width: 24px;
+  height: 24px;
+}
+
+/* contact form end */
+
+/* faq section start */
+.faq-background {
+  background-image: url("/images/bg-faq.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%; /* Or a specific height if needed */
+  position: absolute; /* So it doesn't affect layout */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Place it behind the content */
+  background-attachment: fixed;
+}
+#faq-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.faq-section {
+  width: 100%;
+}
+.faq-section-content {
+  width: 100%;
+}
+.faq-section-content p {
+  text-align: center;
+  margin-top: 16px;
+}
+.faq-nav-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.faq-button-nav-1 {
+  padding: 8px 16px;
+  border-radius: 100px;
+  background: linear-gradient(90deg, #2d4535 0%, #0e1116 100%);
+  border: none;
+}
+.faq-button-nav-2 {
+  padding: 8px 16px;
+  border-radius: 100px;
+  background: var(--Color-Other-White, rgba(255, 255, 255, 1));
+  border: none;
+}
+.nav-faq-container {
+  width: 100%;
+  padding: 80px 0;
+}
+
+.nav-faq-item {
+  background: #000;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.nav-faq-item summary {
+  padding: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-faq-item summary img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.nav-faq-item[open] summary img {
+  transform: rotate(90deg);
+}
+
+.nav-faq-item .content {
+  padding: 0 24px 24px;
+  margin-left: 40px;
+  width: 100%;
+  background-image: url("/images/FAQs.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1122px;
+}
+/* Desktop styles remain the same */
+
+/* Tablet (1024px and below) */
+@media (max-width: 1024px) {
+  .faq-section-content {
+    width: 100%;
+    max-width: 533px;
+  }
+
+  .nav-faq-content {
+    max-width: 700px;
+    padding: 0 20px;
+  }
+}
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  .faq-section-content h3 {
+    font-size: 36px;
+  }
+
+  .faq-nav-buttons {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-faq-container {
+    padding: 40px 0;
+  }
+
+  .nav-faq-item summary {
+    padding: 16px;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .faq-section-content h3 {
+    font-size: 28px;
+  }
+
+  .faq-nav-buttons button {
+    width: 50%;
+  }
+
+  .nav-faq-item summary {
+    font-size: 16px;
+    gap: 12px;
+  }
+
+  .nav-faq-item .content {
+    margin-left: 32px;
+    font-size: 14px;
+  }
+}
+
+/* faq section end */
 
 /* Footer  section start */
 footer {
