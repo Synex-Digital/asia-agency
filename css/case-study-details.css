@@ -39,3 +39,34 @@ body {
   border-radius: 28px;
 }
 /* img section */
+/* riview section start */
+#review {
+  margin-top: 180px;
+  margin-bottom: 60px;
+}
+.review-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.review-services-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+.review-services-title h2 {
+  width: 400px;
+}
+.review-services-title p {
+  width: 481px;
+}
+.review-services-title picture img {
+  width: 1170px;
+  height: 560px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 28px;
+}
+/* riview section end */
