@@ -70,3 +70,50 @@ body {
   border-radius: 28px;
 }
 /* riview section end */
+/* formulaa section start */
+.formula-text-right p {
+  text-align: right;
+}
+.formula-card-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.formula-card-title span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 4px;
+  background-color: rgba(145, 145, 145, 0.3);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.formula-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  row-gap: 24px;
+  margin-bottom: 80px;
+}
+.formula-cards .formula-card {
+  width: 573px;
+  background-color: #171619;
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+#formula-section picture img {
+  width: 1170px;
+  height: 480px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 28px;
+}
+/* formulaa section end */
