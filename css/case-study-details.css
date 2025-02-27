@@ -1,0 +1,168 @@
+body {
+  background: #0b0a0d;
+}
+.header h1 {
+  width: 643px;
+  margin-top: 120px;
+}
+.header p {
+  width: 567px;
+  line-height: 24px;
+  margin-top: 32px;
+}
+.circle-seperator {
+  width: 8px; /* Adjust size as needed */
+  height: 8px;
+  background-color: rgba(145, 145, 145, 0.3); /* Change color as needed */
+  border-radius: 50%; /* Makes it a circle */
+  display: inline-block; /* Ensures it doesn't take full width */
+  margin: 0px 8px;
+}
+.bottom-row {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottom-row .item {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+/* img section */
+.img-section picture img {
+  width: 1170px;
+  height: 560px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 28px;
+}
+/* img section */
+/* riview section start */
+#review {
+  margin-top: 180px;
+  margin-bottom: 60px;
+}
+.review-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.review-services-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+.review-services-title h2 {
+  width: 400px;
+}
+.review-services-title p {
+  width: 481px;
+}
+.review-services-title picture img {
+  width: 1170px;
+  height: 560px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 28px;
+}
+/* riview section end */
+/* formulaa section start */
+.formula-text-right p {
+  text-align: right;
+}
+.formula-card-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.formula-card-title span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 4px;
+  background-color: rgba(145, 145, 145, 0.3);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.formula-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  row-gap: 24px;
+  margin-bottom: 80px;
+}
+.formula-cards .formula-card {
+  width: 573px;
+  background-color: #171619;
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+#formula-section picture img {
+  width: 1170px;
+  height: 480px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 28px;
+}
+/* formulaa section end */
+/* problem solution section start */
+.solution-images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.solution-images picture img {
+  width: 565px;
+  height: 480px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 28px;
+}
+/* problem solution section end */
+/* EXECUTION section start */
+.execution-image-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.execution-image-container picture img {
+  width: 565px;
+  height: 480px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 28px;
+}
+.execution-text-container {
+  width: 529px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+/* EXECUTION section end */
+/* conclusion section start */
+.conclusion-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.conclusion-cards .conclusion-card {
+  width: 565px;
+  padding: 40px;
+  background-color: rgba(14, 17, 22, 1);
+    border-radius: 24px;
+}
+
+/* conclusion section end */
+ 

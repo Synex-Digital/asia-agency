@@ -55,23 +55,3 @@ document.addEventListener("DOMContentLoaded", () => {
     updateSlider();
   });
 });
-// about us section
-
-document.querySelectorAll(".dropdownButton").forEach((button) => {
-  button.addEventListener("click", function () {
-    // Find the closest dropdown content (next sibling div)
-    const dropdownContent = this.parentElement.parentElement.nextElementSibling;
-
-    if (
-      dropdownContent.style.display === "none" ||
-      dropdownContent.style.display === ""
-    ) {
-      dropdownContent.style.display = "block";
-      dropdownContent.style.animation = "fadeIn 0.5s forwards";
-      this.innerHTML = "-";
-    } else {
-      dropdownContent.style.display = "none";
-      this.innerHTML = "+";
-    }
-  });
-});
