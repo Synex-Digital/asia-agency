@@ -184,6 +184,9 @@ a {
 .mt-40 {
   margin-top: 40px;
 }
+.mt-20 {
+  margin-top: 20px;
+}
 /* Colors */
 .white {
   color: rgba(255, 255, 255, 1);

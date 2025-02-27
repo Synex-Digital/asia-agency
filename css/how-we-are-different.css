@@ -1,4 +1,35 @@
 body {
-    background: #0b0a0d;
-  }
-  
+  background: #0b0a0d;
+}
+/* solutions section start */
+#solution h3 {
+  width: 550px;
+  margin: auto;
+}
+.solution-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.solution-cards .solution-card {
+  width: 374px;
+}
+.solution-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#solution .solution-heading h3 {
+  width: 390px;
+  text-align: left;
+  margin: 0px;
+}
+.solution-heading p {
+  width: 458px;
+}
+.solution-cards{
+  flex-wrap: wrap;
+  row-gap: 85px;
+}
+/* solutions section end */
