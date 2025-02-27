@@ -161,3 +161,145 @@ body {
 }
 
 /* paid media channels end */
+/* capabilities section start */
+#capabilities {
+  margin-top: 160px;
+  margin-bottom: 80px;
+}
+.capabilities-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.capabilities-container picture {
+  width: 473px;
+  height: 520px;
+}
+.capabilities-container img {
+  width: 473px;
+  height: 520px;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.capabilities-right {
+  width: 501px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.capabilities-right h3 {
+  text-align: start;
+}
+
+.approach-container-item {
+  display: flex;
+  justify-content: space-between;
+}
+.approach-item img {
+  width: 80px;
+  height: 80px;
+}
+.approach-item ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.approach-item ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.approach-item ul li img {
+  width: 24px;
+  height: 24px;
+  /* mask-image: url("/images/services/icons/right.png");
+  -webkit-mask-image: url("/images/services/icons/right.png");
+  background-color: rgba(152, 162, 179, 1); */
+}
+
+/* capabilities section end */
+/* what we do section start */
+/* Container for the cards */
+.what-we-do-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 24px;
+}
+
+/* Individual card style */
+.what-we-do-cards .what-we-do-card {
+  width: 573px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 24px;
+  position: relative;
+  background: #000;
+  overflow: hidden;
+}
+
+.what-we-do-cards .what-we-do-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 2px;
+  background: radial-gradient(
+    164.04% 114.84% at 50% 0%,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0) 100%
+  ); /* Gradient border */
+
+  /* Cross-browser masking */
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.what-we-do-cards .what-we-do-card:hover::before {
+  opacity: 1;
+}
+
+.what-we-do-cards .what-we-do-card .btn {
+  margin-top: 32px;
+}
+
+.what-we-do-cards .what-we-do-card .btn a img {
+  margin-left: 4px;
+}
+
+.what-we-do-cards .what-we-do-card .btn a {
+  display: inline-flex;
+  width: 154px;
+  padding: 14px 20px;
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255, 1);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, border 0.3s ease;
+  border: 1.5px solid transparent;
+}
+
+.what-we-do-cards .what-we-do-card .btn a:hover {
+  background-color: rgba(14, 17, 22, 1);
+  border: 1.5px solid var(--Color-Grey-800, rgba(29, 41, 57, 1));
+  color: rgba(255, 255, 255, 1);
+  fill: rgba(255, 255, 255, 1);
+}
+.what-we-do-cards .what-we-do-card .btn a:hover img {
+  filter: brightness(0) invert(1);
+}
+
+/* what we do section end */
