@@ -57,3 +57,37 @@ body {
   width: 230px;
 }
 /* why choose us section end */
+/* content section start */
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content-container h3 {
+  width: 536px;
+  text-align: start;
+}
+.content-container p {
+  width: 394px;
+}
+.cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cards .card {
+  width: 374px;
+  padding: 24px;
+  background: var(--Color-BG-Box-BG, rgba(14, 17, 22, 1));
+  border-radius: 24px;
+}
+.cards .card .top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cards .card h3 {
+  margin-top: 48px;
+}
+
+/* content section end */
