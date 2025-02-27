@@ -28,8 +28,32 @@ body {
 .solution-heading p {
   width: 458px;
 }
-.solution-cards{
+.solution-cards {
   flex-wrap: wrap;
   row-gap: 85px;
 }
 /* solutions section end */
+
+/*  why choose us section start */
+#why-choose-us picture img {
+  width: 1170px;
+  height: 542px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 28px;
+  margin-top: 80px;
+}
+.why-choose-us-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 48px;
+}
+.why-choose-us-cards .why-choose-us-card {
+  width: 363px;
+}
+.why-choose-us-cards .why-choose-us-card h3 {
+  border-bottom: 1px solid var(--Color-Other-1, rgba(130, 242, 168, 1));
+  width: 230px;
+}
+/* why choose us section end */
