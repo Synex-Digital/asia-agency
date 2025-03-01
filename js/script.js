@@ -174,7 +174,6 @@ const cards = document.querySelectorAll(".testimonial-card");
 let currentIndex = 0;
 const cardWidth = cards[0].offsetWidth;
 const totalCards = cards.length;
-console.log(cardWidth);
 
 // Update progress bar
 function updateProgress() {
@@ -203,6 +202,74 @@ prevButton.addEventListener("click", () => {
 // Initialize progress bar
 updateProgress();
 
-
-
-
+// word counter
+document.addEventListener('DOMContentLoaded', function() {
+  const words = document.querySelectorAll('.word');
+  const changeTextSection = document.querySelector('.change-text');
+  let lastScrollY = window.scrollY;
+  let animating = false;
+  
+  // Function to animate words to white one-by-one (for scrolling down)
+  function animateWordsToWhite() {
+    words.forEach((word, index) => {
+      setTimeout(() => {
+        word.classList.add('lightup');
+      }, index * 100); // 100ms delay between each word
+    });
+  }
+  
+  // Function to animate words to gray one-by-one (for scrolling up)
+  function animateWordsToGray() {
+    // Reverse the order for scroll up (start from the last word)
+    const wordsArray = Array.from(words);
+    wordsArray.reverse().forEach((word, index) => {
+      setTimeout(() => {
+        word.classList.remove('lightup');
+      }, index * 100); // 100ms delay between each word
+    });
+  }
+  
+  // Function to check if element is in viewport
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top < window.innerHeight &&
+      rect.bottom >= 0
+    );
+  }
+  
+  // Event listener for scroll
+  window.addEventListener('scroll', function() {
+    // Return if animation is already in progress
+    if (animating) return;
+    
+    // Check if section is in viewport
+    if (!changeTextSection || !isInViewport(changeTextSection)) return;
+    
+    const currentScrollY = window.scrollY;
+    const scrollingDown = currentScrollY > lastScrollY;
+    
+    animating = true;
+    
+    if (scrollingDown) {
+      // Scrolling DOWN - animate to WHITE one by one
+      animateWordsToWhite();
+    } else {
+      // Scrolling UP - animate to GRAY one by one
+      animateWordsToGray();
+    }
+    
+    // Reset animation flag after all words are animated
+    setTimeout(() => {
+      animating = false;
+    }, words.length * 100 + 300); // Allow time for all words to animate
+    
+    // Update last scroll position
+    lastScrollY = currentScrollY;
+  });
+  
+  // Initialize words to gray
+  words.forEach(word => {
+    word.classList.remove('lightup');
+  });
+});

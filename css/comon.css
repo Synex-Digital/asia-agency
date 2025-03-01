@@ -190,6 +190,9 @@ a {
 .mt-20 {
   margin-top: 20px;
 }
+.mt-32 {
+  margin-top: 32px;
+}
 /* Colors */
 .white {
   color: rgba(255, 255, 255, 1);
@@ -205,7 +208,7 @@ a {
 }
 
 .primary {
-  background: var(--Color-Other-1, rgba(130, 242, 168, 1));
+  background: rgba(255, 255, 255, 1);
 
   -webkit-background-clip: text; /* For Chrome, Safari */
   -moz-background-clip: text; /* For Firefox */
@@ -218,7 +221,7 @@ a {
   color: rgba(152, 162, 179, 1);
 }
 .gray-800 {
-  color: #1d2939;
+  color: rgba(29, 41, 57, 1);
 }
 .gray-900 {
   color: rgba(16, 24, 40, 1);
@@ -336,6 +339,16 @@ a {
   );
 }
 
+.word {
+  color: #1f2937; /* Default gray-800 */
+  transition: color 0.5s ease;
+}
+
+/* When the word gets the 'lightup' class, it will turn white */
+.word.lightup {
+  color: rgba(255, 255, 255, 1);
+}
+
 /* Hero Section start */
 #hero {
   background-image: url("/images/BGTexture.png");
@@ -391,7 +404,7 @@ nav {
 }
 
 /* Hover effect */
-.nav-item a:hover {
+.nav-item:hover {
   background-color: #444;
   border-radius: 5px;
 }
@@ -434,6 +447,7 @@ header p {
   padding: 4px 12px;
   background: rgba(14, 17, 22, 1);
   border: 1px solid rgba(145, 145, 145, 0.3);
+  font-family: "Lato", serif;
 
   border-radius: 15px;
 }
@@ -447,58 +461,6 @@ header p {
 .description {
   margin-top: 32px;
   margin-bottom: 40px;
-}
-
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .nav-menu {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-
-  .logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-
-  header {
-    width: 100%;
-    padding: 50px 20px;
-  }
-  .tag {
-    margin-bottom: 6px;
-  }
-  .main-heading {
-    font-size: 28px;
-  }
-  .cta-button {
-    width: 100%;
-    text-align: center;
-  }
-}
-@media (max-width: 1024px) {
-  nav {
-    padding: 15px;
-  }
-
-  .nav-menu {
-    gap: 15px;
-  }
-
-  header {
-    width: 90%;
-  }
-
-  .main-heading {
-    font-size: 36px;
-  }
 }
 
 /* Hero Section end */
@@ -586,6 +548,7 @@ header p {
 .badge-button .button-icon {
   width: 24px;
   height: 24px;
+  margin-right: 8px;
 }
 /* white background button */
 .white-bg-btn {
@@ -606,6 +569,12 @@ header p {
 /* Dropdown menu */
 .dropdown {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.dropdown img {
+  margin-left: -10px;
 }
 
 .dropdown-menu {
@@ -624,6 +593,9 @@ header p {
   padding: 10px 15px;
   display: block;
   color: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .dropdown-menu li a:hover {
@@ -663,6 +635,7 @@ header p {
   margin-right: 10px;
   display: flex;
   align-items: start;
+  filter: grayscale(1);
 }
 
 .logo span {
@@ -678,7 +651,7 @@ header p {
   max-width: 1200px;
   margin: 0 auto;
   padding: 120px 303px;
-  border-radius: 25px;
+  border-radius: 28px;
   background-image: url("/images/cta.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1485,6 +1458,10 @@ footer {
   width: 564px;
   margin: 0 auto;
   padding-top: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .footer-content h3 {
   width: 446px;
