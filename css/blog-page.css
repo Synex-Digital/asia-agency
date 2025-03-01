@@ -56,12 +56,6 @@ body {
   position: relative;
   width: 100%;
 }
-#projects {
-  max-width: 1784px;
-  position: relative;
-  overflow: hidden;
-  margin: auto;
-}
 
 .slider {
   display: flex;
