@@ -669,6 +669,7 @@ header p {
   justify-content: center;
   align-items: center;
   padding-top: 40px;
+  font-family: "Lato", serif;
 }
 .cta-btn button {
   border-radius: 25px;
@@ -1486,6 +1487,7 @@ footer {
   border-radius: 100px;
   border: none;
   cursor: pointer;
+  column-gap: 4px;
 }
 .footer-content-nav {
   padding: 120px 20px 0px 20px;
