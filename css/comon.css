@@ -204,12 +204,11 @@ a {
   background: rgba(14, 17, 22, 1);
 }
 .bg-primary {
-  background: rgba(130, 242, 168, 1);
+  background: rgba(255, 255, 255, 1);
 }
 
 .primary {
   background: rgba(255, 255, 255, 1);
-
   -webkit-background-clip: text; /* For Chrome, Safari */
   -moz-background-clip: text; /* For Firefox */
   -ms-background-clip: text; /* For Internet Explorer/Edge */
@@ -477,6 +476,7 @@ header p {
   overflow: hidden;
 }
 .glow-button-border {
+  display: inline-block;
   position: absolute;
   font-weight: 600;
   width: 100%;
@@ -1005,7 +1005,6 @@ header p {
   width: 10px;
   height: 10px;
 }
-
 /* testimonial section end */
 
 /* campaign data section start */
@@ -1533,6 +1532,7 @@ footer {
   background: var(--Color-Other-White, rgba(255, 255, 255, 1));
   border-radius: 100px;
   border: none;
+  cursor: pointer;
 }
 
 .footer-content-nav-2 {
