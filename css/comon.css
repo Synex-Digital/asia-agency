@@ -204,12 +204,11 @@ a {
   background: rgba(14, 17, 22, 1);
 }
 .bg-primary {
-  background: rgba(130, 242, 168, 1);
+  background: rgba(255, 255, 255, 1);
 }
 
 .primary {
   background: rgba(255, 255, 255, 1);
-
   -webkit-background-clip: text; /* For Chrome, Safari */
   -moz-background-clip: text; /* For Firefox */
   -ms-background-clip: text; /* For Internet Explorer/Edge */
@@ -477,6 +476,7 @@ header p {
   overflow: hidden;
 }
 .glow-button-border {
+  display: inline-block;
   position: absolute;
   font-weight: 600;
   width: 100%;
@@ -507,7 +507,7 @@ header p {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(#82f2a8 0%, #020201 100%);
+  background-image: radial-gradient(rgba(255, 255, 255, 1) 0%, #020201 100%);
   filter: blur(5.7px);
   z-index: 0;
 }
@@ -559,11 +559,13 @@ header p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .white-bg-btn-arrow {
   margin-left: 9px;
   width: 24px;
   height: 24px;
+  pointer-events: none;
 }
 
 /* Dropdown menu */
@@ -1005,7 +1007,6 @@ header p {
   width: 10px;
   height: 10px;
 }
-
 /* testimonial section end */
 
 /* campaign data section start */
@@ -1206,14 +1207,14 @@ tbody tr td picture {
   padding-top: 84px;
   width: 244px;
 }
-.contact-form-content button {
-  display: flex;
+.contact-form-content a {
+  display: inline-flex;
   margin-top: 20px;
   padding: 8px 16px;
   border-radius: 100px;
   border: none;
   color: rgba(255, 255, 255, 1);
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.3);
   cursor: pointer;
   border: none;
 }
@@ -1333,7 +1334,7 @@ form {
 .faq-button-nav-1 {
   padding: 8px 16px;
   border-radius: 100px;
-  background: linear-gradient(90deg, #2d4535 0%, #0e1116 100%);
+  background: linear-gradient(90deg, #171c19 0%, #0e1116 100%);
   border: none;
 }
 .faq-button-nav-2 {
@@ -1375,66 +1376,7 @@ form {
   padding: 0 24px 24px;
   margin-left: 40px;
   width: 100%;
-  background-image: url("/images/FAQs.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 1122px;
-}
-/* Desktop styles remain the same */
-
-/* Tablet (1024px and below) */
-@media (max-width: 1024px) {
-  .faq-section-content {
-    width: 100%;
-    max-width: 533px;
-  }
-
-  .nav-faq-content {
-    max-width: 700px;
-    padding: 0 20px;
-  }
-}
-
-/* Tablet (768px and below) */
-@media (max-width: 768px) {
-  .faq-section-content h3 {
-    font-size: 36px;
-  }
-
-  .faq-nav-buttons {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .nav-faq-container {
-    padding: 40px 0;
-  }
-
-  .nav-faq-item summary {
-    padding: 16px;
-  }
-}
-
-/* Mobile (480px and below) */
-@media (max-width: 480px) {
-  .faq-section-content h3 {
-    font-size: 28px;
-  }
-
-  .faq-nav-buttons button {
-    width: 50%;
-  }
-
-  .nav-faq-item summary {
-    font-size: 16px;
-    gap: 12px;
-  }
-
-  .nav-faq-item .content {
-    margin-left: 32px;
-    font-size: 14px;
-  }
+  max-width: 1122px;
 }
 
 /* faq section end */
@@ -1475,8 +1417,9 @@ footer {
   align-items: center;
   margin: 0 auto;
 }
-.footer-content button {
-  display: flex;
+
+.footer-content a {
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   padding: 14px 20px;
@@ -1484,6 +1427,7 @@ footer {
   border: none;
   cursor: pointer;
   column-gap: 4px;
+  background: rgba(255, 255, 255, 1);
 }
 .footer-content-nav {
   padding: 120px 20px 0px 20px;
@@ -1533,6 +1477,7 @@ footer {
   background: var(--Color-Other-White, rgba(255, 255, 255, 1));
   border-radius: 100px;
   border: none;
+  cursor: pointer;
 }
 
 .footer-content-nav-2 {
@@ -1572,7 +1517,7 @@ footer .speretaor {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1px solid var(--color-other-outline-30, rgba(145, 145, 145, 0.3));
+  border: 1px solid rgba(145, 145, 145, 0.3);
 }
 /* Tablet (1024px and below) */
 @media (max-width: 1024px) {
