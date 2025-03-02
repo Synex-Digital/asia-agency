@@ -1319,8 +1319,10 @@ form {
   width: 100%;
 }
 .faq-section-content {
-  width: 100%;
+  width: 533px;
+  margin: 0 auto;
 }
+
 .faq-section-content p {
   text-align: center;
   margin-top: 16px;
