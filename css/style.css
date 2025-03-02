@@ -69,7 +69,7 @@ body {
 .box.glow {
   border-image: radial-gradient(
       75px at var(--glow-x) var(--glow-y),
-      #82f2a7,
+      rgba(252, 252, 253, 1),
       rgba(91, 91, 91, 0.5)
     )
     1;
@@ -82,7 +82,7 @@ body {
   z-index: 1000;
   background: radial-gradient(
     circle,
-    rgba(130, 242, 167, 0.1) 0%,
+    rgba(227, 232, 229, 0.1) 0%,
     transparent 70%
   );
   transition: opacity 0.3s ease;
@@ -90,7 +90,7 @@ body {
 
 .particle {
   position: absolute;
-  background: #82f2a7;
+  background: rgba(252, 252, 253, 1);
   pointer-events: none;
   animation: particleAnim 1s forwards;
 }
@@ -162,22 +162,17 @@ body {
 /* trust us section start */
 .features {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Center content horizontally */
+  justify-content: space-between; /* Center content horizontally */
   align-items: center;
-  padding: 20px;
-  gap: 20px; /* Adds spacing between features */
 }
 
 .feature {
-  width: 100%; /* Full width on very small screens */
-  max-width: 300px; /* Limit width so it doesn't stretch too much */
+  width: 264px;
   display: flex;
   flex-direction: row;
   align-items: start;
-  justify-content: flex-start;
+  justify-content: start;
   text-align: left;
-  justify-content: start; /* Center items in the row */
 }
 
 /* Centering text content */
@@ -192,20 +187,6 @@ body {
   margin-right: 6px;
 }
 
-/* Medium screens: 2 columns */
-@media (min-width: 576px) {
-  .feature {
-    width: 48%; /* Two columns */
-  }
-}
-
-/* Large screens: 4 columns */
-@media (min-width: 1024px) {
-  .feature {
-    width: 23%; /* Four columns */
-  }
-}
-
 /* trust us section end */
 
 /* campaign data section start */
@@ -213,11 +194,11 @@ body {
   width: 460px;
   margin: 0 auto;
 }
-.accordion {
-  width: 474px;
-}
 .campaign-data-content {
   background: none;
+}
+.accordion {
+  width: 474px;
 }
 
 .campaign-data-content .accordion details {
@@ -511,61 +492,10 @@ tbody tr td picture {
 .blog-card-content {
   padding-left: 16px;
 }
-@media (max-width: 1024px) {
-  .blog-heading h3 {
-    width: 100%;
-  }
-  .blog-cards {
-    column-gap: 16px; /* Reduced gap for smaller screens */
-    justify-content: center;
-    padding: 0px 12px;
-  }
+.blog-card-content a {
+  display: inline-block;
 }
 
-/* Responsive for mobile screens */
-@media (max-width: 768px) {
-  .blog-heading h3 {
-    width: 100%;
-  }
-
-  .blog-card {
-    width: 70%; /* Full width for smaller screens */
-  }
-
-  .blog-cards {
-    column-gap: 16px; /* Reduced gap for smaller screens */
-    padding: 0px 12px;
-  }
-}
-/* Responsive for extra small screens (mobile phones) */
-@media (max-width: 480px) {
-  .blog-heading {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 12px;
-  }
-  .blog-heading h3 {
-    width: 100%;
-    text-align: center;
-    padding-bottom: 12px;
-  }
-
-  .blog-card {
-    width: 100%; /* Full width for mobile */
-  }
-
-  .blog-cards {
-    row-gap: 16px; /* Reduced row gap for mobile */
-    padding: 12px 12px;
-  }
-
-  .blog-card-content {
-    padding-left: 12px; /* Reduce padding */
-  }
-}
 /* blog section end */
 /* contact form start */
 .contact-form {
@@ -632,7 +562,7 @@ form {
 .form-group input {
   padding: 16px 0px;
   width: 221px;
-  background: #16191d;
+  background: rgba(14, 17, 22, 1);
   border: transparent;
   color: var(--Color-Other-White, rgba(255, 255, 255, 1));
   font-family: "Lato", serif;
@@ -656,7 +586,7 @@ form {
 .contact-details textarea {
   padding: 16px 0px;
   width: 100%;
-  background: #16191d;
+  background: rgba(14, 17, 22, 1);
   border: transparent;
   color: var(--Color-Other-White, rgba(255, 255, 255, 1));
   border-bottom: 1.5px solid rgba(145, 145, 145, 0.3);
@@ -686,6 +616,7 @@ form {
   border-radius: 100px;
   margin-top: 30px;
   border: none;
+  cursor: pointer;
 }
 .submit-btn button img {
   margin-left: 4px;
@@ -693,243 +624,4 @@ form {
   height: 24px;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .contact-form {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 60px 40px;
-  }
-
-  .contact-form-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .contact-form-points {
-    justify-content: center;
-  }
-
-  .contact-form-input {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40px;
-  }
-
-  .contact-form-container {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .contact-form {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .contact-form-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-form-points {
-    justify-content: center;
-  }
-
-  .contact-form-content h4 {
-    width: 100%;
-  }
-
-  .contact-form-input {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-form-container {
-    width: 100%;
-    text-align: center;
-  }
-
-  .form-group {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact-form-content h2 {
-    font-size: 32px;
-  }
-  .contact-form-content h4 {
-    font-size: 18px;
-  }
-  .contact-form-content,
-  .form-group input {
-    width: 100%;
-  }
-  .form-input input {
-    width: 100%;
-  }
-  .contact-details textarea {
-    font-size: 16px;
-  }
-}
-
 /* contact form end */
-/* faq section start */
-.faq-background {
-  background-image: url("/images/bg-faq.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: 100%; /* Or a specific height if needed */
-  position: absolute; /* So it doesn't affect layout */
-  top: 0;
-  left: 0;
-  z-index: -1; /* Place it behind the content */
-  background-attachment: fixed;
-}
-#faq-section {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.faq-section {
-  width: 100%;
-}
-.faq-section-content {
-  width: 100%;
-}
-.faq-section-content h3 {
-  text-align: center;
-  width: 533px;
-  margin: 0 auto;
-}
-.faq-section-content p {
-  text-align: center;
-  margin-top: 16px;
-}
-.faq-nav-buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-.faq-button-nav-1 {
-  padding: 8px 16px;
-  border-radius: 100px;
-  background: linear-gradient(90deg, #2d4535 0%, #0e1116 100%);
-  border: none;
-}
-.faq-button-nav-2 {
-  padding: 8px 16px;
-  border-radius: 100px;
-  background: var(--Color-Other-White, rgba(255, 255, 255, 1));
-  border: none;
-}
-.nav-faq-container {
-  width: 100%;
-  padding: 80px 0;
-}
-
-.nav-faq-item {
-  background: #000;
-  border-radius: 8px;
-  margin-bottom: 16px;
-}
-
-.nav-faq-item summary {
-  padding: 24px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.nav-faq-item summary img {
-  width: 20px;
-  height: 20px;
-  transition: transform 0.3s ease;
-}
-
-.nav-faq-item[open] summary img {
-  transform: rotate(90deg);
-}
-
-.nav-faq-item .content {
-  padding: 0 24px 24px;
-  margin-left: 40px;
-  width: 100%;
-  background-image: url("/images/FAQs.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 1122px;
-}
-/* Desktop styles remain the same */
-
-/* Tablet (1024px and below) */
-@media (max-width: 1024px) {
-  .faq-section-content {
-    width: 100%;
-    max-width: 533px;
-  }
-
-  .nav-faq-content {
-    max-width: 700px;
-    padding: 0 20px;
-  }
-}
-
-/* Tablet (768px and below) */
-@media (max-width: 768px) {
-  .faq-section-content h3 {
-    font-size: 36px;
-  }
-
-  .faq-nav-buttons {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .nav-faq-container {
-    padding: 40px 0;
-  }
-
-  .nav-faq-item summary {
-    padding: 16px;
-  }
-}
-
-/* Mobile (480px and below) */
-@media (max-width: 480px) {
-  .faq-section-content h3 {
-    font-size: 28px;
-  }
-
-  .faq-nav-buttons button {
-    width: 50%;
-  }
-
-  .nav-faq-item summary {
-    font-size: 16px;
-    gap: 12px;
-  }
-
-  .nav-faq-item .content {
-    margin-left: 32px;
-    font-size: 14px;
-  }
-}
-
-/* faq section end */
