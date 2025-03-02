@@ -502,7 +502,7 @@ tbody tr td picture {
   display: flex;
   width: 100%;
   background: #16191d;
-  border-radius: 12px;
+  border-radius: 24px;
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
@@ -527,6 +527,17 @@ tbody tr td picture {
   flex-direction: row;
   align-items: center;
   gap: 8px;
+}
+.contact-form-content a {
+  display: inline-flex;
+  margin-top: 20px;
+  padding: 8px 16px;
+  border-radius: 100px;
+  border: none;
+  color: rgba(255, 255, 255, 1);
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  border: none;
 }
 .contact-form-points img {
   width: 20px;

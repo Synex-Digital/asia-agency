@@ -103,19 +103,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const cardContainers = document.querySelectorAll(".respond-card-container");
+  const respondCards = document.querySelectorAll(".respond-card");
 
-  cardContainers.forEach((container) => {
-    const checkboxes = container.querySelectorAll(".checkbox");
+  respondCards.forEach((card) => {
+      card.addEventListener("click", function () {
+          // Remove 'selected' class from all cards
+          respondCards.forEach(c => c.classList.remove("selected"));
 
-    checkboxes.forEach((checkbox) => {
-      checkbox.addEventListener("change", function () {
-        if (this.checked) {
-          checkboxes.forEach((cb) => {
-            if (cb !== this) cb.checked = false; // Uncheck other checkboxes in the same section
-          });
-        }
+          // Select the radio button inside the clicked card
+          const radioButton = card.querySelector("input[type='radio']");
+          if (radioButton) {
+              radioButton.checked = true;
+              card.classList.add("selected"); // Add highlight effect
+          }
       });
-    });
   });
 });

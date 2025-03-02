@@ -94,7 +94,7 @@ body {
   line-height: 24px;
 }
 .respond-card-container {
-  background-color: rgba(14, 17, 22, 1);
+  background-color: #0E1116;
   padding: 60px;
   border-radius: 15px;
   margin-bottom: 24px;
@@ -125,6 +125,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  cursor: pointer;
 }
 .text h3 {
   text-align: center;
