@@ -1174,7 +1174,7 @@ tbody tr td picture {
   display: flex;
   width: 100%;
   background: #16191d;
-  border-radius: 12px;
+  border-radius: 24px;
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
@@ -1233,7 +1233,7 @@ form {
 .faq-form-group input {
   padding: 16px 0px;
   width: 221px;
-  background: #16191d;
+  background: rgba(14, 17, 22, 1);
   border: transparent;
   color: var(--Color-Other-White, rgba(255, 255, 255, 1));
   font-family: "Lato", serif;
@@ -1257,7 +1257,7 @@ form {
 .contact-details textarea {
   padding: 16px 0px;
   width: 100%;
-  background: #16191d;
+  background: rgba(14, 17, 22, 1);
   border: transparent;
   color: var(--Color-Other-White, rgba(255, 255, 255, 1));
   border-bottom: 1.5px solid rgba(145, 145, 145, 0.3);
@@ -1319,8 +1319,10 @@ form {
   width: 100%;
 }
 .faq-section-content {
-  width: 100%;
+  width: 533px;
+  margin: 0 auto;
 }
+
 .faq-section-content p {
   text-align: center;
   margin-top: 16px;
