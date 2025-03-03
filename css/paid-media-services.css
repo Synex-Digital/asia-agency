@@ -46,7 +46,7 @@ body {
   width: 520px;
   display: flex;
   flex-direction: column;
-  row-gap: 40px;
+  row-gap: 24px;
 }
 .capability-dropdown-header {
   display: flex;
@@ -58,31 +58,31 @@ body {
   height: 40px;
   background: #0b0a0d;
   border: none;
+  cursor: pointer;
 }
 .dropdown-content {
-  animation: fadeIn 0.5s ease;
+  max-height: 0;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
+
+.dropdown-content.active {
+  visibility: visible;
+  opacity: 1;
+}
+
 .dropdown-content p {
   margin-left: 62px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 .paid-media-container {
   display: flex;
   justify-content: space-between;
 }
 .dropdownButton {
   display: flex;
-  justify-content: center;
   align-items: center;
   cursor: pointer;
 }
@@ -227,7 +227,6 @@ body {
 }
 /* solutions section end */
 
-
 /* why choose us section start */
 .why-choose-us-container {
   display: flex;
@@ -296,4 +295,3 @@ body {
   height: 24px;
 }
 /* why choose us section end */
-

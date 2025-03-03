@@ -62,16 +62,20 @@ body {
 }
 /* why choose us section end */
 /* content section start */
-.content-container {
+.paid-media-heading {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
-.content-container h3 {
+.content-container-how {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content-container-how h2 {
   width: 536px;
   text-align: start;
 }
-.content-container p {
+.content-container-how p {
   width: 394px;
 }
 .cards {
@@ -119,49 +123,35 @@ body {
   height: 40px;
   background: rgba(14, 17, 22, 1);
   border: none;
+  cursor: pointer;
 }
 .dropdown-content {
-  animation: fadeIn 0.5s ease;
+  max-height: 0;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
+
+.dropdown-content.active {
+  visibility: visible;
+  opacity: 1;
+}
+
 .dropdown-content p {
   margin-left: 62px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 .paid-media-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .dropdownButton {
   display: flex;
-  justify-content: center;
   align-items: center;
   cursor: pointer;
-}
-
-.paid-media-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.paid-media-heading .content-container {
-  width: 458px;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  row-gap: 12px;
-}
-.paid-media-heading .content-container h2 {
-  text-align: start;
+  cursor: pointer;
 }
 
 /* paid media channels end */

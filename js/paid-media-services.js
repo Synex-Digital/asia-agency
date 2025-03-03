@@ -1,22 +1,39 @@
-document.querySelectorAll(".dropdownButton").forEach((button) => {
-  button.addEventListener("click", function () {
-    // Find the closest dropdown content (next sibling div)
-    const dropdownContent = this.parentElement.nextElementSibling;
-    const icon = this.querySelector("img"); // Select the icon inside the button
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownButtons = document.querySelectorAll(".dropdownButton");
+  const dropdownContents = document.querySelectorAll(".dropdown-content");
 
-    if (
-      dropdownContent.style.display === "none" ||
-      dropdownContent.style.display === ""
-    ) {
-      dropdownContent.style.display = "block";
-      dropdownContent.style.animation = "fadeIn 0.5s forwards";
-      icon.style.transform = "rotate(90deg)"; // Rotate icon when expanded
-    } else {
-      dropdownContent.style.display = "none";
-      icon.style.transform = "rotate(0deg)"; // Reset icon rotation
-    }
+  dropdownButtons.forEach((button, index) => {
+    const content = dropdownContents[index];
+
+    // Set initial max-height to 0 for all dropdown contents
+    content.style.maxHeight = "0";
+    content.classList.remove("active");
+
+    // Add click event listener to toggle the active class and handle the animation
+    button.addEventListener("click", function () {
+      const isOpen = content.classList.contains("active");
+
+      // Toggle active class on the clicked dropdown content
+      content.classList.toggle("active");
+
+      // If opening, set max-height to the content's scrollHeight
+      if (!isOpen) {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } else {
+        content.style.maxHeight = "0"; // Close it by setting max-height to 0
+      }
+
+      // Close other dropdowns by resetting their max-height to 0
+      dropdownContents.forEach((otherContent, otherIndex) => {
+        if (otherContent !== content && otherContent.classList.contains("active")) {
+          otherContent.classList.remove("active");
+          otherContent.style.maxHeight = "0";
+        }
+      });
+    });
   });
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const campaignItems = document.querySelectorAll(".campaign-data-item");
