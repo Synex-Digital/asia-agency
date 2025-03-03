@@ -1,10 +1,9 @@
 body {
   background: #0b0a0d;
 }
-#hero  header  p{
+#hero header p {
   width: 664px;
 }
-
 
 /* solutions section start */
 #solution h3 {
@@ -58,7 +57,7 @@ body {
   width: 363px;
 }
 .why-choose-us-cards .why-choose-us-card h3 {
-  border-bottom: 1px solid var(--Color-Other-1, rgba(130, 242, 168, 1));
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
   width: 230px;
 }
 /* why choose us section end */
@@ -83,7 +82,7 @@ body {
 .cards .card {
   width: 374px;
   padding: 24px;
-  background: var(--Color-BG-Box-BG, rgba(14, 17, 22, 1));
+  background-image: url("/images/paid-midia/Frame-3253.png");
   border-radius: 24px;
 }
 .cards .card .top-row {
@@ -244,7 +243,10 @@ body {
   align-items: flex-start;
   border-radius: 24px;
   position: relative;
-  background: #000;
+  background-image: url("/images/paid-midia/Frame-3253.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
 
