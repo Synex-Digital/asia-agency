@@ -199,7 +199,7 @@ body {
 .cards .card {
   width: 374px;
   padding: 24px;
-  background: var(--Color-BG-Box-BG, rgba(14, 17, 22, 1));
+  background-image: url("/images/paid-midia/Frame-3253.png");
   border-radius: 24px;
 }
 .cards .card .top-row {
