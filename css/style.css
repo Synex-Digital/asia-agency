@@ -312,6 +312,9 @@ body {
   background-position: center center;
   transition: transform 0.3s ease-in-out;
 }
+.campaign-data-content .accordion details {
+  transition: all 0.3s ease-in-out;
+}
 
 .campaign-data-content .accordion details[open] > summary::after {
   transform: rotate(180deg);
@@ -364,7 +367,6 @@ details img {
 .table-container::-webkit-scrollbar {
   display: none;
 }
-
 
 table {
   /* width: 100%; */

@@ -1355,29 +1355,39 @@ form {
   margin-bottom: 16px;
 }
 
-.nav-faq-item summary {
-  padding: 24px;
+.summary-container {
+  padding: 24px 24px 10px 24px;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.nav-faq-item summary img {
+.arrow-img {
   width: 20px;
   height: 20px;
   transition: transform 0.3s ease;
 }
 
-.nav-faq-item[open] summary img {
+.nav-faq-item.open .arrow-img {
   transform: rotate(90deg);
 }
 
-.nav-faq-item .content {
-  padding: 0 24px 24px;
+.content-container {
   margin-left: 40px;
   width: 100%;
   max-width: 1122px;
+  overflow: hidden;
+  max-height: 0; /* Initial max-height set to 0 */
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  padding-bottom: 20px;
+}
+
+.nav-faq-item.open .content-container {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* faq section end */
