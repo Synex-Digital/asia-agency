@@ -58,6 +58,7 @@ body {
   height: 40px;
   background: #0b0a0d;
   border: none;
+  cursor: pointer;
 }
 .dropdown-content {
   max-height: 0;
@@ -82,7 +83,6 @@ body {
 }
 .dropdownButton {
   display: flex;
-  justify-content: center;
   align-items: center;
   cursor: pointer;
 }
