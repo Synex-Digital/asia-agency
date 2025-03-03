@@ -68,7 +68,6 @@ body {
 }
 
 .dropdown-content.active {
-  max-height: 500px;
   visibility: visible;
   opacity: 1;
 }

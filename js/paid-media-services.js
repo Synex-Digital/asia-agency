@@ -5,12 +5,31 @@ document.addEventListener("DOMContentLoaded", function () {
   dropdownButtons.forEach((button, index) => {
     const content = dropdownContents[index];
 
-    // Initially hide all dropdown contents
+    // Set initial max-height to 0 for all dropdown contents
+    content.style.maxHeight = "0";
     content.classList.remove("active");
 
-    // Add click event listener to toggle 'active' class
+    // Add click event listener to toggle the active class and handle the animation
     button.addEventListener("click", function () {
+      const isOpen = content.classList.contains("active");
+
+      // Toggle active class on the clicked dropdown content
       content.classList.toggle("active");
+
+      // If opening, set max-height to the content's scrollHeight
+      if (!isOpen) {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } else {
+        content.style.maxHeight = "0"; // Close it by setting max-height to 0
+      }
+
+      // Close other dropdowns by resetting their max-height to 0
+      dropdownContents.forEach((otherContent, otherIndex) => {
+        if (otherContent !== content && otherContent.classList.contains("active")) {
+          otherContent.classList.remove("active");
+          otherContent.style.maxHeight = "0";
+        }
+      });
     });
   });
 });

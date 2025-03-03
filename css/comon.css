@@ -1378,7 +1378,7 @@ form {
   width: 100%;
   max-width: 1122px;
   overflow: hidden;
-  max-height: 0; /* Initial max-height set to 0 */
+  max-height: 0;
   opacity: 0;
   visibility: hidden;
   transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
