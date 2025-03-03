@@ -533,7 +533,6 @@ header p {
 .badge-button {
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 36px;
   padding: 6px 16px 6px 6px;
   background: rgba(14, 17, 22, 1);
