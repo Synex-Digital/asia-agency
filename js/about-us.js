@@ -57,21 +57,20 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // about us section
 
-document.querySelectorAll(".dropdownButton").forEach((button) => {
-  button.addEventListener("click", function () {
-    // Find the closest dropdown content (next sibling div)
-    const dropdownContent = this.parentElement.parentElement.nextElementSibling;
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownHeaders = document.querySelectorAll(".capability-dropdown-header");
 
-    if (
-      dropdownContent.style.display === "none" ||
-      dropdownContent.style.display === ""
-    ) {
-      dropdownContent.style.display = "block";
-      dropdownContent.style.animation = "fadeIn 0.5s forwards";
-      this.innerHTML = "-";
-    } else {
-      dropdownContent.style.display = "none";
-      this.innerHTML = "+";
-    }
+  dropdownHeaders.forEach((header) => {
+    const button = header.querySelector(".dropdownButton");
+    const dropdown = header.nextElementSibling; // Target the dropdown next to the header
+
+    button.addEventListener("click", function () {
+      dropdown.classList.toggle("active");
+
+      // Toggle the button text between "+" and "-"
+      button.textContent = dropdown.classList.contains("active") ? "-" : "+";
+    });
   });
 });
+
+
