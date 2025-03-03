@@ -1356,7 +1356,7 @@ form {
 }
 
 .summary-container {
-  padding: 24px 24px 10px 24px;
+  padding: 24px 24px 5px 24px;
   cursor: pointer;
   display: flex;
   align-items: center;
