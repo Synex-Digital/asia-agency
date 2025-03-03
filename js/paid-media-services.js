@@ -1,22 +1,20 @@
-document.querySelectorAll(".dropdownButton").forEach((button) => {
-  button.addEventListener("click", function () {
-    // Find the closest dropdown content (next sibling div)
-    const dropdownContent = this.parentElement.nextElementSibling;
-    const icon = this.querySelector("img"); // Select the icon inside the button
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownButtons = document.querySelectorAll(".dropdownButton");
+  const dropdownContents = document.querySelectorAll(".dropdown-content");
 
-    if (
-      dropdownContent.style.display === "none" ||
-      dropdownContent.style.display === ""
-    ) {
-      dropdownContent.style.display = "block";
-      dropdownContent.style.animation = "fadeIn 0.5s forwards";
-      icon.style.transform = "rotate(90deg)"; // Rotate icon when expanded
-    } else {
-      dropdownContent.style.display = "none";
-      icon.style.transform = "rotate(0deg)"; // Reset icon rotation
-    }
+  dropdownButtons.forEach((button, index) => {
+    const content = dropdownContents[index];
+
+    // Initially hide all dropdown contents
+    content.classList.remove("active");
+
+    // Add click event listener to toggle 'active' class
+    button.addEventListener("click", function () {
+      content.classList.toggle("active");
+    });
   });
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const campaignItems = document.querySelectorAll(".campaign-data-item");
