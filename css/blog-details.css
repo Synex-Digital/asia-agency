@@ -171,39 +171,32 @@ body {
   border-radius: 50%;
 }
 
-.blog-right-section .paragraph {
+.paragraph {
   margin-top: 48px;
   line-height: 24px;
 }
 
-.blog-right-section .content-02 ol {
+ol {
   margin-top: 24px;
   list-style: none; /* Remove default numbering */
   counter-reset: custom-counter; /* Reset the custom counter */
 }
 
-.blog-right-section .content-02 ol li {
+ol li {
   counter-increment: custom-counter; /* Increment the counter for each list item */
 }
 
-.blog-right-section .content-02 ol li::before {
+ol li::before {
   content: counter(custom-counter) ". "; /* Display the counter as the number */
   font-weight: bold; /* Customize text appearance */
   color: rgba(152, 162, 179, 1); /* Customize color */
 }
-.blog-right-section .content-04 {
-  margin-top: 32px;
-}
-.blog-right-section .content-04 ul {
-  margin-top: 16px;
-}
 
-.blog-right-section .content-04 ul li {
+ul li {
   text-decoration: underline;
   padding-bottom: 4px;
   list-style: disc !important;
   margin-left: 20px;
-
 }
 .conclusion {
   padding: 32px;
