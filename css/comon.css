@@ -461,7 +461,70 @@ header p {
   margin-top: 32px;
   margin-bottom: 40px;
 }
+/* Mobile devices */
+@media (max-width: 640px) {
+  header {
+    padding: 80px 20px 60px 20px; /* Adjust padding */
+  }
 
+  .main-heading {
+    font-size: 1.8rem; /* Smaller font size for mobile */
+  }
+
+  .description {
+    font-size: 0.875rem; /* Smaller text on mobile */
+  }
+
+  .tag-container {
+    flex-direction: column; /* Stack tags vertically */
+    align-items: flex-start; /* Align tags to the start */
+  }
+
+  .tag {
+    font-size: 0.875rem; /* Adjust font size for tags */
+    padding: 4px 8px; /* Adjust padding for tags */
+  }
+}
+
+/* Tablets and small laptops (768px) */
+@media (max-width: 768px) {
+  header {
+    padding: 120px 20px 80px 20px; /* Adjust padding for tablet */
+    width: 600px;
+  }
+  header p {
+    width: 550px;
+  }
+
+  .main-heading {
+    font-size: 2.5rem; /* Adjust font size for tablets */
+  }
+
+  .description {
+    font-size: 1rem; /* Maintain readable size */
+  }
+
+  .tag-container {
+    gap: 6px; /* Slightly smaller gap */
+  }
+
+  .tag {
+    font-size: 1rem; /* Default size for tablets */
+    padding: 6px 14px; /* Adjust padding */
+  }
+}
+
+/* Large desktops */
+@media (max-width: 1200px) {
+  header {
+    width: 700px; /* Original width for large screens */
+    padding: 140px 0px 83px 0px;
+  }
+
+  .main-heading {
+    font-size: 2.5rem; /* Larger font size for large screens */
+  }
+}
 /* Hero Section end */
 /* Glow button */
 .glow-button {
@@ -524,11 +587,10 @@ header p {
   cursor: pointer;
   transition: background 0.3s ease;
 }
-
-/* CTA Hover Effect */
-.cta-button:hover {
-  opacity: 0.8;
+.cta-btn-nav {
+  margin: 0 auto;
 }
+
 /* Badge Button */
 .badge-button {
   display: flex;
@@ -675,7 +737,19 @@ header p {
   font-family: "Lato", serif;
   width: 200px;
 }
+.cta-btn-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  font-family: "Lato", serif;
+  width: 250px;
+}
 .cta-btn button {
+  border-radius: 25px;
+  border: none;
+}
+.cta-btn-nav button {
   border-radius: 25px;
   border: none;
 }
@@ -686,7 +760,18 @@ header p {
   align-items: center;
   gap: 4px;
 }
+.cta-btn-nav a {
+  font-family: "lato";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
 .cta-btn a img {
+  width: 24px;
+  height: 24px;
+}
+.cta-btn-nav a img {
   width: 24px;
   height: 24px;
 }
@@ -694,7 +779,7 @@ header p {
   .cta-contant {
     padding: 60px;
   }
-  #home-cta{
+  #home-cta {
     padding: 0 12px;
   }
 }
@@ -1430,7 +1515,7 @@ form {
   transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
   padding-bottom: 20px;
 }
-.content-container p{
+.content-container p {
   width: 96%;
 }
 
@@ -1636,7 +1721,7 @@ footer .speretaor {
     margin: 32px auto 0;
     justify-content: center;
   }
-  .content-container p{
+  .content-container p {
     width: 90%;
   }
 }
