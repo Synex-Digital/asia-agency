@@ -693,7 +693,9 @@ header p {
 @media (max-width: 1200px) {
   .cta-contant {
     padding: 60px;
-    margin: 0px 12px;
+  }
+  #home-cta{
+    padding: 0 12px;
   }
 }
 
@@ -1302,6 +1304,41 @@ form {
   height: 24px;
 }
 
+@media (max-width: 1200px) {
+  .contact-form {
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 60px 80px 60px;
+  }
+  .contact-form-content {
+    width: 100%;
+  }
+  .contact-form-input {
+    width: 100%;
+  }
+  .contact-form-points {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .contact-form-points img {
+    width: 20px;
+    height: 20px;
+  }
+  .contact-form-content h4 {
+    padding-top: 84px;
+    width: 244px;
+  }
+  .contact-form-content a {
+    display: inline-flex;
+    margin-top: 20px;
+    padding: 8px 16px;
+    border-radius: 100px;
+    border: none;
+  }
+}
+
 /* contact form end */
 
 /* faq section start */
@@ -1392,6 +1429,9 @@ form {
   visibility: hidden;
   transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
   padding-bottom: 20px;
+}
+.content-container p{
+  width: 96%;
 }
 
 .nav-faq-item.open .content-container {
@@ -1546,14 +1586,6 @@ footer .speretaor {
     padding-top: 80px;
   }
 
-  .footer-content h3 {
-    width: 100%;
-  }
-
-  .footer-content p {
-    width: 100%;
-  }
-
   .footer-content-nav {
     flex-direction: column;
     gap: 60px;
@@ -1577,6 +1609,11 @@ footer .speretaor {
     width: 100%;
     justify-content: space-around;
   }
+  .footer-content-nav-1-input {
+    max-width: 400px;
+    margin: 32px auto 0;
+    justify-content: center;
+  }
 }
 
 /* Tablet (768px and below) */
@@ -1597,6 +1634,10 @@ footer .speretaor {
   .footer-content-nav-1-input {
     max-width: 400px;
     margin: 32px auto 0;
+    justify-content: center;
+  }
+  .content-container p{
+    width: 90%;
   }
 }
 
@@ -1626,6 +1667,8 @@ footer .speretaor {
     flex-direction: column;
     gap: 16px;
     padding: 16px;
+    justify-content: center;
+    align-items: center;
   }
 
   .footer-content-nav-1-input button {
