@@ -649,7 +649,10 @@ header p {
 .cta-contant {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 120px 303px;
   border-radius: 28px;
   background-image: url("/images/cta.png");
@@ -670,6 +673,7 @@ header p {
   align-items: center;
   padding-top: 40px;
   font-family: "Lato", serif;
+  width: 200px;
 }
 .cta-btn button {
   border-radius: 25px;
@@ -685,6 +689,12 @@ header p {
 .cta-btn a img {
   width: 24px;
   height: 24px;
+}
+@media (max-width: 1200px) {
+  .cta-contant {
+    padding: 60px;
+    margin: 0px 12px;
+  }
 }
 
 /* Responsive Styles */
