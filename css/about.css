@@ -482,7 +482,6 @@ section.py-160 {
 /* capabilities section start */
 .capabilities-container {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 .capabilities-container picture img {
@@ -531,15 +530,15 @@ section.py-160 {
 .list-item .list {
   width: 16px;
   height: 16px;
-  border-radius: 50%; /* Set border-radius to 50% to make it circular */
-  background-color: black; /* Black background */
-  position: relative; /* Position relative for the before pseudo-element */
+  border-radius: 50%;
+  background-color: black;
+  position: relative;
 }
 .list-item .list::before {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 50%; /* Circular shape for before element */
+  border-radius: 50%;
   padding: 1px;
   background: radial-gradient(
     164.04% 114.84% at 50% 0%,
@@ -550,10 +549,60 @@ section.py-160 {
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-  opacity: 1; /* Make sure the before element is visible */
+  opacity: 1;
   pointer-events: none;
 }
+@media (max-width: 1200px) {
+  .capabilities-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .capabilities-container picture img {
+    width: 80%; /* Adjust image width for 1040px */
+    max-width: 500px;
+    height: auto;
+    margin-top: 40px;
+  }
+
+  .capability-dropdown {
+    width: 80%; /* Adjust dropdown width for 1040px */
+  }
+}
+@media (max-width: 768px) {
+  .capabilities-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .capabilities-container picture img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .capability-dropdown {
+    width: 100%;
+  }
+
+  .capability-dropdown-header div {
+    font-size: 28px; /* Adjust header text size */
+  }
+
+  .list-item p {
+    font-size: 16px; /* Adjust list item text size */
+  }
+}
+
+@media (max-width: 480px) {
+  .capability-dropdown-header div {
+    font-size: 24px;
+  }
+
+  .list-item p {
+    font-size: 14px;
+  }
+}
 /* capabilities section end */
 /* cta section start */
 .trail-section-container {
@@ -616,4 +665,49 @@ section.py-160 {
   color: rgba(16, 24, 40, 1);
 }
 
+@media (max-width: 1200px) {
+  .trial-section-container {
+    padding: 24px;
+    flex-direction: column;
+  }
+
+  .trial-content,
+  .trial-info-box {
+    max-width: 100%; /* Full width on tablet */
+    margin-bottom: 20px;
+  }
+  .trial-steps {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 20px;
+  }
+  .trial-steps .step {
+    max-width: 48%; /* Two columns on tablet */
+  }
+
+  .trial-info-box .trial-tags {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .trial-section-container {
+    padding: 16px;
+  }
+
+  .trial-steps .step {
+    max-width: 100%; /* Single column on mobile */
+  }
+
+  .trial-content a {
+    width: 100%; /* Full width button on mobile */
+    max-width: 200px; /* Ensures button does not stretch too much */
+  }
+}
+
+@media (max-width: 480px) {
+  .trial-section-container {
+    padding: 12px;
+  }
+}
 /* cta section end */
