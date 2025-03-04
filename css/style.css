@@ -175,7 +175,6 @@ body {
   text-align: left;
 }
 
-/* Centering text content */
 .feature h3 {
   line-height: 24px;
   text-align: start;
@@ -189,7 +188,7 @@ body {
 
 /* trust us section end */
 
-/* campaign data section start */
+/* campaign Container */
 .campaign-data-title {
   width: 460px;
   margin: 0 auto;
@@ -203,7 +202,6 @@ body {
   width: 474px;
 }
 
-/* --- Accordion Animation (Smooth Open/Close) --- */
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -226,7 +224,6 @@ body {
   }
 }
 
-/* Ensure smooth opening/closing transitions */
 .campaign-data-content .accordion details {
   overflow: hidden;
   transition: padding 0.3s ease-in-out, opacity 0.3s ease-in-out;
@@ -234,26 +231,22 @@ body {
   padding: 0; /* Default padding 0, expands when opened */
 }
 
-/* When accordion is open */
 .campaign-data-content .accordion details[open] {
   animation: slideDown 0.3s ease-in-out forwards;
   padding: 10px 0; /* Add padding instead of height transition */
 }
 
-/* Content inside accordion */
 .campaign-data-content .accordion details .content {
   opacity: 0;
   transform: translateY(-5px);
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-/* When details is open, show content */
 .campaign-data-content .accordion details[open] .content {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* --- Accordion Styling --- */
 .campaign-data-content .accordion details {
   position: relative;
   margin-bottom: 15px;
@@ -262,7 +255,6 @@ body {
   padding: 0;
 }
 
-/* Background effect when accordion opens */
 .campaign-data-content .accordion details[open]::before {
   content: "";
   position: absolute;
@@ -281,7 +273,6 @@ body {
   z-index: 0;
 }
 
-/* --- Summary (Clickable Header) --- */
 .campaign-data-content .accordion summary {
   list-style: none;
   cursor: pointer;
@@ -298,7 +289,6 @@ body {
   display: none;
 }
 
-/* --- Arrow Animation (Rotate on Open) --- */
 .campaign-data-content .accordion summary::after {
   content: "";
   position: absolute;
@@ -320,7 +310,6 @@ body {
   transform: rotate(180deg);
 }
 
-/* --- Flexbox for Layout --- */
 .campaign-data-content {
   display: flex;
   flex-direction: row;
@@ -329,7 +318,6 @@ body {
   gap: 20px;
 }
 
-/* Content inside accordion */
 .content {
   width: 370px;
   padding-left: 24px;
@@ -352,28 +340,12 @@ details img {
   height: 24px;
 }
 
-/* --- Scrollable Table Container --- */
-.table-container {
-  width: 662px;
-  max-height: 571px;
-  overflow-y: auto;
-  border-radius: 24px;
-  background-color: rgba(14, 17, 22);
-  padding: 34px 24px 0px 24px;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.table-container::-webkit-scrollbar {
-  display: none;
-}
-
 table {
   /* width: 100%; */
   border-collapse: separate;
   border-spacing: 0;
-  border: 1px solid rgba(145, 145, 145, 0.3);
-  border-radius: 12px;
+  border: 1.5px solid rgba(145, 145, 145, 0.3);
+  border-radius: 24px;
   overflow: hidden;
 }
 
