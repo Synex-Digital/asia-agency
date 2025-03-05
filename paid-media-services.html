@@ -20,41 +20,86 @@
     <section id="hero" class="py-40">
       <div class="container">
         <nav>
-          <div class="mainlogo">
-            <a href="/index.html"><img src="/images/logo.svg" alt="logo" /></a>
-            <span class="font-20 font-weight-600 lato white">Asia.Agency</span>
-          </div>
-          <div>
-            <ul class="nav-menu font-16 font-weight-500 lato">
-              <li class="nav-item"><a href="/about-us.html">About Us</a></li>
-              <li class="nav-item"><a href="/contact-us.html">Contact</a></li>
-
-              <!-- Dropdown Menu -->
-              <li class="nav-item dropdown">
-                <a href="/services.html">Services</a>
-                <img
-                  src="/images/icons/tabler-icon-chevron-down.png"
-                  alt="arrow-down"
-                />
-                <ul class="dropdown-menu">
-                  <li><a href="#">Web Development</a></li>
-                  <li><a href="#">SEO Optimization</a></li>
-                  <li><a href="#">Digital Marketing</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item"><a href="/blog-page.html">Blog</a></li>
-              <li class="nav-item">
-                <a href="/How-we-are-different.html">How we’re different</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <button class="lato glow-button font-18" type="button">
-              <div class="glow-button-border">Contact us!</div>
-              <div class="polygon"></div>
-            </button>
-          </div>
+          <ul class="sidebar">
+            <li onclick="hideSidebar()">
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="26px"
+                  viewBox="0 -960 960 960"
+                  width="26px"
+                  fill="#1f1f1f"
+                >
+                  <path
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li><a href="/about-us.html">About Us</a></li>
+            <li><a href="/contact-us.html">Contact</a></li>
+            <li><a href="#">works</a></li>
+            <li><a href="/blog-page.html">Blog</a></li>
+            <li>
+              <a href="/How-we-are-different.html">How we’re different</a>
+            </li>
+            <li>
+              <button class="lato glow-button font-18" type="button">
+                <a class="glow-button-border" href="/contact-us.html"
+                  >Contact us!</a
+                >
+                <div class="polygon"></div>
+              </button>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="/index.html">
+                <img src="/images/logo.svg" alt="logo" />
+                <span class="font-20 font-weight-600 lato">Asia.Agency</span>
+              </a>
+            </li>
+            <li class="hideOnMobile mr-30">
+              <a class="" href="/about-us.html">About Us</a>
+            </li>
+            <li class="hideOnMobile mr-30">
+              <a class="" href="/contact-us.html">Contact</a>
+            </li>
+            <li class="hideOnMobile mr-30">
+              <a class="" href="#">works</a>
+            </li>
+            <li class="hideOnMobile mr-30">
+              <a class="" href="/blog-page.html">Blog</a>
+            </li>
+            <li class="hideOnMobile mr-30">
+              <a href="/How-we-are-different.html" class="mr-140"
+                >How we’re different</a
+              >
+            </li>
+            <li class="hideOnMobile">
+              <button class="lato glow-button font-18" type="button">
+                <a class="glow-button-border" href="/contact-us.html"
+                  >Contact us!</a
+                >
+                <div class="polygon"></div>
+              </button>
+            </li>
+            <li class="menu-button mr-30" onclick="showSideBar()">
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="26px"
+                  viewBox="0 -960 960 960"
+                  width="26px"
+                  fill="#1f1f1f"
+                >
+                  <path
+                    d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
         </nav>
 
         <header>
@@ -136,7 +181,7 @@
           <div class="capability-dropdown">
             <div>
               <div class="capability-dropdown-header dropdownButton">
-                <button class="white ">
+                <button class="white">
                   <img src="/images/blog-details/icons/right.png" alt="img" />
                 </button>
                 <div class="plus-jakarta font-weight-600 font-24 white">
@@ -157,7 +202,7 @@
             </div>
             <div>
               <div class="capability-dropdown-header dropdownButton">
-                <button class="white ">
+                <button class="white">
                   <img src="/images/blog-details/icons/right.png" alt="" />
                 </button>
                 <div class="plus-jakarta font-weight-600 font-24 white">
@@ -178,7 +223,7 @@
             </div>
             <div>
               <div class="capability-dropdown-header dropdownButton">
-                <button class="white ">
+                <button class="white">
                   <img src="/images/blog-details/icons/right.png" alt="" />
                 </button>
                 <div class="plus-jakarta font-weight-600 font-24 white">
@@ -199,7 +244,7 @@
             </div>
             <div>
               <div class="capability-dropdown-header dropdownButton">
-                <button class="white ">
+                <button class="white">
                   <img src="/images/blog-details/icons/right.png" alt="" />
                 </button>
                 <div class="plus-jakarta font-weight-600 font-24 white">
@@ -396,7 +441,7 @@
     <!-- capabilities section end -->
 
     <!-- content section start -->
-    <section class="py-80">
+    <section class="py-80" id="content">
       <div class="container">
         <div class="content-container">
           <h3
@@ -1553,117 +1598,171 @@
                   href="#"
                   class="faq-button-nav-1 lato font-weight-600 font-16 white"
                 >
-                  Consaltancy
+                  Consultancy
                 </a>
               </div>
             </div>
             <div class="nav-faq-container">
               <div class="nav-faq-content">
-                <details class="nav-faq-item">
-                  <summary class="lato font-weight-600 font-20 white">
-                    <img
-                      src="/images/icons/arrow-right-solid.svg"
-                      alt="arrow"
-                    />
-                    How do you approach business growth?
-                  </summary>
-                  <div class="content lato font-weight-400 font-16 gray-400">
-                    We provide a comprehensive range of services, including
-                    business consultation, digital marketing, conversion rate
-                    optimization, branding, and tailored strategies to drive
-                    growth.
+                <div class="nav-faq-item">
+                  <div class="summary-container">
+                    <div class="lato font-weight-600 font-20 white">
+                      <img
+                        src="/images/icons/right.svg"
+                        alt="arrow"
+                        class="arrow-img"
+                      />
+                      How do you approach business growth?
+                    </div>
                   </div>
-                </details>
+
+                  <div class="content-container">
+                    <p class="lato font-weight-400 font-16 gray-400 pt-16">
+                      We provide a comprehensive range of services, including
+                      business consultation, digital marketing, conversion rate
+                      optimization, branding, and tailored strategies to drive
+                      growth.
+                    </p>
+                  </div>
+                </div>
               </div>
               <div class="nav-faq-content">
-                <details class="nav-faq-item">
-                  <summary class="lato font-weight-600 font-20 white">
-                    <img
-                      src="/images/icons/arrow-right-solid.svg"
-                      alt="arrow"
-                    />
-                    What services do you offer?
-                  </summary>
-                  <div class="content lato font-weight-400 font-16 gray-400">
-                    We offer digital marketing, web development, and business
-                    consulting services.
+                <div class="nav-faq-item">
+                  <div class="summary-container">
+                    <div class="lato font-weight-600 font-20 white">
+                      <img
+                        src="/images/icons/right.svg"
+                        alt="arrow"
+                        class="arrow-img"
+                      />
+                      What services do you offer?
+                    </div>
                   </div>
-                </details>
+
+                  <div class="content-container">
+                    <p class="lato font-weight-400 font-16 gray-400 pt-16">
+                      We provide a comprehensive range of services, including
+                      business consultation, digital marketing, conversion rate
+                      optimization, branding, and tailored strategies to drive
+                      growth.
+                    </p>
+                  </div>
+                </div>
               </div>
               <div class="nav-faq-content">
-                <details class="nav-faq-item">
-                  <summary class="lato font-weight-600 font-20 white">
-                    <img
-                      src="/images/icons/arrow-right-solid.svg"
-                      alt="arrow"
-                    />
-                    Can you guarantee results?
-                  </summary>
-                  <div class="content lato font-weight-400 font-16 gray-400">
-                    We offer digital marketing, web development, and business
-                    consulting services.
+                <div class="nav-faq-item">
+                  <div class="summary-container">
+                    <div class="lato font-weight-600 font-20 white">
+                      <img
+                        src="/images/icons/right.svg"
+                        alt="arrow"
+                        class="arrow-img"
+                      />
+                      Can you guarantee results?
+                    </div>
                   </div>
-                </details>
+
+                  <div class="content-container">
+                    <p class="lato font-weight-400 font-16 gray-400 pt-16">
+                      We provide a comprehensive range of services, including
+                      business consultation, digital marketing, conversion rate
+                      optimization, branding, and tailored strategies to drive
+                      growth.
+                    </p>
+                  </div>
+                </div>
               </div>
               <div class="nav-faq-content">
-                <details class="nav-faq-item">
-                  <summary class="lato font-weight-600 font-20 white">
-                    <img
-                      src="/images/icons/arrow-right-solid.svg"
-                      alt="arrow"
-                    />
-                    What is the onboarding process like?
-                  </summary>
-                  <div class="content lato font-weight-400 font-16 gray-400">
-                    We offer digital marketing, web development, and business
-                    consulting services.
+                <div class="nav-faq-item">
+                  <div class="summary-container">
+                    <div class="lato font-weight-600 font-20 white">
+                      <img
+                        src="/images/icons/right.svg"
+                        alt="arrow"
+                        class="arrow-img"
+                      />
+                      What is the onboarding process like?
+                    </div>
                   </div>
-                </details>
+
+                  <div class="content-container">
+                    <p class="lato font-weight-400 font-16 gray-400 pt-16">
+                      We provide a comprehensive range of services, including
+                      business consultation, digital marketing, conversion rate
+                      optimization, branding, and tailored strategies to drive
+                      growth.
+                    </p>
+                  </div>
+                </div>
               </div>
               <div class="nav-faq-content">
-                <details class="nav-faq-item">
-                  <summary class="lato font-weight-600 font-20 white">
-                    <img
-                      src="/images/icons/arrow-right-solid.svg"
-                      alt="arrow"
-                    />
-                    Do you offer a trial period?
-                  </summary>
-                  <div class="content lato font-weight-400 font-16 gray-400">
-                    We offer digital marketing, web development, and business
-                    consulting services.
+                <div class="nav-faq-item">
+                  <div class="summary-container">
+                    <div class="lato font-weight-600 font-20 white">
+                      <img
+                        src="/images/icons/right.svg"
+                        alt="arrow"
+                        class="arrow-img"
+                      />
+                      Do you offer a trial period?
+                    </div>
                   </div>
-                </details>
+
+                  <div class="content-container">
+                    <p class="lato font-weight-400 font-16 gray-400 pt-16">
+                      We provide a comprehensive range of services, including
+                      business consultation, digital marketing, conversion rate
+                      optimization, branding, and tailored strategies to drive
+                      growth.
+                    </p>
+                  </div>
+                </div>
               </div>
               <div class="nav-faq-content">
-                <details class="nav-faq-item">
-                  <summary class="lato font-weight-600 font-20 white">
-                    <img
-                      src="/images/icons/arrow-right-solid.svg"
-                      alt="arrow"
-                    />
-                    How do you ensure timely delivery?
-                  </summary>
-                  <div class="content lato font-weight-400 font-16 gray-400">
-                    We offer digital marketing, web development, and business
-                    consulting services.
+                <div class="nav-faq-item">
+                  <div class="summary-container">
+                    <div class="lato font-weight-600 font-20 white">
+                      <img
+                        src="/images/icons/right.svg"
+                        alt="arrow"
+                        class="arrow-img"
+                      />
+                      How do you ensure timely delivery?
+                    </div>
                   </div>
-                </details>
+
+                  <div class="content-container">
+                    <p class="lato font-weight-400 font-16 gray-400 pt-16">
+                      We provide a comprehensive range of services, including
+                      business consultation, digital marketing, conversion rate
+                      optimization, branding, and tailored strategies to drive
+                      growth.
+                    </p>
+                  </div>
+                </div>
               </div>
               <div class="nav-faq-content">
-                <details class="nav-faq-item">
-                  <summary class="lato font-weight-600 font-20 white">
-                    <img
-                      src="/images/icons/arrow-right-solid.svg"
-                      alt="arrow"
-                    />
-                    What sets you apart from other agencies?
-                  </summary>
-                  <div class="content lato font-weight-400 font-16 gray-400">
-                    We offer digital marketing, web development, and business
-                    consulting services.
+                <div class="nav-faq-item">
+                  <div class="summary-container">
+                    <div class="lato font-weight-600 font-20 white">
+                      <img
+                        src="/images/icons/right.svg"
+                        alt="arrow"
+                        class="arrow-img"
+                      />
+                      What sets you apart from other agencies?
+                    </div>
                   </div>
-                </details>
+
+                  <div class="content-container">
+                    <p class="lato font-weight-400 font-16 gray-400 pt-16">
+                      We provide a comprehensive range of services, including
+                      business consultation, digital marketing, conversion rate
+                      optimization, branding, and tailored strategies to drive
+                      growth.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1723,11 +1822,11 @@
             <div class="footer-content-nav-list">
               <h2 class="lato font-weight-600 font-18 gray-300">Services</h2>
               <ul class="pt-12">
-                <li>Digital marketig</li>
-                <li>Digital marketig</li>
-                <li>Digital marketig</li>
-                <li>Digital marketig</li>
-                <li>Digital marketig</li>
+                <li><a href="#">Digital marketig</a></li>
+                <li><a href="#">Business consultant</a></li>
+                <li><a href="#">Business consultant</a></li>
+                <li><a href="#">Business consultant</a></li>
+                <li><a href="#">Business consultant</a></li>
               </ul>
             </div>
             <div class="footer-content-nav-list">
@@ -1743,11 +1842,8 @@
             <div class="footer-content-nav-list">
               <h2 class="lato font-weight-600 font-18 gray-300">Review</h2>
               <ul class="pt-12">
-                <li>Digital marketig</li>
-                <li>Digital marketig</li>
-                <li>Digital marketig</li>
-                <li>Digital marketig</li>
-                <li>Digital marketig</li>
+                <li>Clutch</li>
+                <li>Trustpilot</li>
               </ul>
             </div>
           </div>
@@ -1759,14 +1855,34 @@
             >&copy; 2025-2028 Asia.Agency</span
           >
           <div class="footer-content-nav-social">
-            <img src="/images/icons/x-twitter-brands-solid.svg" alt="twitter" />
-            <img src="/images/icons/linkedin-brands-solid.svg" alt="linkedin" />
-            <img src="/images/icons/facebook-brands-solid.svg" alt="facebook" />
-            <img
-              src="/images/icons/instagram-brands-solid.svg"
-              alt="instagram"
-            />
-            <img src="/images/icons/tiktok-brands-solid.svg" alt="tiktok" />
+            <a href="#">
+              <img
+                src="/images/icons/x-twitter-brands-solid.svg"
+                alt="twitter"
+              />
+            </a>
+
+            <a href="#">
+              <img
+                src="/images/icons/linkedin-brands-solid.svg"
+                alt="linkedin"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="/images/icons/facebook-brands-solid.svg"
+                alt="facebook"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="/images/icons/instagram-brands-solid.svg"
+                alt="instagram"
+              />
+            </a>
+            <a href="#">
+              <img src="/images/icons/tiktok-brands-solid.svg" alt="tiktok" />
+            </a>
           </div>
         </div>
       </div>

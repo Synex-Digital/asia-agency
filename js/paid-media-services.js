@@ -25,7 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Close other dropdowns by resetting their max-height to 0
       dropdownContents.forEach((otherContent, otherIndex) => {
-        if (otherContent !== content && otherContent.classList.contains("active")) {
+        if (
+          otherContent !== content &&
+          otherContent.classList.contains("active")
+        ) {
           otherContent.classList.remove("active");
           otherContent.style.maxHeight = "0";
         }
@@ -33,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const campaignItems = document.querySelectorAll(".campaign-data-item");
@@ -143,7 +145,41 @@ function showSideBar() {
   sidebar.style.display = "flex";
 }
 
-function hideSidebar(){
+function hideSidebar() {
   const sidebar = document.querySelector(".sidebar");
   sidebar.style.display = "none";
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const faqItems = document.querySelectorAll(".nav-faq-item");
+
+  faqItems.forEach((item) => {
+    const summaryContainer = item.querySelector(".summary-container");
+    const contentContainer = item.querySelector(".content-container");
+
+    // Set the initial max-height to 0 for all items
+    contentContainer.style.maxHeight = "0";
+
+    summaryContainer.addEventListener("click", () => {
+      const isOpen = item.classList.contains("open");
+
+      // Toggle open class on the clicked FAQ item
+      item.classList.toggle("open");
+
+      // If opening, set max-height to the content's scrollHeight
+      if (!isOpen) {
+        contentContainer.style.maxHeight = contentContainer.scrollHeight + "px";
+      } else {
+        contentContainer.style.maxHeight = "0"; // Close it by setting max-height to 0
+      }
+
+      // Close other open items
+      faqItems.forEach((otherItem) => {
+        if (otherItem !== item && otherItem.classList.contains("open")) {
+          otherItem.classList.remove("open");
+          otherItem.querySelector(".content-container").style.maxHeight = "0";
+        }
+      });
+    });
+  });
+});
