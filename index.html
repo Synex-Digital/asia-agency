@@ -21,45 +21,86 @@
     <section id="hero" class="py-40">
       <div class="container">
         <nav>
-          <div class="mainlogo">
-            <a href="/index.html"><img src="/images/logo.svg" alt="logo" /></a>
-            <span class="font-20 font-weight-600 lato white">Asia.Agency</span>
-          </div>
-          <div>
-            <ul class="nav-menu font-16 font-weight-500 lato">
-              <li class="nav-item lato">
-                <a href="/about-us.html">About Us</a>
-              </li>
-              <li class="nav-item lato">
-                <a href="/contact-us.html">Contact</a>
-              </li>
-
-              <!-- Dropdown Menu -->
-              <li class="nav-item dropdown lato">
-                <a href="/services.html">Services </a>
-                <img
-                  src="/images/icons/tabler-icon-chevron-down.png"
-                  alt="arrow-down"
-                />
-                <ul class="dropdown-menu">
-                  <li><a href="#">Web Development</a></li>
-                  <li><a href="#">SEO Optimization</a></li>
-                  <li><a href="#">Digital Marketing</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item lato"><a href="/blog-page.html">Blog</a></li>
-              <li class="nav-item lato">
-                <a href="/How-we-are-different.html">How we’re different</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <button class="lato glow-button font-18" type="button">
-              <a href="#" class="glow-button-border lato">Contact us!</a>
-              <div class="polygon"></div>
-            </button>
-          </div>
+          <ul class="sidebar">
+            <li onclick="hideSidebar()">
+              <a href="/index.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="26px"
+                  viewBox="0 -960 960 960"
+                  width="26px"
+                  fill="#1f1f1f"
+                >
+                  <path
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li><a href="/about-us.html">About Us</a></li>
+            <li><a href="/contact-us.html">Contact</a></li>
+            <li><a href="#">works</a></li>
+            <li><a href="/blog-page.html">Blog</a></li>
+            <li>
+              <a href="/How-we-are-different.html">How we’re different</a>
+            </li>
+            <li>
+              <button class="lato glow-button font-18" type="button">
+                <a class="glow-button-border" href="/contact-us.html"
+                  >Contact us!</a
+                >
+                <div class="polygon"></div>
+              </button>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="/index.html">
+                <img src="/images/logo.svg" alt="logo" />
+                <span class="font-20 font-weight-600 lato">Asia.Agency</span>
+              </a>
+            </li>
+            <li class="hideOnMobile mr-30">
+              <a class="" href="/about-us.html">About Us</a>
+            </li>
+            <li class="hideOnMobile mr-30">
+              <a class="" href="/contact-us.html">Contact</a>
+            </li>
+            <li class="hideOnMobile mr-30">
+              <a class="" href="#">works</a>
+            </li>
+            <li class="hideOnMobile mr-30">
+              <a class="" href="/blog-page.html">Blog</a>
+            </li>
+            <li class="hideOnMobile mr-30">
+              <a href="/How-we-are-different.html" class="mr-140"
+                >How we’re different</a
+              >
+            </li>
+            <li class="hideOnMobile">
+              <button class="lato glow-button font-18" type="button">
+                <a class="glow-button-border" href="/contact-us.html"
+                  >Contact us!</a
+                >
+                <div class="polygon"></div>
+              </button>
+            </li>
+            <li class="menu-button mr-30" onclick="showSideBar()">
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="26px"
+                  viewBox="0 -960 960 960"
+                  width="26px"
+                  fill="#1f1f1f"
+                >
+                  <path
+                    d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
         </nav>
 
         <header>
