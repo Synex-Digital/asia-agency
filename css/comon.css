@@ -1657,6 +1657,11 @@ footer .speretaor {
   align-items: center;
   gap: 12px;
 }
+.footer-content-nav-social a {
+  display: inline-block;
+  padding: 0px;
+  margin: 0px;
+}
 .footer-content-nav-social img {
   display: inline-block;
   padding: 9px;
