@@ -765,7 +765,6 @@ header p {
   align-items: center;
   padding-top: 40px;
   font-family: "Lato", serif;
-  width: 200px;
 }
 .cta-btn-nav {
   display: flex;
@@ -1543,44 +1542,70 @@ form {
   width: 24px;
   height: 24px;
 }
-
 @media (max-width: 1200px) {
   .contact-form {
     flex-direction: column;
+    padding: 40px;
     align-items: center;
-    padding: 80px 60px 80px 60px;
   }
+
   .contact-form-content {
-    width: 100%;
+    width: 90%;
+    max-width: 478px;
+    text-align: center;
+    margin-bottom: 40px;
   }
+
   .contact-form-input {
+    width: 90%;
+    max-width: 466px;
+  }
+
+  .contact-form-content h4 {
+    padding-top: 40px;
     width: 100%;
   }
-  .contact-form-points {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+
+  .faq-form-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
   }
-  .contact-form-points img {
-    width: 20px;
-    height: 20px;
-  }
-  .contact-form-content h4 {
-    padding-top: 84px;
-    width: 244px;
-  }
-  .contact-form-content a {
-    display: inline-flex;
-    margin-top: 20px;
-    padding: 8px 16px;
-    border-radius: 100px;
-    border: none;
-  }
-  .contact-form-container {
-    margin-top: 15px;
+
+  .faq-form-group input {
+    width: 100%;
   }
 }
 
+@media (max-width: 768px) {
+  .contact-form-content h2 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-form-content h2 {
+    font-size: 36px;
+  }
+
+  .contact-form-content span,
+  .contact-form-content h4,
+  .contact-form-content a span,
+  .faq-form-group input,
+  .contact-details textarea {
+    font-size: 16px;
+  }
+
+  .submit-btn button {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form-content h2 {
+    font-size: 32px;
+  }
+}
 /* contact form end */
 
 /* faq section start */

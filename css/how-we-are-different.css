@@ -1,8 +1,36 @@
 body {
   background: #0b0a0d;
 }
-#hero header p {
-  width: 664px;
+@media (max-width: 1200px) {
+  #hero header p {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-heading {
+    font-size: 48px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 36px;
+  }
+
+  .cta-btn a {
+    font-size: 16px;
+  }
 }
 
 /* solutions section start */
@@ -36,6 +64,67 @@ body {
   flex-wrap: wrap;
   row-gap: 85px;
 }
+
+@media (max-width: 1200px) {
+  .solution-cards {
+    justify-content: center;
+  }
+
+  .solution-cards .solution-card {
+    width: 45%;
+    max-width: 350px;
+  }
+
+  .solution-heading {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #solution .solution-heading h3 {
+    width: 90%;
+    text-align: center;
+  }
+
+  .solution-heading p {
+    width: 90%;
+    text-align: center;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .solution-cards .solution-card {
+    width: 80%;
+  }
+
+  #solution h3 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .solution-cards .solution-card {
+    width: 90%;
+  }
+
+  #solution h3 {
+    font-size: 32px;
+  }
+
+  .solution-card h2 {
+    font-size: 20px;
+  }
+
+  .solution-card p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  #solution h3 {
+    font-size: 28px;
+  }
+}
 /* solutions section end */
 
 /*  why choose us section start */
@@ -59,6 +148,59 @@ body {
 .why-choose-us-cards .why-choose-us-card h3 {
   border-bottom: 1px solid rgba(255, 255, 255, 1);
   width: 230px;
+}
+
+@media (max-width: 1200px) {
+  #why-choose-us picture img {
+    width: 100%;
+    height: auto;
+  }
+
+  .why-choose-us-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .why-choose-us-cards .why-choose-us-card {
+    width: 45%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  #why-choose-us h3 {
+    font-size: 36px;
+  }
+
+  .why-choose-us-cards .why-choose-us-card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  #why-choose-us h3 {
+    font-size: 32px;
+  }
+
+  .why-choose-us-cards .why-choose-us-card {
+    width: 90%;
+  }
+
+  .why-choose-us-cards .why-choose-us-card h3 {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .why-choose-us-cards .why-choose-us-card p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  #why-choose-us h3 {
+    font-size: 28px;
+  }
 }
 /* why choose us section end */
 /* content section start */
@@ -97,7 +239,66 @@ body {
 .cards .card h3 {
   margin-top: 48px;
 }
+@media (max-width: 1200px) {
+  .cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
 
+  .cards .card {
+    width: 45%;
+    max-width: 350px;
+  }
+
+  .content-container {
+    text-align: center;
+  }
+
+  .content-container h3 {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .content-container p {
+    width: 90%;
+    margin: 16px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-container h3 {
+    font-size: 36px;
+  }
+
+  .cards .card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .content-container h3 {
+    font-size: 32px;
+  }
+
+  .cards .card {
+    width: 90%;
+  }
+
+  .cards .card h3 {
+    font-size: 20px;
+  }
+
+  .cards .card p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-container h3 {
+    font-size: 28px;
+  }
+}
 /* content section end */
 
 /* paid media channels satrt */
@@ -111,7 +312,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  row-gap: 40px;
+  row-gap: 10px;
 }
 .capability-dropdown-header {
   display: flex;
@@ -153,7 +354,67 @@ body {
   cursor: pointer;
   cursor: pointer;
 }
+@media (max-width: 1200px) {
+  .paid-media-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .capability-dropdown {
+    width: 90%;
+    margin-top: 40px;
+  }
+
+  .paid-media-heading {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .content-container-how h2 {
+    width: 90%;
+    text-align: center;
+  }
+
+  .content-container-how p {
+    width: 90%;
+    text-align: center;
+    margin: 16px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-container-how h2 {
+    font-size: 36px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .capability-dropdown-header div {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .content-container-how h2 {
+    font-size: 32px;
+  }
+
+  .capability-dropdown-header div {
+    font-size: 18px;
+  }
+
+  .dropdown-content p {
+    font-size: 14px;
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-container-how h2 {
+    font-size: 28px;
+  }
+}
 /* paid media channels end */
 /* capabilities section start */
 #capabilities {
@@ -212,10 +473,59 @@ body {
   -webkit-mask-image: url("/images/services/icons/right.png");
   background-color: rgba(152, 162, 179, 1); */
 }
+@media (max-width: 1200px) {
+  .capabilities-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
+  .capabilities-container picture {
+    width: 90%;
+    max-width: 473px;
+    height: auto;
+  }
+
+  .capabilities-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .capabilities-right {
+    width: 90%;
+    max-width: 501px;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .capabilities-right h3 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  #capabilities h3 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  #capabilities h3 {
+    font-size: 32px;
+  }
+
+  .capabilities-right p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  #capabilities h3 {
+    font-size: 28px;
+  }
+}
 /* capabilities section end */
 /* what we do section start */
-/* Container for the cards */
 .what-we-do-cards {
   display: flex;
   justify-content: space-between;
@@ -224,7 +534,6 @@ body {
   row-gap: 24px;
 }
 
-/* Individual card style */
 .what-we-do-cards .what-we-do-card {
   width: 573px;
   padding: 32px;
@@ -298,5 +607,44 @@ body {
 .what-we-do-cards .what-we-do-card .btn a:hover img {
   filter: brightness(0) invert(1);
 }
+@media (max-width: 1200px) {
+  .what-we-do-cards {
+    justify-content: center;
+  }
 
+  .what-we-do-cards .what-we-do-card {
+    width: 90%;
+    max-width: 573px;
+  }
+}
+
+@media (max-width: 768px) {
+  #what-we-do h3 {
+    font-size: 36px;
+  }
+
+  .what-we-do-cards .what-we-do-card h5 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  #what-we-do h3 {
+    font-size: 32px;
+  }
+
+  .what-we-do-cards .what-we-do-card h5 {
+    font-size: 24px;
+  }
+
+  .what-we-do-cards .what-we-do-card p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  #what-we-do h3 {
+    font-size: 28px;
+  }
+}
 /* what we do section end */
