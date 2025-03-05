@@ -8,6 +8,12 @@ body {
   justify-content: space-between;
   gap: 12px;
 }
+.bage-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
 .custom-tag {
   display: inline-flex;
   justify-items: center;
@@ -78,4 +84,92 @@ body {
   object-fit: cover;
   object-position: center;
   border-radius: 12px;
+}
+@media (max-width: 1200px) {
+  .header-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .input-header {
+    width: 100%;
+  }
+
+  .header-section-content {
+    width: 50%;
+    margin-left: 40px;
+  }
+  .bage-section {
+    margin-left: 40px;
+  }
+
+  .hero-section .project-card,
+  .cards-section .project-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-section .project-card .card-image picture img,
+  .cards-section .project-card .card-image picture img {
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+  }
+
+  .hero-section .project-card .card-container,
+  .cards-section .project-card .card-container {
+    width: 100%;
+    text-align: center;
+  }
+  
+}
+@media (max-width: 992px) {
+  .header-section-content {
+    width: 90%;
+    font-size: 50px;
+  }
+  .header-section-content h1 {
+    font-size: 60px;
+    text-align: center;
+  }
+  .bage-section {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  .bage-section {
+    margin: 0 auto;
+  }
+  .header-section-content h1 {
+    font-size: 60px;
+    text-align: center;
+  }
+  .header-section-content p,
+  .card-content {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-section-content h1 {
+    font-size: 48px;
+    text-align: center;
+  }
+
+  .header-section-content p,
+  .card-content {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-section-content h1 {
+    font-size: 36px;
+  }
 }
