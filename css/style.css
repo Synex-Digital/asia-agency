@@ -209,7 +209,7 @@ body {
   fill: rgba(255, 255, 255, 1);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
   .numbers-container {
     padding: 0px 12px;
   }
@@ -520,7 +520,7 @@ tbody tr td picture {
     align-items: center;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
   .campaign-data-content {
     flex-direction: column;
     align-items: center;
@@ -598,7 +598,7 @@ tbody tr td picture {
   border-radius: 24px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
   .service-section {
     flex-direction: column;
     align-items: center;
@@ -669,7 +669,7 @@ tbody tr td picture {
   display: inline-block;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
   .blog-heading {
     flex-direction: column;
     align-items: center;
@@ -821,7 +821,7 @@ form {
   height: 24px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
   .contact-form {
     flex-direction: column;
     align-items: center;
