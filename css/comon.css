@@ -395,6 +395,7 @@ nav a {
   align-items: center;
   justify-content: flex-start;
   color: white;
+  column-gap: 8px;
 }
 
 nav li:first-child {
@@ -736,6 +737,68 @@ header p {
   font-weight: 600;
 }
 /* clents section end */
+/* approacht section end */
+.works-process-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.works-process-content h4 {
+  width: 589px;
+  text-align: start;
+}
+.works-process-content p {
+  width: 458px;
+  text-align: start;
+}
+
+.works-process-cards picture img {
+  width: 1170px;
+  height: 806px;
+  object-position: center;
+  object-fit: cover;
+}
+@media (max-width: 1200px) {
+  #works-process {
+    padding: 20px 20px;
+  }
+  .works-process-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .works-process-content h4,
+  .works-process-content p {
+    width: 100%;
+    text-align: left;
+  }
+  .works-process-content h4 {
+    margin-bottom: 20px;
+  }
+  .works-process-section picture img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .works-process-content h4 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 576px) {
+  .works-process-content h4 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .works-process-section picture img {
+    width: 100%;
+    height: auto;
+  }
+}
+/* about section start */
 
 /* cta section start */
 .cta-contant {
