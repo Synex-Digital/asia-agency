@@ -20,41 +20,86 @@
     <section id="hero" class="py-40">
       <div class="container">
         <nav>
-          <div class="mainlogo">
-            <a href="/index.html"><img src="/images/logo.svg" alt="logo" /></a>
-            <span class="font-20 font-weight-600 lato white">Asia.Agency</span>
-          </div>
-          <div>
-            <ul class="nav-menu font-16 font-weight-500 lato">
-              <li class="nav-item"><a href="/about-us.html">About Us</a></li>
-              <li class="nav-item"><a href="/contact-us.html">Contact</a></li>
-
-              <!-- Dropdown Menu -->
-              <li class="nav-item dropdown">
-                <a href="/services.html">Services</a>
-                <img
-                  src="/images/icons/tabler-icon-chevron-down.png"
-                  alt="arrow-down"
-                />
-                <ul class="dropdown-menu">
-                  <li><a href="#">Web Development</a></li>
-                  <li><a href="#">SEO Optimization</a></li>
-                  <li><a href="#">Digital Marketing</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item"><a href="/blog-page.html">Blog</a></li>
-              <li class="nav-item">
-                <a href="/How-we-are-different.html">How we’re different</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <button class="lato glow-button font-18" type="button">
-              <div class="glow-button-border">Contact us!</div>
-              <div class="polygon"></div>
-            </button>
-          </div>
+          <ul class="sidebar">
+            <li onclick="hideSidebar()">
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="26px"
+                  viewBox="0 -960 960 960"
+                  width="26px"
+                  fill="#1f1f1f"
+                >
+                  <path
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li><a href="/about-us.html">About Us</a></li>
+            <li><a href="/contact-us.html">Contact</a></li>
+            <li><a href="#">works</a></li>
+            <li><a href="/blog-page.html">Blog</a></li>
+            <li>
+              <a href="/How-we-are-different.html">How we’re different</a>
+            </li>
+            <li>
+              <button class="lato glow-button font-18" type="button">
+                <a class="glow-button-border" href="/contact-us.html"
+                  >Contact us!</a
+                >
+                <div class="polygon"></div>
+              </button>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="/index.html">
+                <img src="/images/logo.svg" alt="logo" />
+                <span class="font-20 font-weight-600 lato">Asia.Agency</span>
+              </a>
+            </li>
+            <li class="hideOnMobile mr-30">
+              <a class="" href="/about-us.html">About Us</a>
+            </li>
+            <li class="hideOnMobile mr-30">
+              <a class="" href="/contact-us.html">Contact</a>
+            </li>
+            <li class="hideOnMobile mr-30">
+              <a class="" href="#">works</a>
+            </li>
+            <li class="hideOnMobile mr-30">
+              <a class="" href="/blog-page.html">Blog</a>
+            </li>
+            <li class="hideOnMobile mr-30">
+              <a href="/How-we-are-different.html" class="mr-140"
+                >How we’re different</a
+              >
+            </li>
+            <li class="hideOnMobile">
+              <button class="lato glow-button font-18" type="button">
+                <a class="glow-button-border" href="/contact-us.html"
+                  >Contact us!</a
+                >
+                <div class="polygon"></div>
+              </button>
+            </li>
+            <li class="menu-button mr-30" onclick="showSideBar()">
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="26px"
+                  viewBox="0 -960 960 960"
+                  width="26px"
+                  fill="#1f1f1f"
+                >
+                  <path
+                    d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
         </nav>
 
         <div class="header">
@@ -138,7 +183,7 @@
       </div>
     </section>
     <!-- riview section end-->
-     
+
     <!-- formulaa section start-->
     <section id="formula-section" class="py-60">
       <div class="container">
@@ -210,7 +255,7 @@
     <!-- formulaa section end-->
 
     <!-- problem solution section start-->
-    <section class="py-60">
+    <section class="py-60" id="problem-solution">
       <div class="container">
         <div class="review-title lato font-weight-700 font-20 white">
           <h4>PROBLEM & SOLUTION</h4>
@@ -298,7 +343,7 @@
     <!-- problem solution section end-->
 
     <!-- EXECUTION section start-->
-    <section class="py-60">
+    <section class="py-60" id="execution">
       <div class="container">
         <div class="review-title lato font-weight-700 font-20 white">
           <h4>EXECUTION</h4>
@@ -357,7 +402,7 @@
     <!-- EXECUTION section end-->
 
     <!-- conclusion section start-->
-    <section class="py-60">
+    <section class="py-60" id="conclusion">
       <div class="container">
         <div class="review-title lato font-weight-700 font-20 white">
           <h4>CONCLUSION</h4>
@@ -624,7 +669,7 @@
     <!-- projects section end-->
 
     <!-- cta  section start -->
-    <section class="py-80">
+    <section class="py-80" id="cta">
       <div class="container cta-contant">
         <h3 class="font-48 plus-jakarta font-weight-700 white">
           Got a project in mind? Tell us about it.
@@ -644,8 +689,8 @@
     </section>
     <!-- cta  section end -->
 
-    <!-- footer section start -->
-    <footer class="pt-80">
+     <!-- footer section start -->
+     <footer class="pt-80">
       <div class="container">
         <div class="footer-content">
           <h3 class="plus-jakarta font-weight-700 font-48 white">
@@ -695,11 +740,11 @@
             <div class="footer-content-nav-list">
               <h2 class="lato font-weight-600 font-18 gray-300">Services</h2>
               <ul class="pt-12">
-                <li>Digital marketig</li>
-                <li>Digital marketig</li>
-                <li>Digital marketig</li>
-                <li>Digital marketig</li>
-                <li>Digital marketig</li>
+                <li><a href="#">Digital marketig</a></li>
+                <li><a href="#">Business consultant</a></li>
+                <li><a href="#">Business consultant</a></li>
+                <li><a href="#">Business consultant</a></li>
+                <li><a href="#">Business consultant</a></li>
               </ul>
             </div>
             <div class="footer-content-nav-list">
@@ -715,11 +760,8 @@
             <div class="footer-content-nav-list">
               <h2 class="lato font-weight-600 font-18 gray-300">Review</h2>
               <ul class="pt-12">
-                <li>Digital marketig</li>
-                <li>Digital marketig</li>
-                <li>Digital marketig</li>
-                <li>Digital marketig</li>
-                <li>Digital marketig</li>
+                <li>Clutch</li>
+                <li>Trustpilot</li>
               </ul>
             </div>
           </div>
@@ -731,14 +773,34 @@
             >&copy; 2025-2028 Asia.Agency</span
           >
           <div class="footer-content-nav-social">
-            <img src="/images/icons/x-twitter-brands-solid.svg" alt="twitter" />
-            <img src="/images/icons/linkedin-brands-solid.svg" alt="linkedin" />
-            <img src="/images/icons/facebook-brands-solid.svg" alt="facebook" />
-            <img
-              src="/images/icons/instagram-brands-solid.svg"
-              alt="instagram"
-            />
-            <img src="/images/icons/tiktok-brands-solid.svg" alt="tiktok" />
+            <a href="#">
+              <img
+                src="/images/icons/x-twitter-brands-solid.svg"
+                alt="twitter"
+              />
+            </a>
+
+            <a href="#">
+              <img
+                src="/images/icons/linkedin-brands-solid.svg"
+                alt="linkedin"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="/images/icons/facebook-brands-solid.svg"
+                alt="facebook"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="/images/icons/instagram-brands-solid.svg"
+                alt="instagram"
+              />
+            </a>
+            <a href="#">
+              <img src="/images/icons/tiktok-brands-solid.svg" alt="tiktok" />
+            </a>
           </div>
         </div>
       </div>
