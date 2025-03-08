@@ -43,6 +43,13 @@ body {
   width: 100%;
   max-width: 724px;
 }
+.about-us-text h3 {
+  text-align: left;
+  line-height: 48px;
+}
+.about-us-text .about-us-button {
+  display: flex;
+}
 
 /* For screens up to 1024px */
 @media (max-width: 64rem) {
@@ -116,6 +123,7 @@ body {
   width: 400px;
   height: 200px;
   border: 1px solid rgba(91, 91, 91, 0.5);
+  opacity: 50%;
 }
 
 .box.glow {
@@ -198,7 +206,16 @@ body {
 }
 
 .box .plus-icon {
-  position: relative;
+  position: absolute;
+  font-size: 64px;
+  top: 24px;
+  line-height: 76px;
+}
+.box .modulas-icon {
+  position: absolute;
+  font-size: 40px;
+  top: 24px;
+  line-height: 76px;
 }
 
 .box .plus-icon img {

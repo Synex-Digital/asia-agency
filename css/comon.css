@@ -358,6 +358,13 @@ a {
   color: rgba(255, 255, 255, 1);
 }
 
+.line-height-24 {
+  line-height: 24px;
+}
+.line-height-58 {
+  line-height: 58px;
+}
+
 /* Hero Section start */
 #hero {
   background-image: url("/images/BGTexture.png");
@@ -442,6 +449,35 @@ nav li:first-child {
   .sidebar {
     width: 100%;
   }
+}
+
+/* Dropdown Styles */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 100%; /* Position below the parent li */
+  left: 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 header {
