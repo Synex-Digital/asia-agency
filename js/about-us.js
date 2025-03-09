@@ -58,13 +58,22 @@ document.addEventListener("DOMContentLoaded", () => {
 // about us section
 
 document.addEventListener("DOMContentLoaded", function () {
-  const dropdownHeaders = document.querySelectorAll(".capability-dropdown-header");
+  const dropdownHeaders = document.querySelectorAll(
+    ".capability-dropdown-header"
+  );
 
   dropdownHeaders.forEach((header) => {
     const button = header.querySelector(".dropdownButton");
-    const dropdown = header.nextElementSibling; // Target the dropdown next to the header
+    const dropdown = header.nextElementSibling; // This should be the .dropdown-content
+
+    console.log("Dropdown Element:", dropdown); // Debugging
 
     button.addEventListener("click", function () {
+      if (!dropdown) {
+        console.error("Dropdown content not found!");
+        return;
+      }
+      
       dropdown.classList.toggle("active");
 
       // Toggle the button text between "+" and "-"
@@ -79,7 +88,7 @@ function showSideBar() {
   sidebar.style.display = "flex";
 }
 
-function hideSidebar(){
+function hideSidebar() {
   const sidebar = document.querySelector(".sidebar");
   sidebar.style.display = "none";
 }

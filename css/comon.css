@@ -373,8 +373,15 @@ a {
 .line-height-36 {
   line-height: 36px;
 }
-.line-height-30{
+.line-height-30 {
   line-height: 30px;
+}
+.line-height-32 {
+  line-height: 32px;
+}
+
+.line-height-76 {
+  line-height: 76px;
 }
 
 /* Hero Section start */
@@ -673,9 +680,8 @@ header p {
 
 /* Badge Button */
 .badge-button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  height: 36px;
   padding: 6px 16px 6px 6px;
   background: rgba(14, 17, 22, 1);
   border: 1px solid rgba(145, 145, 145, 0.3);
@@ -1144,7 +1150,7 @@ header p {
 .next-button {
   width: 44px;
   height: 44px;
-  background-color:#0B0A0D;
+  background-color: #0b0a0d;
   border-radius: 100px;
   border: 1px solid rgba(145, 145, 145, 0.3);
   color: white;
@@ -1153,7 +1159,15 @@ header p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
+.prev-button:hover {
+  background-color: rgba(145, 145, 145, 0.3);
+  border: 1px solid #0b0a0d;
+}
+.next-button:hover {
+  background-color: rgba(145, 145, 145, 0.3);
+  border: 1px solid #0b0a0d;
 }
 
 .prev-arrow,
@@ -1400,7 +1414,7 @@ tbody tr td picture {
   justify-content: center;
   width: 56px; /* Fixed width */
   height: 56px; /* Fixed height */
-  padding: 12px 12px 12px 12px; 
+  padding: 12px 12px 12px 12px;
   gap: 10px; /* Not needed for a single image, but kept */
   border-radius: 100px; /* Top-left rounded */
   background: rgba(23, 28, 36, 1);
