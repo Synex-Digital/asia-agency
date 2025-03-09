@@ -22,7 +22,7 @@
         <nav>
           <ul class="sidebar">
             <li onclick="hideSidebar()">
-              <a href="">
+              <a href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="26px"
@@ -39,6 +39,14 @@
             <li><a href="/about-us.html">About Us</a></li>
             <li><a href="/contact-us.html">Contact</a></li>
             <li><a href="#">works</a></li>
+            <li class="nav-dropdown">
+              <a class="" href="/services.html">Services </a>
+              <ul class="nav-dropdown-content">
+                <li><a href="#">Service 1</a></li>
+                <li><a href="#">Service 2</a></li>
+                <li><a href="#">Service 3</a></li>
+              </ul>
+            </li>
             <li><a href="/blog-page.html">Blog</a></li>
             <li>
               <a href="/How-we-are-different.html">How we’re different</a>
@@ -67,6 +75,20 @@
             </li>
             <li class="hideOnMobile mr-30">
               <a class="" href="#">works</a>
+            </li>
+            <li class="hideOnMobile mr-30 nav-dropdown">
+              <a class="" href="/services.html"
+                >Services
+                <img
+                  src="/images/icons/tabler-icon-chevron-down.svg"
+                  alt="tabler-icon-chevron-down"
+                />
+              </a>
+              <ul class="nav-dropdown-content">
+                <li><a href="#">Service 1</a></li>
+                <li><a href="#">Service 2</a></li>
+                <li><a href="#">Service 3</a></li>
+              </ul>
             </li>
             <li class="hideOnMobile mr-30">
               <a class="" href="/blog-page.html">Blog</a>
@@ -102,7 +124,7 @@
           </ul>
         </nav>
 
-        <div class="header-section pt-120">
+        <div class="header-section pt-120 line-height-24">
           <div class="bage-section lato">
             <h6 class="font-16 font-weight-400 white custom-tag gray-900">
               All topics
@@ -119,19 +141,23 @@
         </div>
         <div class="header-section-content">
           <h1
-            class="main-heading Soft-Sky-Glow font-76 font-weight-700 plus-jakarta"
+            class="main-heading Soft-Sky-Glow font-76 font-weight-700 plus-jakarta line-height-76"
           >
             <span class="primary italic lora"> Asia Agency </span>
             blogs
           </h1>
-          <p class="lato font-weight-500 font-18 gray-400">
+          <p class="lato font-weight-500 font-18 gray-400 line-height-24">
             We create unexpected connections between creative people with a
             passion, and creative businesses on a mission, so they can make the
             best work of their lives.
           </p>
         </div>
-
-        <div class="pt-80" id="projects">
+      </div>
+    </section>
+    <!-- Hero Section end-->
+    <section id="projects">
+      <div class="container">
+        <div class="pt-80" >
           <div class="slider-container">
             <div class="slider">
               <!-- Card 1 -->
@@ -197,7 +223,6 @@
         </div>
       </div>
     </section>
-    <!-- Hero Section end-->
 
     <!-- Blog Section start -->
     <section class="py-80">
@@ -207,7 +232,7 @@
         >
           Latest
         </h2>
-        <div class="blog-cards-container pt-40">
+        <div class="blog-cards-container pt-40 line-height-24">
           <div class="blog-cards">
             <img src="/images/image-01.svg" alt="" />
             <div class="blog-cards-content">
@@ -368,7 +393,7 @@
     <section>
       <div class="container">
         <div class="blog-cta-container">
-          <h3 class="plus-jakarta font-weight-700 font-48 white">
+          <h3 class="plus-jakarta font-weight-700 font-48 white line-height-58">
             Subscribe to our blog to get the latests articles and updates
           </h3>
           <form action="">
@@ -383,124 +408,129 @@
     </section>
     <!-- blog cta section end -->
 
-   <!-- footer section start -->
-    <footer class="pt-80">
-      <div class="container">
-        <div class="footer-content">
-          <h3 class="plus-jakarta font-weight-700 font-48 white">
-            3-day FREE trial to get to know us
-          </h3>
-          <p class="lato font-weight-400 font-16 white pt-16">
-            we offer you a three dasy trail to reduce risk and check our
-            compatibility. you can decide whether you are ready to move forward
-            with us
-          </p>
-          <div class="footer-content-button pt-32">
-            <a href="#" class="lato font-16 font-weight-600 gray-900">
-              Start a free trial
-              <img src="/images/icons/Right_Icon.svg" alt="right icon" />
-            </a>
-          </div>
-        </div>
-        <div class="footer-content-nav">
-          <div class="footer-content-nav-1">
-            <div class="footer-logo">
-              <img src="/images/logo.svg" alt="footer logo" />
-              <span class="lato font-weight-700 font-26 white"
-                >Asia.Agency</span
-              >
-            </div>
-            <h4 class="lato font-weight-700 font-20 white pt-32">Subscribe</h4>
-            <p class="lato font-weight-400 font-16 gray-500">
-              join our newsteller to get the latest article and updates
+      <!-- footer section start -->
+      <footer>
+        <div class="container">
+          <div class="footer-content">
+            <h3 class="plus-jakarta font-weight-700 font-48 white line-height-58">
+              3-day FREE trial to get to know us
+            </h3>
+            <p class="lato font-weight-400 font-16 white pt-16 line-height-24">
+              we offer you a three dasy trail to reduce risk and check our
+              compatibility. you can decide whether you are ready to move forward
+              with us
             </p>
-
-            <div class="footer-content-nav-1-input">
-              <form action="" class="footer-content-nav-1-input-email">
-                <div class="footer-content-nav-1-input-email">
-                  <img src="images/icons/envelope-regular.svg" alt="envelope" />
-                  <input type="email" placeholder="Enter your email" />
-                </div>
-                <button
-                  type="submit"
-                  class="lato font-weight-600 font-18 gray-900"
+            <div class="footer-content-button pt-32">
+              <a
+                href="#"
+                class="lato font-16 font-weight-600 gray-900 line-height-24"
+              >
+                Start a free trial
+                <img src="/images/icons/Right_Icon.svg" alt="right icon" />
+              </a>
+            </div>
+          </div>
+          <div class="footer-content-nav">
+            <div class="footer-content-nav-1">
+              <div class="footer-logo">
+                <img src="/images/logo.svg" alt="footer logo" />
+                <span class="lato font-weight-700 font-26 white line-height-36"
+                  >Asia.Agency</span
                 >
-                  Subcribe
-                </button>
-              </form>
+              </div>
+              <h4 class="lato font-weight-700 font-20 white pt-32 line-height-26">
+                Subscribe
+              </h4>
+              <p class="lato font-weight-400 font-16 gray-500 line-height-24">
+                join our newsteller to get the latest article and updates
+              </p>
+  
+              <div class="footer-content-nav-1-input">
+                <form action="" class="footer-content-nav-1-input-email">
+                  <div class="footer-content-nav-1-input-email">
+                    <img src="images/icons/envelope-regular.svg" alt="envelope" />
+                    <input type="email" placeholder="Enter your email" />
+                  </div>
+                  <button
+                    type="submit"
+                    class="lato font-weight-600 font-18 gray-900"
+                  >
+                    Subcribe
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="footer-content-nav-2 line-height-24">
+              <div class="footer-content-nav-list">
+                <h2 class="lato font-weight-600 font-18 gray-300">Services</h2>
+                <ul class="pt-12">
+                  <li><a href="#">Digital marketig</a></li>
+                  <li><a href="#">Business consultant</a></li>
+                  <li><a href="#">Business consultant</a></li>
+                  <li><a href="#">Business consultant</a></li>
+                  <li><a href="#">Business consultant</a></li>
+                </ul>
+              </div>
+              <div class="footer-content-nav-list">
+                <h2 class="lato font-weight-600 font-18 gray-300">Quick Link</h2>
+                <ul class="pt-12">
+                  <li><a href="/index.html">Home</a></li>
+                  <li><a href="/index.html">About</a></li>
+                  <li><a href="/index.html">Contact us</a></li>
+                  <li><a href="/index.html">Blog</a></li>
+                  <li><a href="/index.html">Career</a></li>
+                </ul>
+              </div>
+              <div class="footer-content-nav-list">
+                <h2 class="lato font-weight-600 font-18 gray-300">Review</h2>
+                <ul class="pt-12">
+                  <li>Clutch</li>
+                  <li>Trustpilot</li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="footer-content-nav-2">
-            <div class="footer-content-nav-list">
-              <h2 class="lato font-weight-600 font-18 gray-300">Services</h2>
-              <ul class="pt-12">
-                <li><a href="#">Digital marketig</a></li>
-                <li><a href="#">Business consultant</a></li>
-                <li><a href="#">Business consultant</a></li>
-                <li><a href="#">Business consultant</a></li>
-                <li><a href="#">Business consultant</a></li>
-              </ul>
-            </div>
-            <div class="footer-content-nav-list">
-              <h2 class="lato font-weight-600 font-18 gray-300">Quick Link</h2>
-              <ul class="pt-12">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/index.html">About</a></li>
-                <li><a href="/index.html">Contact us</a></li>
-                <li><a href="/index.html">Blog</a></li>
-                <li><a href="/index.html">Career</a></li>
-              </ul>
-            </div>
-            <div class="footer-content-nav-list">
-              <h2 class="lato font-weight-600 font-18 gray-300">Review</h2>
-              <ul class="pt-12">
-                <li>Clutch</li>
-                <li>Trustpilot</li>
-              </ul>
+          <div class="speretaor"></div>
+  
+          <div class="footer-content-nav-bottom">
+            <span class="lato font-weight-400 font-16 gray-500"
+              >&copy; 2025-2028 Asia.Agency</span
+            >
+            <div class="footer-content-nav-social">
+              <a href="#">
+                <img
+                  src="/images/icons/x-twitter-brands-solid.svg"
+                  alt="twitter"
+                />
+              </a>
+  
+              <a href="#">
+                <img
+                  src="/images/icons/linkedin-brands-solid.svg"
+                  alt="linkedin"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="/images/icons/facebook-brands-solid.svg"
+                  alt="facebook"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="/images/icons/instagram-brands-solid.svg"
+                  alt="instagram"
+                />
+              </a>
+              <a href="#">
+                <img src="/images/icons/tiktok-brands-solid.svg" alt="tiktok" />
+              </a>
             </div>
           </div>
         </div>
-        <div class="speretaor"></div>
-
-        <div class="footer-content-nav-bottom">
-          <span class="lato font-weight-400 font-16 gray-500"
-            >&copy; 2025-2028 Asia.Agency</span
-          >
-          <div class="footer-content-nav-social">
-            <a href="#">
-              <img
-                src="/images/icons/x-twitter-brands-solid.svg"
-                alt="twitter"
-              />
-            </a>
-
-            <a href="#">
-              <img
-                src="/images/icons/linkedin-brands-solid.svg"
-                alt="linkedin"
-              />
-            </a>
-            <a href="#">
-              <img
-                src="/images/icons/facebook-brands-solid.svg"
-                alt="facebook"
-              />
-            </a>
-            <a href="#">
-              <img
-                src="/images/icons/instagram-brands-solid.svg"
-                alt="instagram"
-              />
-            </a>
-            <a href="#">
-              <img src="/images/icons/tiktok-brands-solid.svg" alt="tiktok" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- footer section end -->
-
+      </footer>
+      <!-- footer section end -->
+  
     <script src="/js/blog-page.js"></script>
   </body>
 </html>

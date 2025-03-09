@@ -26,8 +26,8 @@ body {
     var(--color-other-outline-30, rgba(145, 145, 145, 0.3));
 }
 .input-header img {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
 }
 .input-header input {
@@ -194,6 +194,7 @@ body {
   align-items: center;
   justify-content: space-between;
   border-radius: 10px;
+  background: rgba(14, 17, 22, 1);
 }
 .pagination-prev-button {
   display: flex;
@@ -202,6 +203,7 @@ body {
   padding: 10px 16px;
   gap: 8px;
   cursor: pointer;
+  border-radius: 0px 0px 10px 10px;
 }
 .pagination-prev-button img {
   width: 20px;
@@ -229,16 +231,16 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  background: rgba(14, 17, 22, 1);
 }
 .pagination-active {
   background-color: rgba(255, 255, 255, 1);
   color: rgba(16, 24, 40, 1);
 }
 @media (max-width: 1200px) {
-  .blog-heading{
+  .blog-heading {
     margin-left: 20px;
   }
-  
 }
 /* blog section  end*/
 /* blog cta section start */
