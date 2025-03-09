@@ -361,8 +361,20 @@ a {
 .line-height-24 {
   line-height: 24px;
 }
+.line-height-42 {
+  line-height: 42px;
+}
 .line-height-58 {
   line-height: 58px;
+}
+.line-height-26 {
+  line-height: 26px;
+}
+.line-height-36 {
+  line-height: 36px;
+}
+.line-height-30{
+  line-height: 30px;
 }
 
 /* Hero Section start */
@@ -503,6 +515,7 @@ header p {
 .main-heading {
   text-align: center;
   margin-top: 12px;
+  line-height: 58px;
 }
 /* Tags */
 .tag-container {
@@ -680,7 +693,7 @@ header p {
 }
 /* white background button */
 .white-bg-btn {
-  padding: 14px 20px;
+  padding: 8px 16px;
   background: var(--Color-Other-White, rgba(255, 255, 255, 1));
   border-radius: 100px;
   text-decoration: none;
@@ -690,7 +703,7 @@ header p {
   position: relative;
 }
 .white-bg-btn-arrow {
-  margin-left: 9px;
+  margin-left: 4px;
   width: 24px;
   height: 24px;
   pointer-events: none;
@@ -987,12 +1000,27 @@ header p {
   padding: 1px;
 }
 
-.card::before {
+.project-card {
+  flex: 0 0 876px;
+  max-width: 876px;
+  background: rgba(14, 17, 22, 1);
+  border-radius: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 24px 24px 24px 40px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.project-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 24px;
   padding: 1px;
+  border-radius: 24px;
   background: radial-gradient(
     164.04% 114.84% at 50% 0%,
     rgba(255, 255, 255, 0.8) 0%,
@@ -1006,24 +1034,9 @@ header p {
   transition: opacity 0.3s ease-in-out;
   pointer-events: none;
 }
-
-.card.active::before {
+.project-card:hover::before {
   opacity: 1;
 }
-
-.project-card {
-  flex: 0 0 876px;
-  max-width: 876px;
-  background: rgba(14, 17, 22, 1);
-  border-radius: 24px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 24px 24px 24px 40px;
-  box-sizing: border-box;
-}
-
 .card-container {
   width: 460px;
 }
@@ -1096,17 +1109,21 @@ header p {
 
 .progress-bar {
   flex-grow: 1;
-  height: 5px;
+  height: 2px;
   background-color: rgba(145, 145, 145, 0.3); /* Default background color */
   margin: 0 20px;
   position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
 }
 
 .progress {
-  height: 100%;
+  height: 4px;
   background-color: rgba(255, 255, 255, 1); /* Default progress color */
   width: 0;
   transition: width 0.3s ease-in-out;
+  border-radius: 50px;
 }
 
 .slider-controls {
@@ -1127,16 +1144,16 @@ header p {
 .next-button {
   width: 44px;
   height: 44px;
-  background-color: rgba(145, 145, 145, 0.08);
-  border: 1px solid rgba(145, 145, 145, 0.3);
+  background-color:#0B0A0D;
   border-radius: 100px;
+  border: 1px solid rgba(145, 145, 145, 0.3);
   color: white;
-  border: none;
   cursor: pointer;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .prev-arrow,
@@ -1383,7 +1400,7 @@ tbody tr td picture {
   justify-content: center;
   width: 56px; /* Fixed width */
   height: 56px; /* Fixed height */
-  padding: 12px 12px 12px 12px; /* Applied only top padding */
+  padding: 12px 12px 12px 12px; 
   gap: 10px; /* Not needed for a single image, but kept */
   border-radius: 100px; /* Top-left rounded */
   background: rgba(23, 28, 36, 1);
