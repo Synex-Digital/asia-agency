@@ -364,14 +364,24 @@ a {
   color: rgba(255, 255, 255, 1);
 }
 
+.line-height-20 {
+  line-height: 20px;
+}
+
 .line-height-24 {
   line-height: 24px;
+}
+.line-height-38 {
+  line-height: 38px;
 }
 .line-height-42 {
   line-height: 42px;
 }
 .line-height-58 {
   line-height: 58px;
+}
+.line-height-64 {
+  line-height: 64px;
 }
 .line-height-68 {
   line-height: 68px;
