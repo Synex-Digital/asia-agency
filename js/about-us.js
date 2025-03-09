@@ -58,29 +58,31 @@ document.addEventListener("DOMContentLoaded", () => {
 // about us section
 
 document.addEventListener("DOMContentLoaded", function () {
-  const dropdownHeaders = document.querySelectorAll(
-    ".capability-dropdown-header"
-  );
+  const dropdownHeaders = document.querySelectorAll(".capability-dropdown-header");
 
   dropdownHeaders.forEach((header) => {
     const button = header.querySelector(".dropdownButton");
     const dropdown = header.nextElementSibling; // This should be the .dropdown-content
-
-    console.log("Dropdown Element:", dropdown); // Debugging
+    const img = button.querySelector("img"); // Get the img inside the button
 
     button.addEventListener("click", function () {
       if (!dropdown) {
         console.error("Dropdown content not found!");
         return;
       }
-      
+
       dropdown.classList.toggle("active");
 
-      // Toggle the button text between "+" and "-"
-      button.textContent = dropdown.classList.contains("active") ? "-" : "+";
+      // Toggle the image src based on active state
+      if (dropdown.classList.contains("active")) {
+        img.src = "/images/about-us/icon/Plus.svg"; // Change to Plus.svg when active
+      } else {
+        img.src = "/images/about-us/icon/Minus.svg"; // Change to Minus.svg when inactive
+      }
     });
   });
 });
+
 
 
 function showSideBar() {
