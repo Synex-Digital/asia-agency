@@ -13,6 +13,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  column-gap: 12px;
 }
 .custom-tag {
   display: inline-flex;

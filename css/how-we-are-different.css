@@ -147,7 +147,7 @@ body {
 }
 .why-choose-us-cards .why-choose-us-card h3 {
   border-bottom: 1px solid rgba(255, 255, 255, 1);
-  width: 230px;
+  width:fit-content;
 }
 
 @media (max-width: 1200px) {
