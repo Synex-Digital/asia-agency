@@ -2033,7 +2033,8 @@ a {
 footer .speretaor {
   height: 1px;
   border: 1px solid #3a3d40;
-  margin-top: 20px;
+  margin-top: 80px;
+  opacity: 0.5;
 }
 
 .footer-content-nav-bottom {
