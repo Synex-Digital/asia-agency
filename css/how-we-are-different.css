@@ -147,7 +147,7 @@ body {
 }
 .why-choose-us-cards .why-choose-us-card h3 {
   border-bottom: 1px solid rgba(255, 255, 255, 1);
-  width:fit-content;
+  width: fit-content;
 }
 
 @media (max-width: 1200px) {
@@ -204,22 +204,21 @@ body {
 }
 /* why choose us section end */
 /* content section start */
-.paid-media-heading {
+.content-container-top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
 }
-.content-container-how {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.content-container-how h2 {
+.content-container-top h3 {
   width: 536px;
   text-align: start;
 }
-.content-container-how p {
+.content-container-top p {
   width: 394px;
+  margin-top: 16px;
 }
+
 .cards {
   display: flex;
   justify-content: space-between;
@@ -251,24 +250,28 @@ body {
     max-width: 350px;
   }
 
-  .content-container {
+  .content-container-top {
     text-align: center;
   }
 
-  .content-container h3 {
+  .content-container-top h3 {
     width: 90%;
     margin: 0 auto;
   }
 
-  .content-container p {
+  .content-container-top p {
     width: 90%;
     margin: 16px auto;
   }
 }
 
 @media (max-width: 768px) {
-  .content-container h3 {
+  .content-container-top {
+    flex-direction: column;
+  }
+  .content-container-top h3 {
     font-size: 36px;
+    text-align: center;
   }
 
   .cards .card {
@@ -277,7 +280,7 @@ body {
 }
 
 @media (max-width: 600px) {
-  .content-container h3 {
+  .content-container-top h3 {
     font-size: 32px;
   }
 
@@ -295,13 +298,29 @@ body {
 }
 
 @media (max-width: 480px) {
-  .content-container h3 {
+  .content-container-top h3 {
     font-size: 28px;
   }
 }
 /* content section end */
 
 /* paid media channels satrt */
+.paid-media-heading {
+  display: flex;
+  justify-content: space-between;
+}
+.content-container-how {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content-container-how h2 {
+  width: 536px;
+  text-align: start;
+}
+.content-container-how p {
+  width: 394px;
+}
 .paid-media {
   margin-top: 80px;
   margin-bottom: 160px;
@@ -326,12 +345,21 @@ body {
   border: none;
   cursor: pointer;
 }
+
 .dropdown-content {
   max-height: 0;
   visibility: hidden;
   opacity: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.dropdownButton img {
+  transition: transform 0.3s ease;
+}
+
+.dropdownButton.active img {
+  transform: rotate(90deg);
 }
 
 .dropdown-content.active {
@@ -542,11 +570,11 @@ body {
   align-items: flex-start;
   border-radius: 24px;
   position: relative;
-  background-image: url("/images/paid-midia/Frame-3253.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+  background: rgba(14, 17, 22, 1);
 }
 
 .what-we-do-cards .what-we-do-card::before {
@@ -574,6 +602,13 @@ body {
 
 .what-we-do-cards .what-we-do-card:hover::before {
   opacity: 1;
+}
+.what-we-do-card:hover {
+  background-image: url("/images/paid-midia/Frame-3253.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
 }
 
 .what-we-do-cards .what-we-do-card .btn {

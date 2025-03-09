@@ -4,35 +4,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
   dropdownButtons.forEach((button, index) => {
     const content = dropdownContents[index];
+    const icon = button.querySelector("img"); // Select the image inside the button
 
-    // Set initial max-height to 0 for all dropdown contents
-    content.style.maxHeight = "0";
-    content.classList.remove("active");
+    // If it's the first item, make it active on page load
+    if (index === 0) {
+      content.classList.add("active");
+      content.style.maxHeight = content.scrollHeight + "px";
+      button.classList.add("active"); // Add active class to rotate the icon
+    } else {
+      content.style.maxHeight = "0";
+      content.classList.remove("active");
+    }
 
-    // Add click event listener to toggle the active class and handle the animation
     button.addEventListener("click", function () {
       const isOpen = content.classList.contains("active");
 
-      // Toggle active class on the clicked dropdown content
       content.classList.toggle("active");
+      button.classList.toggle("active"); // Toggle active class for rotation
 
-      // If opening, set max-height to the content's scrollHeight
       if (!isOpen) {
         content.style.maxHeight = content.scrollHeight + "px";
       } else {
-        content.style.maxHeight = "0"; // Close it by setting max-height to 0
+        content.style.maxHeight = "0";
       }
 
-      // Close other dropdowns by resetting their max-height to 0
+      // Close other dropdowns
       dropdownContents.forEach((otherContent, otherIndex) => {
-        if (otherContent !== content && otherContent.classList.contains("active")) {
+        if (
+          otherContent !== content &&
+          otherContent.classList.contains("active")
+        ) {
           otherContent.classList.remove("active");
           otherContent.style.maxHeight = "0";
+          dropdownButtons[otherIndex].classList.remove("active"); // Remove active class from other buttons
         }
       });
     });
   });
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   const campaignItems = document.querySelectorAll(".campaign-data-item");
   const progressFill = document.querySelector(".progress-fill");
@@ -136,12 +146,51 @@ document.addEventListener("DOMContentLoaded", () => {
     updateSlider();
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const faqContainers = {
+    "About us": document.querySelector(".nav-faq-container"),
+    Services: document.querySelector(".nav-faq-container-1"),
+    Consultancy: document.querySelector(".nav-faq-container-2"),
+  };
+
+  const buttons = {
+    "About us": document.querySelector(".faq-button-nav-1.lato.white"),
+    Services: document.querySelector(".faq-button-nav-2.lato.gray-900"),
+    Consultancy: document.querySelectorAll(".faq-button-nav-1.lato.white")[1],
+  };
+
+  // Initially show the "About us" container and make its button active
+  faqContainers["About us"].style.display = "block";
+  buttons["About us"].classList.add("active");
+
+  // Add event listeners to the buttons
+  for (const buttonText in buttons) {
+    buttons[buttonText].addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent default anchor behavior
+
+      // Hide all containers and deactivate ALL buttons
+      for (const container in faqContainers) {
+        faqContainers[container].style.display = "none";
+        //Deactivate every button
+        for (const button in buttons) {
+          buttons[button].classList.remove("active");
+        }
+      }
+
+      // Show the selected container and activate its button
+      faqContainers[buttonText].style.display = "block";
+      buttons[buttonText].classList.add("active");
+    });
+  }
+});
+
 function showSideBar() {
   const sidebar = document.querySelector(".sidebar");
   sidebar.style.display = "flex";
 }
 
-function hideSidebar(){
+function hideSidebar() {
   const sidebar = document.querySelector(".sidebar");
   sidebar.style.display = "none";
 }
