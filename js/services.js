@@ -153,12 +153,50 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const faqContainers = {
+    "About us": document.querySelector(".nav-faq-container"),
+    Services: document.querySelector(".nav-faq-container-1"),
+    Consultancy: document.querySelector(".nav-faq-container-2"),
+  };
+
+  const buttons = {
+    "About us": document.querySelector(".faq-button-nav-1.lato.white"),
+    Services: document.querySelector(".faq-button-nav-2.lato.gray-900"),
+    Consultancy: document.querySelectorAll(".faq-button-nav-1.lato.white")[1],
+  };
+
+  // Initially show the "About us" container and make its button active
+  faqContainers["About us"].style.display = "block";
+  buttons["About us"].classList.add("active");
+
+  // Add event listeners to the buttons
+  for (const buttonText in buttons) {
+    buttons[buttonText].addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent default anchor behavior
+
+      // Hide all containers and deactivate ALL buttons
+      for (const container in faqContainers) {
+        faqContainers[container].style.display = "none";
+        //Deactivate every button
+        for (const button in buttons) {
+          buttons[button].classList.remove("active");
+        }
+      }
+
+      // Show the selected container and activate its button
+      faqContainers[buttonText].style.display = "block";
+      buttons[buttonText].classList.add("active");
+    });
+  }
+});
 function showSideBar() {
   const sidebar = document.querySelector(".sidebar");
   sidebar.style.display = "flex";
 }
 
-function hideSidebar(){
+function hideSidebar() {
   const sidebar = document.querySelector(".sidebar");
   sidebar.style.display = "none";
 }
