@@ -58,7 +58,9 @@ document.addEventListener("DOMContentLoaded", () => {
 // about us section
 
 document.addEventListener("DOMContentLoaded", function () {
-  const dropdownHeaders = document.querySelectorAll(".capability-dropdown-header");
+  const dropdownHeaders = document.querySelectorAll(
+    ".capability-dropdown-header"
+  );
 
   dropdownHeaders.forEach((header) => {
     const button = header.querySelector(".dropdownButton");
@@ -75,15 +77,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Toggle the image src based on active state
       if (dropdown.classList.contains("active")) {
-        img.src = "/images/about-us/icon/Plus.svg"; // Change to Plus.svg when active
-      } else {
         img.src = "/images/about-us/icon/Minus.svg"; // Change to Minus.svg when inactive
+      } else {
+        img.src = "/images/about-us/icon/Plus.svg"; // Change to Plus.svg when active
       }
     });
   });
 });
-
-
 
 function showSideBar() {
   const sidebar = document.querySelector(".sidebar");
