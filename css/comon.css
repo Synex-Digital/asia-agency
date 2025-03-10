@@ -1271,18 +1271,16 @@ header p {
 .testimonial-card {
   flex: 0 0 702px;
   width: 702px;
-  background: rgba(14, 17, 22, 1);
   border-radius: 24px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 40px;
-  box-sizing: border-box;
   background-image: url("/images/testimonial-card.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 100% auto;
 }
 .testimonial-tittle {
   width: 646px;
