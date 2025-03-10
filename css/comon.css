@@ -139,6 +139,9 @@ a {
 .mb-80 {
   margin-bottom: 80px;
 }
+.mb-12 {
+  margin-bottom: 12px;
+}
 .pt-8 {
   padding-top: 8px;
 }
@@ -185,11 +188,17 @@ a {
 .pb-16 {
   padding-bottom: 16px;
 }
+.pb-12 {
+  padding-bottom: 12px;
+}
 .pb-80 {
   padding-bottom: 80px;
 }
 .pb-160 {
   padding-bottom: 160px;
+}
+.pb-180 {
+  padding-bottom: 180px;
 }
 .pb-280 {
   padding-bottom: 280px;
@@ -358,6 +367,48 @@ a {
   color: rgba(255, 255, 255, 1);
 }
 
+.line-height-20 {
+  line-height: 20px;
+}
+
+.line-height-24 {
+  line-height: 24px;
+}
+.line-height-38 {
+  line-height: 38px;
+}
+.line-height-42 {
+  line-height: 42px;
+}
+.line-height-58 {
+  line-height: 58px;
+}
+.line-height-64 {
+  line-height: 64px;
+}
+.line-height-68 {
+  line-height: 68px;
+}
+.line-height-26 {
+  line-height: 26px;
+}
+.line-height-36 {
+  line-height: 36px;
+}
+.line-height-30 {
+  line-height: 30px;
+}
+.line-height-32 {
+  line-height: 32px;
+}
+.line-height-34{
+  line-height: 34px;
+}
+
+.line-height-76 {
+  line-height: 76px;
+}
+
 /* Hero Section start */
 #hero {
   background-image: url("/images/BGTexture.png");
@@ -444,6 +495,40 @@ nav li:first-child {
   }
 }
 
+/* Dropdown Styles */
+.nav-dropdown {
+  position: relative; /* Ensures child elements position correctly */
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  background: radial-gradient(
+    76.07% 57.21% at 50% 123.08%,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(4, 5, 9, 0.2) 100%
+  );
+  min-width: 160px;
+  box-shadow: 0px 8px 16px;
+  z-index: 9999;
+  top: 100%; /* Places dropdown below the nav item */
+  left: 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.nav-dropdown-content a {
+  color: rgba(208, 213, 221, 1);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Show dropdown on hover */
+.nav-dropdown:hover .nav-dropdown-content {
+  display: block;
+}
+
 header {
   width: 800px;
   margin: 0 auto;
@@ -467,6 +552,7 @@ header p {
 .main-heading {
   text-align: center;
   margin-top: 12px;
+  line-height: 58px;
 }
 /* Tags */
 .tag-container {
@@ -624,9 +710,8 @@ header p {
 
 /* Badge Button */
 .badge-button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  height: 36px;
   padding: 6px 16px 6px 6px;
   background: rgba(14, 17, 22, 1);
   border: 1px solid rgba(145, 145, 145, 0.3);
@@ -644,7 +729,7 @@ header p {
 }
 /* white background button */
 .white-bg-btn {
-  padding: 14px 20px;
+  padding: 8px 16px;
   background: var(--Color-Other-White, rgba(255, 255, 255, 1));
   border-radius: 100px;
   text-decoration: none;
@@ -654,7 +739,7 @@ header p {
   position: relative;
 }
 .white-bg-btn-arrow {
-  margin-left: 9px;
+  margin-left: 4px;
   width: 24px;
   height: 24px;
   pointer-events: none;
@@ -951,12 +1036,27 @@ header p {
   padding: 1px;
 }
 
-.card::before {
+.project-card {
+  flex: 0 0 876px;
+  max-width: 876px;
+  background: rgba(14, 17, 22, 1);
+  border-radius: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 24px 24px 24px 40px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.project-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 24px;
   padding: 1px;
+  border-radius: 24px;
   background: radial-gradient(
     164.04% 114.84% at 50% 0%,
     rgba(255, 255, 255, 0.8) 0%,
@@ -970,24 +1070,9 @@ header p {
   transition: opacity 0.3s ease-in-out;
   pointer-events: none;
 }
-
-.card.active::before {
+.project-card:hover::before {
   opacity: 1;
 }
-
-.project-card {
-  flex: 0 0 876px;
-  max-width: 876px;
-  background: rgba(14, 17, 22, 1);
-  border-radius: 24px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 24px 24px 24px 40px;
-  box-sizing: border-box;
-}
-
 .card-container {
   width: 460px;
 }
@@ -1060,17 +1145,21 @@ header p {
 
 .progress-bar {
   flex-grow: 1;
-  height: 5px;
+  height: 2px;
   background-color: rgba(145, 145, 145, 0.3); /* Default background color */
   margin: 0 20px;
   position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
 }
 
 .progress {
-  height: 100%;
+  height: 4px;
   background-color: rgba(255, 255, 255, 1); /* Default progress color */
   width: 0;
   transition: width 0.3s ease-in-out;
+  border-radius: 50px;
 }
 
 .slider-controls {
@@ -1091,16 +1180,24 @@ header p {
 .next-button {
   width: 44px;
   height: 44px;
-  background-color: rgba(145, 145, 145, 0.08);
-  border: 1px solid rgba(145, 145, 145, 0.3);
+  background-color: #0b0a0d;
   border-radius: 100px;
+  border: 1px solid rgba(145, 145, 145, 0.3);
   color: white;
-  border: none;
   cursor: pointer;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.prev-button:hover {
+  background-color: rgba(145, 145, 145, 0.3);
+  border: 1px solid #0b0a0d;
+}
+.next-button:hover {
+  background-color: rgba(145, 145, 145, 0.3);
+  border: 1px solid #0b0a0d;
 }
 
 .prev-arrow,
@@ -1347,7 +1444,7 @@ tbody tr td picture {
   justify-content: center;
   width: 56px; /* Fixed width */
   height: 56px; /* Fixed height */
-  padding: 12px 12px 12px 12px; /* Applied only top padding */
+  padding: 12px 12px 12px 12px;
   gap: 10px; /* Not needed for a single image, but kept */
   border-radius: 100px; /* Top-left rounded */
   background: rgba(23, 28, 36, 1);
@@ -1720,9 +1817,32 @@ form {
   background: var(--Color-Other-White, rgba(255, 255, 255, 1));
   border: none;
 }
-.nav-faq-container {
+
+.nav-faq-container-1,
+.nav-faq-container-2 {
+  display: none;
+}
+.nav-faq-container,
+.nav-faq-container-1,
+.nav-faq-container-2 {
   width: 100%;
   padding: 80px 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.faq-button-nav-1 {
+  background: linear-gradient(90deg, #171c19 0%, #0e1116 100%);
+  color: white;
+}
+.faq-button-nav-2 {
+  background: linear-gradient(90deg, #171c19 0%, #0e1116 100%);
+  color: white;
+}
+
+.faq-button-nav-1.active,
+.faq-button-nav-2.active {
+  background: rgba(255, 255, 255, 1);
+  color: #101828; /*rgba(16, 24, 40, 1)*/
 }
 
 .nav-faq-item {
@@ -1942,7 +2062,8 @@ a {
 footer .speretaor {
   height: 1px;
   border: 1px solid #3a3d40;
-  margin-top: 20px;
+  margin-top: 80px;
+  opacity: 0.5;
 }
 
 .footer-content-nav-bottom {
@@ -1962,14 +2083,21 @@ footer .speretaor {
   padding: 0px;
   margin: 0px;
 }
-.footer-content-nav-social img {
-  display: inline-block;
+.footer-content-nav-social a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   padding: 9px;
   width: 36px;
   height: 36px;
   border-radius: 50%;
   border: 1px solid rgba(145, 145, 145, 0.3);
 }
+.footer-content-nav-social img {
+  width: 20;
+  height: 20;
+}
+
 /* Tablet (1024px and below) */
 @media (max-width: 1200px) {
   .footer-content-nav {

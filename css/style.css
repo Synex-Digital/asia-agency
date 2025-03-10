@@ -43,6 +43,13 @@ body {
   width: 100%;
   max-width: 724px;
 }
+.about-us-text h3 {
+  text-align: left;
+  line-height: 48px;
+}
+.about-us-text .about-us-button {
+  display: flex;
+}
 
 /* For screens up to 1024px */
 @media (max-width: 64rem) {
@@ -116,6 +123,7 @@ body {
   width: 400px;
   height: 200px;
   border: 1px solid rgba(91, 91, 91, 0.5);
+  opacity: 50%;
 }
 
 .box.glow {
@@ -198,7 +206,16 @@ body {
 }
 
 .box .plus-icon {
-  position: relative;
+  position: absolute;
+  font-size: 64px;
+  top: 24px;
+  line-height: 76px;
+}
+.box .modulas-icon {
+  position: absolute;
+  font-size: 40px;
+  top: 24px;
+  line-height: 76px;
 }
 
 .box .plus-icon img {
@@ -420,13 +437,14 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   transition: transform 0.3s ease-in-out;
+  transform: rotate(180deg);
 }
 .campaign-data-content .accordion details {
   transition: all 0.3s ease-in-out;
 }
 
 .campaign-data-content .accordion details[open] > summary::after {
-  transform: rotate(180deg);
+  transform: rotate(0deg);
 }
 
 .campaign-data-content {
@@ -459,13 +477,35 @@ details img {
   height: 24px;
 }
 
+.table-container {
+  max-height: 571px;
+  width: 672px;
+  padding: 36px 24px 0px 24px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 15px;
+  background-color: rgba(14, 17, 22);
+  position: relative; /* Ensure proper context for sticky */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.table-container::-webkit-scrollbar {
+  display: none;
+}
+
 table {
-  /* width: 100%; */
+  width: 100%;
   border-collapse: separate;
   border-spacing: 0;
   border: 1.5px solid rgba(145, 145, 145, 0.3);
   border-radius: 24px;
   overflow: hidden;
+}
+thead {
+  position: sticky;
+  top: 0;
+  z-index: 100; /* Ensure it stays above the content */
+  background-color: #1c1f24;
 }
 
 th,
@@ -473,6 +513,16 @@ td {
   padding: 16px 16px;
   text-align: left;
   border-bottom: 1px solid #282f38;
+}
+thead tr th {
+  padding: 24px 0px 24px 24px;
+  text-transform: uppercase;
+}
+tbody tr td {
+  text-align: center;
+}
+tr:hover {
+  background-color: #202831;
 }
 thead tr {
   background-color: #1c1f24;
@@ -493,12 +543,19 @@ tbody tr td picture {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px; /* Fixed width */
-  height: 56px; /* Fixed height */
-  padding: 12px 12px 12px 12px; /* Applied only top padding */
-  gap: 10px; /* Not needed for a single image, but kept */
-  border-radius: 100px; /* Top-left rounded */
+  width: 56px;
+  height: 56px;
+  padding: 12px;
+  border-radius: 100px;
   background: rgba(23, 28, 36, 1);
+}
+thead th {
+  padding: 16px;
+  background-color: #1c1f24;
+  text-transform: uppercase;
+}
+tbody tr:hover {
+  background-color: #202831;
 }
 
 .brand-icon {

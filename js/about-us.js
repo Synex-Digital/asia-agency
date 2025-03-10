@@ -62,16 +62,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   dropdownHeaders.forEach((header) => {
     const button = header.querySelector(".dropdownButton");
-    const dropdown = header.nextElementSibling; // Target the dropdown next to the header
+    const dropdown = header.nextElementSibling; // This should be the .dropdown-content
+    const img = button.querySelector("img"); // Get the img inside the button
 
     button.addEventListener("click", function () {
+      if (!dropdown) {
+        console.error("Dropdown content not found!");
+        return;
+      }
+
       dropdown.classList.toggle("active");
 
-      // Toggle the button text between "+" and "-"
-      button.textContent = dropdown.classList.contains("active") ? "-" : "+";
+      // Toggle the image src based on active state
+      if (dropdown.classList.contains("active")) {
+        img.src = "/images/about-us/icon/Plus.svg"; // Change to Plus.svg when active
+      } else {
+        img.src = "/images/about-us/icon/Minus.svg"; // Change to Minus.svg when inactive
+      }
     });
   });
 });
+
 
 
 function showSideBar() {
@@ -79,7 +90,7 @@ function showSideBar() {
   sidebar.style.display = "flex";
 }
 
-function hideSidebar(){
+function hideSidebar() {
   const sidebar = document.querySelector(".sidebar");
   sidebar.style.display = "none";
 }
