@@ -1446,9 +1446,6 @@ header p {
 }
 
 @media (max-width: 576px) {
-  .testimonial-tittle {
-    width: 100%;
-  }
   .main-heading {
     font-size: 30px;
     line-height: 38px;
@@ -2052,6 +2049,12 @@ form {
 .nav-faq-item.open .content-container {
   opacity: 1;
   visibility: visible;
+}
+
+.summary-container div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 @media (max-width: 1200px) {
   .nav-faq-container {

@@ -12,7 +12,6 @@ nav ul li {
   width: 708px;
   text-align: start;
   margin-top: 120px;
-  padding-bottom: 65px;
 }
 .hero-content p {
   width: 657px;
@@ -169,6 +168,8 @@ nav ul li {
   padding: 10px 14px;
   border-radius: 32px;
   margin-bottom: 16px;
+  border: none;
+  outline: none;
 }
 .weekly-newsletter form input::placeholder {
   color: rgba(152, 162, 179, 1);
@@ -187,7 +188,6 @@ nav ul li {
   margin-bottom: 20px;
 }
 .blog-right-section p {
-  line-height: 24px;
   margin-top: 20px;
 }
 .blog-right-section img {
@@ -226,6 +226,7 @@ nav ul li {
   display: flex;
   flex-direction: column;
   margin-top: 16px;
+  gap: 6px;
 }
 
 .blog-right-section .profile-bolg img {

@@ -8,18 +8,33 @@ body {
   justify-content: space-between;
   padding-bottom: 80px;
 }
+.case-study-container .stats-contaier {
+  padding-bottom: 0px;
+}
 .stats {
   width: 220px;
 }
+
 .stats-item {
   display: flex;
-  align-items: start;
-  justify-content: start;
+  align-items: flex-start; /* Align items to the top */
+  justify-content: flex-start; /* Align items to the start */
+  position: relative;
+}
+
+.stats-item h6 {
+  position: relative;
+  margin-right: 10px; /* Add some spacing between h6 and icon */
 }
 
 .stats-item .stars-plus-icon {
-  width: 39px;
-  height: 38px;
+  align-self: flex-start; /* Align the icon to the top */
+  position: relative;
+}
+
+.stats-item {
+  display: inline-flex;
+  align-items: baseline;
 }
 .gradient-text {
   font-size: 40px;
@@ -35,6 +50,10 @@ body {
   color: transparent;
 }
 @media (max-width: 1200px) {
+  #paid-hero {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .stats-contaier {
     flex-wrap: wrap;
     justify-content: space-around;
@@ -45,6 +64,10 @@ body {
     width: 45%;
     margin-bottom: 40px;
   }
+}
+.description {
+  margin-top: 32px;
+  margin-bottom: 0px;
 }
 
 @media (max-width: 768px) {
@@ -117,6 +140,9 @@ body {
   background: #0b0a0d;
   border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .dropdown-content {
   max-height: 0;
@@ -145,6 +171,7 @@ body {
   align-items: center;
   cursor: pointer;
 }
+
 @media (max-width: 1200px) {
   .paid-media-container {
     column-gap: 100px;
@@ -169,7 +196,6 @@ body {
     width: 100%;
   }
   .capability-dropdown {
-    padding: 0px 40px;
     margin-top: 40px;
   }
 }
@@ -190,7 +216,6 @@ body {
     margin-left: 40px;
   }
 }
-
 @media (max-width: 576px) {
   .capability-dropdown-header {
     gap: 12px;
@@ -301,6 +326,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
 }
 .capabilities-container picture {
   width: 473px;
@@ -675,11 +701,8 @@ body {
 }
 /* why choose us section end */
 /* faq section start */
-.nav-faq-item .content-container p{
+.nav-faq-item .content-container p {
   width: 95%;
 }
-
-
-
 
 /* faq section end */
