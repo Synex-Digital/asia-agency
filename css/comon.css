@@ -565,7 +565,7 @@ header p {
   display: inline-flex; /* Allows flex properties while keeping it inline */
   justify-content: center; /* Centers text horizontally */
   align-items: center; /* Centers text vertically */
-  padding: 4px 12px;
+  padding: 4px 12px 6px;
   background: rgba(14, 17, 22, 1);
   border: 1px solid rgba(145, 145, 145, 0.3);
   font-family: "Lato", serif;
@@ -603,10 +603,11 @@ header p {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 612px) {
   .tag-container {
     flex-wrap: wrap;
     justify-content: center;
+    row-gap: 10px;
   }
 
   .tag {
@@ -1133,7 +1134,7 @@ header p {
 
 @media (max-width: 1200px) {
   .projects-container h3 {
-    width: 100%;
+    width: 90%;
     text-align: center;
   }
   .projects-container {
@@ -1172,6 +1173,9 @@ header p {
   }
   .card-footer {
     justify-content: center;
+  }
+  .slider-controls {
+    padding-left: 10px;
   }
 }
 
@@ -1276,11 +1280,14 @@ header p {
   flex-direction: row;
   justify-content: space-between;
   padding: 40px;
-  background-image: url("/images/testimonial-card.png");
+  background-color: rgba(14, 17, 22, 1);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% auto;
+}
+.testimonial-card:hover {
+  background-image: url("/images/testimonial-card.png");
 }
 .testimonial-tittle {
   width: 646px;
@@ -1370,41 +1377,112 @@ header p {
   height: 10px;
 }
 @media (max-width: 1200px) {
-  .profile {
-    display: block;
-    width: 100%;
-    text-align: left;
+  .testimonial-card {
+    width: 90%;
+    flex: 0 0 90%;
   }
+}
 
-  .testimonial-text {
-    width: 100%;
-    text-align: center;
-    word-wrap: break-word;
+@media (max-width: 992px) {
+  .testimonial-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
   }
-
   .profile {
     width: 100%;
     align-items: center;
-    margin-bottom: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .profile-info {
+    text-align: left;
+  }
+  .testimonial-text {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    padding-bottom: 22px;
   }
 }
 
 @media (max-width: 768px) {
   .testimonial-card {
+    flex-direction: row;
+    align-items: center;
+    padding: 30px;
+  }
+  .testimonial-tittle {
+    width: 95%;
+  }
+  .main-heading {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .profile {
     flex-direction: column;
     align-items: center;
-    padding: 24px;
-    flex: 0 0 100%;
-    row-gap: 40px;
+    width: 100%;
+  }
+  .profile-info {
+    text-align: center;
   }
   .testimonial-card {
     padding: 20px;
   }
 }
-
-@media (max-width: 480px) {
+@media (max-width: 599px) {
   .testimonial-card {
-    width: 95%;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonial-card {
+    background-size: cover;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-heading {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .profile-image {
+    width: 48px;
+    height: 48px;
+  }
+  .icon {
+    width: 48px;
+    height: 48px;
+  }
+  .profile-info h3 {
+    font-size: 16px;
+  }
+  .profile-info p {
+    font-size: 14px;
+  }
+  .testimonial-text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .rating {
+    padding: 8px 10px;
+  }
+  .rating-img {
+    width: 18px;
+    height: 21px;
+    margin-right: 5px;
+  }
+  .stars img {
+    width: 8px;
+    height: 8px;
+  }
+  .rating-value {
+    font-size: 14px;
   }
 }
 /* testimonial section end */
@@ -1965,12 +2043,18 @@ form {
   padding-bottom: 20px;
 }
 .content-container p {
-  width: 96%;
+  width: 90%;
 }
 
 .nav-faq-item.open .content-container {
   opacity: 1;
   visibility: visible;
+}
+
+.summary-container div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 @media (max-width: 1200px) {
   .nav-faq-container {
@@ -2016,14 +2100,16 @@ form {
 @media (max-width: 480px) {
   .main-heading {
     font-size: 28px;
+    padding-left: 20px;
   }
 
   .summary-container div {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .content-container p {
-    font-size: 14px;
+    font-size: 12px;
+    padding-top: 8px;
   }
 
   .faq-button-nav-1,

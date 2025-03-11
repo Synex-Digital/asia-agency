@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   dropdownButtons.forEach((button, index) => {
     const content = dropdownContents[index];
+    const img = button.querySelector("img"); // Select the image inside the button
 
     // Set initial max-height to 0 for all dropdown contents
     content.style.maxHeight = "0";
@@ -16,14 +17,16 @@ document.addEventListener("DOMContentLoaded", function () {
       // Toggle active class on the clicked dropdown content
       content.classList.toggle("active");
 
-      // If opening, set max-height to the content's scrollHeight
+      // If opening, set max-height to the content's scrollHeight and change the image
       if (!isOpen) {
         content.style.maxHeight = content.scrollHeight + "px";
+        img.src = "/images/paid-midia/icons/down.svg"; // Change to active image
       } else {
         content.style.maxHeight = "0"; // Close it by setting max-height to 0
+        img.src = "/images/blog-details/icons/right.png"; // Revert to default image
       }
 
-      // Close other dropdowns by resetting their max-height to 0
+      // Close other dropdowns by resetting their max-height to 0 and image path
       dropdownContents.forEach((otherContent, otherIndex) => {
         if (
           otherContent !== content &&
@@ -31,6 +34,12 @@ document.addEventListener("DOMContentLoaded", function () {
         ) {
           otherContent.classList.remove("active");
           otherContent.style.maxHeight = "0";
+
+          // Reset image for other closed dropdowns
+          const otherImg = dropdownButtons[otherIndex].querySelector("img");
+          if (otherImg) {
+            otherImg.src = "/images/blog-details/icons/right.png";
+          }
         }
       });
     });

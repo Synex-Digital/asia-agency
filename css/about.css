@@ -101,9 +101,6 @@ body {
   .mission-vision-content h4 {
     font-size: 24px;
   }
-  .mission-vision-content button {
-    max-width: 90px;
-  }
 }
 /* mission-vision section end */
 /* team section start */
@@ -291,6 +288,35 @@ body {
   }
   .team-card-section {
     padding: 0 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-card-overlay picture img {
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+  }
+  .team-card-overlay picture {
+    width: 70px;
+    height: 56px;
+  }
+}
+@media (max-width: 384px) {
+  .team-card-overlay picture {
+    width: 90px;
+    height: 56px;
+  }
+}
+@media (max-width: 360px) {
+  .team-card-overlay picture img {
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+  }
+  .team-card-overlay picture {
+    width: 100px;
+    height: 56px;
   }
 }
 /* team section end */
@@ -654,6 +680,8 @@ body {
   flex-direction: row;
   align-items: center;
   column-gap: 8px;
+  flex-wrap: wrap;
+  row-gap: 8px;
 }
 .trial-info-box .trial-tags .tag {
   background: var(--color-other-outline-15, rgba(145, 145, 145, 0.15));
@@ -671,7 +699,7 @@ body {
   height: 134px;
   border-radius: 10px;
   background: var(--color-other-outline-15, rgba(145, 145, 145, 0.15));
-  padding: 24px 79px 24px 24px;
+  padding: 24px 24px 24px 24px;
 }
 .trial-steps .step .step-number {
   display: inline-flex;
@@ -700,9 +728,6 @@ body {
     justify-content: space-around;
     row-gap: 20px;
   }
-  .trial-steps .step {
-    max-width: 48%; /* Two columns on tablet */
-  }
 
   .trial-info-box .trial-tags {
     padding-top: 10px;
@@ -715,7 +740,7 @@ body {
   }
 
   .trial-steps .step {
-    max-width: 100%; /* Single column on mobile */
+    max-width: 48%; /* Single column on mobile */
   }
 
   .trial-content a {
@@ -723,8 +748,20 @@ body {
     max-width: 200px; /* Ensures button does not stretch too much */
   }
 }
+@media (max-width: 512px) {
+  .trial-steps .step {
+    max-width: 80%;
+  }
+}
 
 @media (max-width: 480px) {
+  .trial-content h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .trial-steps .step {
+    max-width: 100%;
+  }
   .trial-section-container {
     padding: 12px;
   }

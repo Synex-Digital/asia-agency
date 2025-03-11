@@ -6,6 +6,12 @@ body {
   border-radius: 100px;
 }
 
+@media (max-width: 1080px) {
+  #numbers {
+    display: none;
+  }
+}
+
 /* projects button */
 .projects-button {
   display: inline-flex;
@@ -53,6 +59,9 @@ body {
 
 /* For screens up to 1024px */
 @media (max-width: 64rem) {
+  #hero {
+    padding: 20px 40px;
+  }
   .about-us-text {
     max-width: 600px;
     margin: 0 auto;
@@ -564,26 +573,95 @@ tbody tr:hover {
   vertical-align: middle;
 }
 
-@media (max-width: 640px) {
-  .campaign-data-content {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .campaign-data-content {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 @media (max-width: 1100px) {
   .campaign-data-content {
     flex-direction: column;
     align-items: center;
+    width: 100%;
+  }
+  .accordion, .table-container {
+    width: 100%;
+    max-width: 672px;
+  }
+  .campaign-data-title {
+    width: 90%;
   }
 }
 
+
+@media (max-width: 768px) {
+  .campaign-data-content {
+    width: 100%;
+  }
+  .accordion, .table-container {
+    width: 100%;
+  }
+  .campaign-data-title {
+    width: 95%;
+  }
+  .main-heading {
+    font-size: 36px;
+    line-height: 44px;
+    width: 100%;
+  }
+  th, td {
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+  thead tr th {
+    padding: 16px 8px;
+  }
+  .content, details a {
+    padding-left: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .campaign-data-content {
+    width: 100%;
+  }
+  .accordion, .table-container {
+    width: 100%;
+    padding: 24px 12px 0 12px;
+  }
+  .campaign-data-title {
+    width: 100%;
+  }
+  .main-heading {
+    font-size: 33px;
+    line-height: 38px;
+  }
+  th, td {
+    padding: 8px 4px;
+    font-size: 12px;
+  }
+  thead tr th {
+    padding: 12px 4px;
+  }
+  .content, details a {
+    padding-left: 12px;
+  }
+  .white-bg-btn {
+    font-size: 14px;
+  }
+  .accordion summary {
+    padding: 16px;
+    font-size: 16px;
+  }
+  .content {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  tbody tr td picture {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+  .brand-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
 /* campaign data section end */
 
 /* service section start */
@@ -662,8 +740,8 @@ tbody tr:hover {
     justify-content: center;
   }
   .service-section h3 {
-    width: 459px;
-    font-size: 36px;
+    width: 100%;
+    font-size: 28px;
   }
 }
 /* service section end */
@@ -734,8 +812,9 @@ tbody tr:hover {
     row-gap: 40px;
   }
   .blog-heading h3 {
-    width: 459px;
-    font-size: 36px;
+    width: 100%;
+    font-size: 32px;
+    text-align: center;
   }
 }
 
@@ -878,16 +957,84 @@ form {
   height: 24px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .contact-form {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    row-gap: 40px;
+    padding: 60px 40px;
+  }
+  .contact-form-content,
+  .contact-form-input {
+    width: 100%;
   }
   .contact-form-content {
-    width: 459px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-form {
+    padding: 40px 30px;
+  }
+  .form-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .form-group input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-form-content h2 {
+    font-size: 48px;
+    line-height: 52px;
+  }
+  .contact-form-content h4 {
+    padding-top: 40px;
+    width: 100%;
+  }
+  .contact-form-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact-form-container div {
+    width: 100%;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+    #contact-form {
+        background-size: cover;
+    }
+}
+
+@media (max-width: 576px) {
+  .contact-form {
+    padding: 30px 20px;
+  }
+  .contact-form-content h2 {
     font-size: 36px;
+    line-height: 40px;
+  }
+  .contact-form-points span {
+    font-size: 16px;
+  }
+  .contact-form-content h4 {
+    font-size: 18px;
+  }
+  .contact-form-content a span {
+    font-size: 14px;
+  }
+  .form-group input,
+  .contact-details textarea {
+    font-size: 16px;
+    padding: 12px 0;
+  }
+  .submit-btn button {
+    font-size: 16px;
   }
 }
 /* contact form end */
