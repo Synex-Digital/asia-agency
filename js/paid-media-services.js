@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const dropdownButtons = document.querySelectorAll(".dropdownButton");
-  const dropdownContents = document.querySelectorAll(".dropdown-content");
+  const dropdownButtons = document.querySelectorAll(".paid-media-services-dropdownButton");
+  const dropdownContents = document.querySelectorAll(".paid-media-services-dropdown-content");
 
   dropdownButtons.forEach((button, index) => {
     const content = dropdownContents[index];
@@ -37,11 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
 document.addEventListener("DOMContentLoaded", function () {
-  const campaignItems = document.querySelectorAll(".campaign-data-item");
-  const progressFill = document.querySelector(".progress-fill");
+  const campaignItems = document.querySelectorAll(".how-we-campaign-data-item");
+  const progressFill = document.querySelector(".how-we-progress-fill");
   const campaignTables = document.querySelectorAll(
-    '[class^="campaign-table-container-"]'
+    '[class^="how-we-campaign-table-container-"]'
   );
 
   // Initially show only the first campaign table and hide the others
@@ -83,6 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".slider-container").forEach((container) => {
