@@ -3,59 +3,10 @@ body {
 }
 
 /* Bannar section start */
-.about-us-header {
-  margin-top: 15.15rem;
-}
-.about-us-header h1 {
-  max-width: 754px;
-  width: 100%;
-  margin: 0 auto;
-}
-.about-us-header p {
-  max-width: 754px;
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 32px;
-  margin-bottom: 40px;
-  text-align: center;
-}
 
-#bannar picture img {
-  width: 100%;
-  height: 580px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 20px;
-}
 /* Bannar section end */
 /* vision section start */
-#bannar picture img {
-  width: 100%;
-  height: 580px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 20px;
-}
-@media (max-width: 768px) {
-  #bannar {
-    padding: 0px 12px;
-  }
-}
-@media (max-width: 640px) {
-  #bannar {
-    padding: 0px 12px;
-  }
-}
 
-@media (max-width: 480px) {
-  .about-us-header {
-    margin-top: 8rem !important;
-  }
-  p.description.lato.font-weight-500.font-18.gray-400.line-height-24 {
-    width: 100%;
-    text-align: center;
-  }
-}
 /* vision section end */
 /* mission-vision section start */
 
@@ -189,9 +140,7 @@ body {
 .team-card-overlay span {
   margin-top: 8px;
 }
-.team-card-overlay .team-card-overlay-content {
-  /* width: 443px; */
-}
+
 .team-card-overlay picture {
   width: 56px;
   height: 56px;
@@ -248,9 +197,6 @@ body {
 }
 .team-card-overlay span {
   margin-top: 8px;
-}
-.team-card-overlay .team-card-overlay-content {
-  /* width: 443px; */
 }
 
 @media (max-width: 1040px) {
@@ -575,7 +521,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+  }
   .column_icon {
     width: 36px;
     height: 36px;
@@ -725,120 +671,9 @@ body {
   .list-item p {
     font-size: 14px;
   }
-  .trail-section-container{
+  .trail-section-container {
     padding: 16px;
   }
 }
 /* capabilities section end */
-/* cta section start */
-.trail-section-container {
-  padding: 32px;
-  background: rgba(22, 25, 29, 1);
-  border-radius: 15px;
-  background-image: url(/images/about-us/BG.png);
-  background-size: cover;
-  background-position: center;
-}
-.trial-section-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.trial-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 478px;
-}
-.trial-content a {
-  width: 200px;
-  margin-top: 32px;
-}
-.trial-info-box {
-  width: 497px;
-  background: var(--color-other-outline-15, rgba(145, 145, 145, 0.15));
-  padding: 24px 16px 24px 24px;
-  border-radius: 15px;
-}
-.trial-info-box .trial-tags {
-  padding-top: 140px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  column-gap: 8px;
-}
-.trial-info-box .trial-tags .tag {
-  background: var(--color-other-outline-15, rgba(145, 145, 145, 0.15));
-}
-.trial-steps {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  column-gap: 16px;
-}
 
-.trial-steps .step {
-  width: 264px;
-  height: 134px;
-  border-radius: 10px;
-  background: var(--color-other-outline-15, rgba(145, 145, 145, 0.15));
-  padding: 24px 79px 24px 24px;
-}
-.trial-steps .step .step-number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-bottom: 16px;
-  color: rgba(16, 24, 40, 1);
-}
-
-@media (max-width: 1100px) {
-  .trial-section-container {
-    padding: 24px;
-    flex-direction: column;
-  }
-
-  .trial-content,
-  .trial-info-box {
-    max-width: 100%; /* Full width on tablet */
-    margin-bottom: 20px;
-  }
-  .trial-steps {
-    flex-wrap: wrap;
-    justify-content: space-around;
-    row-gap: 20px;
-  }
-  .trial-steps .step {
-    max-width: 48%; /* Two columns on tablet */
-  }
-
-  .trial-info-box .trial-tags {
-    padding-top: 10px;
-  }
-}
-
-@media (max-width: 768px) {
-  .trial-section-container {
-    padding: 16px;
-  }
-
-  .trial-steps .step {
-    max-width: 100%; /* Single column on mobile */
-  }
-
-  .trial-content a {
-    width: 100%; /* Full width button on mobile */
-    max-width: 200px; /* Ensures button does not stretch too much */
-  }
-}
-
-@media (max-width: 480px) {
-  .trial-section-container {
-    padding: 12px;
-  }
-}
-/* cta section end */
