@@ -66,10 +66,6 @@ body {
 }
 
 @media (max-width: 1200px) {
-  #hero-nav {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
   .solution-cards {
     justify-content: center;
   }
@@ -193,6 +189,7 @@ body {
 
   .why-choose-us-cards .why-choose-us-card h3 {
     font-size: 20px;
+    width: 100%;
   }
 
   .why-choose-us-cards .why-choose-us-card p {
@@ -255,13 +252,11 @@ body {
 
   .content-container-top {
     text-align: center;
-    flex-direction: column;
   }
 
   .content-container-top h3 {
     width: 90%;
     margin: 0 auto;
-    text-align: center;
   }
 
   .content-container-top p {
@@ -613,6 +608,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  
 }
 
 .what-we-do-cards .what-we-do-card .btn {
@@ -649,7 +645,6 @@ body {
 @media (max-width: 1200px) {
   .what-we-do-cards {
     justify-content: center;
-    gap: 24px;
   }
 
   .what-we-do-cards .what-we-do-card {
@@ -666,13 +661,6 @@ body {
   .what-we-do-cards .what-we-do-card h5 {
     font-size: 28px;
   }
-  .projects-container h3 {
-    font-size: 40px;
-  }
-
-  .how-we-are-different-heading {
-    font-size: 40px;
-  }
 }
 
 @media (max-width: 600px) {
@@ -687,39 +675,11 @@ body {
   .what-we-do-cards .what-we-do-card p {
     font-size: 14px;
   }
-  .projects-container h3 {
-    font-size: 38px;
-  }
 }
 
 @media (max-width: 480px) {
   #what-we-do h3 {
     font-size: 28px;
-  }
-  .cta-contant h3 {
-    font-size: 24px;
-    line-height: 36px;
-  }
-  .projects-container h3 {
-    font-size: 24px;
-    line-height: 32px;
-  }
-  .how-we-are-different-heading {
-    font-size: 32px;
-  }
-  .contact-form-points {
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    gap: 8px;
-  }
-  .contact-form-content span,
-  .contact-form-content h4,
-  .contact-form-content a span,
-  .faq-form-group input,
-  .contact-details textarea {
-    font-size: 16px;
-    text-align: start;
   }
 }
 /* what we do section end */

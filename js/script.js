@@ -7,6 +7,30 @@ const radius = 75; // Glow radius
 const maxParticles = 5; // Maximum number of particles (though current createParticles creates max 3 per call)
 let activeParticles = 0; // Not currently used, but could be used to limit total particles
 
+document.addEventListener('DOMContentLoaded', function () {
+  let lastScrollTop = 0;
+  const header = document.querySelector('header');
+  const nav = document.querySelector('nav');
+
+  if (header) { // Ensure the header element exists
+    window.addEventListener('scroll', function () {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop) {
+        // Scroll down, hide the header
+        header.style.top = '-10rem'; // Adjust this value based on the header height
+      } else {
+        // Scroll up, show the header
+        header.style.top = '-1rem';
+        nav.style.backgroundColor = 'black';
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative scroll
+    });
+  } else {
+    console.error("Header element not found");
+  }
+});
+
 document.addEventListener("mousemove", (e) => {
   const mouseX = e.clientX;
   const mouseY = e.clientY;
@@ -373,3 +397,5 @@ function hideSidebar() {
   const sidebar = document.querySelector(".sidebar");
   sidebar.style.display = "none";
 }
+
+

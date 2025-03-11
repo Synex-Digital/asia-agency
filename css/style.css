@@ -6,12 +6,6 @@ body {
   border-radius: 100px;
 }
 
-@media (max-width: 1080px) {
-  #numbers {
-    display: none;
-  }
-}
-
 /* projects button */
 .projects-button {
   display: inline-flex;
@@ -59,9 +53,6 @@ body {
 
 /* For screens up to 1024px */
 @media (max-width: 64rem) {
-  #hero {
-    padding: 20px 40px;
-  }
   .about-us-text {
     max-width: 600px;
     margin: 0 auto;
@@ -87,6 +78,13 @@ body {
   .about-us-text h3 {
     font-size: 32px;
   }
+
+  .font-18 {
+    font-size: 14px;
+}
+.projects-button{
+  padding: 7px 20px;
+}
 }
 
 /* For screens up to 640px */
@@ -97,6 +95,10 @@ body {
     align-items: start;
     row-gap: 20px;
   }
+
+  .about-us-text h3 {
+    font-size: 18px;
+}
 
   .about-us-text {
     max-width: 100%;
@@ -307,6 +309,9 @@ body {
   height: 54px;
   margin-right: 6px;
 }
+.brand-pic{
+  display: block;
+}
 /* For devices smaller than or equal to 640px */
 @media (max-width: 640px) {
   .features {
@@ -323,6 +328,9 @@ body {
     gap: 20px;
     justify-content: space-around;
   }
+  .brand-pic{
+    display:none;
+  }
 }
 @media (max-width: 1024px) {
   .features {
@@ -334,17 +342,18 @@ body {
 /* trust us section end */
 
 /* campaign Container */
-.campaign-data-title {
+/* .campaign-data-title {
   width: 460px;
   margin: 0 auto;
-}
+} */
 
 .campaign-data-content {
   background: none;
 }
 
 .accordion {
-  width: 474px;
+  max-width: 474px;
+  width: 100%;
 }
 
 @keyframes slideDown {
@@ -488,7 +497,7 @@ details img {
 
 .table-container {
   max-height: 571px;
-  width: 672px;
+  /* width: 672px; */
   padding: 36px 24px 0px 24px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -524,7 +533,7 @@ td {
   border-bottom: 1px solid #282f38;
 }
 thead tr th {
-  padding: 24px 0px 24px 24px;
+  padding: 20px 10px 20px 10px;
   text-transform: uppercase;
 }
 tbody tr td {
@@ -536,10 +545,7 @@ tr:hover {
 thead tr {
   background-color: #1c1f24;
 }
-thead tr th {
-  padding: 24px 0px 24px 24px;
-  text-transform: uppercase;
-}
+
 
 tbody tr td {
   text-align: center;
@@ -573,95 +579,55 @@ tbody tr:hover {
   vertical-align: middle;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 640px) {
   .campaign-data-content {
     flex-direction: column;
     align-items: center;
-    width: 100%;
-  }
-  .accordion, .table-container {
-    width: 100%;
-    max-width: 672px;
-  }
-  .campaign-data-title {
-    width: 90%;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .campaign-data-content {
-    width: 100%;
-  }
-  .accordion, .table-container {
-    width: 100%;
-  }
-  .campaign-data-title {
-    width: 95%;
-  }
-  .main-heading {
-    font-size: 36px;
-    line-height: 44px;
-    width: 100%;
-  }
-  th, td {
-    padding: 12px 8px;
-    font-size: 14px;
   }
   thead tr th {
-    padding: 16px 8px;
-  }
-  .content, details a {
-    padding-left: 16px;
-  }
-}
-
-@media (max-width: 640px) {
-  .campaign-data-content {
-    width: 100%;
-  }
-  .accordion, .table-container {
-    width: 100%;
-    padding: 24px 12px 0 12px;
-  }
-  .campaign-data-title {
-    width: 100%;
-  }
-  .main-heading {
-    font-size: 33px;
-    line-height: 38px;
-  }
-  th, td {
-    padding: 8px 4px;
+    text-transform: uppercase;
     font-size: 12px;
-  }
-  thead tr th {
-    padding: 12px 4px;
-  }
-  .content, details a {
-    padding-left: 12px;
-  }
-  .white-bg-btn {
-    font-size: 14px;
-  }
-  .accordion summary {
-    padding: 16px;
-    font-size: 16px;
-  }
-  .content {
-    font-size: 14px;
-    line-height: 20px;
   }
   tbody tr td picture {
     width: 40px;
     height: 40px;
-    padding: 8px;
+}
+.contact-form{
+  padding: 30px !important;
+}
+.font-56{
+  font-size: 40px;
+}
+.form-cta{
+  margin-top: 2rem !important;
+}
+}
+
+@media (max-width: 768px) {
+  .campaign-data-content {
+    flex-direction: column;
+    align-items: center;
   }
-  .brand-icon {
-    width: 20px;
-    height: 20px;
+  td {
+    padding: 8px 8px;
+  }
+  .service-section-wrap {
+    padding: 50px 14px !important;
+  }
+  .form-input-group{
+    flex-direction: column;
+  }
+  .contact-form{
+    padding: 50px;
   }
 }
+@media (max-width: 1100px) {
+  .campaign-data-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 /* campaign data section end */
 
 /* service section start */
@@ -669,7 +635,6 @@ tbody tr:hover {
   position: relative;
   padding: 160px 14px;
   background: linear-gradient(296.19deg, #0e1116 0%, #0e1116 100%);
-
   overflow: hidden;
 }
 
@@ -696,7 +661,7 @@ tbody tr:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
 }
 
 .service-section h3 {
@@ -740,8 +705,7 @@ tbody tr:hover {
     justify-content: center;
   }
   .service-section h3 {
-    width: 100%;
-    font-size: 28px;
+    font-size: 36px;
   }
 }
 /* service section end */
@@ -753,7 +717,7 @@ tbody tr:hover {
 }
 .blog-heading h3 {
   text-align: start;
-  width: 450px;
+  /* width: 450px; */
 }
 
 .blog-cards {
@@ -772,6 +736,38 @@ tbody tr:hover {
   border-radius: 20px;
   padding: 1.5px;
   overflow: hidden;
+}
+
+.form-text {
+  width: 100%;
+}
+
+.form-form {
+  width: 100%;
+}
+
+.form-cta a{
+  display: inline-flex;
+    margin-top: 20px;
+    padding: 8px 16px;
+    border-radius: 100px;
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border: none;
+}
+.form-cta {
+  margin-top: 6rem;
+}
+ul.form-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+ul.form-list li {
+  display: flex;
+  gap: 0.6rem;
 }
 
 .blog-card::before {
@@ -812,9 +808,8 @@ tbody tr:hover {
     row-gap: 40px;
   }
   .blog-heading h3 {
-    width: 100%;
-    font-size: 32px;
-    text-align: center;
+    /* width: 459px; */
+    font-size: 36px;
   }
 }
 
@@ -829,6 +824,7 @@ tbody tr:hover {
   justify-content: space-between;
   align-items: start;
   padding: 80px 60px 80px 80px;
+  gap: 6rem;
 }
 #contact-form {
   background-image: url("/images/Contactform.png");
@@ -884,6 +880,29 @@ tbody tr:hover {
 form {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.form-input-group {
+  display: flex;
+  gap: 2rem;
+}
+
+.form-input {
+  background: none;
+  padding: 1rem;
+  font-size: 18px;
+  line-height: 24px;
+  width: 100%;
+  border: none;
+  font-family: 'Plus Jakarta Sans';
+  color: white;
+  border-bottom: 1px solid #9191914D;
+}
+.form-input::placeholder {
+  color: white;
+}
+.form-input:focus {
+  outline: none;
 }
 
 .form-group {
@@ -957,84 +976,16 @@ form {
   height: 24px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
   .contact-form {
     flex-direction: column;
     align-items: center;
-    padding: 60px 40px;
-  }
-  .contact-form-content,
-  .contact-form-input {
-    width: 100%;
+    justify-content: center;
+    row-gap: 40px;
   }
   .contact-form-content {
-    margin-bottom: 40px;
-  }
-}
-
-@media (max-width: 992px) {
-  .contact-form {
-    padding: 40px 30px;
-  }
-  .form-group {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-  }
-  .form-group input {
-    width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .contact-form-content h2 {
-    font-size: 48px;
-    line-height: 52px;
-  }
-  .contact-form-content h4 {
-    padding-top: 40px;
-    width: 100%;
-  }
-  .contact-form-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .contact-form-container div {
-    width: 100%;
-    padding-top: 20px;
-  }
-}
-
-@media (max-width: 600px) {
-    #contact-form {
-        background-size: cover;
-    }
-}
-
-@media (max-width: 576px) {
-  .contact-form {
-    padding: 30px 20px;
-  }
-  .contact-form-content h2 {
+    width: 459px;
     font-size: 36px;
-    line-height: 40px;
-  }
-  .contact-form-points span {
-    font-size: 16px;
-  }
-  .contact-form-content h4 {
-    font-size: 18px;
-  }
-  .contact-form-content a span {
-    font-size: 14px;
-  }
-  .form-group input,
-  .contact-details textarea {
-    font-size: 16px;
-    padding: 12px 0;
-  }
-  .submit-btn button {
-    font-size: 16px;
   }
 }
 /* contact form end */

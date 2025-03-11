@@ -16,116 +16,122 @@
     <title>paid media services</title>
   </head>
   <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="container">
+        <nav class="nav">
+          <ul class="sidebar">
+            <li onclick="hideSidebar()">
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="26px"
+                  viewBox="0 -960 960 960"
+                  width="26px"
+                  fill="#1f1f1f"
+                >
+                  <path
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li><a href="/about-us.html">About Us</a></li>
+            <li><a href="/contact-us.html">Contact</a></li>
+            <li><a href="#">works</a></li>
+            <li class="nav-dropdown">
+              <a class="" href="/services.html">Services </a>
+              <ul class="nav-dropdown-content">
+                <li><a href="#">Service 1</a></li>
+                <li><a href="#">Service 2</a></li>
+                <li><a href="#">Service 3</a></li>
+              </ul>
+            </li>
+            <li><a href="/blog-page.html">Blog</a></li>
+            <li>
+              <a href="/How-we-are-different.html">How we’re different</a>
+            </li>
+            <li>
+              <button class="lato glow-button font-18" type="button">
+                <a class="glow-button-border" href="/contact-us.html"
+                  >Contact us!</a
+                >
+                <div class="polygon"></div>
+              </button>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="/index.html">
+                <img src="/images/logo.svg" alt="logo" />
+                <span class="font-20 font-weight-600 lato">Asia.Agency</span>
+              </a>
+            </li>
+
+            <li class="hideOnMobile nav-item mr-30">
+              <a class="" href="/about-us.html">About Us</a>
+            </li>
+            <li class="hideOnMobile nav-item mr-30">
+              <a class="" href="/contact-us.html">Contact</a>
+            </li>
+            <li class="hideOnMobile nav-item mr-30">
+              <a class="" href="#">works</a>
+            </li>
+            <li class="hideOnMobile nav-item mr-30 nav-dropdown">
+              <a class="" href="/services.html"
+                >Services
+                <img
+                  src="/images/icons/tabler-icon-chevron-down.svg"
+                  alt="tabler-icon-chevron-down"
+                />
+              </a>
+              <ul class="nav-dropdown-content">
+                <li><a href="#">Service 1</a></li>
+                <li><a href="#">Service 2</a></li>
+                <li><a href="#">Service 3</a></li>
+              </ul>
+            </li>
+            <li class="hideOnMobile nav-item mr-30">
+              <a class="" href="/blog-page.html">Blog</a>
+            </li>
+            <li class="hideOnMobile nav-item mr-30">
+              <a href="/How-we-are-different.html" class="mr-140"
+                >How we’re different</a
+              >
+            </li>
+            <li class="hideOnMobile">
+              <button class="lato glow-button font-18" type="button">
+                <a class="glow-button-border" href="/contact-us.html"
+                  >Contact us!</a
+                >
+                <div class="polygon"></div>
+              </button>
+            </li>
+            <li class="menu-button mr-30" onclick="showSideBar()">
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="26px"
+                  viewBox="0 -960 960 960"
+                  width="26px"
+                  fill="#1f1f1f"
+                >
+                  <path
+                    d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Header -->
+
     <!-- Hero Section start-->
     <section id="hero" class="py-40">
       <div class="container">
-        <div id="paid-hero">
-          <nav>
-            <ul class="sidebar">
-              <li onclick="hideSidebar()">
-                <a href="#">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="26px"
-                    viewBox="0 -960 960 960"
-                    width="26px"
-                    fill="#1f1f1f"
-                  >
-                    <path
-                      d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-                    />
-                  </svg>
-                </a>
-              </li>
-              <li><a href="/about-us.html">About Us</a></li>
-              <li><a href="/contact-us.html">Contact</a></li>
-              <li><a href="#">works</a></li>
-              <li class="nav-dropdown">
-                <a class="" href="/services.html">Services </a>
-                <ul class="nav-dropdown-content">
-                  <li><a href="#">Service 1</a></li>
-                  <li><a href="#">Service 2</a></li>
-                  <li><a href="#">Service 3</a></li>
-                </ul>
-              </li>
-              <li><a href="/blog-page.html">Blog</a></li>
-              <li>
-                <a href="/How-we-are-different.html">How we’re different</a>
-              </li>
-              <li>
-                <button class="lato glow-button font-18" type="button">
-                  <a class="glow-button-border" href="/contact-us.html"
-                    >Contact us!</a
-                  >
-                  <div class="polygon"></div>
-                </button>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <a href="/index.html">
-                  <img src="/images/logo.svg" alt="logo" />
-                  <span class="font-20 font-weight-600 lato">Asia.Agency</span>
-                </a>
-              </li>
-              <li class="hideOnMobile mr-30">
-                <a class="" href="/about-us.html">About Us</a>
-              </li>
-              <li class="hideOnMobile mr-30">
-                <a class="" href="/contact-us.html">Contact</a>
-              </li>
-              <li class="hideOnMobile mr-30">
-                <a class="" href="#">works</a>
-              </li>
-              <li class="hideOnMobile mr-30 nav-dropdown">
-                <a class="" href="/services.html"
-                  >Services
-                  <img
-                    src="/images/icons/tabler-icon-chevron-down.svg"
-                    alt="tabler-icon-chevron-down"
-                  />
-                </a>
-                <ul class="nav-dropdown-content">
-                  <li><a href="#">Service 1</a></li>
-                  <li><a href="#">Service 2</a></li>
-                  <li><a href="#">Service 3</a></li>
-                </ul>
-              </li>
-              <li class="hideOnMobile mr-30">
-                <a class="" href="/blog-page.html">Blog</a>
-              </li>
-              <li class="hideOnMobile mr-30">
-                <a href="/How-we-are-different.html" class="mr-140"
-                  >How we’re different</a
-                >
-              </li>
-              <li class="hideOnMobile">
-                <button class="lato glow-button font-18" type="button">
-                  <a class="glow-button-border" href="/contact-us.html"
-                    >Contact us!</a
-                  >
-                  <div class="polygon"></div>
-                </button>
-              </li>
-              <li class="menu-button mr-30" onclick="showSideBar()">
-                <a href="#">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="26px"
-                    viewBox="0 -960 960 960"
-                    width="26px"
-                    fill="#1f1f1f"
-                  >
-                    <path
-                      d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-                    />
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <header>
+        <div style="margin-top: 15.25rem;">
           <h1
             class="main-heading Soft-Sky-Glow font-76 font-weight-700 plus-jakarta line-height-76"
           >
@@ -148,7 +154,7 @@
               /></a>
             </button>
           </div>
-        </header>
+        </div>
         <div class="stats-contaier">
           <div class="stats">
             <div class="stats-item line-height-64">
@@ -502,18 +508,6 @@
     <!-- content section start -->
     <section class="py-80" id="content">
       <div class="container">
-        <div class="works-process-content">
-          <h4
-            class="main-heading Soft-Sky-Glow font-48 font-weight-700 plus-jakarta"
-          >
-          Standing out in a
-            <span class="primary italic lora">competitive market </span>
-          </h4>
-          <p class="lato font-weight-400 font-16 gray-400 line-height-24">
-            In a crowded paid search market, standing out is tough. But with a tailored strategy and expert support, we’ll help you capture attention and drive ROI with efficient, impactful campaigns.
-          </p>
-        </div>
-
         <div class="content-container">
           <h3
             class="main-heading Soft-Sky-Glow font-48 font-weight-700 plus-jakarta"
@@ -530,7 +524,7 @@
         <div class="cards pt-80">
           <div class="card">
             <div
-              class="top-row lato font-weight-400 font-16 gray-400 line-height-24"
+              class="top-row lato font-weight-400 font-16 gray- line-height-24"
             >
               <h6>THE CHALLENGE</h6>
               <span>01</span>
@@ -683,7 +677,7 @@
     <!-- works process section end -->
 
     <!-- cta  section start -->
-    <section class="cta-section pt-80">
+    <section class="cta-section">
       <div
         class="container green-topleft-bottomright cta-contant line-height-58"
       >
@@ -1380,7 +1374,7 @@
     <!-- why choose us section start -->
 
     <!-- testimonial section start -->
-    <section class="pb-80" id="projects">
+    <section class="py-80" id="projects">
       <div class="container">
         <div class="testimonial-tittle pt-80">
           <h3
@@ -1858,7 +1852,7 @@
                         class="arrow-img"
                       />
                       What is the onboarding process like?
-                    </p>
+                    </div>
                   </div>
 
                   <div class="content-container">
@@ -2440,5 +2434,6 @@
     <!-- footer section end -->
 
     <script src="/js/paid-media-services.js"></script>
+    <script src="/js/comon.js"></script>
   </body>
 </html>

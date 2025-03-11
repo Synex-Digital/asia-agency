@@ -79,6 +79,14 @@ a {
   font-size: 96px;
 }
 
+.hero-wraper {
+  margin: 13.5rem 0 0rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Padding */
 .py-11 {
   padding-top: 11px;
@@ -190,6 +198,9 @@ a {
 }
 .pb-12 {
   padding-bottom: 12px;
+}
+.pb-40{
+  padding-bottom: 40px;
 }
 .pb-80 {
   padding-bottom: 80px;
@@ -488,10 +499,42 @@ nav li:first-child {
   .menu-button {
     display: block;
   }
+  .py-45 {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  .py-60{
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .font-20 {
+    font-size: 18px;
+  }
+  .pb-160 {
+    margin: 0 10px 0 10px;
+  }
+  .line-height-58 {
+    line-height: 40px;
+  }
+  .pb-160 {
+    padding-bottom: 100px;
+  }
+  .font-32 {
+    font-size: 26px;
+  }
+  .font-16 {
+    font-size: 12px;
+  }
+  .line-height-36 {
+    line-height: 10px;
+}
 }
 @media (max-width: 400px) {
   .sidebar {
     width: 100%;
+  }
+  .font-20 {
+    font-size: 16px;
   }
 }
 
@@ -530,9 +573,13 @@ nav li:first-child {
 }
 
 header {
-  width: 800px;
-  margin: 0 auto;
-  padding: 140px 0px 83px 0px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin-top: 3rem; /* Adjust this value as needed */
+  z-index: 1000; /* Ensures the header stays above other content */
+  transition: top 0.3s ease; /* Smooth transition for showing/hiding the header */
 }
 
 header p {
@@ -565,7 +612,7 @@ header p {
   display: inline-flex; /* Allows flex properties while keeping it inline */
   justify-content: center; /* Centers text horizontally */
   align-items: center; /* Centers text vertically */
-  padding: 4px 12px 6px;
+  padding: 2px 12px 5px 12px;
   background: rgba(14, 17, 22, 1);
   border: 1px solid rgba(145, 145, 145, 0.3);
   font-family: "Lato", serif;
@@ -582,11 +629,17 @@ header p {
 .description {
   margin-top: 32px;
   margin-bottom: 40px;
+  width: 60%;
 }
+
+
+
 @media (max-width: 800px) {
   header {
-    width: 100%;
-    padding: 100px 20px 60px;
+    margin-top: 1.5rem;
+  }
+  .container{
+    padding: 0px 8px 0px 8px;
   }
 
   header p {
@@ -594,20 +647,27 @@ header p {
   }
 
   .description {
-    margin-top: 20px;
-    margin-bottom: 30px;
-  }
+    margin-top: 32px;
+    margin-bottom: 40px;
+    width: 85%;
+}
 
   .main-heading {
     font-size: 60px;
   }
+  .hero-wraper {
+    margin: 8.5rem 0 0rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-@media (max-width: 612px) {
+@media (max-width: 600px) {
   .tag-container {
     flex-wrap: wrap;
     justify-content: center;
-    row-gap: 10px;
   }
 
   .tag {
@@ -643,6 +703,13 @@ header p {
     padding: 4px 8px;
   }
 }
+
+@media (max-width:1070px){
+  .nav-item  {
+    display: none;
+  }
+}
+
 /* Hero Section end */
 /* Glow button */
 .glow-button {
@@ -794,7 +861,7 @@ header p {
   justify-content: center;
   gap: 32px;
   max-width: 1200px;
-  padding: 20px;
+  margin: 4rem 0px 4rem 0px;
 }
 
 .logo {
@@ -894,7 +961,7 @@ header p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 120px 303px;
+  padding: 120px 0px;
   border-radius: 28px;
   background-image: url("/images/cta.png");
   background-repeat: no-repeat;
@@ -920,7 +987,6 @@ header p {
   justify-content: center;
   align-items: center;
   font-family: "Lato", serif;
-  width: 250px;
   padding-bottom: 14px;
 }
 .cta-btn button {
@@ -1101,6 +1167,7 @@ header p {
   background-repeat: no-repeat;
   background-position: center;
   border: 15px;
+  border-radius: 1rem;
 }
 
 .card-content {
@@ -1134,7 +1201,7 @@ header p {
 
 @media (max-width: 1200px) {
   .projects-container h3 {
-    width: 90%;
+    width: 100%;
     text-align: center;
   }
   .projects-container {
@@ -1163,8 +1230,9 @@ header p {
   }
   .card-image {
     width: 100%;
-    margin-top: 20px;
-  }
+    border-radius: .9rem;
+    overflow: hidden;
+}
 }
 
 @media (max-width: 768px) {
@@ -1173,9 +1241,6 @@ header p {
   }
   .card-footer {
     justify-content: center;
-  }
-  .slider-controls {
-    padding-left: 10px;
   }
 }
 
@@ -1276,22 +1341,30 @@ header p {
   flex: 0 0 702px;
   width: 702px;
   border-radius: 24px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 40px;
-  background-color: rgba(14, 17, 22, 1);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% auto;
+  transition:  0.5s ease;
 }
-.testimonial-card:hover {
-  background-image: url("/images/testimonial-card.png");
+
+.testimonial-card:hover{
+  padding: 1px;
+  background: linear-gradient(180deg, #FFFFFFCC, #ffffff0a);
 }
 .testimonial-tittle {
   width: 646px;
   margin: 0 auto;
+}
+
+.testimonial-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px;
+  border-radius: 24px;
+  background-color: #0E1116;
+  background-image: url(/images/testimonial-card.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: auto;
+;
 }
 
 .profile {
@@ -1377,112 +1450,49 @@ header p {
   height: 10px;
 }
 @media (max-width: 1200px) {
-  .testimonial-card {
-    width: 90%;
-    flex: 0 0 90%;
+  .profile {
+    display: block;
+    width: 100%;
+    text-align: left;
   }
-}
 
-@media (max-width: 992px) {
-  .testimonial-card {
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
+  .testimonial-text {
+    width: 100%;
+    text-align: center;
+    word-wrap: break-word;
   }
+
   .profile {
     width: 100%;
     align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .profile-info {
-    text-align: left;
-  }
-  .testimonial-text {
-    width: 100%;
-    margin-top: 20px;
-    text-align: center;
-    padding-bottom: 22px;
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 768px) {
   .testimonial-card {
-    flex-direction: row;
-    align-items: center;
-    padding: 30px;
-  }
-  .testimonial-tittle {
-    width: 95%;
-  }
-  .main-heading {
-    font-size: 36px;
-    line-height: 44px;
-  }
-  .profile {
     flex-direction: column;
     align-items: center;
-    width: 100%;
-  }
-  .profile-info {
-    text-align: center;
+    padding: 24px;
+    flex: 0 0 100%;
+    row-gap: 40px;
   }
   .testimonial-card {
     padding: 20px;
   }
-}
-@media (max-width: 599px) {
-  .testimonial-card {
+  .testimonial-wrapper{
     flex-direction: column;
+  }
+  .profile {
+    display: flex
+;
     align-items: center;
-    padding: 30px;
-  }
+}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .testimonial-card {
-    background-size: cover;
-  }
-}
-
-@media (max-width: 576px) {
-  .main-heading {
-    font-size: 30px;
-    line-height: 38px;
-  }
-
-  .profile-image {
-    width: 48px;
-    height: 48px;
-  }
-  .icon {
-    width: 48px;
-    height: 48px;
-  }
-  .profile-info h3 {
-    font-size: 16px;
-  }
-  .profile-info p {
-    font-size: 14px;
-  }
-  .testimonial-text {
-    font-size: 18px;
-    line-height: 24px;
-  }
-  .rating {
-    padding: 8px 10px;
-  }
-  .rating-img {
-    width: 18px;
-    height: 21px;
-    margin-right: 5px;
-  }
-  .stars img {
-    width: 8px;
-    height: 8px;
-  }
-  .rating-value {
-    font-size: 14px;
+    width: 95%;
   }
 }
 /* testimonial section end */
@@ -2027,12 +2037,15 @@ form {
   transition: transform 0.3s ease;
 }
 
+p.lato.font-weight-400.font-16.gray-400.pt-16.line-height-24 {
+  padding-left: 2rem;
+}
 .nav-faq-item.open .arrow-img {
   transform: rotate(90deg);
 }
 
 .content-container {
-  margin-left: 40px;
+  /* margin-left: 40px; */
   width: 100%;
   max-width: 1122px;
   overflow: hidden;
@@ -2043,18 +2056,12 @@ form {
   padding-bottom: 20px;
 }
 .content-container p {
-  width: 90%;
+  width: 96%;
 }
 
 .nav-faq-item.open .content-container {
   opacity: 1;
   visibility: visible;
-}
-
-.summary-container div {
-  display: flex;
-  align-items: center;
-  gap: 5px;
 }
 @media (max-width: 1200px) {
   .nav-faq-container {
@@ -2065,6 +2072,10 @@ form {
 @media (max-width: 768px) {
   .faq-section-content {
     width: 90%;
+  }
+
+  .nav-faq-container{
+    padding: 0px !important;
   }
 
   .main-heading {
@@ -2093,23 +2104,21 @@ form {
   }
 
   .content-container {
-    margin-left: 30px;
+    /* margin-left: 30px; */
   }
 }
 
 @media (max-width: 480px) {
   .main-heading {
     font-size: 28px;
-    padding-left: 20px;
   }
 
   .summary-container div {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .content-container p {
-    font-size: 12px;
-    padding-top: 8px;
+    font-size: 14px;
   }
 
   .faq-button-nav-1,
