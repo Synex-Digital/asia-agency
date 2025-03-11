@@ -1,13 +1,7 @@
 body {
   background: #0b0a0d;
 }
-nav ul li:first-child {
-  margin-left: 0px;
-}
-nav ul li {
-  margin-right:0px;
-  margin-left: 0px;
-}
+
 .hero-content h1 {
   width: 708px;
   text-align: start;
@@ -392,7 +386,7 @@ ul li {
   .weekly-newsletter {
     width: 35%;
   }
-  .blog-right-section{
+  .blog-right-section {
     padding: 0px 20px;
   }
 }
@@ -446,7 +440,7 @@ ul li {
 }
 
 /* blog section  end*/
-.footer-content-nav-list ul li{
+.footer-content-nav-list ul li {
   list-style: none !important;
   text-decoration: none;
   margin-left: 0px;

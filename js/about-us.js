@@ -59,12 +59,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", function () {
   const dropdownHeaders = document.querySelectorAll(
-    ".capability-dropdown-header"
+    ".about-us-capability-dropdown-header"
   );
 
   dropdownHeaders.forEach((header) => {
-    const button = header.querySelector(".dropdownButton");
-    const dropdown = header.nextElementSibling; // This should be the .dropdown-content
+    const button = header.querySelector(".about-us-dropdownButton");
+    const dropdown = header.nextElementSibling; // This should be the .about-us-dropdown-content
     const img = button.querySelector("img"); // Get the img inside the button
 
     button.addEventListener("click", function () {
@@ -77,13 +77,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Toggle the image src based on active state
       if (dropdown.classList.contains("active")) {
-        img.src = "/images/about-us/icon/Minus.svg"; // Change to Minus.svg when inactive
+        img.src = "/images/about-us/icon/Minus.svg"; // Change to Minus.svg when active
       } else {
-        img.src = "/images/about-us/icon/Plus.svg"; // Change to Plus.svg when active
+        img.src = "/images/about-us/icon/Plus.svg"; // Change to Plus.svg when inactive
       }
     });
   });
 });
+
 
 function showSideBar() {
   const sidebar = document.querySelector(".sidebar");
