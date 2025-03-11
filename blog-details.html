@@ -16,10 +16,10 @@
     />
   </head>
   <body>
-    <!-- Hero Section start-->
-    <section id="hero" class="py-40">
+    <!-- Header -->
+    <header id="header">
       <div class="container">
-        <nav>
+        <nav class="nav">
           <ul class="sidebar">
             <li onclick="hideSidebar()">
               <a href="#">
@@ -67,16 +67,17 @@
                 <span class="font-20 font-weight-600 lato">Asia.Agency</span>
               </a>
             </li>
-            <li class="hideOnMobile mr-30">
+
+            <li class="hideOnMobile nav-item mr-30">
               <a class="" href="/about-us.html">About Us</a>
             </li>
-            <li class="hideOnMobile mr-30">
+            <li class="hideOnMobile nav-item mr-30">
               <a class="" href="/contact-us.html">Contact</a>
             </li>
-            <li class="hideOnMobile mr-30">
+            <li class="hideOnMobile nav-item mr-30">
               <a class="" href="#">works</a>
             </li>
-            <li class="hideOnMobile mr-30 nav-dropdown">
+            <li class="hideOnMobile nav-item mr-30 nav-dropdown">
               <a class="" href="/services.html"
                 >Services
                 <img
@@ -90,10 +91,10 @@
                 <li><a href="#">Service 3</a></li>
               </ul>
             </li>
-            <li class="hideOnMobile mr-30">
+            <li class="hideOnMobile nav-item mr-30">
               <a class="" href="/blog-page.html">Blog</a>
             </li>
-            <li class="hideOnMobile mr-30">
+            <li class="hideOnMobile nav-item mr-30">
               <a href="/How-we-are-different.html" class="mr-140"
                 >How we’re different</a
               >
@@ -123,8 +124,14 @@
             </li>
           </ul>
         </nav>
+      </div>
+    </header>
+    <!-- Header -->
 
-        <div class="hero-content">
+    <!-- Hero Section start-->
+    <section id="hero" class="py-40">
+      <div class="container">
+        <div class="hero-content" style="margin-top: 14rem">
           <h1 class="plus-jakarta font-weight-700 font-56 white line-height-68">
             Asia Agency How Digital Marketing Can Transform Your Business in
             2025
@@ -405,7 +412,7 @@
           <div
             class="conclusion bg-box lato font-weight-400 font-18 gray-400 pt-32 line-height-24"
           >
-            <h2 class="line-height-42 white">Conclusion</h2>
+            <h2 class="line-height-42">Conclusion</h2>
             <p>
               Morbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus
               id scelerisque est ultricies ultricies. Duis est sit sed leo nisl,
@@ -432,7 +439,7 @@
     <!-- main section end -->
 
     <!-- Blog Section start -->
-    <section class="pt-80 pb-160">
+    <section class="py-80">
       <div class="container">
         <h2
           class="blog-heading main-heading Soft-Sky-Glow font-48 font-weight-700 plus-jakarta"
@@ -507,8 +514,8 @@
     </section>
     <!-- Blog Section end -->
 
-     <!-- footer section start -->
-     <footer>
+    <!-- footer section start -->
+    <footer>
       <div class="container">
         <div class="footer-content">
           <h3 class="plus-jakarta font-weight-700 font-48 white line-height-58">
@@ -631,5 +638,6 @@
     <!-- footer section end -->
 
     <script src="/js/blog-details.js"></script>
+    <script src="/js/comon.js"></script>
   </body>
 </html>

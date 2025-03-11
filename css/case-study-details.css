@@ -3,7 +3,6 @@ body {
 }
 .header h1 {
   width: 643px;
-  margin-top: 120px;
 }
 .header p {
   width: 567px;
@@ -31,10 +30,6 @@ body {
   gap: 16px;
 }
 @media (max-width: 1200px) {
-  #hero {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
   .header h1 {
     width: 90%;
     margin-top: 60px;
@@ -87,8 +82,7 @@ body {
 
 @media (max-width: 480px) {
   .header h1 {
-    font-size: 24px;
-    line-height: 35px;
+    font-size: 32px;
   }
 }
 /* img section */
@@ -324,11 +318,10 @@ body {
   }
   .formula-cards {
     justify-content: center;
-    gap: 24px;
   }
 
   .formula-cards .formula-card {
-    width: 48%;
+    width: 90%;
     max-width: 573px;
   }
 
@@ -353,12 +346,6 @@ body {
     width: 90%;
   }
 }
-@media (max-width: 950px) {
-  .formula-cards .formula-card {
-    width: 90%;
-    max-width: 573px;
-  }
-}
 
 @media (max-width: 768px) {
   .review-services-title h2 {
@@ -367,7 +354,6 @@ body {
 
   .formula-cards .formula-card h2 {
     font-size: 20px;
-    text-align: center;
   }
 }
 
@@ -381,17 +367,7 @@ body {
     font-size: 14px;
   }
 }
-
-@media (max-width: 480px) {
-  .formula-card-title {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    flex-direction: column;
-  }
-}
 /* EXECUTION section end */
-
 /* conclusion section start */
 .conclusion-cards {
   display: flex;
@@ -470,7 +446,6 @@ body {
 
 @media (max-width: 480px) {
   .cta-contant h3 {
-    font-size: 24px;
-    line-height: 44px;
+    font-size: 28px;
   }
 }

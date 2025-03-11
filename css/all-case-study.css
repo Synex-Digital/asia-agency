@@ -19,7 +19,7 @@ body {
   display: inline-flex;
   justify-items: center;
   align-items: center;
-  padding: 4px 12px 6px;
+  padding: 4px 12px;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 40px;
 }
@@ -87,10 +87,6 @@ body {
   border-radius: 12px;
 }
 @media (max-width: 1200px) {
-  #hero {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
   .header-section {
     flex-direction: column;
     align-items: flex-start;
@@ -102,7 +98,7 @@ body {
 
   .header-section-content {
     width: 50%;
-    margin-left: 20px;
+    margin-left: 40px;
   }
   .bage-section {
     margin-left: 40px;
@@ -126,6 +122,7 @@ body {
     width: 100%;
     text-align: center;
   }
+  
 }
 @media (max-width: 992px) {
   .header-section-content {
@@ -143,7 +140,6 @@ body {
 @media (max-width: 768px) {
   .bage-section {
     margin: 0 auto;
-    row-gap: 10px;
   }
   .header-section-content h1 {
     font-size: 60px;

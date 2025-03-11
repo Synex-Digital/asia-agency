@@ -16,10 +16,10 @@
     />
   </head>
   <body>
-    <!-- Hero Section start-->
-    <section id="hero" class="py-40">
-      <div class="container hero-section">
-        <nav>
+    <!-- Header -->
+    <header id="header">
+      <div class="container">
+        <nav class="nav">
           <ul class="sidebar">
             <li onclick="hideSidebar()">
               <a href="#">
@@ -67,16 +67,17 @@
                 <span class="font-20 font-weight-600 lato">Asia.Agency</span>
               </a>
             </li>
-            <li class="hideOnMobile mr-30">
+
+            <li class="hideOnMobile nav-item mr-30">
               <a class="" href="/about-us.html">About Us</a>
             </li>
-            <li class="hideOnMobile mr-30">
+            <li class="hideOnMobile nav-item mr-30">
               <a class="" href="/contact-us.html">Contact</a>
             </li>
-            <li class="hideOnMobile mr-30">
+            <li class="hideOnMobile nav-item mr-30">
               <a class="" href="#">works</a>
             </li>
-            <li class="hideOnMobile mr-30 nav-dropdown">
+            <li class="hideOnMobile nav-item mr-30 nav-dropdown">
               <a class="" href="/services.html"
                 >Services
                 <img
@@ -90,10 +91,10 @@
                 <li><a href="#">Service 3</a></li>
               </ul>
             </li>
-            <li class="hideOnMobile mr-30">
+            <li class="hideOnMobile nav-item mr-30">
               <a class="" href="/blog-page.html">Blog</a>
             </li>
-            <li class="hideOnMobile mr-30">
+            <li class="hideOnMobile nav-item mr-30">
               <a href="/How-we-are-different.html" class="mr-140"
                 >How we’re different</a
               >
@@ -123,8 +124,14 @@
             </li>
           </ul>
         </nav>
+      </div>
+    </header>
+    <!-- Header -->
 
-        <div class="header-section pt-120">
+    <!-- Hero Section start-->
+    <section id="hero" class="pb-40" >
+      <div class="container hero-section">
+        <div class="header-section" style="margin-top: 14rem;">
           <div class="bage-section lato line-height-26">
             <h6 class="font-16 font-weight-400 white custom-tag gray-900">
               All topics
@@ -463,5 +470,6 @@
     <!-- footer section end -->
 
     <script src="/js/case-study.js"></script>
+    <script src="/js/comon.js"></script>
   </body>
 </html>

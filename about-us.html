@@ -15,11 +15,13 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
-    <!-- Hero Section start-->
-    <section id="hero" class="py-40">
+
+    <!-- Header -->
+    <header id="header">
       <div class="container">
-        <nav>
+        <nav class="nav">
           <ul class="sidebar">
             <li onclick="hideSidebar()">
               <a href="#">
@@ -67,16 +69,17 @@
                 <span class="font-20 font-weight-600 lato">Asia.Agency</span>
               </a>
             </li>
-            <li class="hideOnMobile mr-30">
+
+            <li class="hideOnMobile nav-item mr-30">
               <a class="" href="/about-us.html">About Us</a>
             </li>
-            <li class="hideOnMobile mr-30">
+            <li class="hideOnMobile nav-item mr-30">
               <a class="" href="/contact-us.html">Contact</a>
             </li>
-            <li class="hideOnMobile mr-30">
+            <li class="hideOnMobile nav-item mr-30">
               <a class="" href="#">works</a>
             </li>
-            <li class="hideOnMobile mr-30 nav-dropdown">
+            <li class="hideOnMobile nav-item mr-30 nav-dropdown">
               <a class="" href="/services.html"
                 >Services
                 <img
@@ -90,10 +93,10 @@
                 <li><a href="#">Service 3</a></li>
               </ul>
             </li>
-            <li class="hideOnMobile mr-30">
+            <li class="hideOnMobile nav-item mr-30">
               <a class="" href="/blog-page.html">Blog</a>
             </li>
-            <li class="hideOnMobile mr-30">
+            <li class="hideOnMobile nav-item mr-30">
               <a href="/How-we-are-different.html" class="mr-140"
                 >How we’re different</a
               >
@@ -123,8 +126,14 @@
             </li>
           </ul>
         </nav>
+      </div>
+    </header>
+    <!-- Header -->
 
-        <header>
+    <!-- Hero Section start-->
+    <section id="hero" class="py-40">
+      <div class="container">
+        <div class="about-us-header">
           <h1
             class="main-heading Soft-Sky-Glow font-76 font-weight-700 plus-jakarta line-height-76"
           >
@@ -143,13 +152,13 @@
             <button>
               <a
                 href="#"
-                class="cta-btn-nav gray-900 font-weight-600 font-18 lato line-height-24"
+                class="cta-button gray-900 lato font-weight-600 font-18"
                 >Talk to our experts
                 <img src="/images/icons/Right_Icon.svg" alt="cta-icons"
               /></a>
             </button>
           </div>
-        </header>
+        </div>
       </div>
     </section>
     <!-- Hero Section end-->
@@ -480,7 +489,7 @@
 
     <!-- clients logo section start-->
     <section id="clients" class="pb-80 pt-160">
-      <div class="logo-container container" id="logoContainer">
+      <div class="logo-container" id="logoContainer">
         <div class="logo">
           <img src="/images/clients/logo-01.svg" alt="Attentive Logo" />
         </div>
@@ -820,7 +829,7 @@
       </div>
     </section>
     <!-- cta section end-->
-     
+
     <!-- testimonial section start -->
     <section class="about-us-slider pt-80 pb-160" id="projects">
       <div class="container">
@@ -1179,5 +1188,6 @@
     <!-- footer section end -->
 
     <script src="/js/about-us.js"></script>
+    <script src="/js/comon.js"></script>
   </body>
 </html>
