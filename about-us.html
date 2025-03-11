@@ -1,1193 +1,980 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>about us</title>
-    <link rel="stylesheet" href="css/comon.css" />
-    <link rel="stylesheet" href="css/about.css" />
 
-    <!-- Google Fonts lato -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>about us</title>
+  <link rel="stylesheet" href="css/comon.css" />
+  <link rel="stylesheet" href="css/about.css" />
 
-  <body>
+  <!-- Google Fonts lato -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet" />
+</head>
 
-    <!-- Header -->
-    <header id="header">
-      <div class="container">
-        <nav class="nav">
-          <ul class="sidebar">
-            <li onclick="hideSidebar()">
-              <a href="#">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="26px"
-                  viewBox="0 -960 960 960"
-                  width="26px"
-                  fill="#1f1f1f"
-                >
-                  <path
-                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li><a href="/about-us.html">About Us</a></li>
-            <li><a href="/contact-us.html">Contact</a></li>
-            <li><a href="#">works</a></li>
-            <li class="nav-dropdown">
-              <a class="" href="/services.html">Services </a>
-              <ul class="nav-dropdown-content">
-                <li><a href="#">Service 1</a></li>
-                <li><a href="#">Service 2</a></li>
-                <li><a href="#">Service 3</a></li>
-              </ul>
-            </li>
-            <li><a href="/blog-page.html">Blog</a></li>
-            <li>
-              <a href="/How-we-are-different.html">How we’re different</a>
-            </li>
-            <li>
-              <button class="lato glow-button font-18" type="button">
-                <a class="glow-button-border" href="/contact-us.html"
-                  >Contact us!</a
-                >
-                <div class="polygon"></div>
-              </button>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a href="/index.html">
-                <img src="/images/logo.svg" alt="logo" />
-                <span class="font-20 font-weight-600 lato">Asia.Agency</span>
-              </a>
-            </li>
+<body>
 
-            <li class="hideOnMobile nav-item mr-30">
-              <a class="" href="/about-us.html">About Us</a>
-            </li>
-            <li class="hideOnMobile nav-item mr-30">
-              <a class="" href="/contact-us.html">Contact</a>
-            </li>
-            <li class="hideOnMobile nav-item mr-30">
-              <a class="" href="#">works</a>
-            </li>
-            <li class="hideOnMobile nav-item mr-30 nav-dropdown">
-              <a class="" href="/services.html"
-                >Services
-                <img
-                  src="/images/icons/tabler-icon-chevron-down.svg"
-                  alt="tabler-icon-chevron-down"
-                />
-              </a>
-              <ul class="nav-dropdown-content">
-                <li><a href="#">Service 1</a></li>
-                <li><a href="#">Service 2</a></li>
-                <li><a href="#">Service 3</a></li>
-              </ul>
-            </li>
-            <li class="hideOnMobile nav-item mr-30">
-              <a class="" href="/blog-page.html">Blog</a>
-            </li>
-            <li class="hideOnMobile nav-item mr-30">
-              <a href="/How-we-are-different.html" class="mr-140"
-                >How we’re different</a
-              >
-            </li>
-            <li class="hideOnMobile">
-              <button class="lato glow-button font-18" type="button">
-                <a class="glow-button-border" href="/contact-us.html"
-                  >Contact us!</a
-                >
-                <div class="polygon"></div>
-              </button>
-            </li>
-            <li class="menu-button mr-30" onclick="showSideBar()">
-              <a href="#">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="26px"
-                  viewBox="0 -960 960 960"
-                  width="26px"
-                  fill="#1f1f1f"
-                >
-                  <path
-                    d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-                  />
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <!-- Header -->
-
-    <!-- Hero Section start-->
-    <section id="hero" class="py-40">
-      <div class="container">
-        <div class="about-us-header">
-          <h1
-            class="main-heading Soft-Sky-Glow font-76 font-weight-700 plus-jakarta line-height-76"
-          >
-            Tailored solutions & strategies for your
-            <span class="primary italic lora">business growth </span>
-          </h1>
-
-          <p
-            class="description lato font-weight-500 font-18 gray-400 line-height-24"
-          >
-            Empowering your business with tailored strategies and cutting-edge
-            solutions designed to accelerate growth, enhance brand presence, and
-            deliver measurable results.
-          </p>
-          <div class="cta-btn-nav">
-            <button>
-              <a
-                href="#"
-                class="cta-button gray-900 lato font-weight-600 font-18"
-                >Talk to our experts
-                <img src="/images/icons/Right_Icon.svg" alt="cta-icons"
-              /></a>
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+      <nav class="nav">
+        <ul class="sidebar">
+          <li onclick="hideSidebar()">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px"
+                fill="#1f1f1f">
+                <path
+                  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+              </svg>
+            </a>
+          </li>
+          <li><a href="/about-us.html">About Us</a></li>
+          <li><a href="/contact-us.html">Contact</a></li>
+          <li><a href="#">works</a></li>
+          <li class="nav-dropdown">
+            <a class="" href="/services.html">Services </a>
+            <ul class="nav-dropdown-content">
+              <li><a href="#">Service 1</a></li>
+              <li><a href="#">Service 2</a></li>
+              <li><a href="#">Service 3</a></li>
+            </ul>
+          </li>
+          <li><a href="/blog-page.html">Blog</a></li>
+          <li>
+            <a href="/How-we-are-different.html">How we’re different</a>
+          </li>
+          <li>
+            <button class="lato glow-button font-18" type="button">
+              <a class="glow-button-border" href="/contact-us.html">Contact us!</a>
+              <div class="polygon"></div>
             </button>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/index.html">
+              <img src="/images/logo.svg" alt="logo" />
+              <span class="font-20 font-weight-600 lato">Asia.Agency</span>
+            </a>
+          </li>
+
+          <li class="hideOnMobile nav-item mr-30">
+            <a class="" href="/about-us.html">About Us</a>
+          </li>
+          <li class="hideOnMobile nav-item mr-30">
+            <a class="" href="/contact-us.html">Contact</a>
+          </li>
+          <li class="hideOnMobile nav-item mr-30">
+            <a class="" href="#">works</a>
+          </li>
+          <li class="hideOnMobile nav-item mr-30 nav-dropdown">
+            <a class="" href="/services.html">Services
+              <img src="/images/icons/tabler-icon-chevron-down.svg" alt="tabler-icon-chevron-down" />
+            </a>
+            <ul class="nav-dropdown-content">
+              <li><a href="#">Service 1</a></li>
+              <li><a href="#">Service 2</a></li>
+              <li><a href="#">Service 3</a></li>
+            </ul>
+          </li>
+          <li class="hideOnMobile nav-item mr-30">
+            <a class="" href="/blog-page.html">Blog</a>
+          </li>
+          <li class="hideOnMobile nav-item mr-30">
+            <a href="/How-we-are-different.html" class="mr-140">How we’re different</a>
+          </li>
+          <li class="hideOnMobile">
+            <button class="lato glow-button font-18" type="button">
+              <a class="glow-button-border" href="/contact-us.html">Contact us!</a>
+              <div class="polygon"></div>
+            </button>
+          </li>
+          <li class="menu-button mr-30" onclick="showSideBar()">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px"
+                fill="#1f1f1f">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- Header -->
+
+  <!-- Hero Section start-->
+  <section id="hero" class="py-40">
+    <div class="container">
+      <div class="about-us-header">
+        <h1 class="main-heading Soft-Sky-Glow font-76 font-weight-700 plus-jakarta line-height-76">
+          Tailored solutions & strategies for your
+          <span class="primary italic lora">business growth </span>
+        </h1>
+
+        <p class="description lato font-weight-500 font-18 gray-400 line-height-24">
+          Empowering your business with tailored strategies and cutting-edge
+          solutions designed to accelerate growth, enhance brand presence, and
+          deliver measurable results.
+        </p>
+        <div class="cta-btn-nav">
+          <button>
+            <a href="#" class="cta-button gray-900 lato font-weight-600 font-18">Talk to our experts
+              <img src="/images/icons/Right_Icon.svg" alt="cta-icons" /></a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Hero Section end-->
+
+  <!-- Bannar section start -->
+  <section id="bannar">
+    <div class="container">
+      <picture>
+        <img src="images/about-us/hero-image.png" alt="vision-image" />
+      </picture>
+    </div>
+  </section>
+  <!-- Bannar section end -->
+
+  <!-- mission-vision section start -->
+  <section id="mission-vision">
+    <div class="container">
+      <div class="mission-vision-container">
+        <div class="mission-vision-content">
+          <button class="badge-button lato">
+            <img src="/images/icons/about-us.png" alt="about-us" class="button-icon" />
+            <span class="lato font-16 font-weight-400 white">Mission</span>
+          </button>
+          <h4 class="plus-jakarta font-weight-600 font-32 white line-height-42">
+            To empower businesses with innovative, customized strategies that
+            drive growth and transform them into industry leaders.
+          </h4>
+        </div>
+        <div class="vertical-separator"></div>
+        <div class="mission-vision-content">
+          <button class="badge-button lato">
+            <img src="/images/icons/about-us.png" alt="about-us" class="button-icon" />
+            <span class="lato font-16 font-weight-400 white"> Vision </span>
+          </button>
+          <h4 class="plus-jakarta font-weight-600 font-32 white line-height-42">
+            To revolutionize business growth through creativity, technology,
+            and expertise, helping companies thrive in the digital age.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- mission-vision section end -->
+
+  <!-- team section start -->
+  <section id="team-section" class="py-80">
+    <div class="container">
+      <div class="team-content">
+        <h2 class="main-heading Soft-Sky-Glow font-48 font-weight-700 plus-jakarta line-height-58">
+          Let's get to know
+          <span class="primary italic lora">each other </span>
+        </h2>
+        <p class="lato font-weight-400 font-16 gray-400 line-height-24">
+          Since 2016, Asia Agency, founded by Abu Sayeed, has been dedicated
+          to driving business growth through innovative digital solutions. We
+          focus on creating value and continuously evolving to help businesses
+          succeed in an ever-changing market.
+        </p>
+      </div>
+      <div class="team-card-section mt-80">
+        <div class="team-top-card">
+          <div class="team-card">
+            <picture>
+              <img src="/images/about-us/team-member-image-01.png" alt="team-img" />
+            </picture>
+            <div class="team-card-overlay overlay-team-red">
+              <div class="team-card-overlay-content">
+                <h5 class="plus-jakarta font-weight-700 font-28 white line-height-32">
+                  Abu Sayeed
+                </h5>
+                <h6 class="lato font-weight-400 font-16 white mt-8 line-height-24">
+                  Founder and Ceo
+                </h6>
+              </div>
+              <picture>
+                <img src="/images/icons/linkedin_icon.svg" alt="team-icon" class="team-icon" />
+              </picture>
+            </div>
+          </div>
+          <div class="team-card">
+            <picture>
+              <img src="/images/about-us/team-member-image-02.png" alt="team-img" />
+            </picture>
+            <div class="team-card-overlay overlay-team-purple">
+              <div class="team-card-overlay-content">
+                <h5 class="plus-jakarta font-weight-700 font-28 white line-height-32">
+                  Abu Sayeed
+                </h5>
+                <p class="lato font-weight-400 font-16 white line-height-24">
+                  Founder and Ceo
+                </p>
+              </div>
+              <picture>
+                <img src="/images/icons/linkedin_icon.svg" alt="team-icon" />
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="team-bottom-card">
+          <div class="team-card-2">
+            <picture>
+              <img src="/images/about-us/team-member-image-03.png" alt="team-img" />
+            </picture>
+            <div class="team-card-overlay overlay-team-orange">
+              <div class="team-card-overlay-content">
+                <h5 class="plus-jakarta font-weight-700 font-28 white line-height-32">
+                  Abu Sayeed
+                </h5>
+                <p class="lato font-weight-400 font-16 white line-height-24">
+                  Founder and Ceo
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="team-card-2">
+            <picture>
+              <img src="/images/about-us/team-member-image-04.png" alt="team-img" />
+            </picture>
+            <div class="team-card-overlay overlay-team-blue">
+              <div class="team-card-overlay-content">
+                <h5 class="plus-jakarta font-weight-700 font-28 white line-height-32">
+                  Abu Sayeed
+                </h5>
+                <p class="lato font-weight-400 font-16 white line-height-24">
+                  Founder and Ceo
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="team-card-2">
+            <picture>
+              <img src="/images/about-us/team-member-image-05.png" alt="team-img" />
+            </picture>
+            <div class="team-card-overlay overlay-team-green">
+              <div class="team-card-overlay-content">
+                <h5 class="plus-jakarta font-weight-700 font-28 white line-height-32">
+                  Abu Sayeed
+                </h5>
+                <p class="lato font-weight-400 font-16 white line-height-24">
+                  Founder and Ceo
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Hero Section end-->
+    </div>
+  </section>
+  <!-- team section end -->
 
-    <!-- Bannar section start -->
-    <section id="bannar">
-      <div class="container">
+  <!-- success section start -->
+  <section class="py-160">
+    <div class="container suscces-container">
+      <h2 class="main-heading Soft-Sky-Glow font-48 font-weight-700 plus-jakarta">
+        Turning ambitions into
+        <span class="primary italic lora">success stories </span>
+      </h2>
+      <div class="success-overlay pt-80">
+        <img src="/images/about-us/success-stories-image.png" alt="success" />
+        <div>
+          <div class="success-overlay-content">
+            <p class="lato font-weight-400 font-16 gray-400 pb-80 line-height-24">
+              Partnering with visionary businesses to transform ideas into
+              impactful success stories—driving growth, inspiring innovation,
+              and creating lasting value in a competitive world.
+            </p>
+            <div class="success-overlay-content-bottom">
+              <span class="plus-jakarta font-weight-600 primary line-height-76">12+</span>
+              <p class="lato font-weight-500 font-20 gray-400 line-height-26">
+                Researchers, Strategists, consultants, and digital marketers
+                working together to grow your business.
+              </p>
+            </div>
+          </div>
+          <div class="horizontal-separator"></div>
+          <div class="success-overlay-content">
+            <div class="success-overlay-content-bottom">
+              <span class="plus-jakarta font-weight-600 primary line-height-76">135+</span>
+              <p class="lato font-weight-500 font-20 gray-400 line-height-26">
+                Business online presence we've helped shape, optimize, and
+                launch since 2022.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- success section end -->
+
+  <!-- cta  section start -->
+  <section class="pb-160" id="home-cta">
+    <div class="container green-topleft-bottomright cta-contant">
+      <h3 class="font-48 plus-jakarta font-weight-700 white line-height-58">
+        Get a reliable partner that provides solutions to business challenges
+      </h3>
+      <div class="cta-btn">
+        <a href="#" class="cta-button gray-900 latoo font-weight-600 font-18 white">Hire consultant
+          <img src="/images/icons/Right_Icon.svg" alt="cta-icons" /></a>
+      </div>
+    </div>
+  </section>
+  <!-- cta  section end -->
+
+
+  <!-- why choose us section start -->
+  <section class="py-160" id="why-choose-us">
+    <div class="container why-choose-us-container">
+      <h2 class="main-heading Soft-Sky-Glow font-48 font-weight-700 plus-jakarta">
+        Why choose
+        <span class="primary italic lora">Asia Agency </span>
+      </h2>
+      <div class="columns pt-80">
+        <div class="column">
+          <span class="column_icon lato font-weight-500 font-18 white line-height-24">01</span>
+          <h3 class="plus-jakarta font-weight-600 font-24 white line-height-24">
+            Collaboration Is Key
+          </h3>
+          <p class="lato font-weight-400 font-18 gray-400 line-height-24">
+            We differentiate ourselves from large agencies where junior talent
+            typically handles most of the work, and interactions with design
+            leaders are limited.
+          </p>
+        </div>
+        <div class="column">
+          <div class="column_icon lato font-weight-500 font-18 white line-height-24">
+            02
+          </div>
+          <h3 class="plus-jakarta font-weight-600 font-24 white line-height-24">
+            Collaboration Is Key
+          </h3>
+          <p class="lato font-weight-400 font-18 gray-400 line-height-24">
+            At Asia agency, our co-founders lead dedicated, senior-level teams
+            with cross-disciplinary expertise to ensure project success,
+            ensure project success.
+          </p>
+        </div>
+        <div class="column">
+          <div class="column_icon lato font-weight-500 font-18 white line-height-24">
+            03
+          </div>
+          <h3 class="plus-jakarta font-weight-600 font-24 white line-height-24">
+            Collaboration Is Key
+          </h3>
+          <p class="lato font-weight-400 font-18 gray-400 line-height-24">
+            We differentiate ourselves from large agencies where junior talent
+            typically handles most of the work, and interactions with design
+            leaders are limited.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- why choose us section end -->
+
+  <!-- clients logo section start-->
+  <section id="clients" class="pb-80 pt-160">
+    <div class="logo-container" id="logoContainer">
+      <div class="logo">
+        <img src="/images/clients/logo-01.svg" alt="Attentive Logo" />
+      </div>
+
+      <div class="logo">
+        <img src="/images/clients/logo-02.svg" alt="Attentive Logo" />
+      </div>
+
+      <div class="logo">
+        <img src="/images/clients/logo-03.svg" alt="Attentive Logo" />
+      </div>
+      <div class="logo">
+        <img src="/images/clients/logo-01.svg" alt="Attentive Logo" />
+      </div>
+
+      <div class="logo">
+        <img src="/images/clients/logo-02.svg" alt="Attentive Logo" />
+      </div>
+
+      <div class="logo">
+        <img src="/images/clients/logo-03.svg" alt="Attentive Logo" />
+      </div>
+      <div class="logo">
+        <img src="/images/clients/logo-01.svg" alt="Attentive Logo" />
+      </div>
+
+      <div class="logo">
+        <img src="/images/clients/logo-02.svg" alt="Attentive Logo" />
+      </div>
+
+      <div class="logo">
+        <img src="/images/clients/logo-03.svg" alt="Attentive Logo" />
+      </div>
+      <div class="logo">
+        <img src="/images/clients/logo-01.svg" alt="Attentive Logo" />
+      </div>
+
+      <div class="logo">
+        <img src="/images/clients/logo-02.svg" alt="Attentive Logo" />
+      </div>
+
+      <div class="logo">
+        <img src="/images/clients/logo-03.svg" alt="Attentive Logo" />
+      </div>
+      <div class="logo">
+        <img src="/images/clients/logo-01.svg" alt="Attentive Logo" />
+      </div>
+
+      <div class="logo">
+        <img src="/images/clients/logo-02.svg" alt="Attentive Logo" />
+      </div>
+
+      <div class="logo">
+        <img src="/images/clients/logo-03.svg" alt="Attentive Logo" />
+      </div>
+      <div class="logo">
+        <img src="/images/clients/logo-01.svg" alt="Attentive Logo" />
+      </div>
+    </div>
+  </section>
+  <!-- clients logo section end-->
+
+  <!-- capability section start-->
+  <section id="capabilities" class="py-80">
+    <div class="container">
+      <h2 class="main-heading Soft-Sky-Glow font-48 font-weight-700 plus-jakarta">
+        Our core
+        <span class="primary italic lora">capabilities </span>
+      </h2>
+      <div class="pt-80 capabilities-container">
+        <div class="capability-dropdown">
+          <div class="capability-dropdown">
+            <div class="capability-dropdown-header">
+              <div class="plus-jakarta font-weight-600 font-32 white line-height-42">
+                Business Growth
+              </div>
+              <button class="white dropdownButton">
+                <img src="/images/about-us/icon/plus.svg" alt="minus-icon" />
+              </button>
+            </div>
+            <div class="dropdown-content pt-24 line-height-24">
+              <div class="list-item">
+                <span class="list"></span>
+                <p class="lato font-weight-500 font-18 gray-400">
+                  Tailored growth strategies
+                </p>
+              </div>
+              <div class="list-item">
+                <span class="list"></span>
+                <p class="lato font-weight-500 font-18 gray-400">
+                  Tailored growth strategies
+                </p>
+              </div>
+              <div class="list-item">
+                <span class="list"></span>
+                <p class="lato font-weight-500 font-18 gray-400">
+                  Tailored growth strategies
+                </p>
+              </div>
+              <div class="list-item pb-12">
+                <span class="list"></span>
+                <p class="lato font-weight-500 font-18 gray-400">
+                  Tailored growth strategies
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="horizontal-separator speretaor-mt-0 speretaor-mb-24"></div>
+          <div class="capability-dropdown">
+            <div class="capability-dropdown-header">
+              <div class="plus-jakarta font-weight-600 font-32 white line-height-42">
+                Digital Marketing
+              </div>
+              <button class="white dropdownButton font-48">
+                <img src="/images/about-us/icon/plus.svg" alt="minus-icon" />
+              </button>
+            </div>
+            <div class="dropdown-content pt-24 line-height-24">
+              <div class="list-item">
+                <span class="list"></span>
+                <p class="lato font-weight-500 font-18 gray-400">
+                  Tailored growth strategies
+                </p>
+              </div>
+              <div class="list-item">
+                <span class="list"></span>
+                <p class="lato font-weight-500 font-18 gray-400">
+                  Tailored growth strategies
+                </p>
+              </div>
+              <div class="list-item">
+                <span class="list"></span>
+                <p class="lato font-weight-500 font-18 gray-400">
+                  Tailored growth strategies
+                </p>
+              </div>
+              <div class="list-item">
+                <span class="list"></span>
+                <p class="lato font-weight-500 font-18 gray-400">
+                  Tailored growth strategies
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="horizontal-separator speretaor-mt-0 speretaor-mb-24"></div>
+          <div class="capability-dropdown">
+            <div class="capability-dropdown-header">
+              <div class="plus-jakarta font-weight-600 font-32 white line-height-42">
+                Performance Analytics
+              </div>
+              <button class="white dropdownButton">
+                <img src="/images/about-us/icon/plus.svg" alt="minus-icon" />
+              </button>
+            </div>
+            <div class="dropdown-content pt-24 line-height-24">
+              <div class="list-item">
+                <span class="list"></span>
+                <p class="lato font-weight-500 font-18 gray-400">
+                  Tailored growth strategies
+                </p>
+              </div>
+              <div class="list-item">
+                <span class="list"></span>
+                <p class="lato font-weight-500 font-18 gray-400">
+                  Tailored growth strategies
+                </p>
+              </div>
+              <div class="list-item">
+                <span class="list"></span>
+                <p class="lato font-weight-500 font-18 gray-400">
+                  Tailored growth strategies
+                </p>
+              </div>
+              <div class="list-item">
+                <span class="list"></span>
+                <p class="lato font-weight-500 font-18 gray-400">
+                  Tailored growth strategies
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="horizontal-separator speretaor-mt-0 speretaor-mb-24"></div>
+          <div class="capability-dropdown">
+            <div class="capability-dropdown-header">
+              <div class="plus-jakarta font-weight-600 font-32 white line-height-42">
+                Customer Engagement
+              </div>
+              <button class="white dropdownButton">
+                <img src="/images/about-us/icon/plus.svg" alt="minus-icon" />
+              </button>
+            </div>
+            <div class="dropdown-content pt-24 line-height-24">
+              <div class="list-item">
+                <span class="list"></span>
+                <p class="lato font-weight-500 font-18 gray-400">
+                  Customer Engagement
+                </p>
+              </div>
+              <div class="list-item">
+                <span class="list"></span>
+                <p class="lato font-weight-500 font-18 gray-400">
+                  Tailored growth strategies
+                </p>
+              </div>
+              <div class="list-item">
+                <span class="list"></span>
+                <p class="lato font-weight-500 font-18 gray-400">
+                  Tailored growth strategies
+                </p>
+              </div>
+              <div class="list-item">
+                <span class="list"></span>
+                <p class="lato font-weight-500 font-18 gray-400">
+                  Tailored growth strategies
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
         <picture>
-          <img src="images/about-us/hero-image.png" alt="vision-image" />
+          <img src="images/about-us/capabilities-image.png" alt="capability" />
         </picture>
       </div>
-    </section>
-    <!-- Bannar section end -->
+    </div>
+  </section>
+  <!-- capability section end-->
 
-    <!-- mission-vision section start -->
-    <section id="mission-vision">
-      <div class="container">
-        <div class="mission-vision-container">
-          <div class="mission-vision-content">
-            <button class="badge-button lato">
-              <img
-                src="/images/icons/about-us.png"
-                alt="about-us"
-                class="button-icon"
-              />
-              <span class="lato font-16 font-weight-400 white">Mission</span>
-            </button>
-            <h4
-              class="plus-jakarta font-weight-600 font-32 white line-height-42"
-            >
-              To empower businesses with innovative, customized strategies that
-              drive growth and transform them into industry leaders.
-            </h4>
-          </div>
-          <div class="vertical-separator"></div>
-          <div class="mission-vision-content">
-            <button class="badge-button lato">
-              <img
-                src="/images/icons/about-us.png"
-                alt="about-us"
-                class="button-icon"
-              />
-              <span class="lato font-16 font-weight-400 white"> Vision </span>
-            </button>
-            <h4
-              class="plus-jakarta font-weight-600 font-32 white line-height-42"
-            >
-              To revolutionize business growth through creativity, technology,
-              and expertise, helping companies thrive in the digital age.
-            </h4>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- mission-vision section end -->
-
-    <!-- team section start -->
-    <section id="team-section" class="py-80">
-      <div class="container">
-        <div class="team-content">
-          <h2
-            class="main-heading Soft-Sky-Glow font-48 font-weight-700 plus-jakarta line-height-58"
-          >
-            Let's get to know
-            <span class="primary italic lora">each other </span>
+  <!-- cta section start-->
+  <section class="trial-section pt-80">
+    <div class="container trail-section-container">
+      <!-- Left Side: Headline & CTA -->
+      <div class="trial-section-container">
+        <div class="trial-content">
+          <h2 class="trial-title plus-jakarta font-56 white line-height-68">
+            Start with a free <br /><span class="highlight">7–days trial</span>
           </h2>
-          <p class="lato font-weight-400 font-16 gray-400 line-height-24">
-            Since 2016, Asia Agency, founded by Abu Sayeed, has been dedicated
-            to driving business growth through innovative digital solutions. We
-            focus on creating value and continuously evolving to help businesses
-            succeed in an ever-changing market.
-          </p>
-        </div>
-        <div class="team-card-section mt-80">
-          <div class="team-top-card">
-            <div class="team-card">
-              <picture>
-                <img
-                  src="/images/about-us/team-member-image-01.png"
-                  alt="team-img"
-                />
-              </picture>
-              <div class="team-card-overlay overlay-team-red">
-                <div class="team-card-overlay-content">
-                  <h5
-                    class="plus-jakarta font-weight-700 font-28 white line-height-32"
-                  >
-                    Abu Sayeed
-                  </h5>
-                  <h6
-                    class="lato font-weight-400 font-16 white mt-8 line-height-24"
-                  >
-                    Founder and Ceo
-                  </h6>
-                </div>
-                <picture>
-                  <img
-                    src="/images/icons/linkedin_icon.svg"
-                    alt="team-icon"
-                    class="team-icon"
-                  />
-                </picture>
-              </div>
-            </div>
-            <div class="team-card">
-              <picture>
-                <img
-                  src="/images/about-us/team-member-image-02.png"
-                  alt="team-img"
-                />
-              </picture>
-              <div class="team-card-overlay overlay-team-purple">
-                <div class="team-card-overlay-content">
-                  <h5
-                    class="plus-jakarta font-weight-700 font-28 white line-height-32"
-                  >
-                    Abu Sayeed
-                  </h5>
-                  <p class="lato font-weight-400 font-16 white line-height-24">
-                    Founder and Ceo
-                  </p>
-                </div>
-                <picture>
-                  <img src="/images/icons/linkedin_icon.svg" alt="team-icon" />
-                </picture>
-              </div>
-            </div>
-          </div>
-          <div class="team-bottom-card">
-            <div class="team-card-2">
-              <picture>
-                <img
-                  src="/images/about-us/team-member-image-03.png"
-                  alt="team-img"
-                />
-              </picture>
-              <div class="team-card-overlay overlay-team-orange">
-                <div class="team-card-overlay-content">
-                  <h5
-                    class="plus-jakarta font-weight-700 font-28 white line-height-32"
-                  >
-                    Abu Sayeed
-                  </h5>
-                  <p class="lato font-weight-400 font-16 white line-height-24">
-                    Founder and Ceo
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="team-card-2">
-              <picture>
-                <img
-                  src="/images/about-us/team-member-image-04.png"
-                  alt="team-img"
-                />
-              </picture>
-              <div class="team-card-overlay overlay-team-blue">
-                <div class="team-card-overlay-content">
-                  <h5
-                    class="plus-jakarta font-weight-700 font-28 white line-height-32"
-                  >
-                    Abu Sayeed
-                  </h5>
-                  <p class="lato font-weight-400 font-16 white line-height-24">
-                    Founder and Ceo
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="team-card-2">
-              <picture>
-                <img
-                  src="/images/about-us/team-member-image-05.png"
-                  alt="team-img"
-                />
-              </picture>
-              <div class="team-card-overlay overlay-team-green">
-                <div class="team-card-overlay-content">
-                  <h5
-                    class="plus-jakarta font-weight-700 font-28 white line-height-32"
-                  >
-                    Abu Sayeed
-                  </h5>
-                  <p class="lato font-weight-400 font-16 white line-height-24">
-                    Founder and Ceo
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- team section end -->
-
-    <!-- success section start -->
-    <section class="py-160">
-      <div class="container suscces-container">
-        <h2
-          class="main-heading Soft-Sky-Glow font-48 font-weight-700 plus-jakarta"
-        >
-          Turning ambitions into
-          <span class="primary italic lora">success stories </span>
-        </h2>
-        <div class="success-overlay pt-80">
-          <img src="/images/about-us/success-stories-image.png" alt="success" />
-          <div>
-            <div class="success-overlay-content">
-              <p
-                class="lato font-weight-400 font-16 gray-400 pb-80 line-height-24"
-              >
-                Partnering with visionary businesses to transform ideas into
-                impactful success stories—driving growth, inspiring innovation,
-                and creating lasting value in a competitive world.
-              </p>
-              <div class="success-overlay-content-bottom">
-                <span
-                  class="plus-jakarta font-weight-600 primary line-height-76"
-                  >12+</span
-                >
-                <p class="lato font-weight-500 font-20 gray-400 line-height-26">
-                  Researchers, Strategists, consultants, and digital marketers
-                  working together to grow your business.
-                </p>
-              </div>
-            </div>
-            <div class="horizontal-separator"></div>
-            <div class="success-overlay-content">
-              <div class="success-overlay-content-bottom">
-                <span
-                  class="plus-jakarta font-weight-600 primary line-height-76"
-                  >135+</span
-                >
-                <p class="lato font-weight-500 font-20 gray-400 line-height-26">
-                  Business online presence we've helped shape, optimize, and
-                  launch since 2022.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- success section end -->
-
-    <!-- cta  section start -->
-    <section class="cta-section" id="home-cta">
-      <div class="container green-topleft-bottomright cta-contant">
-        <h3 class="font-48 plus-jakarta font-weight-700 white line-height-58">
-          Get a reliable partner that provides solutions to business challenges
-        </h3>
-        <div class="cta-btn">
-          <a
-            href="#"
-            class="cta-button gray-900 lato font-weight-600 font-18 line-height-24"
-            >Hire consultant
-            <img src="/images/icons/Right_Icon.svg" alt="cta-icons"
-          /></a>
-        </div>
-      </div>
-    </section>
-    <!-- cta  section end -->
-
-    <!-- why choose us section start -->
-    <section class="py-160" id="why-choose-us">
-      <div class="container why-choose-us-container">
-        <h2
-          class="main-heading Soft-Sky-Glow font-48 font-weight-700 plus-jakarta"
-        >
-          Why choose
-          <span class="primary italic lora">Asia Agency </span>
-        </h2>
-        <div class="columns pt-80">
-          <div class="column">
-            <span
-              class="column_icon lato font-weight-500 font-18 white line-height-24"
-              >01</span
-            >
-            <h3
-              class="plus-jakarta font-weight-600 font-24 white line-height-24"
-            >
-              Collaboration Is Key
-            </h3>
-            <p class="lato font-weight-400 font-18 gray-400 line-height-24">
-              We differentiate ourselves from large agencies where junior talent
-              typically handles most of the work, and interactions with design
-              leaders are limited.
-            </p>
-          </div>
-          <div class="column">
-            <div
-              class="column_icon lato font-weight-500 font-18 white line-height-24"
-            >
-              02
-            </div>
-            <h3
-              class="plus-jakarta font-weight-600 font-24 white line-height-24"
-            >
-              Collaboration Is Key
-            </h3>
-            <p class="lato font-weight-400 font-18 gray-400 line-height-24">
-              At Asia agency, our co-founders lead dedicated, senior-level teams
-              with cross-disciplinary expertise to ensure project success,
-              ensure project success.
-            </p>
-          </div>
-          <div class="column">
-            <div
-              class="column_icon lato font-weight-500 font-18 white line-height-24"
-            >
-              03
-            </div>
-            <h3
-              class="plus-jakarta font-weight-600 font-24 white line-height-24"
-            >
-              Collaboration Is Key
-            </h3>
-            <p class="lato font-weight-400 font-18 gray-400 line-height-24">
-              We differentiate ourselves from large agencies where junior talent
-              typically handles most of the work, and interactions with design
-              leaders are limited.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- why choose us section end -->
-
-    <!-- clients logo section start-->
-    <section id="clients" class="pb-80 pt-160">
-      <div class="logo-container" id="logoContainer">
-        <div class="logo">
-          <img src="/images/clients/logo-01.svg" alt="Attentive Logo" />
-        </div>
-
-        <div class="logo">
-          <img src="/images/clients/logo-02.svg" alt="Attentive Logo" />
-        </div>
-
-        <div class="logo">
-          <img src="/images/clients/logo-03.svg" alt="Attentive Logo" />
-        </div>
-        <div class="logo">
-          <img src="/images/clients/logo-01.svg" alt="Attentive Logo" />
-        </div>
-
-        <div class="logo">
-          <img src="/images/clients/logo-02.svg" alt="Attentive Logo" />
-        </div>
-
-        <div class="logo">
-          <img src="/images/clients/logo-03.svg" alt="Attentive Logo" />
-        </div>
-        <div class="logo">
-          <img src="/images/clients/logo-01.svg" alt="Attentive Logo" />
-        </div>
-
-        <div class="logo">
-          <img src="/images/clients/logo-02.svg" alt="Attentive Logo" />
-        </div>
-
-        <div class="logo">
-          <img src="/images/clients/logo-03.svg" alt="Attentive Logo" />
-        </div>
-        <div class="logo">
-          <img src="/images/clients/logo-01.svg" alt="Attentive Logo" />
-        </div>
-
-        <div class="logo">
-          <img src="/images/clients/logo-02.svg" alt="Attentive Logo" />
-        </div>
-
-        <div class="logo">
-          <img src="/images/clients/logo-03.svg" alt="Attentive Logo" />
-        </div>
-        <div class="logo">
-          <img src="/images/clients/logo-01.svg" alt="Attentive Logo" />
-        </div>
-
-        <div class="logo">
-          <img src="/images/clients/logo-02.svg" alt="Attentive Logo" />
-        </div>
-
-        <div class="logo">
-          <img src="/images/clients/logo-03.svg" alt="Attentive Logo" />
-        </div>
-        <div class="logo">
-          <img src="/images/clients/logo-01.svg" alt="Attentive Logo" />
-        </div>
-      </div>
-    </section>
-    <!-- clients logo section end-->
-
-    <!-- capability section start-->
-    <section id="capabilities" class="py-80">
-      <div class="container">
-        <h2
-          class="main-heading Soft-Sky-Glow font-48 font-weight-700 plus-jakarta"
-        >
-          Our core
-          <span class="primary italic lora">capabilities </span>
-        </h2>
-        <div class="pt-80 capabilities-container">
-          <div class="capability-dropdown">
-            <div class="capability-dropdown">
-              <div class="capability-dropdown-header">
-                <div
-                  class="plus-jakarta font-weight-600 font-32 white line-height-42"
-                >
-                  Business Growth
-                </div>
-                <button class="white dropdownButton">
-                  <img src="/images/about-us/icon/plus.svg" alt="minus-icon" />
-                </button>
-              </div>
-              <div class="dropdown-content pt-24 line-height-24">
-                <div class="list-item">
-                  <span class="list"></span>
-                  <p class="lato font-weight-500 font-18 gray-400">
-                    Tailored growth strategies
-                  </p>
-                </div>
-                <div class="list-item">
-                  <span class="list"></span>
-                  <p class="lato font-weight-500 font-18 gray-400">
-                    Tailored growth strategies
-                  </p>
-                </div>
-                <div class="list-item">
-                  <span class="list"></span>
-                  <p class="lato font-weight-500 font-18 gray-400">
-                    Tailored growth strategies
-                  </p>
-                </div>
-                <div class="list-item pb-12">
-                  <span class="list"></span>
-                  <p class="lato font-weight-500 font-18 gray-400">
-                    Tailored growth strategies
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="horizontal-separator speretaor-mt-0 speretaor-mb-24"
-            ></div>
-            <div class="capability-dropdown">
-              <div class="capability-dropdown-header">
-                <div
-                  class="plus-jakarta font-weight-600 font-32 white line-height-42"
-                >
-                  Digital Marketing
-                </div>
-                <button class="white dropdownButton font-48">
-                  <img src="/images/about-us/icon/plus.svg" alt="minus-icon" />
-                </button>
-              </div>
-              <div class="dropdown-content pt-24 line-height-24">
-                <div class="list-item">
-                  <span class="list"></span>
-                  <p class="lato font-weight-500 font-18 gray-400">
-                    Tailored growth strategies
-                  </p>
-                </div>
-                <div class="list-item">
-                  <span class="list"></span>
-                  <p class="lato font-weight-500 font-18 gray-400">
-                    Tailored growth strategies
-                  </p>
-                </div>
-                <div class="list-item">
-                  <span class="list"></span>
-                  <p class="lato font-weight-500 font-18 gray-400">
-                    Tailored growth strategies
-                  </p>
-                </div>
-                <div class="list-item">
-                  <span class="list"></span>
-                  <p class="lato font-weight-500 font-18 gray-400">
-                    Tailored growth strategies
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="horizontal-separator speretaor-mt-0 speretaor-mb-24"
-            ></div>
-            <div class="capability-dropdown">
-              <div class="capability-dropdown-header">
-                <div
-                  class="plus-jakarta font-weight-600 font-32 white line-height-42"
-                >
-                  Performance Analytics
-                </div>
-                <button class="white dropdownButton">
-                  <img src="/images/about-us/icon/plus.svg" alt="minus-icon" />
-                </button>
-              </div>
-              <div class="dropdown-content pt-24 line-height-24">
-                <div class="list-item">
-                  <span class="list"></span>
-                  <p class="lato font-weight-500 font-18 gray-400">
-                    Tailored growth strategies
-                  </p>
-                </div>
-                <div class="list-item">
-                  <span class="list"></span>
-                  <p class="lato font-weight-500 font-18 gray-400">
-                    Tailored growth strategies
-                  </p>
-                </div>
-                <div class="list-item">
-                  <span class="list"></span>
-                  <p class="lato font-weight-500 font-18 gray-400">
-                    Tailored growth strategies
-                  </p>
-                </div>
-                <div class="list-item">
-                  <span class="list"></span>
-                  <p class="lato font-weight-500 font-18 gray-400">
-                    Tailored growth strategies
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="horizontal-separator speretaor-mt-0 speretaor-mb-24"
-            ></div>
-            <div class="capability-dropdown">
-              <div class="capability-dropdown-header">
-                <div
-                  class="plus-jakarta font-weight-600 font-32 white line-height-42"
-                >
-                  Customer Engagement
-                </div>
-                <button class="white dropdownButton">
-                  <img src="/images/about-us/icon/plus.svg" alt="minus-icon" />
-                </button>
-              </div>
-              <div class="dropdown-content pt-24 line-height-24">
-                <div class="list-item">
-                  <span class="list"></span>
-                  <p class="lato font-weight-500 font-18 gray-400">
-                    Customer Engagement
-                  </p>
-                </div>
-                <div class="list-item">
-                  <span class="list"></span>
-                  <p class="lato font-weight-500 font-18 gray-400">
-                    Tailored growth strategies
-                  </p>
-                </div>
-                <div class="list-item">
-                  <span class="list"></span>
-                  <p class="lato font-weight-500 font-18 gray-400">
-                    Tailored growth strategies
-                  </p>
-                </div>
-                <div class="list-item">
-                  <span class="list"></span>
-                  <p class="lato font-weight-500 font-18 gray-400">
-                    Tailored growth strategies
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <picture>
-            <img
-              src="images/about-us/capabilities-image.png"
-              alt="capability"
-            />
-          </picture>
-        </div>
-      </div>
-    </section>
-    <!-- capability section end-->
-
-    <!-- cta section start-->
-    <section class="trial-section pt-80">
-      <div class="container trail-section-container">
-        <!-- Left Side: Headline & CTA -->
-        <div class="trial-section-container">
-          <div class="trial-content">
-            <h2
-              class="trial-title plus-jakarta font-weight-700 font-56 white line-height-68"
-            >
-              Start with a free <br /><span class="highlight"
-                >7–days trial</span
-              >
-            </h2>
-            <a
-              class="white-bg-btn lato font-weight-600 font-16 gray-900 line-height-24"
-              href="#"
-            >
-              <div class="lato font-weight-600 font-18 gray-900">
-                Start a free trial
-              </div>
-
-              <img
-                class="white-bg-btn-arrow"
-                src="/images/icons/Right_Icon.svg"
-                alt=""
-              />
-            </a>
-          </div>
-
-          <!-- Right Side: Info Box -->
-          <div class="trial-info-box line-height-24">
-            <p class="trial-description lato font-weight-400 font-16 white">
-              Guiding Your Journey to Success – A Proven Four-Step Process to
-              Drive Growth and Deliver Lasting Impact
-            </p>
-            <div class="trial-tags lato">
-              <span class="tag white">startup</span>
-              <span class="tag white">agencies</span>
-              <span class="tag white">existing company</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Steps Section -->
-        <div class="trial-steps pt-16">
-          <div class="step">
-            <span
-              class="step-number lato font-weight-500 font-16 bg-primary line-height-24"
-              >01</span
-            >
-            <p
-              class="step-title plus-jakarta font-weight-600 font-24 white line-height-30"
-            >
-              Discovery call
-            </p>
-          </div>
-          <div class="step">
-            <span
-              class="step-number lato font-weight-500 font-16 bg-primary line-height-24"
-              >02</span
-            >
-            <p
-              class="step-title plus-jakarta font-weight-600 font-24 white line-height-30"
-            >
-              Strategy
-            </p>
-          </div>
-          <div class="step">
-            <span
-              class="step-number lato font-weight-500 font-16 bg-primary line-height-24"
-              >03</span
-            >
-            <p
-              class="step-title plus-jakarta font-weight-600 font-24 white line-height-30"
-            >
-              Execution
-            </p>
-          </div>
-          <div class="step">
-            <span
-              class="step-number lato font-weight-500 font-16 bg-primary line-height-24"
-              >04</span
-            >
-            <p
-              class="step-title plus-jakarta font-weight-600 font-24 white line-height-30"
-            >
-              Review
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- cta section end-->
-
-    <!-- testimonial section start -->
-    <section class="about-us-slider pt-80 pb-160" id="projects">
-      <div class="container">
-        <div class="testimonial-tittle pt-80">
-          <h3
-            class="main-heading Soft-Sky-Glow font-48 font-weight-700 plus-jakarta"
-          >
-            <span class="primary italic lora">Our partners </span>
-            find nemeous reasions to love us
-          </h3>
-        </div>
-        <div class="pt-80">
-          <div class="slider-container">
-            <div class="slider">
-              <!-- Card 1 -->
-              <div class="card testimonial-card">
-                <div class="profile">
-                  <div class="profile-image">
-                    <div class="icon">
-                      <img
-                        src="/images/icons/sourcetree.svg"
-                        alt="sourcetree"
-                      />
-                    </div>
-                    <img
-                      src="images/about-us/client-image.png"
-                      alt="Erfan Hossain"
-                    />
-                  </div>
-                  <div class="profile-info">
-                    <h3 class="lato font-weight-600 font-18 white pt-16">
-                      Erfan Hossain
-                    </h3>
-                    <p class="lato gray-400 font-16 gray-400">
-                      Co founder at Bingo
-                    </p>
-                  </div>
-
-                  <div class="rating">
-                    <img
-                      class="rating-img"
-                      src="images/icons/vector-group.svg"
-                      alt="C Logo"
-                    />
-                    <span class="stars">
-                      <img src="/images/icons/star-solid.svg" alt="stars" />
-                      <img src="/images/icons/star-solid.svg" alt="stars" />
-                      <img src="/images/icons/star-solid.svg" alt="stars" />
-                      <img src="/images/icons/star-solid.svg" alt="stars" />
-                      <img src="/images/icons/star-solid.svg" alt="stars" />
-                    </span>
-                    <span
-                      class="rating-value lato font-weight-400 font-16 white"
-                      >5.0</span
-                    >
-                  </div>
-                </div>
-                <p class="testimonial-text lato font-weight-500 font-20 white">
-                  Asia Agency’s data-driven strategies have completely
-                  transformed our business approach. They don’t just deliver
-                  campaigns; they create comprehensive growth plans that help us
-                  connect with customers in meaningful ways.
-                </p>
-              </div>
-              <!-- Card 2 -->
-              <div class="card testimonial-card">
-                <div class="profile">
-                  <div class="profile-image">
-                    <div class="icon">
-                      <img
-                        src="/images/icons/sourcetree.svg"
-                        alt="sourcetree"
-                      />
-                    </div>
-                    <img
-                      src="images/about-us/client-image.png"
-                      alt="Erfan Hossain"
-                    />
-                  </div>
-                  <div class="profile-info">
-                    <h3 class="lato font-weight-600 font-18 white pt-16">
-                      Erfan Hossain
-                    </h3>
-                    <p class="lato gray-400 font-16 gray-400">
-                      Co founder at Bingo
-                    </p>
-                  </div>
-
-                  <div class="rating">
-                    <img
-                      class="rating-img"
-                      src="images/icons/vector-group.svg"
-                      alt="C Logo"
-                    />
-                    <span class="stars">
-                      <img src="/images/icons/star-solid.svg" alt="stars" />
-                      <img src="/images/icons/star-solid.svg" alt="stars" />
-                      <img src="/images/icons/star-solid.svg" alt="stars" />
-                      <img src="/images/icons/star-solid.svg" alt="stars" />
-                      <img src="/images/icons/star-solid.svg" alt="stars" />
-                    </span>
-                    <span
-                      class="rating-value lato font-weight-400 font-16 white"
-                      >5.0</span
-                    >
-                  </div>
-                </div>
-                <p class="testimonial-text lato font-weight-500 font-20 white">
-                  Asia Agency’s data-driven strategies have completely
-                  transformed our business approach. They don’t just deliver
-                  campaigns; they create comprehensive growth plans that help us
-                  connect with customers in meaningful ways.
-                </p>
-              </div>
-              <!-- Card 3 -->
-              <div class="card testimonial-card">
-                <div class="profile">
-                  <div class="profile-image">
-                    <div class="icon">
-                      <img
-                        src="/images/icons/sourcetree.svg"
-                        alt="sourcetree"
-                      />
-                    </div>
-                    <img
-                      src="images/about-us/client-image.png"
-                      alt="Erfan Hossain"
-                    />
-                  </div>
-                  <div class="profile-info">
-                    <h3 class="lato font-weight-600 font-18 white pt-16">
-                      Erfan Hossain
-                    </h3>
-                    <p class="lato gray-400 font-16 gray-400">
-                      Co founder at Bingo
-                    </p>
-                  </div>
-
-                  <div class="rating">
-                    <img
-                      class="rating-img"
-                      src="images/icons/vector-group.svg"
-                      alt="C Logo"
-                    />
-                    <span class="stars">
-                      <img src="/images/icons/star-solid.svg" alt="stars" />
-                      <img src="/images/icons/star-solid.svg" alt="stars" />
-                      <img src="/images/icons/star-solid.svg" alt="stars" />
-                      <img src="/images/icons/star-solid.svg" alt="stars" />
-                      <img src="/images/icons/star-solid.svg" alt="stars" />
-                    </span>
-                    <span
-                      class="rating-value lato font-weight-400 font-16 white"
-                      >5.0</span
-                    >
-                  </div>
-                </div>
-                <p class="testimonial-text lato font-weight-500 font-20 white">
-                  Asia Agency’s data-driven strategies have completely
-                  transformed our business approach. They don’t just deliver
-                  campaigns; they create comprehensive growth plans that help us
-                  connect with customers in meaningful ways.
-                </p>
-              </div>
-              <!-- Card 4 -->
-              <div class="card testimonial-card">
-                <div class="profile">
-                  <div class="profile-image">
-                    <div class="icon">
-                      <img
-                        src="/images/icons/sourcetree.svg"
-                        alt="sourcetree"
-                      />
-                    </div>
-                    <img
-                      src="images/about-us/client-image.png"
-                      alt="Erfan Hossain"
-                    />
-                  </div>
-                  <div class="profile-info">
-                    <h3 class="lato font-weight-600 font-18 white pt-16">
-                      Erfan Hossain
-                    </h3>
-                    <p class="lato gray-400 font-16 gray-400">
-                      Co founder at Bingo
-                    </p>
-                  </div>
-
-                  <div class="rating">
-                    <img
-                      class="rating-img"
-                      src="images/icons/vector-group.svg"
-                      alt="C Logo"
-                    />
-                    <span class="stars">
-                      <img src="/images/icons/star-solid.svg" alt="stars" />
-                      <img src="/images/icons/star-solid.svg" alt="stars" />
-                      <img src="/images/icons/star-solid.svg" alt="stars" />
-                      <img src="/images/icons/star-solid.svg" alt="stars" />
-                      <img src="/images/icons/star-solid.svg" alt="stars" />
-                    </span>
-                    <span
-                      class="rating-value lato font-weight-400 font-16 white"
-                      >5.0</span
-                    >
-                  </div>
-                </div>
-                <p class="testimonial-text lato font-weight-500 font-20 white">
-                  Asia Agency’s data-driven strategies have completely
-                  transformed our business approach. They don’t just deliver
-                  campaigns; they create comprehensive growth plans that help us
-                  connect with customers in meaningful ways.
-                </p>
-              </div>
-            </div>
-            <div class="slider-controls pt-32">
-              <div class="slider-buttons">
-                <button class="prev-button">
-                  <span class="prev-arrow"></span>
-                </button>
-                <button class="next-button">
-                  <span class="next-arrow"></span>
-                </button>
-              </div>
-              <div class="progress-bar">
-                <div class="progress"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- testimonial section end -->
-
-    <!-- footer section start -->
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <h3 class="plus-jakarta font-weight-700 font-48 white line-height-58">
-            3-day FREE trial to get to know us
-          </h3>
-          <p class="lato font-weight-400 font-16 white pt-16 line-height-24">
-            we offer you a three dasy trail to reduce risk and check our
-            compatibility. you can decide whether you are ready to move forward
-            with us
-          </p>
-          <div class="footer-content-button pt-32">
-            <a
-              href="#"
-              class="lato font-16 font-weight-600 gray-900 line-height-24"
-            >
+          <a class="white-bg-btn lato font-weight-600 font-16 gray-900 line-height-24" href="#">
+            <div class="lato font-weight-600 font-18 gray-900">
               Start a free trial
-              <img src="/images/icons/Right_Icon.svg" alt="right icon" />
-            </a>
-          </div>
+            </div>
+
+            <img class="white-bg-btn-arrow" src="/images/icons/Right_Icon.svg" alt="" />
+          </a>
         </div>
-        <div class="footer-content-nav">
-          <div class="footer-content-nav-1">
-            <div class="footer-logo">
-              <img src="/images/logo.svg" alt="footer logo" />
-              <span class="lato font-weight-700 font-26 white line-height-36"
-                >Asia.Agency</span
-              >
-            </div>
-            <h4 class="lato font-weight-700 font-20 white pt-32 line-height-26">
-              Subscribe
-            </h4>
-            <p class="lato font-weight-400 font-16 gray-500 line-height-24">
-              join our newsteller to get the latest article and updates
-            </p>
 
-            <div class="footer-content-nav-1-input">
-              <form action="" class="footer-content-nav-1-input-email">
-                <div class="footer-content-nav-1-input-email">
-                  <img src="images/icons/envelope-regular.svg" alt="envelope" />
-                  <input type="email" placeholder="Enter your email" />
-                </div>
-                <button
-                  type="submit"
-                  class="lato font-weight-600 font-18 gray-900"
-                >
-                  Subcribe
-                </button>
-              </form>
-            </div>
-          </div>
-          <div class="footer-content-nav-2 line-height-24">
-            <div class="footer-content-nav-list">
-              <h2 class="lato font-weight-600 font-18 gray-300">Services</h2>
-              <ul class="pt-12">
-                <li><a href="#">Digital marketig</a></li>
-                <li><a href="#">Business consultant</a></li>
-                <li><a href="#">Business consultant</a></li>
-                <li><a href="#">Business consultant</a></li>
-                <li><a href="#">Business consultant</a></li>
-              </ul>
-            </div>
-            <div class="footer-content-nav-list">
-              <h2 class="lato font-weight-600 font-18 gray-300">Quick Link</h2>
-              <ul class="pt-12">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/index.html">About</a></li>
-                <li><a href="/index.html">Contact us</a></li>
-                <li><a href="/index.html">Blog</a></li>
-                <li><a href="/index.html">Career</a></li>
-              </ul>
-            </div>
-            <div class="footer-content-nav-list">
-              <h2 class="lato font-weight-600 font-18 gray-300">Review</h2>
-              <ul class="pt-12">
-                <li>Clutch</li>
-                <li>Trustpilot</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="speretaor"></div>
-
-        <div class="footer-content-nav-bottom">
-          <span class="lato font-weight-400 font-16 gray-500"
-            >&copy; 2025-2028 Asia.Agency</span
-          >
-          <div class="footer-content-nav-social">
-            <a href="#">
-              <img
-                src="/images/icons/x-twitter-brands-solid.svg"
-                alt="twitter"
-              />
-            </a>
-
-            <a href="#">
-              <img
-                src="/images/icons/linkedin-brands-solid.svg"
-                alt="linkedin"
-              />
-            </a>
-            <a href="#">
-              <img
-                src="/images/icons/facebook-brands-solid.svg"
-                alt="facebook"
-              />
-            </a>
-            <a href="#">
-              <img
-                src="/images/icons/instagram-brands-solid.svg"
-                alt="instagram"
-              />
-            </a>
-            <a href="#">
-              <img src="/images/icons/tiktok-brands-solid.svg" alt="tiktok" />
-            </a>
+        <!-- Right Side: Info Box -->
+        <div class="trial-info-box line-height-24">
+          <p class="trial-description lato font-weight-400 font-16 white">
+            Guiding Your Journey to Success – A Proven Four-Step Process to
+            Drive Growth and Deliver Lasting Impact
+          </p>
+          <div class="trial-tags lato">
+            <span class="tag white">startup</span>
+            <span class="tag white">agencies</span>
+            <span class="tag white">existing company</span>
           </div>
         </div>
       </div>
-    </footer>
-    <!-- footer section end -->
 
-    <script src="/js/about-us.js"></script>
-    <script src="/js/comon.js"></script>
-  </body>
+      <!-- Steps Section -->
+      <div class="trial-steps pt-16">
+        <div class="step">
+          <span class="step-number lato font-weight-500 font-16 bg-primary line-height-24">01</span>
+          <p class="step-title plus-jakarta font-weight-600 font-24 white line-height-30">
+            Discovery call
+          </p>
+        </div>
+        <div class="step">
+          <span class="step-number lato font-weight-500 font-16 bg-primary line-height-24">02</span>
+          <p class="step-title plus-jakarta font-weight-600 font-24 white line-height-30">
+            Strategy
+          </p>
+        </div>
+        <div class="step">
+          <span class="step-number lato font-weight-500 font-16 bg-primary line-height-24">03</span>
+          <p class="step-title plus-jakarta font-weight-600 font-24 white line-height-30">
+            Execution
+          </p>
+        </div>
+        <div class="step">
+          <span class="step-number lato font-weight-500 font-16 bg-primary line-height-24">04</span>
+          <p class="step-title plus-jakarta font-weight-600 font-24 white line-height-30">
+            Review
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- cta section end-->
+
+  <!-- testimonial section start -->
+  <section class="py-80" id="projects">
+    <div class="container">
+      <div class="testimonial-tittle pt-80">
+        <h3 class="main-heading Soft-Sky-Glow font-48 font-weight-700 plus-jakarta">
+          <span class="primary italic lora">Our partners </span>
+          find nemeous reasions to love us
+        </h3>
+      </div>
+      <div class="pt-80">
+        <div class="slider-container">
+          <div class="slider">
+            <!-- Card 1 -->
+            <div class="card testimonial-card">
+              <div class="testimonial-wrapper">
+                <div class="profile">
+                  <div class="profile-image">
+                    <div class="icon">
+                      <img src="/images/icons/sourcetree.svg" alt="sourcetree" />
+                    </div>
+                    <img
+                      src="https://images.pexels.com/photos/634021/pexels-photo-634021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="Erfan Hossain" />
+                  </div>
+                  <div class="profile-info">
+                    <h3 class="lato font-weight-600 font-18 white pt-16">
+                      Erfan Hossain
+                    </h3>
+                    <p class="lato gray-400 font-16 gray-400">
+                      Co founder at Bingo
+                    </p>
+                  </div>
+
+                  <div class="rating">
+                    <img class="rating-img" src="images/icons/vector-group.svg" alt="C Logo" />
+                    <span class="stars">
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                    </span>
+                    <span class="rating-value lato font-weight-400 font-16 white">5.0</span>
+                  </div>
+                </div>
+                <p class="testimonial-text lato font-weight-500 font-20 white">
+                  Asia Agency’s data-driven strategies have completely
+                  transformed our business approach. They don’t just deliver
+                  campaigns; they create comprehensive growth plans that help us
+                  connect with customers in meaningful ways.
+                </p>
+              </div>
+            </div>
+            <!-- Card 1 -->
+            <div class="card testimonial-card">
+              <div class="testimonial-wrapper">
+                <div class="profile">
+                  <div class="profile-image">
+                    <div class="icon">
+                      <img src="/images/icons/sourcetree.svg" alt="sourcetree" />
+                    </div>
+                    <img
+                      src="https://images.pexels.com/photos/634021/pexels-photo-634021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="Erfan Hossain" />
+                  </div>
+                  <div class="profile-info">
+                    <h3 class="lato font-weight-600 font-18 white pt-16">
+                      Erfan Hossain
+                    </h3>
+                    <p class="lato gray-400 font-16 gray-400">
+                      Co founder at Bingo
+                    </p>
+                  </div>
+
+                  <div class="rating">
+                    <img class="rating-img" src="images/icons/vector-group.svg" alt="C Logo" />
+                    <span class="stars">
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                    </span>
+                    <span class="rating-value lato font-weight-400 font-16 white">5.0</span>
+                  </div>
+                </div>
+                <p class="testimonial-text lato font-weight-500 font-20 white">
+                  Asia Agency’s data-driven strategies have completely
+                  transformed our business approach. They don’t just deliver
+                  campaigns; they create comprehensive growth plans that help us
+                  connect with customers in meaningful ways.
+                </p>
+              </div>
+            </div>
+            <!-- Card 1 -->
+            <div class="card testimonial-card">
+              <div class="testimonial-wrapper">
+                <div class="profile">
+                  <div class="profile-image">
+                    <div class="icon">
+                      <img src="/images/icons/sourcetree.svg" alt="sourcetree" />
+                    </div>
+                    <img
+                      src="https://images.pexels.com/photos/634021/pexels-photo-634021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="Erfan Hossain" />
+                  </div>
+                  <div class="profile-info">
+                    <h3 class="lato font-weight-600 font-18 white pt-16">
+                      Erfan Hossain
+                    </h3>
+                    <p class="lato gray-400 font-16 gray-400">
+                      Co founder at Bingo
+                    </p>
+                  </div>
+
+                  <div class="rating">
+                    <img class="rating-img" src="images/icons/vector-group.svg" alt="C Logo" />
+                    <span class="stars">
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                    </span>
+                    <span class="rating-value lato font-weight-400 font-16 white">5.0</span>
+                  </div>
+                </div>
+                <p class="testimonial-text lato font-weight-500 font-20 white">
+                  Asia Agency’s data-driven strategies have completely
+                  transformed our business approach. They don’t just deliver
+                  campaigns; they create comprehensive growth plans that help us
+                  connect with customers in meaningful ways.
+                </p>
+              </div>
+            </div>
+            <!-- Card 1 -->
+            <div class="card testimonial-card">
+              <div class="testimonial-wrapper">
+                <div class="profile">
+                  <div class="profile-image">
+                    <div class="icon">
+                      <img src="/images/icons/sourcetree.svg" alt="sourcetree" />
+                    </div>
+                    <img
+                      src="https://images.pexels.com/photos/634021/pexels-photo-634021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="Erfan Hossain" />
+                  </div>
+                  <div class="profile-info">
+                    <h3 class="lato font-weight-600 font-18 white pt-16">
+                      Erfan Hossain
+                    </h3>
+                    <p class="lato gray-400 font-16 gray-400">
+                      Co founder at Bingo
+                    </p>
+                  </div>
+
+                  <div class="rating">
+                    <img class="rating-img" src="images/icons/vector-group.svg" alt="C Logo" />
+                    <span class="stars">
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                      <img src="/images/icons/star-solid.svg" alt="stars" />
+                    </span>
+                    <span class="rating-value lato font-weight-400 font-16 white">5.0</span>
+                  </div>
+                </div>
+                <p class="testimonial-text lato font-weight-500 font-20 white">
+                  Asia Agency’s data-driven strategies have completely
+                  transformed our business approach. They don’t just deliver
+                  campaigns; they create comprehensive growth plans that help us
+                  connect with customers in meaningful ways.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-controls pt-32">
+            <div class="slider-buttons">
+              <button class="prev-button">
+                <span class="prev-arrow"></span>
+              </button>
+              <button class="next-button">
+                <span class="next-arrow"></span>
+              </button>
+            </div>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- testimonial section end -->
+
+  <!-- footer section start -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <h3 class="plus-jakarta font-weight-700 font-48 white line-height-58">
+          3-day FREE trial to get to know us
+        </h3>
+        <p class="lato font-weight-400 font-16 white pt-16 line-height-24">
+          we offer you a three dasy trail to reduce risk and check our
+          compatibility. you can decide whether you are ready to move forward
+          with us
+        </p>
+        <div class="footer-content-button pt-32">
+          <a href="#" class="lato font-16 font-weight-600 gray-900 line-height-24">
+            Start a free trial
+            <img src="/images/icons/Right_Icon.svg" alt="right icon" />
+          </a>
+        </div>
+      </div>
+      <div class="footer-content-nav">
+        <div class="footer-content-nav-1">
+          <div class="footer-logo">
+            <img src="/images/logo.svg" alt="footer logo" />
+            <span class="lato font-weight-700 font-26 white line-height-36">Asia.Agency</span>
+          </div>
+          <h4 class="lato font-weight-700 font-20 white pt-32 line-height-26">
+            Subscribe
+          </h4>
+          <p class="lato font-weight-400 font-16 gray-500 line-height-24">
+            join our newsteller to get the latest article and updates
+          </p>
+
+          <div class="footer-content-nav-1-input">
+            <form action="" class="footer-content-nav-1-input-email">
+              <div class="footer-content-nav-1-input-email">
+                <img src="images/icons/envelope-regular.svg" alt="envelope" />
+                <input type="email" placeholder="Enter your email" />
+              </div>
+              <button type="submit" class="lato font-weight-600 font-18 gray-900">
+                Subcribe
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-content-nav-2 line-height-24">
+          <div class="footer-content-nav-list">
+            <h2 class="lato font-weight-600 font-18 gray-300">Services</h2>
+            <ul class="pt-12">
+              <li><a href="#">Digital marketig</a></li>
+              <li><a href="#">Business consultant</a></li>
+              <li><a href="#">Business consultant</a></li>
+              <li><a href="#">Business consultant</a></li>
+              <li><a href="#">Business consultant</a></li>
+            </ul>
+          </div>
+          <div class="footer-content-nav-list">
+            <h2 class="lato font-weight-600 font-18 gray-300">Quick Link</h2>
+            <ul class="pt-12">
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/index.html">About</a></li>
+              <li><a href="/index.html">Contact us</a></li>
+              <li><a href="/index.html">Blog</a></li>
+              <li><a href="/index.html">Career</a></li>
+            </ul>
+          </div>
+          <div class="footer-content-nav-list">
+            <h2 class="lato font-weight-600 font-18 gray-300">Review</h2>
+            <ul class="pt-12">
+              <li>Clutch</li>
+              <li>Trustpilot</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="speretaor"></div>
+
+      <div class="footer-content-nav-bottom">
+        <span class="lato font-weight-400 font-16 gray-500">&copy; 2025-2028 Asia.Agency</span>
+        <div class="footer-content-nav-social">
+          <a href="#">
+            <img src="/images/icons/x-twitter-brands-solid.svg" alt="twitter" />
+          </a>
+
+          <a href="#">
+            <img src="/images/icons/linkedin-brands-solid.svg" alt="linkedin" />
+          </a>
+          <a href="#">
+            <img src="/images/icons/facebook-brands-solid.svg" alt="facebook" />
+          </a>
+          <a href="#">
+            <img src="/images/icons/instagram-brands-solid.svg" alt="instagram" />
+          </a>
+          <a href="#">
+            <img src="/images/icons/tiktok-brands-solid.svg" alt="tiktok" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section end -->
+
+  <script src="/js/about-us.js"></script>
+  <script src="/js/comon.js"></script>
+</body>
+
 </html>

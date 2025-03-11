@@ -621,6 +621,7 @@ tbody tr:hover {
     padding: 50px;
   }
 }
+
 @media (max-width: 1100px) {
   .campaign-data-content {
     flex-direction: column;
