@@ -190,7 +190,7 @@ body {
   margin-top: 8px;
 }
 .team-card-overlay .team-card-overlay-content {
-  width: 443px;
+  /* width: 443px; */
 }
 .team-card-overlay picture {
   width: 56px;
@@ -250,7 +250,7 @@ body {
   margin-top: 8px;
 }
 .team-card-overlay .team-card-overlay-content {
-  width: 443px;
+  /* width: 443px; */
 }
 
 @media (max-width: 1040px) {
@@ -333,7 +333,7 @@ body {
 
 @media (max-width: 480px) {
   .team-card-overlay picture {
-    width: 70px;
+    width: 56px;
     height: 56px;
     border-radius: 50%;
     overflow: hidden;
@@ -572,8 +572,10 @@ body {
     font-size: 32px;
   }
   .column {
-    width: 100%;
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
   .column_icon {
     width: 36px;
     height: 36px;
@@ -722,6 +724,9 @@ body {
 
   .list-item p {
     font-size: 14px;
+  }
+  .trail-section-container{
+    padding: 16px;
   }
 }
 /* capabilities section end */
