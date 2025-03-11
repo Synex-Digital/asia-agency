@@ -607,6 +607,7 @@ header p {
   .tag-container {
     flex-wrap: wrap;
     justify-content: center;
+    row-gap: 10px;
   }
 
   .tag {
@@ -2096,6 +2097,7 @@ form {
 @media (max-width: 480px) {
   .main-heading {
     font-size: 28px;
+    padding-left: 20px;
   }
 
   .summary-container div {

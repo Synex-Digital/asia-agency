@@ -755,6 +755,10 @@ body {
 }
 
 @media (max-width: 480px) {
+  .trial-content h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
   .trial-steps .step {
     max-width: 100%;
   }

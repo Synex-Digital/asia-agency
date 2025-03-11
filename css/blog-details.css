@@ -30,6 +30,10 @@ nav ul li {
   margin: 0px 8px;
 }
 @media (max-width: 1200px) {
+  #hero{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .hero-content h1 {
     width: 70%;
     margin-top: 60px;
@@ -54,7 +58,7 @@ nav ul li {
     width: 100%;
   }
   .hero-content {
-    margin-left: 40px;
+    margin-left: 20px;
   }
 }
 
@@ -66,7 +70,10 @@ nav ul li {
 
 @media (max-width: 600px) {
   .hero-content h1 {
-    font-size: 36px;
+    font-size: 20px;
+    line-height: 44px;
+    width: 100%;
+
   }
 
   .hero-content p,
