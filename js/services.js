@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const campaignItems = document.querySelectorAll(".campaign-data-item");
-  const progressFill = document.querySelector(".progress-fill");
+  const campaignItems = document.querySelectorAll(".how-we-campaign-data-item");
+  const progressFill = document.querySelector(".how-we-progress-fill");
   const campaignTables = document.querySelectorAll(
-    '[class^="campaign-table-container-"]'
+    '[class^="how-we-campaign-table-container-"]'
   );
 
   // Initially show only the first campaign table and hide the others
@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
 // JavaScript for Slider
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".slider-container").forEach((container) => {
@@ -103,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const respondCards = document.querySelectorAll(".respond-card");
+  const respondCards = document.querySelectorAll(".services-respond-card");
 
   respondCards.forEach((card) => {
     card.addEventListener("click", function () {
@@ -157,7 +158,39 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const faqItems = document.querySelectorAll(".nav-faq-item");
 
+  faqItems.forEach((item) => {
+    const summaryContainer = item.querySelector(".summary-container");
+    const contentContainer = item.querySelector(".content-container");
+
+    // Set the initial max-height to 0 for all items
+    contentContainer.style.maxHeight = "0";
+
+    summaryContainer.addEventListener("click", () => {
+      const isOpen = item.classList.contains("open");
+
+      // Toggle open class on the clicked FAQ item
+      item.classList.toggle("open");
+
+      // If opening, set max-height to the content's scrollHeight
+      if (!isOpen) {
+        contentContainer.style.maxHeight = contentContainer.scrollHeight + "px";
+      } else {
+        contentContainer.style.maxHeight = "0"; // Close it by setting max-height to 0
+      }
+
+      // Close other open items
+      faqItems.forEach((otherItem) => {
+        if (otherItem !== item && otherItem.classList.contains("open")) {
+          otherItem.classList.remove("open");
+          otherItem.querySelector(".content-container").style.maxHeight = "0";
+        }
+      });
+    });
+  });
+});
 function showSideBar() {
   const sidebar = document.querySelector(".sidebar");
   sidebar.style.display = "flex";
