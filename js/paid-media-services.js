@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   dropdownButtons.forEach((button, index) => {
     const content = dropdownContents[index];
+    const img = button.querySelector("img"); // Select the image inside the button
 
     // Set initial max-height to 0 for all dropdown contents
     content.style.maxHeight = "0";
@@ -16,26 +17,27 @@ document.addEventListener("DOMContentLoaded", function () {
       // Toggle active class on the clicked dropdown content
       content.classList.toggle("active");
 
-      // If opening, set max-height to the content's scrollHeight
+      // If opening, set max-height to the content's scrollHeight and change image to down arrow
       if (!isOpen) {
         content.style.maxHeight = content.scrollHeight + "px";
+        img.src = "/images/blog-details/icons/down.png"; // Change to down arrow
       } else {
         content.style.maxHeight = "0"; // Close it by setting max-height to 0
+        img.src = "/images/blog-details/icons/right.png"; // Change back to right arrow
       }
 
-      // Close other dropdowns by resetting their max-height to 0
+      // Close other dropdowns and reset their images
       dropdownContents.forEach((otherContent, otherIndex) => {
-        if (
-          otherContent !== content &&
-          otherContent.classList.contains("active")
-        ) {
+        if (otherContent !== content && otherContent.classList.contains("active")) {
           otherContent.classList.remove("active");
           otherContent.style.maxHeight = "0";
+          dropdownButtons[otherIndex].querySelector("img").src = "/images/blog-details/icons/right.png"; // Reset image
         }
       });
     });
   });
 });
+
 
 
 document.addEventListener("DOMContentLoaded", function () {

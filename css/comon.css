@@ -984,7 +984,6 @@ header p {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 40px;
   font-family: "Lato", serif;
 }
 .cta-btn-nav {
