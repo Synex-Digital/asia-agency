@@ -927,7 +927,7 @@ header p {
   .works-process-content h4,
   .works-process-content p {
     width: 100%;
-    text-align: left;
+    text-align: center;
   }
   .works-process-content h4 {
     margin-bottom: 20px;
