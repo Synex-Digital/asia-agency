@@ -1008,6 +1008,7 @@ header p {
   align-items: center;
   gap: 4px;
   font-size: 18px;
+  margin-top: 32px;
 }
 .cta-btn-nav a {
   font-family: "lato";

@@ -37,11 +37,7 @@ document.addEventListener("mousemove", (e) => {
 
   // Get grid boundaries (assuming your grid container has class "grid")
   const grid = document.querySelector(".grid");
-  if (!grid) {
-    // Check if grid exists - important!
-    console.error("Grid container with class 'grid' not found in HTML.");
-    return; // Exit if no grid found to avoid errors
-  }
+  if (grid) {
   const gridRect = grid.getBoundingClientRect();
 
   // Check if mouse is within grid boundaries
@@ -81,7 +77,7 @@ document.addEventListener("mousemove", (e) => {
     } else {
       box.classList.remove("glow");
     }
-  });
+  })}
 });
 
 function createParticles(box, mouseX, mouseY) {
@@ -188,6 +184,7 @@ document.querySelectorAll("details").forEach((item) => {
 });
 
 // Testimonial slider functionality
+// Testimonial slider functionality
 const slider = document.querySelector(".slider");
 const prevButton = document.querySelector(".prev-button");
 const nextButton = document.querySelector(".next-button");
@@ -195,35 +192,48 @@ const progressBar = document.querySelector(".progress");
 const cards = document.querySelectorAll(".testimonial-card");
 
 let currentIndex = 0;
-const cardWidth = cards[0].offsetWidth;
 const totalCards = cards.length;
+
+// Ensure there are cards before accessing offsetWidth
+const cardWidth = totalCards > 0 ? cards[0].offsetWidth : 0;
 
 // Update progress bar
 function updateProgress() {
-  const progress = ((currentIndex + 1) / totalCards) * 100;
-  progressBar.style.width = `${progress}%`;
+  if (progressBar) {
+    const progress = totalCards > 0 ? ((currentIndex + 1) / totalCards) * 100 : 0;
+    progressBar.style.width = `${progress}%`;
+  }
 }
 
 // Next slide
-nextButton.addEventListener("click", () => {
-  if (currentIndex < totalCards - 1) {
-    currentIndex++;
-    slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-    updateProgress();
-  }
-});
+if (nextButton) {
+  nextButton.addEventListener("click", () => {
+    if (currentIndex < totalCards - 1) {
+      currentIndex++;
+      if (slider) {
+        slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+      }
+      updateProgress();
+    }
+  });
+}
 
 // Previous slide
-prevButton.addEventListener("click", () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-    updateProgress();
-  }
-});
+if (prevButton) {
+  prevButton.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      if (slider) {
+        slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+      }
+      updateProgress();
+    }
+  });
+}
 
 // Initialize progress bar
 updateProgress();
+
 
 // word counter
 document.addEventListener("DOMContentLoaded", function () {
@@ -360,33 +370,45 @@ document.addEventListener("DOMContentLoaded", function () {
   const buttons = {
     "About us": document.querySelector(".faq-button-nav-1.lato.white"),
     Services: document.querySelector(".faq-button-nav-2.lato.gray-900"),
-    Consultancy: document.querySelectorAll(".faq-button-nav-1.lato.white")[1],
+    Consultancy: document.querySelectorAll(".faq-button-nav-1.lato.white")[1], // Might be undefined
   };
 
-  // Initially show the "About us" container and make its button active
-  faqContainers["About us"].style.display = "block";
-  buttons["About us"].classList.add("active");
+  // Check if "About us" container exists before modifying it
+  if (faqContainers["About us"] && buttons["About us"]) {
+    faqContainers["About us"].style.display = "block";
+    buttons["About us"].classList.add("active");
+  }
 
   // Add event listeners to the buttons
   for (const buttonText in buttons) {
-    buttons[buttonText].addEventListener("click", function (event) {
+    const button = buttons[buttonText];
+    if (!button) continue; // Skip if the button does not exist
+
+    button.addEventListener("click", function (event) {
       event.preventDefault(); // Prevent default anchor behavior
 
       // Hide all containers and deactivate ALL buttons
       for (const container in faqContainers) {
-        faqContainers[container].style.display = "none";
-        //Deactivate every button
-        for (const button in buttons) {
-          buttons[button].classList.remove("active");
+        if (faqContainers[container]) {
+          faqContainers[container].style.display = "none";
+        }
+      }
+
+      for (const btn in buttons) {
+        if (buttons[btn]) {
+          buttons[btn].classList.remove("active");
         }
       }
 
       // Show the selected container and activate its button
-      faqContainers[buttonText].style.display = "block";
-      buttons[buttonText].classList.add("active");
+      if (faqContainers[buttonText] && buttons[buttonText]) {
+        faqContainers[buttonText].style.display = "block";
+        buttons[buttonText].classList.add("active");
+      }
     });
   }
 });
+
 
 function showSideBar() {
   const sidebar = document.querySelector(".sidebar");
@@ -397,5 +419,226 @@ function hideSidebar() {
   const sidebar = document.querySelector(".sidebar");
   sidebar.style.display = "none";
 }
+
+// about-us js
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownHeaders = document.querySelectorAll(
+    ".about-us-capability-dropdown-header"
+  );
+
+  dropdownHeaders.forEach((header) => {
+    const button = header.querySelector(".about-us-dropdownButton");
+    const dropdown = header.nextElementSibling; // This should be the .about-us-dropdown-content
+    const img = button.querySelector("img"); // Get the img inside the button
+
+    button.addEventListener("click", function () {
+      if (!dropdown) {
+        console.error("Dropdown content not found!");
+        return;
+      }
+
+      dropdown.classList.toggle("active");
+
+      // Toggle the image src based on active state
+      if (dropdown.classList.contains("active")) {
+        img.src = "/images/about-us/icon/Minus.svg"; // Change to Minus.svg when active
+      } else {
+        img.src = "/images/about-us/icon/Plus.svg"; // Change to Plus.svg when inactive
+      }
+    });
+  });
+});
+
+// how we are 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownButtons = document.querySelectorAll(".how-we-dropdownButton");
+  const dropdownContents = document.querySelectorAll(".how-we-dropdown-content");
+
+  dropdownButtons.forEach((button, index) => {
+    const content = dropdownContents[index];
+    const icon = button.querySelector("img"); // Select the image inside the button
+
+    // If it's the first item, make it active on page load
+    if (index === 0) {
+      content.classList.add("active");
+      content.style.maxHeight = content.scrollHeight + "px";
+      button.classList.add("active"); // Add active class to rotate the icon
+    } else {
+      content.style.maxHeight = "0";
+      content.classList.remove("active");
+    }
+
+    button.addEventListener("click", function () {
+      const isOpen = content.classList.contains("active");
+
+      content.classList.toggle("active");
+      button.classList.toggle("active"); // Toggle active class for rotation
+
+      if (!isOpen) {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } else {
+        content.style.maxHeight = "0";
+      }
+
+      // Close other dropdowns
+      dropdownContents.forEach((otherContent, otherIndex) => {
+        if (
+          otherContent !== content &&
+          otherContent.classList.contains("active")
+        ) {
+          otherContent.classList.remove("active");
+          otherContent.style.maxHeight = "0";
+          dropdownButtons[otherIndex].classList.remove("active"); // Remove active class from other buttons
+        }
+      });
+    });
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const campaignItems = document.querySelectorAll(".how-we-campaign-data-item");
+  const progressFill = document.querySelector(".how-we-progress-fill");
+  const campaignTables = document.querySelectorAll(
+    '[class^="how-we-campaign-table-container-"]'
+  );
+
+  // Initially show only the first campaign table and hide the others
+  campaignTables.forEach((table, index) => {
+    table.style.display = index === 0 ? "block" : "none";
+  });
+
+  const totalWidth = 798;
+  const stepWidth = totalWidth / 3; // Dividing by 3 for 33%, 66%, 100%
+
+  // Set initial progress to 33% and first item active
+  progressFill.style.width = `${stepWidth}px`;
+  if (campaignItems.length > 0) {
+    campaignItems[0].classList.add("active");
+  }
+
+  campaignItems.forEach((item, index) => {
+    item.addEventListener("click", () => {
+      // Remove active class from all items
+      campaignItems.forEach((i) => i.classList.remove("active"));
+
+      // Add active class only to current clicked item
+      item.classList.add("active");
+
+      // Calculate progress - 33% for first, 66% for second, 100% for third
+      const progress = stepWidth * (index + 1);
+      progressFill.style.transition = "width 0.3s ease";
+      progressFill.style.width = `${progress}px`;
+
+      // Hide all campaign tables
+      campaignTables.forEach((table) => {
+        table.style.display = "none";
+      });
+
+      // Display the corresponding campaign table
+      if (campaignTables[index]) {
+        campaignTables[index].style.display = "block";
+      }
+    });
+  });
+});
+
+// paid media
+
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownButtons = document.querySelectorAll(".paid-media-services-dropdownButton");
+  const dropdownContents = document.querySelectorAll(".paid-media-services-dropdown-content");
+
+  dropdownButtons.forEach((button, index) => {
+    const content = dropdownContents[index];
+    const img = button.querySelector("img"); // Select the image inside the button
+
+    // Set initial max-height to 0 for all dropdown contents
+    content.style.maxHeight = "0";
+    content.classList.remove("active");
+
+    // Add click event listener to toggle the active class and handle the animation
+    button.addEventListener("click", function () {
+      const isOpen = content.classList.contains("active");
+
+      // Toggle active class on the clicked dropdown content
+      content.classList.toggle("active");
+
+      // If opening, set max-height to the content's scrollHeight and change image to down arrow
+      if (!isOpen) {
+        content.style.maxHeight = content.scrollHeight + "px";
+        img.src = "/images/blog-details/icons/down.png"; // Change to down arrow
+      } else {
+        content.style.maxHeight = "0"; // Close it by setting max-height to 0
+        img.src = "/images/blog-details/icons/right.png"; // Change back to right arrow
+      }
+
+      // Close other dropdowns and reset their images
+      dropdownContents.forEach((otherContent, otherIndex) => {
+        if (otherContent !== content && otherContent.classList.contains("active")) {
+          otherContent.classList.remove("active");
+          otherContent.style.maxHeight = "0";
+          dropdownButtons[otherIndex].querySelector("img").src = "/images/blog-details/icons/right.png"; // Reset image
+        }
+      });
+    });
+  });
+});
+
+// sercices radio 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const respondCards = document.querySelectorAll(".services-respond-card");
+
+  respondCards.forEach((card) => {
+    card.addEventListener("click", function () {
+      // Remove 'selected' class from all cards
+      respondCards.forEach((c) => c.classList.remove("selected"));
+
+      // Select the radio button inside the clicked card
+      const radioButton = card.querySelector("input[type='radio']");
+      if (radioButton) {
+        radioButton.checked = true;
+        card.classList.add("selected"); // Add highlight effect
+      }
+    });
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const steps = [
+    ".services-item-1",
+    ".services-item-2",
+    ".services-item-3",
+    ".services-item-4"
+  ];
+
+  // Hide all steps except the first one
+  for (let i = 1; i < steps.length; i++) {
+    document.querySelector(steps[i]).style.display = "none";
+  }
+
+  steps.forEach((stepSelector, index) => {
+    const respondCards = document.querySelectorAll(`${stepSelector} .services-respond-card`);
+    
+    respondCards.forEach((card) => {
+      card.addEventListener("click", function () {
+        // Remove 'selected' class from all cards in the current step
+        respondCards.forEach((c) => c.classList.remove("selected"));
+
+        // Select the radio button inside the clicked card
+        const radioButton = card.querySelector("input[type='radio']");
+        if (radioButton) {
+          radioButton.checked = true;
+          card.classList.add("selected"); // Add highlight effect
+
+          // Show the next step if available
+          if (index + 1 < steps.length) {
+            document.querySelector(steps[index + 1]).style.display = "block";
+          }
+        }
+      });
+    });
+  });
+});
+
 
 
