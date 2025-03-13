@@ -7,22 +7,23 @@ const radius = 75; // Glow radius
 const maxParticles = 5; // Maximum number of particles (though current createParticles creates max 3 per call)
 let activeParticles = 0; // Not currently used, but could be used to limit total particles
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   let lastScrollTop = 0;
-  const header = document.querySelector('header');
-  const nav = document.querySelector('nav');
+  const header = document.querySelector("header");
+  const nav = document.querySelector("nav");
 
-  if (header) { // Ensure the header element exists
-    window.addEventListener('scroll', function () {
+  if (header) {
+    // Ensure the header element exists
+    window.addEventListener("scroll", function () {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
       if (scrollTop > lastScrollTop) {
         // Scroll down, hide the header
-        header.style.top = '-10rem'; // Adjust this value based on the header height
+        header.style.top = "-10rem"; // Adjust this value based on the header height
       } else {
         // Scroll up, show the header
-        header.style.top = '-1rem';
-        nav.style.backgroundColor = 'black';
+        header.style.top = "-1rem";
+        nav.style.backgroundColor = "black";
       }
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative scroll
     });
@@ -38,46 +39,47 @@ document.addEventListener("mousemove", (e) => {
   // Get grid boundaries (assuming your grid container has class "grid")
   const grid = document.querySelector(".grid");
   if (grid) {
-  const gridRect = grid.getBoundingClientRect();
+    const gridRect = grid.getBoundingClientRect();
 
-  // Check if mouse is within grid boundaries
-  const isInGrid =
-    mouseX >= gridRect.left &&
-    mouseX <= gridRect.right &&
-    mouseY >= gridRect.top &&
-    mouseY <= gridRect.bottom;
+    // Check if mouse is within grid boundaries
+    const isInGrid =
+      mouseX >= gridRect.left &&
+      mouseX <= gridRect.right &&
+      mouseY >= gridRect.top &&
+      mouseY <= gridRect.bottom;
 
-  // Only show glow area when mouse is in grid
-  glowArea.style.opacity = isInGrid ? "1" : "0";
-  glowArea.style.left = `${mouseX - radius}px`;
-  glowArea.style.top = `${mouseY - radius}px`;
-  glowArea.style.width = `${radius * 2}px`;
-  glowArea.style.height = `${radius * 2}px`;
+    // Only show glow area when mouse is in grid
+    glowArea.style.opacity = isInGrid ? "1" : "0";
+    glowArea.style.left = `${mouseX - radius}px`;
+    glowArea.style.top = `${mouseY - radius}px`;
+    glowArea.style.width = `${radius * 2}px`;
+    glowArea.style.height = `${radius * 2}px`;
 
-  boxes.forEach((box) => {
-    const rect = box.getBoundingClientRect();
+    boxes.forEach((box) => {
+      const rect = box.getBoundingClientRect();
 
-    // Calculate the glow position relative to the box
-    const glowX = mouseX - rect.left;
-    const glowY = mouseY - rect.top;
-    // Check if mouse is within glow radius of the box
-    const isNearBox =
-      glowX >= -radius &&
-      glowX <= rect.width + radius &&
-      glowY >= -radius &&
-      glowY <= rect.height + radius;
+      // Calculate the glow position relative to the box
+      const glowX = mouseX - rect.left;
+      const glowY = mouseY - rect.top;
+      // Check if mouse is within glow radius of the box
+      const isNearBox =
+        glowX >= -radius &&
+        glowX <= rect.width + radius &&
+        glowY >= -radius &&
+        glowY <= rect.height + radius;
 
-    if (isNearBox) {
-      box.style.setProperty("--glow-x", `${glowX}px`);
-      box.style.setProperty("--glow-y", `${glowY}px`);
-      box.classList.add("glow");
+      if (isNearBox) {
+        box.style.setProperty("--glow-x", `${glowX}px`);
+        box.style.setProperty("--glow-y", `${glowY}px`);
+        box.classList.add("glow");
 
-      // **Call createParticles function when mouse is near a box**
-      createParticles(box, glowX, glowY); // Pass box, and relative mouse position
-    } else {
-      box.classList.remove("glow");
-    }
-  })}
+        // **Call createParticles function when mouse is near a box**
+        createParticles(box, glowX, glowY); // Pass box, and relative mouse position
+      } else {
+        box.classList.remove("glow");
+      }
+    });
+  }
 });
 
 function createParticles(box, mouseX, mouseY) {
@@ -200,7 +202,8 @@ const cardWidth = totalCards > 0 ? cards[0].offsetWidth : 0;
 // Update progress bar
 function updateProgress() {
   if (progressBar) {
-    const progress = totalCards > 0 ? ((currentIndex + 1) / totalCards) * 100 : 0;
+    const progress =
+      totalCards > 0 ? ((currentIndex + 1) / totalCards) * 100 : 0;
     progressBar.style.width = `${progress}%`;
   }
 }
@@ -233,76 +236,6 @@ if (prevButton) {
 
 // Initialize progress bar
 updateProgress();
-
-
-// word counter
-document.addEventListener("DOMContentLoaded", function () {
-  const words = document.querySelectorAll(".word");
-  const changeTextSection = document.querySelector(".change-text");
-  let lastScrollY = window.scrollY;
-  let animating = false;
-
-  // Function to animate words to white one-by-one (for scrolling down)
-  function animateWordsToWhite() {
-    words.forEach((word, index) => {
-      setTimeout(() => {
-        word.classList.add("lightup");
-      }, index * 100); // 100ms delay between each word
-    });
-  }
-
-  // Function to animate words to gray one-by-one (for scrolling up)
-  function animateWordsToGray() {
-    // Reverse the order for scroll up (start from the last word)
-    const wordsArray = Array.from(words);
-    wordsArray.reverse().forEach((word, index) => {
-      setTimeout(() => {
-        word.classList.remove("lightup");
-      }, index * 100); // 100ms delay between each word
-    });
-  }
-
-  // Function to check if element is in viewport
-  function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return rect.top < window.innerHeight && rect.bottom >= 0;
-  }
-
-  // Event listener for scroll
-  window.addEventListener("scroll", function () {
-    // Return if animation is already in progress
-    if (animating) return;
-
-    // Check if section is in viewport
-    if (!changeTextSection || !isInViewport(changeTextSection)) return;
-
-    const currentScrollY = window.scrollY;
-    const scrollingDown = currentScrollY > lastScrollY;
-
-    animating = true;
-
-    if (scrollingDown) {
-      // Scrolling DOWN - animate to WHITE one by one
-      animateWordsToWhite();
-    } else {
-      // Scrolling UP - animate to GRAY one by one
-      animateWordsToGray();
-    }
-
-    // Reset animation flag after all words are animated
-    setTimeout(() => {
-      animating = false;
-    }, words.length * 100 + 300); // Allow time for all words to animate
-
-    // Update last scroll position
-    lastScrollY = currentScrollY;
-  });
-
-  // Initialize words to gray
-  words.forEach((word) => {
-    word.classList.remove("lightup");
-  });
-});
 
 document.addEventListener("DOMContentLoaded", function () {
   const faqItems = document.querySelectorAll(".nav-faq-item");
@@ -409,7 +342,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
 function showSideBar() {
   const sidebar = document.querySelector(".sidebar");
   sidebar.style.display = "flex";
@@ -449,11 +381,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// how we are 
+// how we are
 
 document.addEventListener("DOMContentLoaded", function () {
   const dropdownButtons = document.querySelectorAll(".how-we-dropdownButton");
-  const dropdownContents = document.querySelectorAll(".how-we-dropdown-content");
+  const dropdownContents = document.querySelectorAll(
+    ".how-we-dropdown-content"
+  );
 
   dropdownButtons.forEach((button, index) => {
     const content = dropdownContents[index];
@@ -502,51 +436,73 @@ document.addEventListener("DOMContentLoaded", function () {
     '[class^="how-we-campaign-table-container-"]'
   );
 
-  // Initially show only the first campaign table and hide the others
-  campaignTables.forEach((table, index) => {
-    table.style.display = index === 0 ? "block" : "none";
-  });
+  if (campaignTables && campaignTables.length > 0) {
+    // Initially show only the first campaign table and hide the others
+    campaignTables.forEach((table, index) => {
+      if (table) {
+        table.style.display = index === 0 ? "block" : "none";
+      }
+    });
+  }
 
   const totalWidth = 798;
   const stepWidth = totalWidth / 3; // Dividing by 3 for 33%, 66%, 100%
 
-  // Set initial progress to 33% and first item active
-  progressFill.style.width = `${stepWidth}px`;
-  if (campaignItems.length > 0) {
+  if (progressFill) {
+    // Set initial progress to 33% and first item active
+    progressFill.style.width = `${stepWidth}px`;
+  }
+
+  if (campaignItems && campaignItems.length > 0) {
     campaignItems[0].classList.add("active");
   }
 
-  campaignItems.forEach((item, index) => {
-    item.addEventListener("click", () => {
-      // Remove active class from all items
-      campaignItems.forEach((i) => i.classList.remove("active"));
+  if (campaignItems) {
+    campaignItems.forEach((item, index) => {
+      if (item) {
+        item.addEventListener("click", () => {
+          // Remove active class from all items
+          if (campaignItems) {
+            campaignItems.forEach((i) => i.classList.remove("active"));
+          }
 
-      // Add active class only to current clicked item
-      item.classList.add("active");
+          // Add active class only to current clicked item
+          item.classList.add("active");
 
-      // Calculate progress - 33% for first, 66% for second, 100% for third
-      const progress = stepWidth * (index + 1);
-      progressFill.style.transition = "width 0.3s ease";
-      progressFill.style.width = `${progress}px`;
+          if (progressFill) {
+            // Calculate progress - 33% for first, 66% for second, 100% for third
+            const progress = stepWidth * (index + 1);
+            progressFill.style.transition = "width 0.3s ease";
+            progressFill.style.width = `${progress}px`;
+          }
 
-      // Hide all campaign tables
-      campaignTables.forEach((table) => {
-        table.style.display = "none";
-      });
+          // Hide all campaign tables
+          if (campaignTables) {
+            campaignTables.forEach((table) => {
+              if (table) {
+                table.style.display = "none";
+              }
+            });
 
-      // Display the corresponding campaign table
-      if (campaignTables[index]) {
-        campaignTables[index].style.display = "block";
+            // Display the corresponding campaign table
+            if (campaignTables[index]) {
+              campaignTables[index].style.display = "block";
+            }
+          }
+        });
       }
     });
-  });
+  }
 });
-
 // paid media
 
 document.addEventListener("DOMContentLoaded", function () {
-  const dropdownButtons = document.querySelectorAll(".paid-media-services-dropdownButton");
-  const dropdownContents = document.querySelectorAll(".paid-media-services-dropdown-content");
+  const dropdownButtons = document.querySelectorAll(
+    ".paid-media-services-dropdownButton"
+  );
+  const dropdownContents = document.querySelectorAll(
+    ".paid-media-services-dropdown-content"
+  );
 
   dropdownButtons.forEach((button, index) => {
     const content = dropdownContents[index];
@@ -574,17 +530,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Close other dropdowns and reset their images
       dropdownContents.forEach((otherContent, otherIndex) => {
-        if (otherContent !== content && otherContent.classList.contains("active")) {
+        if (
+          otherContent !== content &&
+          otherContent.classList.contains("active")
+        ) {
           otherContent.classList.remove("active");
           otherContent.style.maxHeight = "0";
-          dropdownButtons[otherIndex].querySelector("img").src = "/images/blog-details/icons/right.png"; // Reset image
+          dropdownButtons[otherIndex].querySelector("img").src =
+            "/images/blog-details/icons/right.png"; // Reset image
         }
       });
     });
   });
 });
 
-// sercices radio 
+// sercices radio
 
 document.addEventListener("DOMContentLoaded", function () {
   const respondCards = document.querySelectorAll(".services-respond-card");
@@ -608,37 +568,246 @@ document.addEventListener("DOMContentLoaded", function () {
     ".services-item-1",
     ".services-item-2",
     ".services-item-3",
-    ".services-item-4"
+    ".services-item-4",
   ];
 
   // Hide all steps except the first one
   for (let i = 1; i < steps.length; i++) {
-    document.querySelector(steps[i]).style.display = "none";
+    const stepElement = document.querySelector(steps[i]);
+    if (stepElement) {
+      stepElement.style.display = "none";
+    }
   }
 
   steps.forEach((stepSelector, index) => {
-    const respondCards = document.querySelectorAll(`${stepSelector} .services-respond-card`);
-    
-    respondCards.forEach((card) => {
-      card.addEventListener("click", function () {
-        // Remove 'selected' class from all cards in the current step
-        respondCards.forEach((c) => c.classList.remove("selected"));
+    const respondCards = document.querySelectorAll(
+      `${stepSelector} .services-respond-card`
+    );
 
-        // Select the radio button inside the clicked card
-        const radioButton = card.querySelector("input[type='radio']");
-        if (radioButton) {
-          radioButton.checked = true;
-          card.classList.add("selected"); // Add highlight effect
+    if (respondCards) {
+      respondCards.forEach((card) => {
+        if (card) {
+          card.addEventListener("click", function () {
+            // Remove 'selected' class from all cards in the current step
+            respondCards.forEach((c) => {
+              if (c) {
+                c.classList.remove("selected");
+              }
+            });
 
-          // Show the next step if available
-          if (index + 1 < steps.length) {
-            document.querySelector(steps[index + 1]).style.display = "block";
-          }
+            // Select the radio button inside the clicked card
+            const radioButton = card.querySelector("input[type='radio']");
+            if (radioButton) {
+              radioButton.checked = true;
+              card.classList.add("selected"); // Add highlight effect
+
+              // Show the next step if available
+              if (index + 1 < steps.length) {
+                const nextStepElement = document.querySelector(
+                  steps[index + 1]
+                );
+                if (nextStepElement) {
+                  nextStepElement.style.display = "block";
+                }
+              }
+            }
+          });
         }
       });
-    });
+    }
   });
 });
 
+// homeAnimation
+// hero section
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.from(".home-hero .main-heading", {
+    y: 100,
+    opacity: 0,
+    duration: 1.5,
+    ease: "power3.out",
+  });
+
+  gsap.from(".home-hero .description", {
+    y: 100,
+    opacity: 0,
+    duration: 1.5,
+    ease: "power3.out",
+    delay: 0.3,
+  });
+
+  gsap.from(".home-hero .cta-btn-nav", {
+    y: 100,
+    opacity: 0,
+    duration: 1.5,
+    ease: "power3.out",
+    delay: 0.6,
+  });
+
+  gsap.from(".home-hero .tag", {
+    y: 100,
+    opacity: 0,
+    duration: 1.2,
+    stagger: 0.2,
+    ease: "power3.out",
+  });
+
+  // Select all logo elements
+  const logos = document.querySelectorAll(".logo");
+
+  logos.forEach((logo, index) => {
+    gsap.from(logo, {
+      opacity: 0,
+      y: 50, // Animating the logos from below
+      duration: 1, // Duration of the animation
+      scrollTrigger: {
+        trigger: logo, // Trigger the animation when the logo enters the viewport
+        start: "top 80%", // Animation starts when the top of the logo reaches 80% of the viewport
+        end: "top 30%", // Animation ends when the top of the logo reaches 30% of the viewport
+        scrub: true, // Scrub the animation as the user scrolls
+        markers: false, // You can set to true if you want to see markers for start and end points
+      },
+    });
+  });
+});
+// about-us
+document.addEventListener("DOMContentLoaded", function () {
+  if (typeof window.Lenis === "undefined") {
+    console.error("Lenis is not loaded. Check the script source or network.");
+    return;
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Select all words
+  const words = document.querySelectorAll("#about-us h3");
+
+  // Split each word into characters and animate them
+  words.forEach((word, i) => {
+    const text = new SplitType(word, { types: "char" }); 
+
+    gsap.fromTo(text.chars, 
+      {
+        color: "rgba(255, 255, 255, 0.1)", 
+      },
+      {
+        color: "rgba(255, 255, 255, 1)",   
+        scrollTrigger: {
+          trigger: word,         
+          start: "top 80%",     
+          end: "top 20%",       
+          scrub: true,
+          markers: false,
+        },
+        opacity: 1,
+        duration: 0.2,
+        stagger: 0.05,          
+      }
+    );
+  });
 
 
+
+
+  // Lenis smooth scrolling
+  const lenis = new window.Lenis();
+  lenis.on("scroll", (e) => {});
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+  // Previous div animations (updated to use #about-us parent selector)
+  gsap.from("#about-us .container", {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    scrollTrigger: {
+      trigger: "#about-us",
+      start: "top 80%",
+      end: "top 50%",
+      scrub: 1,
+    }
+  });
+
+  gsap.from("#about-us .about-us-content", {
+    scale: 0.95,
+    opacity: 0,
+    duration: 1.2,
+    scrollTrigger: {
+      trigger: "#about-us .about-us-content",
+      start: "top 85%",
+      end: "top 55%",
+      scrub: 1,
+    }
+  });
+
+  gsap.from("#about-us .badge-button", {
+    x: -100,
+    opacity: 0,
+    duration: 0.8,
+    scrollTrigger: {
+      trigger: "#about-us .badge-button",
+      start: "top 90%",
+      end: "top 60%",
+      scrub: 1,
+    }
+  });
+
+  gsap.from("#about-us .about-us-text", {
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: "#about-us .about-us-text",
+      start: "top 85%",
+      end: "top 50%",
+      scrub: 1,
+    }
+  });
+
+  // Button animations using #about-us parent selector
+  // 1. Button wrapper
+  gsap.from("#about-us .about-us-button", {
+    y: 50,
+    opacity: 0,
+    duration: 1.2,
+    ease: "back.out(1.7)",
+    scrollTrigger: {
+      trigger: "#about-us .about-us-button",
+      start: "top 95%",
+      end: "top 65%",
+      scrub: 1,
+      markers: false,
+    }
+  });
+
+  // 2. Glow button
+  gsap.from("#about-us .glow-button", {
+    scale: 0.9,
+    opacity: 0.7,
+    boxShadow: "0 0 0 rgba(255, 255, 255, 0)",
+    duration: 1,
+    scrollTrigger: {
+      trigger: "#about-us .about-us-button",
+      start: "top 90%",
+      end: "top 60%",
+      scrub: 1,
+      markers: false,
+    },
+  });
+
+  // 3. Polygon
+  gsap.from("#about-us .polygon", {
+    opacity: 0,
+    rotation: -90,
+    duration: 1,
+    scrollTrigger: {
+      trigger: "#about-us .about-us-button",
+      start: "top 95%",
+      end: "top 65%",
+      scrub: 1,
+      markers: false,
+    }
+  });
+
+});
