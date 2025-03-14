@@ -620,57 +620,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // homeAnimation
 // hero section
-document.addEventListener("DOMContentLoaded", function () {
-  gsap.from(".home-hero .main-heading", {
-    y: 100,
-    opacity: 0,
-    duration: 1.5,
-    ease: "power3.out",
-  });
-
-  gsap.from(".home-hero .description", {
-    y: 100,
-    opacity: 0,
-    duration: 1.5,
-    ease: "power3.out",
-    delay: 0.3,
-  });
-
-  gsap.from(".home-hero .cta-btn-nav", {
-    y: 100,
-    opacity: 0,
-    duration: 1.5,
-    ease: "power3.out",
-    delay: 0.6,
-  });
-
-  gsap.from(".home-hero .tag", {
-    y: 100,
-    opacity: 0,
-    duration: 1.2,
-    stagger: 0.2,
-    ease: "power3.out",
-  });
-
-  // Select all logo elements
-  const logos = document.querySelectorAll(".logo");
-
-  logos.forEach((logo, index) => {
-    gsap.from(logo, {
+if (
+  window.location.pathname === "/" ||
+  window.location.pathname === "/index.html"
+) {
+  document.addEventListener("DOMContentLoaded", function () {
+    gsap.from(".home-hero .main-heading", {
+      y: 100,
       opacity: 0,
-      y: 50, // Animating the logos from below
-      duration: 1, // Duration of the animation
-      scrollTrigger: {
-        trigger: logo, // Trigger the animation when the logo enters the viewport
-        start: "top 80%", // Animation starts when the top of the logo reaches 80% of the viewport
-        end: "top 30%", // Animation ends when the top of the logo reaches 30% of the viewport
-        scrub: true, // Scrub the animation as the user scrolls
-        markers: false, // You can set to true if you want to see markers for start and end points
-      },
+      duration: 1.5,
+      ease: "power3.out",
+    });
+
+    gsap.from(".home-hero .description", {
+      y: 100,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power3.out",
+      delay: 0.3,
+    });
+
+    gsap.from(".home-hero .cta-btn-nav", {
+      y: 100,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power3.out",
+      delay: 0.6,
+    });
+
+    gsap.from(".home-hero .tag", {
+      y: 100,
+      opacity: 0,
+      duration: 1.2,
+      stagger: 0.2,
+      ease: "power3.out",
     });
   });
-});
+}
 // about-us
+// this has problem
 document.addEventListener("DOMContentLoaded", function () {
   if (typeof window.Lenis === "undefined") {
     console.error("Lenis is not loaded. Check the script source or network.");
@@ -684,30 +672,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Split each word into characters and animate them
   words.forEach((word, i) => {
-    const text = new SplitType(word, { types: "char" }); 
+    const text = new SplitType(word, { types: "char" });
 
-    gsap.fromTo(text.chars, 
+    gsap.fromTo(
+      text.chars,
       {
-        color: "rgba(255, 255, 255, 0.1)", 
+        color: "rgba(255, 255, 255, 0.1)",
       },
       {
-        color: "rgba(255, 255, 255, 1)",   
+        color: "rgba(255, 255, 255, 1)",
         scrollTrigger: {
-          trigger: word,         
-          start: "top 80%",     
-          end: "top 20%",       
+          trigger: word,
+          start: "top 80%",
+          end: "top 20%",
           scrub: true,
           markers: false,
         },
         opacity: 1,
         duration: 0.2,
-        stagger: 0.05,          
+        stagger: 0.05,
       }
     );
   });
-
-
-
 
   // Lenis smooth scrolling
   const lenis = new window.Lenis();
@@ -717,97 +703,663 @@ document.addEventListener("DOMContentLoaded", function () {
     requestAnimationFrame(raf);
   }
   requestAnimationFrame(raf);
-  // Previous div animations (updated to use #about-us parent selector)
-  gsap.from("#about-us .container", {
-    opacity: 0,
-    y: 50,
-    duration: 1,
+});
+
+// Register ScrollTrigger with GSAP
+gsap.registerPlugin(ScrollTrigger);
+
+// Animation function
+const animateOnScroll = (
+  selector,
+  triggerSelector,
+  animationType,
+  options = {}
+) => {
+  const animationPresets = {
+    fadeTextUp: {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      scrollTrigger: {
+        start: "top 80%",
+        end: "top 30%",
+        scrub: true,
+        markers: false,
+      },
+    },
+    bageButton: {
+      x: -100,
+      opacity: 0,
+      duration: 0.8,
+      scrollTrigger: {
+        start: "top 90%",
+        end: "top 60%",
+        scrub: 1,
+      },
+    },
+    brandLogo: {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      scrollTrigger: {
+        start: "top 80%",
+        end: "top 30%",
+        scrub: true,
+        markers: false,
+      },
+    },
+    btnDown: {
+      y: 50,
+      opacity: 0,
+      duration: 1.2,
+      ease: "back.out(1.7)",
+      scrollTrigger: {
+        start: "top 95%",
+        end: "top 65%",
+        scrub: 1,
+      },
+    },
+    typewriter: {
+      function: (element, trigger, options) => {
+        // Store original content and clear element
+        const originalHTML = element.innerHTML;
+        element.innerHTML = "";
+
+        // Create a temporary container to parse the content
+        const tempDiv = document.createElement("div");
+        tempDiv.innerHTML = originalHTML;
+
+        // Process text nodes and spans separately
+        const characters = [];
+        Array.from(tempDiv.childNodes).forEach((node) => {
+          if (node.nodeType === Node.TEXT_NODE) {
+            // Split text into characters
+            Array.from(node.textContent).forEach((char) => {
+              const span = document.createElement("span");
+              span.textContent = char;
+              span.style.opacity = 0;
+              element.appendChild(span);
+              characters.push(span);
+            });
+          } else if (node.nodeType === Node.ELEMENT_NODE) {
+            // Preserve the span (or other elements) as-is
+            const clonedNode = node.cloneNode(true);
+            clonedNode.style.opacity = 0;
+            element.appendChild(clonedNode);
+            characters.push(clonedNode);
+          }
+        });
+
+        // Animate all characters and spans
+        gsap.to(characters, {
+          opacity: 1,
+          stagger: options.stagger || 0.1,
+          scrollTrigger: {
+            trigger: trigger,
+            start: options.scrollTrigger?.start || "top 80%",
+            toggleActions: "play none none none",
+            markers: options.scrollTrigger?.markers || false,
+          },
+        });
+      },
+    },
+  };
+
+  // Get the preset, fallback to fadeTextUp if invalid
+  const preset = animationPresets[animationType] || animationPresets.fadeTextUp;
+
+  // Convert selector to array and filter out non-existent elements
+  const elements = gsap.utils
+    .toArray(selector)
+    .filter((el) => el instanceof Element);
+
+  if (!elements.length) {
+    // console.warn(`No elements found for selector no problem: ${selector}`);
+    return;
+  }
+
+  elements.forEach((element) => {
+    // Determine the trigger dynamically
+    let trigger = triggerSelector
+      ? document.querySelector(triggerSelector)
+      : element.closest("section") || element;
+
+    if (!trigger) {
+      console.warn(
+        `Trigger not found for ${triggerSelector}, using element as fallback`
+      );
+      trigger = element;
+    }
+
+    // Handle the preset based on whether it’s a function or properties
+    if (typeof preset.function === "function") {
+      preset.function(element, trigger, options); // Call the custom function
+    } else {
+      // Only apply gsap.from for property-based presets
+      gsap.from(element, {
+        ...preset,
+        ...options,
+        scrollTrigger: {
+          trigger: trigger,
+          ...preset.scrollTrigger, // Safe now, only used for fadeTextUp-like presets
+          ...options.scrollTrigger,
+        },
+      });
+    }
+  });
+};
+
+// Usage
+document.addEventListener("DOMContentLoaded", () => {
+  animateOnScroll(".animate-text", null, "fadeTextUp");
+  animateOnScroll(".animate-bageButton", null, "bageButton");
+  animateOnScroll(".btn-down", "btn-down", "btnDown", {
+    scrollTrigger: {},
+  });
+
+  animateOnScroll(".typewriter", null, "typewriter", {
+    stagger: 0.05,
+    delay: 0.5,
     scrollTrigger: {
-      trigger: "#about-us",
       start: "top 80%",
-      end: "top 50%",
-      scrub: 1,
-    }
+    },
+  });
+});
+
+// home-animations.js
+
+// Only run on homepage
+if (
+  window.location.pathname === "/" ||
+  window.location.pathname === "/index.html"
+) {
+  document.addEventListener("DOMContentLoaded", () => {
+    // Animate all boxes with content
+    gsap.from(".box h6", {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".grid",
+        start: "top 80%",
+        scrub: true,
+      },
+    });
+
+    gsap.from(".box span", {
+      y: 20,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: "power2.out",
+      delay: 0.3,
+      scrollTrigger: {
+        trigger: ".box span",
+        start: "top 80%",
+        scrub: true,
+        end: "top 10%",
+      },
+    });
+
+    // Animate the empty boxes
+    gsap.from(".box:not(:has(h6))", {
+      scale: 0.8,
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.1,
+      ease: "back.out(1.7)",
+      scrollTrigger: {
+        trigger: ".grid",
+        start: "top 80%",
+        scrub: true,
+      },
+    });
+
+    // Glow area animation
+    gsap.from(".glow-area", {
+      scale: 0,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".grid",
+        start: "top 80%",
+        scrub: true,
+      },
+    });
   });
 
-  gsap.from("#about-us .about-us-content", {
-    scale: 0.95,
-    opacity: 0,
-    duration: 1.2,
-    scrollTrigger: {
-      trigger: "#about-us .about-us-content",
-      start: "top 85%",
-      end: "top 55%",
-      scrub: 1,
-    }
-  });
-
-  gsap.from("#about-us .badge-button", {
-    x: -100,
-    opacity: 0,
-    duration: 0.8,
-    scrollTrigger: {
-      trigger: "#about-us .badge-button",
-      start: "top 90%",
-      end: "top 60%",
-      scrub: 1,
-    }
-  });
-
-  gsap.from("#about-us .about-us-text", {
-    opacity: 0,
-    duration: 1,
-    scrollTrigger: {
-      trigger: "#about-us .about-us-text",
-      start: "top 85%",
-      end: "top 50%",
-      scrub: 1,
-    }
-  });
-
-  // Button animations using #about-us parent selector
-  // 1. Button wrapper
-  gsap.from("#about-us .about-us-button", {
+  // trust-us
+  // Animate each feature with a staggered effect
+  gsap.from("#trust-us .feature", {
     y: 50,
     opacity: 0,
-    duration: 1.2,
-    ease: "back.out(1.7)",
-    scrollTrigger: {
-      trigger: "#about-us .about-us-button",
-      start: "top 95%",
-      end: "top 65%",
-      scrub: 1,
-      markers: false,
-    }
-  });
-
-  // 2. Glow button
-  gsap.from("#about-us .glow-button", {
-    scale: 0.9,
-    opacity: 0.7,
-    boxShadow: "0 0 0 rgba(255, 255, 255, 0)",
     duration: 1,
+    stagger: 0.2,
+    ease: "power3.out",
     scrollTrigger: {
-      trigger: "#about-us .about-us-button",
-      start: "top 90%",
-      end: "top 60%",
-      scrub: 1,
-      markers: false,
+      trigger: "#trust-us",
+      start: "top 80%",
+      toggleActions: "play none none reverse",
     },
   });
 
-  // 3. Polygon
-  gsap.from("#about-us .polygon", {
+  // Animate icons separately for extra emphasis
+  gsap.from("#trust-us .feature img", {
+    scale: 0.8,
     opacity: 0,
-    rotation: -90,
-    duration: 1,
+    duration: 0.8,
+    stagger: 0.2,
+    ease: "back.out(1.7)",
+    delay: 0.2,
     scrollTrigger: {
-      trigger: "#about-us .about-us-button",
-      start: "top 95%",
-      end: "top 65%",
-      scrub: 1,
-      markers: false,
-    }
+      trigger: "#trust-us",
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    },
   });
 
+  // Animate text with a slight delay after icons
+  gsap.from("#trust-us .feature h3", {
+    x: 30,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.2,
+    ease: "power2.out",
+    delay: 0.4,
+    scrollTrigger: {
+      trigger: "#trust-us",
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    },
+  });
+
+  // campaign data section
+  // Animate the title with fade and slight scale
+  gsap.from("#campaign-data .main-heading", {
+    opacity: 0,
+    scale: 0.95,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: "#campaign-data",
+      start: "top 85%",
+      end: "top 60%",
+      scrub: 1,
+    },
+  });
+
+  // Animate accordion items with fade-in
+  gsap.from("#campaign-data .accordion details", {
+    opacity: 0,
+    y: 20,
+    duration: 0.8,
+    stagger: 0.15,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".accordion",
+      start: "top 80%",
+      end: "top 50%",
+      scrub: 1,
+    },
+  });
+
+  // Animate table header with fade
+  gsap.from("#campaign-data table thead", {
+    opacity: 0,
+    duration: 0.8,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".table-container",
+      start: "top 85%",
+      end: "top 60%",
+      scrub: 1,
+    },
+  });
+
+  // Animate table rows with fade and slight stagger
+  gsap.from("#campaign-data table tbody tr", {
+    opacity: 0,
+    y: 15,
+    duration: 0.8,
+    stagger: 0.05,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".table-container",
+      start: "top 80%",
+      end: "top 40%",
+      scrub: 1,
+    },
+  });
+
+  // services-section
+  // service-section-animations.js
+
+  // Check if service-section-wrap exists
+  if (document.querySelector(".service-section-wrap")) {
+    document.addEventListener("DOMContentLoaded", () => {
+      // Register ScrollTrigger plugin
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Animate the entire section
+      gsap.from(".service-section-wrap", {
+        opacity: 0,
+        y: 80,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".service-section-wrap",
+          start: "top 90%", // Start when top of section hits 90% of viewport
+          end: "bottom 20%", // End when bottom of section is 20% from top
+          scrub: 1,
+        },
+      });
+
+      // Animate heading and paragraph
+      gsap.from(".service-section > *", {
+        opacity: 0,
+        y: 40,
+        duration: 1,
+        stagger: 0.2,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".service-section",
+          start: "top 85%",
+          end: "top 50%",
+          scrub: 1,
+        },
+      });
+
+      // Animate all service cards individually
+      gsap.from(".service-card", {
+        opacity: 0,
+        scale: 0.9,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: "back.out(1.2)",
+        scrollTrigger: {
+          trigger: ".service-section-wrap", // Use the full section as trigger
+          start: "top 80%", // Start earlier to catch all cards
+          end: "bottom 80%", // Extend end to ensure bottom cards animate
+          scrub: 1,
+          // pin: false, // No pinning, just scroll-based
+        },
+      });
+
+      // Animate card contents
+      gsap.from(".service-card > *", {
+        opacity: 0,
+        y: 20,
+        duration: 0.6,
+        stagger: 0.1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".service-section-wrap", // Same trigger for consistency
+          start: "top 80%",
+          end: "bottom 80%",
+          scrub: 1,
+        },
+      });
+    });
+  }
+
+  // blog secction
+  gsap.utils.toArray(".blog-card").forEach((card, index) => {
+    gsap.from(card, {
+      scrollTrigger: {
+        trigger: card,
+        start: "top 80%", // Start animation when top of card is 80% from top of viewport
+        end: "bottom 20%", // End when bottom of card is 20% from top of viewport
+        scrub: 1, // Smooth scrubbing effect
+        toggleActions: "play none none reverse", // Play on enter, reverse on leave
+      },
+      opacity: 0,
+      y: 50, // Move up from 50px below
+      duration: 1,
+      ease: "power2.out",
+      delay: index * 0.2, // Stagger animation for each card
+    });
+  });
+
+  // Animate heading
+  gsap.from(".blog-heading", {
+    scrollTrigger: {
+      trigger: ".blog-heading",
+      start: "top 90%",
+      end: "bottom 60%",
+      scrub: 1,
+    },
+    opacity: 0,
+    y: 30,
+    duration: 1,
+    ease: "power2.out",
+  });
+// contact-us section
+
+// Animate the form text section
+gsap.from('.form-text', {
+  scrollTrigger: {
+      trigger: '.contact-form',
+      start: 'top 80%', // Start animation when top of element is at 80% of viewport height
+      end: 'bottom 20%', // End when bottom is at 20% of viewport height
+      scrub: 1, // Smooth scrubbing effect
+      toggleActions: 'play none none reverse' // Play on enter, reverse on leave
+  },
+  opacity: 0,
+  x: -50, // Slide in from left
+  duration: 1
 });
+
+
+// Animate form inputs
+gsap.from('.form-input', {
+  scrollTrigger: {
+      trigger: '.form-input-group',
+      start: 'top 90%',
+      end: 'bottom 30%',
+      scrub: 1,
+  },
+  opacity: 0,
+  y: 30,
+  stagger: 0.3,
+  duration: 1
+});
+
+// Animate submit button
+gsap.from('.submit-btn', {
+  scrollTrigger: {
+      trigger: '.submit-btn',
+      start: 'top 100%',
+      end: 'bottom 40%',
+      scrub: 1,
+  },
+  opacity: 0,
+  scale: 0.9,
+  duration: 1
+});
+
+
+}
+
+// testimonial-animations.js
+
+// Check if testimonial section with testimonial-card exists
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  /*** Testimonial Animation ***/
+  if (document.querySelector(".testimonial-animate")) {
+    gsap.from(".testimonial-tittle h3", {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".testimonial-tittle",
+        start: "top 90%",
+        end: "top 60%",
+        scrub: 1,
+      },
+    });
+
+    gsap.from(".testimonial-card", {
+      opacity: 0,
+      y: 60,
+      duration: 1, // Adjust the duration for all elements to animate at once
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".testimonial-animate .slider-container",
+        start: "top 85%",
+        end: "bottom 20%",
+        scrub: 1,
+      },
+    });
+
+    gsap.from(".testimonial-card .testimonial-wrapper > *", {
+      opacity: 0,
+      y: 30,
+      duration: 1, // Same duration as the previous animation
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".testimonial-animate .slider-container",
+        start: "top 85%",
+        end: "bottom 20%",
+        scrub: 1,
+      },
+    });
+
+    gsap.from(".testimonial-animate .slider-controls", {
+      opacity: 0,
+      y: 40,
+      duration: 1, // Same duration as the previous animation
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".testimonial-animate .slider-controls",
+        start: "top 90%",
+        end: "top 60%",
+        scrub: 1,
+      },
+    });
+  }
+
+  /*** Projects Animation ***/
+  if (document.querySelector(".projects")) {
+    gsap.from("#projects .main-heading", {
+      y: 60,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: "#projects",
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    gsap.from("#projects .projects-button", {
+      x: 40,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power2.out",
+      delay: 0.3,
+      scrollTrigger: {
+        trigger: "#projects",
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    gsap.from("#projects .project-card", {
+      y: 80,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".slider",
+        start: "top 75%",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    gsap.from("#projects .card-container > *", {
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".slider",
+        start: "top 75%",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    gsap.from("#projects .slider-controls", {
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".slider-controls",
+        start: "top 90%",
+        toggleActions: "play none none reverse",
+      },
+    });
+  }
+});
+
+// home-cta-animations.js
+// Check if home-cta exists and target only the first instance
+if (document.querySelector("#home-cta")) {
+  document.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Select all elements with the #home-cta ID (which should be unique)
+    // Instead, use a class like `.home-cta` for multiple sections
+    document.querySelectorAll(".home-cta").forEach((ctaSection) => {
+      gsap.from(ctaSection, {
+        y: 100, // Slide up from 100px below
+        opacity: 0,
+        duration: 1.2,
+        ease: "power4.out", // Smooth, strong easing
+        scrollTrigger: {
+          trigger: ctaSection,
+          start: "top 90%",
+          end: "top 60%",
+          scrub: 1,
+        },
+      });
+
+      // Stagger internal elements
+      gsap.from(ctaSection.querySelectorAll(".cta-contant > *"), {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ctaSection,
+          start: "top 85%",
+          end: "top 55%",
+          scrub: 1,
+        },
+      });
+
+      // Animate buttons inside each section
+      gsap.to(ctaSection.querySelectorAll(".cta-button"), {
+        x: 10, // Slight shift right
+        duration: 0.6,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: ctaSection,
+          start: "top 80%",
+          end: "top 50%",
+          scrub: 1,
+        },
+      });
+    });
+  });
+}

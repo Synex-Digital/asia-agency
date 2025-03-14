@@ -352,6 +352,22 @@ body {
 
 /* trust us section end */
 
+/* animation start */
+.animate-item.left-button {
+  opacity: 0; /* Matches opacity: 0 in preset */
+  transform: translateX(-100px); /* Matches x: -100 in preset */
+}
+/* animation end*/
+
+/* Ensure smooth transitions */
+.numbers-container,
+.box {
+  will-change: transform, opacity;
+}
+
+
+/* animation end */
+
 /* campaign Container */
 
 .campaign-data-content {
