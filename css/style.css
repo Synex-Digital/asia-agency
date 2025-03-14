@@ -126,12 +126,12 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   overflow: hidden;
-  width: 1200px;
+  width: 100%;
 }
 
 .box {
   position: relative;
-  width: 400px;
+  width:100%;
   height: 200px;
   border: 1px solid rgba(91, 91, 91, 0.5);
   opacity: 50%;
@@ -219,13 +219,13 @@ body {
 .box .plus-icon {
   position: absolute;
   font-size: 64px;
-  top: 24px;
+  top: 10%;
   line-height: 76px;
 }
 .box .modulas-icon {
   position: absolute;
   font-size: 40px;
-  top: 24px;
+  top: 10%;
   line-height: 76px;
 }
 
@@ -249,38 +249,47 @@ body {
     row-gap: 48px;
   }
 }
-
-@media (max-width: 768px) {
-  .grid {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    overflow: hidden;
-    width: 600px;
+@media (max-width:900px) {
+  .box h6{
+    font-size: 70px;
   }
-  .box {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border: 1px solid rgba(91, 91, 91, 0.5);
+  .box .plus-icon {
+    top: 3%;
+    font-size: 50px;
+  }
+  .box .modulas-icon {
+    top: 3%;
+    font-size: 30px;
+  }
+  
+}
+@media (max-width:720px) {
+  .box h6{
+    font-size: 50px;
+  }
+
+  .numbers-container h3 {
+    width: 90%;
+    text-align: center;
+}
+  
+}
+
+@media (max-width:600px){
+  .box h6{
+    padding-left: 8px;
+  }
+  .box span{
+    padding-left: 8px;
+  }
+}
+@media (max-width:500px) {
+
+  #numberSection{
+    display: none;
   }
 }
 
-@media (max-width: 640px) {
-  .grid {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    overflow: hidden;
-    width: 480px;
-  }
-  .box {
-    position: relative;
-    width: 160px;
-    height: 200px;
-    border: 1px solid rgba(91, 91, 91, 0.5);
-  }
-}
 /* number section end */
 
 /* trust us section start */
@@ -339,7 +348,25 @@ body {
     justify-content: space-around;
   }
 }
+
+
 /* trust us section end */
+
+/* animation start */
+.animate-item.left-button {
+  opacity: 0; /* Matches opacity: 0 in preset */
+  transform: translateX(-100px); /* Matches x: -100 in preset */
+}
+/* animation end*/
+
+/* Ensure smooth transitions */
+.numbers-container,
+.box {
+  will-change: transform, opacity;
+}
+
+
+/* animation end */
 
 /* campaign Container */
 
