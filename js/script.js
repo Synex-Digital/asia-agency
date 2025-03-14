@@ -544,7 +544,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// sercices radio
+// services radio
 
 document.addEventListener("DOMContentLoaded", function () {
   const respondCards = document.querySelectorAll(".services-respond-card");
@@ -656,531 +656,830 @@ if (
       ease: "power3.out",
     });
   });
-}
-// about-us
-// this has problem
-document.addEventListener("DOMContentLoaded", function () {
-  if (typeof window.Lenis === "undefined") {
-    console.error("Lenis is not loaded. Check the script source or network.");
-    return;
-  }
+  document.addEventListener("DOMContentLoaded", () => {
+    // Register ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger);
 
+    // Initialize animations
+    function initAnimations() {
+      // Animate logos from left to right
+      gsap.from(".logo", {
+        scrollTrigger: {
+          trigger: "#logoContainer",
+          start: "top 80%",
+          toggleActions: "play none none reset",
+          // markers: true // Uncomment for debugging
+        },
+        x: -30,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: "power2.out",
+      });
+
+      // Optional: Add hover effect for logos
+      const logos = document.querySelectorAll(".logo");
+      logos.forEach((logo) => {
+        logo.addEventListener("mouseenter", () => {
+          gsap.to(logo, {
+            scale: 1.1,
+            duration: 0.3,
+            ease: "power2.out",
+          });
+        });
+        logo.addEventListener("mouseleave", () => {
+          gsap.to(logo, {
+            scale: 1,
+            duration: 0.3,
+            ease: "power2.out",
+          });
+        });
+      });
+    }
+
+    setTimeout(() => {
+      initAnimations();
+      ScrollTrigger.refresh();
+    }, 100);
+
+    // Ensure proper recalculation after full load (e.g., images)
+    window.addEventListener("load", () => {
+      ScrollTrigger.refresh();
+    });
+  });
+  // about-us
+  document.addEventListener("DOMContentLoaded", function () {
+    if (typeof window.Lenis === "undefined") {
+      console.error("Lenis is not loaded. Check the script source or network.");
+      return;
+    }
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Select all words
+    const words = document.querySelectorAll("#about-us h3");
+
+    // Split each word into characters and animate them
+    words.forEach((word, i) => {
+      const text = new SplitType(word, { types: "char" });
+
+      gsap.fromTo(
+        text.chars,
+        {
+          color: "rgba(255, 255, 255, 0.1)",
+        },
+        {
+          color: "rgba(255, 255, 255, 1)",
+          scrollTrigger: {
+            trigger: word,
+            start: "top 80%",
+            end: "top 20%",
+            scrub: true,
+            markers: false,
+          },
+          opacity: 1,
+          duration: 0.2,
+          stagger: 0.05,
+        }
+      );
+    });
+
+    // Lenis smooth scrolling
+    const lenis = new window.Lenis();
+    lenis.on("scroll", (e) => {});
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  });
+
+  // Register ScrollTrigger with GSAP
   gsap.registerPlugin(ScrollTrigger);
 
-  // Select all words
-  const words = document.querySelectorAll("#about-us h3");
-
-  // Split each word into characters and animate them
-  words.forEach((word, i) => {
-    const text = new SplitType(word, { types: "char" });
-
-    gsap.fromTo(
-      text.chars,
-      {
-        color: "rgba(255, 255, 255, 0.1)",
-      },
-      {
-        color: "rgba(255, 255, 255, 1)",
+  // Animation function
+  const animateOnScroll = (
+    selector,
+    triggerSelector,
+    animationType,
+    options = {}
+  ) => {
+    const animationPresets = {
+      fadeTextUp: {
+        opacity: 0,
+        y: 50,
+        duration: 1,
         scrollTrigger: {
-          trigger: word,
           start: "top 80%",
-          end: "top 20%",
+          end: "top 30%",
           scrub: true,
           markers: false,
         },
-        opacity: 1,
-        duration: 0.2,
-        stagger: 0.05,
+      },
+      bageButton: {
+        x: -100,
+        opacity: 0,
+        duration: 0.8,
+        scrollTrigger: {
+          start: "top 90%",
+          end: "top 60%",
+          scrub: 1,
+        },
+      },
+      brandLogo: {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        scrollTrigger: {
+          start: "top 80%",
+          end: "top 30%",
+          scrub: true,
+          markers: false,
+        },
+      },
+      btnDown: {
+        y: 50,
+        opacity: 0,
+        duration: 1.2,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+          start: "top 95%",
+          end: "top 65%",
+          scrub: 1,
+        },
+      },
+      typewriter: {
+        function: (element, trigger, options) => {
+          // Store original content and clear element
+          const originalHTML = element.innerHTML;
+          element.innerHTML = "";
+
+          // Create a temporary container to parse the content
+          const tempDiv = document.createElement("div");
+          tempDiv.innerHTML = originalHTML;
+
+          // Process text nodes and spans separately
+          const characters = [];
+          Array.from(tempDiv.childNodes).forEach((node) => {
+            if (node.nodeType === Node.TEXT_NODE) {
+              // Split text into characters
+              Array.from(node.textContent).forEach((char) => {
+                const span = document.createElement("span");
+                span.textContent = char;
+                span.style.opacity = 0;
+                element.appendChild(span);
+                characters.push(span);
+              });
+            } else if (node.nodeType === Node.ELEMENT_NODE) {
+              // Preserve the span (or other elements) as-is
+              const clonedNode = node.cloneNode(true);
+              clonedNode.style.opacity = 0;
+              element.appendChild(clonedNode);
+              characters.push(clonedNode);
+            }
+          });
+
+          // Animate all characters and spans
+          gsap.to(characters, {
+            opacity: 1,
+            stagger: options.stagger || 0.1,
+            scrollTrigger: {
+              trigger: trigger,
+              start: options.scrollTrigger?.start || "top 80%",
+              toggleActions: "play none none none",
+              markers: options.scrollTrigger?.markers || false,
+            },
+          });
+        },
+      },
+    };
+
+    // Get the preset, fallback to fadeTextUp if invalid
+    const preset =
+      animationPresets[animationType] || animationPresets.fadeTextUp;
+
+    // Convert selector to array and filter out non-existent elements
+    const elements = gsap.utils
+      .toArray(selector)
+      .filter((el) => el instanceof Element);
+
+    if (!elements.length) {
+      // console.warn(`No elements found for selector no problem: ${selector}`);
+      return;
+    }
+
+    elements.forEach((element) => {
+      // Determine the trigger dynamically
+      let trigger = triggerSelector
+        ? document.querySelector(triggerSelector)
+        : element.closest("section") || element;
+
+      if (!trigger) {
+        console.warn(
+          `Trigger not found for ${triggerSelector}, using element as fallback`
+        );
+        trigger = element;
       }
-    );
-  });
 
-  // Lenis smooth scrolling
-  const lenis = new window.Lenis();
-  lenis.on("scroll", (e) => {});
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf);
-});
-
-// Register ScrollTrigger with GSAP
-gsap.registerPlugin(ScrollTrigger);
-
-// Animation function
-const animateOnScroll = (
-  selector,
-  triggerSelector,
-  animationType,
-  options = {}
-) => {
-  const animationPresets = {
-    fadeTextUp: {
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      scrollTrigger: {
-        start: "top 80%",
-        end: "top 30%",
-        scrub: true,
-        markers: false,
-      },
-    },
-    bageButton: {
-      x: -100,
-      opacity: 0,
-      duration: 0.8,
-      scrollTrigger: {
-        start: "top 90%",
-        end: "top 60%",
-        scrub: 1,
-      },
-    },
-    brandLogo: {
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      scrollTrigger: {
-        start: "top 80%",
-        end: "top 30%",
-        scrub: true,
-        markers: false,
-      },
-    },
-    btnDown: {
-      y: 50,
-      opacity: 0,
-      duration: 1.2,
-      ease: "back.out(1.7)",
-      scrollTrigger: {
-        start: "top 95%",
-        end: "top 65%",
-        scrub: 1,
-      },
-    },
-    typewriter: {
-      function: (element, trigger, options) => {
-        // Store original content and clear element
-        const originalHTML = element.innerHTML;
-        element.innerHTML = "";
-
-        // Create a temporary container to parse the content
-        const tempDiv = document.createElement("div");
-        tempDiv.innerHTML = originalHTML;
-
-        // Process text nodes and spans separately
-        const characters = [];
-        Array.from(tempDiv.childNodes).forEach((node) => {
-          if (node.nodeType === Node.TEXT_NODE) {
-            // Split text into characters
-            Array.from(node.textContent).forEach((char) => {
-              const span = document.createElement("span");
-              span.textContent = char;
-              span.style.opacity = 0;
-              element.appendChild(span);
-              characters.push(span);
-            });
-          } else if (node.nodeType === Node.ELEMENT_NODE) {
-            // Preserve the span (or other elements) as-is
-            const clonedNode = node.cloneNode(true);
-            clonedNode.style.opacity = 0;
-            element.appendChild(clonedNode);
-            characters.push(clonedNode);
-          }
-        });
-
-        // Animate all characters and spans
-        gsap.to(characters, {
-          opacity: 1,
-          stagger: options.stagger || 0.1,
+      // Handle the preset based on whether it’s a function or properties
+      if (typeof preset.function === "function") {
+        preset.function(element, trigger, options); // Call the custom function
+      } else {
+        // Only apply gsap.from for property-based presets
+        gsap.from(element, {
+          ...preset,
+          ...options,
           scrollTrigger: {
             trigger: trigger,
-            start: options.scrollTrigger?.start || "top 80%",
-            toggleActions: "play none none none",
-            markers: options.scrollTrigger?.markers || false,
+            ...preset.scrollTrigger, // Safe now, only used for fadeTextUp-like presets
+            ...options.scrollTrigger,
           },
         });
-      },
-    },
+      }
+    });
   };
 
-  // Get the preset, fallback to fadeTextUp if invalid
-  const preset = animationPresets[animationType] || animationPresets.fadeTextUp;
+  // Usage
+  document.addEventListener("DOMContentLoaded", () => {
+    animateOnScroll(".animate-text", null, "fadeTextUp");
+    animateOnScroll(".animate-bageButton", null, "bageButton");
 
-  // Convert selector to array and filter out non-existent elements
-  const elements = gsap.utils
-    .toArray(selector)
-    .filter((el) => el instanceof Element);
+    animateOnScroll(".typewriter", null, "typewriter", {
+      stagger: 0.05,
+      delay: 0.5,
+      scrollTrigger: {
+        start: "top 80%",
+      },
+    });
+  });
 
-  if (!elements.length) {
-    // console.warn(`No elements found for selector no problem: ${selector}`);
-    return;
-  }
-
-  elements.forEach((element) => {
-    // Determine the trigger dynamically
-    let trigger = triggerSelector
-      ? document.querySelector(triggerSelector)
-      : element.closest("section") || element;
-
-    if (!trigger) {
-      console.warn(
-        `Trigger not found for ${triggerSelector}, using element as fallback`
-      );
-      trigger = element;
-    }
-
-    // Handle the preset based on whether it’s a function or properties
-    if (typeof preset.function === "function") {
-      preset.function(element, trigger, options); // Call the custom function
-    } else {
-      // Only apply gsap.from for property-based presets
-      gsap.from(element, {
-        ...preset,
-        ...options,
+  // home-animations.js
+  // Only run on homepage
+  if (
+    window.location.pathname === "/" ||
+    window.location.pathname === "/index.html"
+  ) {
+    // trust-us
+    document.addEventListener("DOMContentLoaded", () => {
+      // Animate each feature with a staggered effect
+      gsap.from("#trust-us .feature", {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.2,
+        ease: "power3.out",
         scrollTrigger: {
-          trigger: trigger,
-          ...preset.scrollTrigger, // Safe now, only used for fadeTextUp-like presets
-          ...options.scrollTrigger,
+          trigger: "#trust-us",
+          start: "top 80%",
+          toggleActions: "play none none reverse",
         },
       });
-    }
-  });
-};
 
-// Usage
-document.addEventListener("DOMContentLoaded", () => {
-  animateOnScroll(".animate-text", null, "fadeTextUp");
-  animateOnScroll(".animate-bageButton", null, "bageButton");
-  animateOnScroll(".btn-down", "btn-down", "btnDown", {
-    scrollTrigger: {},
-  });
+      // Animate icons separately for extra emphasis
+      gsap.from("#trust-us .feature img", {
+        scale: 0.8,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "back.out(1.7)",
+        delay: 0.2,
+        scrollTrigger: {
+          trigger: "#trust-us",
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      });
 
-  animateOnScroll(".typewriter", null, "typewriter", {
-    stagger: 0.05,
-    delay: 0.5,
-    scrollTrigger: {
-      start: "top 80%",
-    },
-  });
-});
-
-// home-animations.js
-
-// Only run on homepage
-if (
-  window.location.pathname === "/" ||
-  window.location.pathname === "/index.html"
-) {
-  document.addEventListener("DOMContentLoaded", () => {
-    // Animate all boxes with content
-    gsap.from(".box h6", {
-      y: 50,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.2,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".grid",
-        start: "top 80%",
-        scrub: true,
-      },
+      // Animate text with a slight delay after icons
+      gsap.from("#trust-us .feature h3", {
+        x: 30,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power2.out",
+        delay: 0.4,
+        scrollTrigger: {
+          trigger: "#trust-us",
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      });
     });
 
-    gsap.from(".box span", {
-      y: 20,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.2,
-      ease: "power2.out",
-      delay: 0.3,
-      scrollTrigger: {
-        trigger: ".box span",
-        start: "top 80%",
-        scrub: true,
-        end: "top 10%",
-      },
-    });
-
-    // Animate the empty boxes
-    gsap.from(".box:not(:has(h6))", {
-      scale: 0.8,
-      opacity: 0,
-      duration: 0.6,
-      stagger: 0.1,
-      ease: "back.out(1.7)",
-      scrollTrigger: {
-        trigger: ".grid",
-        start: "top 80%",
-        scrub: true,
-      },
-    });
-
-    // Glow area animation
-    gsap.from(".glow-area", {
-      scale: 0,
-      opacity: 0,
-      duration: 1.5,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".grid",
-        start: "top 80%",
-        scrub: true,
-      },
-    });
-  });
-
-  // trust-us
-  // Animate each feature with a staggered effect
-  gsap.from("#trust-us .feature", {
-    y: 50,
-    opacity: 0,
-    duration: 1,
-    stagger: 0.2,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: "#trust-us",
-      start: "top 80%",
-      toggleActions: "play none none reverse",
-    },
-  });
-
-  // Animate icons separately for extra emphasis
-  gsap.from("#trust-us .feature img", {
-    scale: 0.8,
-    opacity: 0,
-    duration: 0.8,
-    stagger: 0.2,
-    ease: "back.out(1.7)",
-    delay: 0.2,
-    scrollTrigger: {
-      trigger: "#trust-us",
-      start: "top 80%",
-      toggleActions: "play none none reverse",
-    },
-  });
-
-  // Animate text with a slight delay after icons
-  gsap.from("#trust-us .feature h3", {
-    x: 30,
-    opacity: 0,
-    duration: 0.8,
-    stagger: 0.2,
-    ease: "power2.out",
-    delay: 0.4,
-    scrollTrigger: {
-      trigger: "#trust-us",
-      start: "top 80%",
-      toggleActions: "play none none reverse",
-    },
-  });
-
-  // campaign data section
-  // Animate the title with fade and slight scale
-  gsap.from("#campaign-data .main-heading", {
-    opacity: 0,
-    scale: 0.95,
-    duration: 1,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: "#campaign-data",
-      start: "top 85%",
-      end: "top 60%",
-      scrub: 1,
-    },
-  });
-
-  // Animate accordion items with fade-in
-  gsap.from("#campaign-data .accordion details", {
-    opacity: 0,
-    y: 20,
-    duration: 0.8,
-    stagger: 0.15,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: ".accordion",
-      start: "top 80%",
-      end: "top 50%",
-      scrub: 1,
-    },
-  });
-
-  // Animate table header with fade
-  gsap.from("#campaign-data table thead", {
-    opacity: 0,
-    duration: 0.8,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: ".table-container",
-      start: "top 85%",
-      end: "top 60%",
-      scrub: 1,
-    },
-  });
-
-  // Animate table rows with fade and slight stagger
-  gsap.from("#campaign-data table tbody tr", {
-    opacity: 0,
-    y: 15,
-    duration: 0.8,
-    stagger: 0.05,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: ".table-container",
-      start: "top 80%",
-      end: "top 40%",
-      scrub: 1,
-    },
-  });
-
-  // services-section
-  // service-section-animations.js
-
-  // Check if service-section-wrap exists
-  if (document.querySelector(".service-section-wrap")) {
+    // campaign data section
     document.addEventListener("DOMContentLoaded", () => {
       // Register ScrollTrigger plugin
       gsap.registerPlugin(ScrollTrigger);
 
-      // Animate the entire section
-      gsap.from(".service-section-wrap", {
-        opacity: 0,
-        y: 80,
-        duration: 1.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".service-section-wrap",
-          start: "top 90%", // Start when top of section hits 90% of viewport
-          end: "bottom 20%", // End when bottom of section is 20% from top
-          scrub: 1,
-        },
+      // Reset inline styles on accordion details to prevent initial hiding
+      const detailsElements = document.querySelectorAll(".accordion details");
+      detailsElements.forEach((detail) => {
+        detail.style.opacity = "1";
+        detail.style.transform = "none";
       });
 
-      // Animate heading and paragraph
-      gsap.from(".service-section > *", {
+      // Initialize animations
+      function initAnimations() {
+        // Animate accordion items (left side)
+        gsap.from(".accordion details", {
+          scrollTrigger: {
+            trigger: ".campaign-data-content",
+            start: "top 80%",
+            toggleActions: "play none none reset",
+            // markers: true // Uncomment for debugging
+          },
+          y: 30,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power2.out",
+        });
+
+        // Enhance accordion content animation when opened
+        detailsElements.forEach((detail) => {
+          detail.addEventListener("toggle", () => {
+            if (detail.open) {
+              gsap.from(detail.querySelector(".white-bg-btn"), {
+                y: 20,
+                opacity: 0,
+                duration: 0.5,
+                ease: "power2.out",
+              });
+            }
+          });
+        });
+
+        // Animate table header (right side)
+        gsap.from(".table-container thead tr", {
+          scrollTrigger: {
+            trigger: ".campaign-data-content",
+            start: "top 80%",
+            toggleActions: "play none none reset",
+          },
+          y: -20, // Slide down from above
+          opacity: 0,
+          duration: 0.8,
+          ease: "power3.out",
+        });
+
+        // Animate table rows (right side)
+        gsap.from(".table-container tbody tr", {
+          scrollTrigger: {
+            trigger: ".campaign-data-content",
+            start: "top 80%",
+            toggleActions: "play none none reset",
+          },
+          x: 30, // Slide in from the right (changed from y to x for horizontal effect)
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.1, // Stagger rows for a wave effect
+          ease: "power2.out",
+        });
+
+        // Hover animation for "More info" buttons
+        const moreInfoButtons = document.querySelectorAll(".white-bg-btn");
+        moreInfoButtons.forEach((btn) => {
+          btn.addEventListener("mouseenter", () => {
+            gsap.to(btn, { scale: 1.05, duration: 0.3, ease: "power2.out" });
+            gsap.to(btn.querySelector(".white-bg-btn-arrow"), {
+              x: 5,
+              duration: 0.3,
+              ease: "power2.out",
+            });
+          });
+          btn.addEventListener("mouseleave", () => {
+            gsap.to(btn, { scale: 1, duration: 0.3, ease: "power2.out" });
+            gsap.to(btn.querySelector(".white-bg-btn-arrow"), {
+              x: 0,
+              duration: 0.3,
+              ease: "power2.out",
+            });
+          });
+        });
+      }
+
+      // Run animations after a short delay and refresh ScrollTrigger
+      setTimeout(() => {
+        initAnimations();
+        ScrollTrigger.refresh();
+      }, 100);
+
+      // Ensure visibility on full load
+      window.addEventListener("load", () => {
+        detailsElements.forEach((detail) => {
+          detail.style.opacity = "1";
+          detail.style.transform = "none";
+        });
+        ScrollTrigger.refresh();
+      });
+    });
+    // services-section
+    // Check if service-section-wrap exists
+    if (document.querySelector(".service-section-wrap")) {
+      document.addEventListener("DOMContentLoaded", () => {
+        // Register ScrollTrigger plugin
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animate the entire section
+        gsap.from(".service-section-wrap", {
+          opacity: 0,
+          y: 80,
+          duration: 1.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".service-section-wrap",
+            start: "top 90%", // Start when top of section hits 90% of viewport
+            end: "bottom 20%", // End when bottom of section is 20% from top
+            scrub: 1,
+          },
+        });
+
+        // Animate heading and paragraph
+        gsap.from(".service-section > *", {
+          opacity: 0,
+          y: 40,
+          duration: 1,
+          stagger: 0.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".service-section",
+            start: "top 85%",
+            end: "top 50%",
+            scrub: 1,
+          },
+        });
+
+        // Animate all service cards individually
+        gsap.from(".service-card", {
+          opacity: 0,
+          scale: 0.9,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "back.out(1.2)",
+          scrollTrigger: {
+            trigger: ".service-section-wrap", // Use the full section as trigger
+            start: "top 80%", // Start earlier to catch all cards
+            end: "bottom 80%", // Extend end to ensure bottom cards animate
+            scrub: 1,
+            // pin: false, // No pinning, just scroll-based
+          },
+        });
+
+        // Animate card contents
+        gsap.from(".service-card > *", {
+          opacity: 0,
+          y: 20,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".service-section-wrap", // Same trigger for consistency
+            start: "top 80%",
+            end: "bottom 80%",
+            scrub: 1,
+          },
+        });
+      });
+    }
+    // blog secction
+    document.addEventListener("DOMContentLoaded", () => {
+      gsap.utils.toArray(".blog-card").forEach((card, index) => {
+        gsap.from(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: "top 80%", // Start animation when top of card is 80% from top of viewport
+            end: "bottom 20%", // End when bottom of card is 20% from top of viewport
+            scrub: 1, // Smooth scrubbing effect
+            toggleActions: "play none none reverse", // Play on enter, reverse on leave
+          },
+          opacity: 0,
+          y: 50, // Move up from 50px below
+          duration: 1,
+          ease: "power2.out",
+          delay: index * 0.2, // Stagger animation for each card
+        });
+      });
+
+      // Animate heading
+      gsap.from(".blog-heading", {
+        scrollTrigger: {
+          trigger: ".blog-heading",
+          start: "top 90%",
+          end: "bottom 60%",
+          scrub: 1,
+        },
         opacity: 0,
-        y: 40,
+        y: 30,
         duration: 1,
+        ease: "power2.out",
+      });
+    });
+    // contact-us section
+    document.addEventListener("DOMContentLoaded", () => {
+      gsap.from(".form-text h3", {
+        scrollTrigger: {
+          trigger: ".form-text",
+          start: "top 80%", // When top of element hits 80% from top of viewport
+          toggleActions: "play none none reset", // On enter, on leave, on enter back, on leave back
+        },
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+      });
+
+      // Animate list items
+      gsap.from(".form-list li", {
+        scrollTrigger: {
+          trigger: ".form-list",
+          start: "top 80%",
+          toggleActions: "play none none reset",
+        },
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
         stagger: 0.2,
         ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".service-section",
-          start: "top 85%",
-          end: "top 50%",
-          scrub: 1,
-        },
       });
 
-      // Animate all service cards individually
-      gsap.from(".service-card", {
+      // Animate CTA
+      gsap.from(".form-cta", {
+        scrollTrigger: {
+          trigger: ".form-cta",
+          start: "top 80%",
+          toggleActions: "play none none reset",
+        },
+        y: 30,
         opacity: 0,
-        scale: 0.9,
         duration: 0.8,
-        stagger: 0.15,
-        ease: "back.out(1.2)",
-        scrollTrigger: {
-          trigger: ".service-section-wrap", // Use the full section as trigger
-          start: "top 80%", // Start earlier to catch all cards
-          end: "bottom 80%", // Extend end to ensure bottom cards animate
-          scrub: 1,
-          // pin: false, // No pinning, just scroll-based
-        },
+        ease: "power2.out",
       });
 
-      // Animate card contents
-      gsap.from(".service-card > *", {
+      // Animate service and budget sections
+      gsap.from(".form-form > div", {
+        scrollTrigger: {
+          trigger: ".form-form",
+          start: "top 80%",
+          toggleActions: "play none none reset",
+        },
+        x: 50,
         opacity: 0,
+        duration: 0.8,
+        stagger: 0.3,
+        ease: "power3.out",
+      });
+
+      // Animate form inputs
+      gsap.from(".form-input", {
+        scrollTrigger: {
+          trigger: ".form-input-group",
+          start: "top 80%",
+          toggleActions: "play none none reset",
+        },
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power2.out",
+      });
+
+      // Animate submit button
+      gsap.from(".submit-btn button", {
+        scrollTrigger: {
+          trigger: ".submit-btn",
+          start: "top 80%",
+          toggleActions: "play none none reset",
+        },
+        scale: 0.8,
+        opacity: 0,
+        duration: 0.8,
+        ease: "back.out(1.7)",
+      });
+
+      // Hover animation for submit button (remains same as it’s not scroll-dependent)
+      const submitBtn = document.querySelector(".submit-btn button");
+      submitBtn.addEventListener("mouseenter", () => {
+        gsap.to(submitBtn, {
+          duration: 0.3,
+          scale: 1.05,
+          ease: "power2.out",
+        });
+      });
+      submitBtn.addEventListener("mouseleave", () => {
+        gsap.to(submitBtn, {
+          duration: 0.3,
+          scale: 1,
+          ease: "power2.out",
+        });
+      });
+    });
+    // faq section
+    document.addEventListener("DOMContentLoaded", () => {
+      gsap.from(".faq-section-content .main-heading", {
+        scrollTrigger: {
+          trigger: ".faq-section-content",
+          start: "top 80%",
+          toggleActions: "play none none reset",
+        },
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+      });
+
+      // Animate the subtitle
+      gsap.from(".faq-section-content p", {
+        scrollTrigger: {
+          trigger: ".faq-section-content",
+          start: "top 80%",
+          toggleActions: "play none none reset",
+        },
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        delay: 0.2,
+        ease: "power2.out",
+      });
+
+      // Animate navigation buttons
+      gsap.from(".faq-nav-buttons a", {
+        scrollTrigger: {
+          trigger: ".faq-nav-buttons",
+          start: "top 80%",
+          toggleActions: "play none none reset",
+        },
         y: 20,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.2,
+        ease: "power2.out",
+      });
+
+      // Animate FAQ items
+      gsap.from(".nav-faq-item", {
+        scrollTrigger: {
+          trigger: ".nav-faq-container",
+          start: "top 80%",
+          toggleActions: "play none none reset",
+        },
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power3.out",
+      });
+    });
+    // footer section
+    document.addEventListener("DOMContentLoaded", () => {
+      gsap.from(".footer-content h3", {
+        scrollTrigger: {
+          trigger: ".footer-content",
+          start: "top 80%",
+          toggleActions: "play none none reset",
+        },
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+      });
+
+      // Animate the trial section paragraph
+      gsap.from(".footer-content p", {
+        scrollTrigger: {
+          trigger: ".footer-content",
+          start: "top 80%",
+          toggleActions: "play none none reset",
+        },
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        delay: 0.2,
+        ease: "power2.out",
+      });
+
+      // Animate the trial button
+      gsap.from(".footer-content-button a", {
+        scrollTrigger: {
+          trigger: ".footer-content-button",
+          start: "top 80%",
+          toggleActions: "play none none reset",
+        },
+        scale: 0.8,
+        opacity: 0,
+        duration: 0.8,
+        ease: "back.out(1.7)",
+        delay: 0.4,
+      });
+
+      // Animate the logo section
+      gsap.from(".footer-logo", {
+        scrollTrigger: {
+          trigger: ".footer-content-nav-1",
+          start: "top 80%",
+          toggleActions: "play none none reset",
+        },
+        x: -50,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+      });
+
+      // Animate subscribe section
+      gsap.from(".footer-content-nav-1 h4, .footer-content-nav-1 p", {
+        scrollTrigger: {
+          trigger: ".footer-content-nav-1",
+          start: "top 80%",
+          toggleActions: "play none none reset",
+        },
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power2.out",
+        delay: 0.2,
+      });
+
+      // Animate email subscription form
+      gsap.from(".footer-content-nav-1-input-email", {
+        scrollTrigger: {
+          trigger: ".footer-content-nav-1-input",
+          start: "top 80%",
+          toggleActions: "play none none reset",
+        },
+        y: 20,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        delay: 0.4,
+      });
+
+      // Animate navigation columns
+      gsap.from(".footer-content-nav-list", {
+        scrollTrigger: {
+          trigger: ".footer-content-nav-2",
+          start: "top 80%",
+          toggleActions: "play none none reset",
+        },
+        x: 50,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power3.out",
+      });
+
+      // Animate bottom copyright and social icons
+      gsap.from(".footer-content-nav-bottom > *", {
+        scrollTrigger: {
+          trigger: ".footer-content-nav-bottom",
+          start: "top 90%",
+          toggleActions: "play none none reset",
+        },
+        y: 20,
+        opacity: 0,
         duration: 0.6,
         stagger: 0.1,
         ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".service-section-wrap", // Same trigger for consistency
-          start: "top 80%",
-          end: "bottom 80%",
-          scrub: 1,
-        },
+      });
+
+      // Hover animation for trial button
+      const trialBtn = document.querySelector(".footer-content-button a");
+      trialBtn.addEventListener("mouseenter", () => {
+        gsap.to(trialBtn, {
+          scale: 1.05,
+          duration: 0.3,
+          ease: "power2.out",
+        });
+      });
+      trialBtn.addEventListener("mouseleave", () => {
+        gsap.to(trialBtn, {
+          scale: 1,
+          duration: 0.3,
+          ease: "power2.out",
+        });
+      });
+
+      // Hover animation for social icons
+      const socialIcons = document.querySelectorAll(
+        ".footer-content-nav-social a"
+      );
+      socialIcons.forEach((icon) => {
+        icon.addEventListener("mouseenter", () => {
+          gsap.to(icon, {
+            scale: 1.2,
+            duration: 0.3,
+            ease: "power2.out",
+          });
+        });
+        icon.addEventListener("mouseleave", () => {
+          gsap.to(icon, {
+            scale: 1,
+            duration: 0.3,
+            ease: "power2.out",
+          });
+        });
       });
     });
   }
-
-  // blog secction
-  gsap.utils.toArray(".blog-card").forEach((card, index) => {
-    gsap.from(card, {
-      scrollTrigger: {
-        trigger: card,
-        start: "top 80%", // Start animation when top of card is 80% from top of viewport
-        end: "bottom 20%", // End when bottom of card is 20% from top of viewport
-        scrub: 1, // Smooth scrubbing effect
-        toggleActions: "play none none reverse", // Play on enter, reverse on leave
-      },
-      opacity: 0,
-      y: 50, // Move up from 50px below
-      duration: 1,
-      ease: "power2.out",
-      delay: index * 0.2, // Stagger animation for each card
-    });
-  });
-
-  // Animate heading
-  gsap.from(".blog-heading", {
-    scrollTrigger: {
-      trigger: ".blog-heading",
-      start: "top 90%",
-      end: "bottom 60%",
-      scrub: 1,
-    },
-    opacity: 0,
-    y: 30,
-    duration: 1,
-    ease: "power2.out",
-  });
-// contact-us section
-
-// Animate the form text section
-gsap.from('.form-text', {
-  scrollTrigger: {
-      trigger: '.contact-form',
-      start: 'top 80%', // Start animation when top of element is at 80% of viewport height
-      end: 'bottom 20%', // End when bottom is at 20% of viewport height
-      scrub: 1, // Smooth scrubbing effect
-      toggleActions: 'play none none reverse' // Play on enter, reverse on leave
-  },
-  opacity: 0,
-  x: -50, // Slide in from left
-  duration: 1
-});
-
-
-// Animate form inputs
-gsap.from('.form-input', {
-  scrollTrigger: {
-      trigger: '.form-input-group',
-      start: 'top 90%',
-      end: 'bottom 30%',
-      scrub: 1,
-  },
-  opacity: 0,
-  y: 30,
-  stagger: 0.3,
-  duration: 1
-});
-
-// Animate submit button
-gsap.from('.submit-btn', {
-  scrollTrigger: {
-      trigger: '.submit-btn',
-      start: 'top 100%',
-      end: 'bottom 40%',
-      scrub: 1,
-  },
-  opacity: 0,
-  scale: 0.9,
-  duration: 1
-});
-
-
 }
 
 // testimonial-animations.js
