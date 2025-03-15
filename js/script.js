@@ -620,6 +620,62 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // homeAnimation
 // hero section
+// about-us
+document.addEventListener("DOMContentLoaded", function () {
+  if (!window.gsap) {
+    console.error("GSAP failed to load");
+    return;
+  }
+  if (!window.ScrollTrigger) {
+    console.error("ScrollTrigger failed to load");
+    return;
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const heading = document.querySelector("#about-us h3");
+  const text = heading.textContent;
+  heading.innerHTML = text
+    .split("")
+    .map((char) => `<span class="char">${char}</span>`)
+    .join("");
+
+  const chars = heading.querySelectorAll(".char");
+
+  // Set initial color explicitly
+  gsap.set(chars, { color: "rgba(255, 255, 255, 0.1)" });
+
+  // Animate only color change on scroll
+  gsap.to(chars, {
+    color: "rgba(255, 255, 255, 1)",
+    stagger: 0.05,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: "#about-us",
+      start: "top 80%",
+      end: "top 20%",
+      scrub: true,
+      markers: false,
+    },
+  });
+
+  gsap.from(".about-us-button", {
+    y: 100, 
+    opacity: 0,
+    duration: 1.5, 
+    ease: "power3.out", 
+    delay: 0.6, 
+    scrollTrigger: {
+      trigger: ".about-us-button", 
+      start: "top 90%", 
+      end: "top 50%",
+      toggleActions: "play none none reverse",
+      scrub: true,
+    },
+  });
+ 
+});
 if (
   window.location.pathname === "/" ||
   window.location.pathname === "/index.html"
@@ -706,52 +762,6 @@ if (
     window.addEventListener("load", () => {
       ScrollTrigger.refresh();
     });
-  });
-  // about-us
-  document.addEventListener("DOMContentLoaded", function () {
-    if (typeof window.Lenis === "undefined") {
-      console.error("Lenis is not loaded. Check the script source or network.");
-      return;
-    }
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Select all words
-    const words = document.querySelectorAll("#about-us h3");
-
-    // Split each word into characters and animate them
-    words.forEach((word, i) => {
-      const text = new SplitType(word, { types: "char" });
-
-      gsap.fromTo(
-        text.chars,
-        {
-          color: "rgba(255, 255, 255, 0.1)",
-        },
-        {
-          color: "rgba(255, 255, 255, 1)",
-          scrollTrigger: {
-            trigger: word,
-            start: "top 80%",
-            end: "top 20%",
-            scrub: true,
-            markers: false,
-          },
-          opacity: 1,
-          duration: 0.2,
-          stagger: 0.05,
-        }
-      );
-    });
-
-    // Lenis smooth scrolling
-    const lenis = new window.Lenis();
-    lenis.on("scroll", (e) => {});
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
   });
 
   // Register ScrollTrigger with GSAP
@@ -903,6 +913,7 @@ if (
   document.addEventListener("DOMContentLoaded", () => {
     animateOnScroll(".animate-text", null, "fadeTextUp");
     animateOnScroll(".animate-bageButton", null, "bageButton");
+    animateOnScroll(".btn-down", null, "btnDown", {});
 
     animateOnScroll(".typewriter", null, "typewriter", {
       stagger: 0.05,
