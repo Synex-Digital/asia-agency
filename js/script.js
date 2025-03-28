@@ -661,20 +661,19 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   gsap.from(".about-us-button", {
-    y: 100, 
+    y: 100,
     opacity: 0,
-    duration: 1.5, 
-    ease: "power3.out", 
-    delay: 0.6, 
+    duration: 1.5,
+    ease: "power3.out",
+    delay: 0.6,
     scrollTrigger: {
-      trigger: ".about-us-button", 
-      start: "top 90%", 
+      trigger: ".about-us-button",
+      start: "top 90%",
       end: "top 50%",
       toggleActions: "play none none reverse",
       scrub: true,
     },
   });
- 
 });
 if (
   window.location.pathname === "/" ||
@@ -1510,48 +1509,49 @@ document.addEventListener("DOMContentLoaded", () => {
         trigger: ".testimonial-tittle",
         start: "top 90%",
         end: "top 60%",
-        scrub: 1,
+        toggleActions: "play none none reverse", // Runs every time it enters the viewport
       },
     });
-
+    
     gsap.from(".testimonial-card", {
       opacity: 0,
       y: 60,
-      duration: 1, // Adjust the duration for all elements to animate at once
+      duration: 1,
       ease: "power2.out",
       scrollTrigger: {
         trigger: ".testimonial-animate .slider-container",
         start: "top 85%",
         end: "bottom 20%",
-        scrub: 1,
+        toggleActions: "play none none reverse",
       },
     });
-
+    
     gsap.from(".testimonial-card .testimonial-wrapper > *", {
       opacity: 0,
       y: 30,
-      duration: 1, // Same duration as the previous animation
+      duration: 1,
       ease: "power2.out",
       scrollTrigger: {
         trigger: ".testimonial-animate .slider-container",
         start: "top 85%",
         end: "bottom 20%",
-        scrub: 1,
+        toggleActions: "play none none reverse",
       },
     });
-
+    
     gsap.from(".testimonial-animate .slider-controls", {
       opacity: 0,
       y: 40,
-      duration: 1, // Same duration as the previous animation
+      duration: 1,
       ease: "power3.out",
       scrollTrigger: {
         trigger: ".testimonial-animate .slider-controls",
         start: "top 90%",
         end: "top 60%",
-        scrub: 1,
+        toggleActions: "play none none reverse",
       },
     });
+    
   }
 
   /*** Projects Animation ***/
